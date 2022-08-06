@@ -38,6 +38,9 @@ export default function Header() {
             <Link href="/nextjs">
               <a className="mr-5 font-semibold hover:text-gray-900">NEXT.JS</a>
             </Link>
+            <Link href="/notion">
+              <a className="mr-5 font-semibold hover:text-gray-900">NOTION</a>
+            </Link>
           </nav>
           <DarkModeToggleButton/>
         </div>

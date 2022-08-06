@@ -10,7 +10,7 @@ export default function Nextjs() {
           <meta name="description" content="Start Next.js" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        Nextjs
+        <p> Next.js </p>
       </Layout>
     </>
   );
