@@ -11,41 +11,44 @@ export default function Notion({ projectData }) {
           <meta name="description" content="Start Next.js" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        <div className="min-h-screen">
         {projectData.map((data) => (
-          <div className="project-card">
-            <h1 className="font-bold text-2xl">
-              {data.properties.name.title[0].plain_text}
-            </h1>
-            <h3 className="mt-4 text-lg">
-              {data.properties.desc.rich_text[0].text.content}
-            </h3>
-            <p>
-              <span className="font-semibold mb-2">DATE</span> :{" "}
-              {data.properties.workField.date.start} ~{" "}
-              {data.properties.workField.date.end}
-            </p>
-            <p>
-              <span className="font-semibold">Github</span> :{" "}
-              {data.properties.github.url}
-            </p>
-            <p>
-              <span className="font-semibold">Notion</span> : {data.url}
-            </p>
-            <div className="mt-3">
-              <p
-                className="
+            <div className="project-card">
+              <h1 className="font-bold text-2xl">
+                {data.properties.name.title[0].plain_text}
+              </h1>
+              <h3 className="mt-4 text-lg">
+                {data.properties.desc.rich_text[0].text.content}
+              </h3>
+              <p className="mt-4 mb-2">
+                <span className="font-semibold">DATE</span> : {" "}
+                {data.properties.workField.date.start} ~
+                {data.properties.workField.date.end}
+              </p>
+              <p className="mb-2">
+                <span className="font-semibold">Github</span> : {" "}
+                {data.properties.github.url}
+              </p>
+              <p className="mb-2">
+                <span className="font-semibold">Notion</span> : {data.url}
+              </p>
+              <div className="mt-3">
+                <p
+                  className="
                 float-right 
               text-center
               px-2 py-1
               rounded-md bg-sky-200 
               dark:bg-sky-800/50 w-44
               "
-              >
-                {data.properties.tag.multi_select[0].name}
-              </p>
+                >
+                  {data.properties.tag.multi_select[0].name}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </Layout>
     </>
   );

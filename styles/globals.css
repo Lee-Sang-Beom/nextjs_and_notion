@@ -14,12 +14,13 @@
 }
 
 .project-card {
-    @apply flex flex-col mt-10 ml-40 mr-40 mb-10 pl-10 pr-10 pb-5 pt-5
-            transition duration-300 transform border border-gray-300
+    @apply  flex flex-col mt-10 ml-40 mr-40 mb-10 pl-10 pr-10 pb-5 pt-5
+            transition duration-700 transform border border-l-gray-900
             hover:scale-105
             hover:shadow-lg
-            dark:border-gray-200/50
-            dark:hover:shadow-gray-400/40
+            dark:border-gray-300/50
+            /* 그림자 opacity 40*/
+            dark:hover:shadow-gray-400/40 
             hover:text-blue-600
 }
 
