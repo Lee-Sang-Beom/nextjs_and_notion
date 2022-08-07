@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import { DATABASE_ID, TOKEN } from "../config";
 
-export default function Notion({projectsUrl}) {
+export default function Notion({ projectData }) {
   return (
     <>
       <Layout>
@@ -11,9 +11,40 @@ export default function Notion({projectsUrl}) {
           <meta name="description" content="Start Next.js" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <h1>나의 notion 주소 </h1>
-        {projectsUrl.map((url)=>(
-          <p key={url}> {url} </p>
+        {projectData.map((data) => (
+          <div className="project-card">
+            <h1 className="font-bold text-2xl">
+              {data.properties.name.title[0].plain_text}
+            </h1>
+            <h3 className="mt-4 text-lg">
+              {data.properties.desc.rich_text[0].text.content}
+            </h3>
+            <p>
+              <span className="font-semibold mb-2">DATE</span> :{" "}
+              {data.properties.workField.date.start} ~{" "}
+              {data.properties.workField.date.end}
+            </p>
+            <p>
+              <span className="font-semibold">Github</span> :{" "}
+              {data.properties.github.url}
+            </p>
+            <p>
+              <span className="font-semibold">Notion</span> : {data.url}
+            </p>
+            <div className="mt-3">
+              <p
+                className="
+                float-right 
+              text-center
+              px-2 py-1
+              rounded-md bg-sky-200 
+              dark:bg-sky-800/50 w-44
+              "
+              >
+                {data.properties.tag.multi_select[0].name}
+              </p>
+            </div>
+          </div>
         ))}
       </Layout>
     </>
@@ -40,16 +71,18 @@ export async function getStaticProps() {
     options
   );
 
-  const projects = await res.json();
-  const projectUrl = projects.results.map(
-    (aProject) => aProject.url
-  ).splice(1,3);
+  let projects = await res.json();
+  projects = projects.results.slice(1);
+  console.log(projects);
 
-  console.log(`projectNames : ${projectUrl}`);
+  const projectData = projects.map((aProject) => aProject);
 
+  console.log(`projectNames : ${projectData}`);
+
+  console.log(projects);
   return {
     props: {
-      projectsUrl : projectUrl
+      projectData: projects,
     },
   };
 }
