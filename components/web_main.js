@@ -79,8 +79,8 @@ export default function WebMain() {
                 </h1>
                 <p className="leading-relaxed mb-3">
                   DOM이 무엇인지 들어보셨나요? 웹 페이지에서의 DOM은 사용자와의
-                  상호작용과 깊은 관련이 있어요! 이것이 무엇인지, 궁금하다면
-                  아래 Learn 버튼을 눌러주세요!
+                  상호작용과 깊은 관련이 있어요! 이것이 무엇인지 궁금하다면 아래
+                  Learn 버튼을 눌러주세요!
                 </p>
                 <a className="text-indigo-500 inline-flex items-center mt-5">
                   Learn
@@ -113,9 +113,9 @@ export default function WebMain() {
                   REST-API
                 </h1>
                 <p className="leading-relaxed mb-3">
-                  HTML, CSS, JS가 무엇인지 많이 들어보셨나요? 웹 페이지에서
-                  이것들이 각자 어떠한 역할을 하고 있는지, 궁금하다면 아래 Learn
-                  버튼을 눌러주세요!
+                  REST API라는 용어를 들어보셨나요? 컴퓨터 시스템끼리 정보를
+                  안전하게 교환하기 위한 방법으로 알려져 있는 REST-API에 대해
+                  궁금하다면, 아래 Learn 버튼을 눌러주세요!
                 </p>
                 <a className="text-indigo-500 inline-flex items-center mt-5">
                   Learn
