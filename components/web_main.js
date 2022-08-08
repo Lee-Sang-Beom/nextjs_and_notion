@@ -513,9 +513,7 @@ export default function WebMain() {
                 </h1>
                 <p className="leading-relaxed mb-3">
                   HTML, CSS, JS가 무엇인지 많이 들어보셨나요? 프론트엔드
-                  개발자가 되기 위해서 이것들은 꼭 익혀두셔야 해요! 웹
-                  페이지에서 이것들이 각자 어떠한 역할을 하고 있는지, 궁금하다면
-                  아래 Learn 버튼을 눌러주세요!
+                  개발자가 되기 위해서 이것들은 꼭 익혀두셔야 해요! 이것들이 각자 어떠한 역할을 하고 있는지 궁금하다면, 아래 Learn 버튼을 눌러주세요!
                 </p>
                 <a className="text-indigo-500 inline-flex items-center mt-5">
                   Learn
