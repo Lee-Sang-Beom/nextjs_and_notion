@@ -13,7 +13,7 @@ export default function Notion({ projectData }) {
         </Head>
         <div className="min-h-screen">
         {projectData.map((data) => (
-            <div className="project-card">
+            <div className="project-card" key={data.id}>
               <h1 className="font-bold text-2xl">
                 {data.properties.name.title[0].plain_text}
               </h1>
