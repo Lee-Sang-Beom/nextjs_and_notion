@@ -41,10 +41,9 @@ export default function Notion({ projectData }) {
                 >
                   {/* {data.properties.tag.multi_select[0].name} */}
                   {data.properties.tag.multi_select.map((tagname)=>(
-                    <sapn className="
+                    <sapn key={tagname.id} className="
                     inline mr-4 px-4 py-2 rounded-md bg-sky-200 
                     dark:bg-sky-500/50  
-                    
                     ">
                       {tagname.name}
                     </sapn>
