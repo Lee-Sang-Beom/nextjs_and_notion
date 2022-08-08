@@ -14,7 +14,7 @@ export default function Notion({ projectData }) {
         <div className="min-h-screen">
         {projectData.map((data) => (
             <div className="project-card" key={data.id}>
-              <h1 className="font-bold text-2xl">
+              <h1 className="font-bold text-2xl ">
                 {data.properties.name.title[0].plain_text}
               </h1>
               <h3 className="mt-4 text-lg">
@@ -35,14 +35,20 @@ export default function Notion({ projectData }) {
               <div className="mt-3">
                 <p
                   className="
-                float-right 
-              text-center
-              px-2 py-1
-              rounded-md bg-sky-200 
-              dark:bg-sky-800/50 w-44
-              "
+                text-left
+                px-2 py-1
+                "
                 >
-                  {data.properties.tag.multi_select[0].name}
+                  {/* {data.properties.tag.multi_select[0].name} */}
+                  {data.properties.tag.multi_select.map((tagname)=>(
+                    <sapn className="
+                    inline mr-4 px-4 py-2 rounded-md bg-sky-200 
+                    dark:bg-sky-500/50  
+                    
+                    ">
+                      {tagname.name}
+                    </sapn>
+                  ))}
                 </p>
               </div>
             </div>
@@ -76,13 +82,8 @@ export async function getStaticProps() {
 
   let projects = await res.json();
   projects = projects.results.slice(1);
-  console.log(projects);
-
   const projectData = projects.map((aProject) => aProject);
 
-  console.log(`projectNames : ${projectData}`);
-
-  console.log(projects);
   return {
     props: {
       projectData: projects,
