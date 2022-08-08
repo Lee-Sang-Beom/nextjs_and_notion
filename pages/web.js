@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/layout";
+import WebMain from "../components/web_main";
 
 export default function Web() {
   return (
@@ -10,7 +11,7 @@ export default function Web() {
           <meta name="description" content="Start Next.js" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        Web
+        <WebMain />
       </Layout>
     </>
   );
