@@ -7,7 +7,7 @@ export default function Notion({ projectData }) {
     <>
       <Layout>
         <Head>
-          <title>Next.js</title>
+        <title>FrontendWeb</title>
           <meta name="description" content="Start Next.js" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
