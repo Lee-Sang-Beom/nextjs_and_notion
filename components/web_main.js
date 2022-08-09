@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function WebMain() {
   return (
     <>
@@ -20,21 +22,23 @@ export default function WebMain() {
                   페이지에서 이것들이 각자 어떠한 역할을 하고 있는지, 궁금하다면
                   아래 Learn 버튼을 눌러주세요!
                 </p>
-                <a className="text-indigo-500 inline-flex items-center mt-5">
-                  Learn
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <Link href="/web_basic/html_css_js">
+                  <a className="text-indigo-500 inline-flex items-center mt-5 cursor-pointer">
+                    Learn
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </Link>
               </div>
             </div>
             {/* box 2*/}
