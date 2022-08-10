@@ -3,6 +3,9 @@ import Layout from "../components/layout";
 import { DATABASE_ID, TOKEN } from "../config";
 
 export default function Notion({ projectData }) {
+  
+  const teamUrl = "https://www.notion.so/Study-FrontEnd-Develop-a4e3dbc37feb4f2093b1211be7cd32a2";
+  
   return (
     <>
       <Layout>
@@ -26,11 +29,10 @@ export default function Notion({ projectData }) {
                 {data.properties.workField.date.end}
               </p>
               <p className="mb-2">
-                <span className="font-semibold">Github</span> : {" "}
-                {data.properties.github.url}
+                <span className="font-semibold">Github</span> : <a href = {data.properties.github.url}> {data.properties.github.url}</a>
               </p>
               <p className="mb-2">
-                <span className="font-semibold">Notion</span> : {data.url}
+                <span className="font-semibold">Notion</span> : <a href = {teamUrl}> {teamUrl}</a>
               </p>
               <div className="mt-3">
                 <p
@@ -80,9 +82,9 @@ export async function getStaticProps() {
   );
 
   let projects = await res.json();
-  projects = projects.results.slice(1);
+  projects = projects.results.slice(2);
   const projectData = projects.map((aProject) => aProject);
-
+  console.log(projects)
   return {
     props: {
       projectData: projects,
