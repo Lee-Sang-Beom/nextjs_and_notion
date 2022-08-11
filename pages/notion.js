@@ -61,7 +61,7 @@ export default function Notion({ projectData }) {
   );
 }
 
-// 빌드 때 호출되어, 데이터를 미리 가져오고 화면에 렌더링 (딱 한번)
+
 export async function getStaticProps() {
   const options = {
     method: "POST",
@@ -84,7 +84,6 @@ export async function getStaticProps() {
   let projects = await res.json();
   projects = projects.results.slice(2);
   const projectData = projects.map((aProject) => aProject);
-  console.log(projects)
   return {
     props: {
       projectData: projects,
