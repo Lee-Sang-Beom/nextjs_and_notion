@@ -24,8 +24,8 @@ export default function HTML_CSS_JS() {
               <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">
                 HTML, CSS, JS
               </h1>
-              <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-                HTML, CSS,JS는 웹 프로그래밍을 하려면 반드시 알아두어야 하는
+              <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                - HTML, CSS,JS는 웹 프로그래밍을 하려면 반드시 알아두어야 하는
                 상식이에요! 아래 내용을 보면서, 어떤 역할을 하는지에 대해 꼭
                 알아두도록 해요!
               </p>
@@ -144,7 +144,7 @@ export default function HTML_CSS_JS() {
                 </p>
 
                 <p className="leading-relaxed text-sm mb-2">
-                  <strong className="text-emerald-600">아래 버튼</strong>을
+                  <strong className="text-emerald-600 dark:text-yellow-400">아래 버튼</strong>을
                   누르면, 저희가 추천하는 강의 영상으로 이동할 수 있어요!
                 </p>
                 <a
