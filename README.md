@@ -1,4 +1,4 @@
-Project - MyTodoList
+Project - Frontend Guide
 ======================
 
 ## 1. 프로젝트 계획 이유
@@ -16,7 +16,7 @@ Project - MyTodoList
 
  ## 2.1. Next.js 
 ```
-npx create-next-app@latest
+npx create-next-app@latest [프로젝트명]
 ```
 > 사전에 node.js가 설치되어 있어야 합니다.
 
