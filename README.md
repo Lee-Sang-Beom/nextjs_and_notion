@@ -15,11 +15,26 @@ Project - Frontend Guide
 # 2. Install
 
  ## 2.1. Next.js 
+
+ - 사전에 node.js가 설치되어 있어야 합니다.
 ```
 npx create-next-app@latest [프로젝트명]
 ```
-> 사전에 node.js가 설치되어 있어야 합니다.
 
+ - 설치 확인은 아래의 명령어를 사용하여 확인할 수 있습니다.
+```
+npm -v
+```
+
+ - 빌드하기
+```
+npm run build
+```
+
+ - 실행하기
+```
+npm run dev
+```
 
  ## 2.2. Tailwind
 
