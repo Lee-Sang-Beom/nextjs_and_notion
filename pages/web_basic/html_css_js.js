@@ -1,9 +1,15 @@
 import Link from "next/link";
 import Layout from "../../components/layout";
 import Head from "next/head";
-import Image from "next/image";
+import MoveBtn from "../../components/moveBtn";
+import Recommend_Youtube from "../../components/recommend_youtube";
+import Learn_More from "../../components/learn_More";
 
 export default function HTML_CSS_JS() {
+  // 페이지 넘김 정보
+  const prev = undefined;
+  const next = "/web_basic/rendering";
+
   return (
     <Layout>
       <Head>
@@ -124,7 +130,7 @@ export default function HTML_CSS_JS() {
                 <p className="leading-relaxed text-base mb-4">
                   {`HTML의, `}
                   <strong>{`HT(HyperText)`}</strong>
-                  {`은 일반적인 텍스트를 비순차적으로 접근할 수 있는 방법을 제공해요! 같은 페이지 내의 다른 데이터로 이동할 수도 있고, 다른 페이지로도 이동할 수도 있죠!`}
+                  {`는 일반적인 텍스트를 비순차적으로 접근할 수 있는 방법을 제공해요! 같은 페이지 내의 다른 데이터로 이동할 수도 있고, 다른 페이지로도 이동할 수도 있죠!`}
                 </p>
                 <p className="leading-relaxed text-base mb-4">
                   {<strong>{`ML(Markup Lanauage)`}</strong>}
@@ -143,28 +149,10 @@ export default function HTML_CSS_JS() {
                   {`은 하이퍼텍스트를 가장 중요한 특징으로 하는 마크업이라는 형식을 가진 언어라고 정리할 수 있어요. 웹 페이지를 만들기 위해 표준적으로 사용되는 마크업 언어이기 때문에, 웹 페이지를 만들 때 꼭 필요하죠.`}
                 </p>
 
-                <p className="leading-relaxed text-sm mb-2">
-                  <strong className="text-emerald-600 dark:text-yellow-400">아래 버튼</strong>을
-                  누르면, 저희가 추천하는 강의 영상으로 이동할 수 있어요!
-                </p>
-                <a
-                  className="text-indigo-500 inline-flex items-center cursor-pointer mt-2"
-                  href={`https://www.youtube.com/watch?v=8kJwTrs6e-4&list=PLFeNz2ojQZjtQc7mt8E9fNzIh9or34A61`}
-                  title="출처 : 유노코딩"
-                >
-                  Learn More
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <Learn_More
+                  url={`https://www.youtube.com/watch?v=8kJwTrs6e-4&list=PLFeNz2ojQZjtQc7mt8E9fNzIh9or34A61`}
+                  hover_title={`출처 : 유노코딩`}
+                />
               </div>
             </div>
           </div>
@@ -254,31 +242,10 @@ export default function HTML_CSS_JS() {
                   {<strong>CSS</strong>}
                   {`는 HTML 요소들의 크기, 디자인, 배치 등을 조절하고 가공해요!`}
                 </p>
-
-                <p className="leading-relaxed text-sm mb-2">
-                  <strong className="text-emerald-600 dark:text-yellow-400">
-                    아래 버튼
-                  </strong>
-                  을 누르면, 저희가 추천하는 강의 영상으로 이동할 수 있어요!
-                </p>
-                <a
-                  className="text-indigo-500 inline-flex items-center cursor-pointer mt-2"
-                  href={`https://www.youtube.com/watch?v=yZq_B6cQ9mo`}
-                  title="출처 : 유노코딩"
-                >
-                  Learn More
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <Learn_More
+                  url={`https://www.youtube.com/watch?v=yZq_B6cQ9mo`}
+                  hover_title={`출처 : 유노코딩`}
+                />
               </div>
             </div>
           </div>
@@ -373,7 +340,7 @@ export default function HTML_CSS_JS() {
                     </li>
                   </ul>
                 </div>
-                
+
                 <p className="leading-relaxed text-base mb-4 ">
                   {`자바스크립트는 다양한 장점을 가지고 있어요.`}
                 </p>
@@ -389,34 +356,13 @@ export default function HTML_CSS_JS() {
                 </div>
 
                 <p className="leading-relaxed text-base mb-4 ">
-                {`오늘날 자바스크립트는 브라우저 환경에서 가장 널리 사용되는 언어로 자리매김했어요. 그렇기에 내가 웹 사이트를 만들겠다고 다짐했다면, 꼭 알고 있어야 해요!`}
+                  {`오늘날 자바스크립트는 브라우저 환경에서 가장 널리 사용되는 언어로 자리매김했어요. 그렇기에 내가 웹 사이트를 만들겠다고 다짐했다면, 꼭 알고 있어야 해요!`}
                 </p>
 
-                <p className="leading-relaxed text-sm mb-2">
-                
-                  <strong className="text-emerald-600 dark:text-yellow-400">
-                    아래 버튼
-                  </strong>
-                  을 누르면, 저희가 추천하는 강의 영상으로 이동할 수 있어요!
-                </p>
-                <a
-                  className="text-indigo-500 inline-flex items-center cursor-pointer mt-2"
-                  href={`https://www.youtube.com/watch?v=9olX2yyXnVA`}
-                  title="출처 : 유노코딩"
-                >
-                  Learn More
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <Learn_More
+                  url={`https://www.youtube.com/watch?v=9olX2yyXnVA`}
+                  hover_title={`출처 : 유노코딩`}
+                />
               </div>
             </div>
           </div>
@@ -430,159 +376,27 @@ export default function HTML_CSS_JS() {
             그 외 추천 유튜브 영상
           </h1>
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-            <div className="p-4 md:w-1/3 flex">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                </svg>
-              </div>
-              <div className="flex-grow pl-6">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                  얄팍한 코딩사전
-                </h2>
-                <p className="leading-relaxed text-base">
-                  HTML, CSS, JavaScript가 뭔가요?
-                </p>
-                <a
-                  className="mt-3 text-indigo-500 inline-flex items-center"
-                  href={`https://www.youtube.com/watch?v=ffENjt7aEdc`}
-                >
-                  유튜브 보러가기
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/3 flex">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                </svg>
-              </div>
-              <div className="flex-grow pl-6">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                  드림코딩
-                </h2>
-                <p className="leading-relaxed text-base">
-                  CSS 기초 이론 정리. 포트폴리오 만드는 날까지!
-                </p>
-                <a
-                  className="mt-3 text-indigo-500 inline-flex items-center"
-                  href={`https://www.youtube.com/watch?v=gGebK7lWnCk`}
-                >
-                  유튜브 보러가기
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/3 flex">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                </svg>
-              </div>
-              <div className="flex-grow pl-6">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                  드림코딩
-                </h2>
-                <p className="leading-relaxed text-base">
-                  자바스크립트의 역사와 현재 그리고 미래
-                </p>
-                <a
-                  className="mt-3 text-indigo-500 inline-flex items-center"
-                  href={`https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2`}
-                >
-                  유튜브 보러가기
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <Recommend_Youtube
+              channel_name={`얄팍한 코딩사전`}
+              video_title={`HTML, CSS, JavaScript가 뭔가요?`}
+              url={`https://www.youtube.com/watch?v=ffENjt7aEdc`}
+            />
+            <Recommend_Youtube
+              channel_name={`드림코딩`}
+              video_title={`CSS 기초 이론 정리. 포트폴리오 만드는 날까지!`}
+              url={`https://www.youtube.com/watch?v=gGebK7lWnCk`}
+            />
+            <Recommend_Youtube
+              channel_name={`드림코딩`}
+              video_title={`자바스크립트의 역사와 현재 그리고 미래`}
+              url={`https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2`}
+            />
           </div>
         </div>
       </section>
 
       {/*이동하기*/}
-      <section className="text-gray-600 body-font">
-        <div className="container mx-auto mt-20 flex px-5 mb-24 items-center justify-center flex-col">
-          <div className="text-center lg:w-2/3 w-full">
-            <div className="flex justify-center">
-            <Link href="/web">
-              <a>
-                <button className="
-                rounded-lg px-5 py-2 ml-5 mr-5
-                transition ease-in-out duration-500
-                text-gray-200 dark:text-gray-700
-                bg-gray-700 dark:bg-gray-100
-                hover:-translate-y-1 hover:scale-110
-                hover:text-gray-700 dark:hover:text-gray-200
-                hover:bg-gray-200 dark:hover:bg-gray-700 ">
-                  MAIN
-                </button>
-              </a>
-            </Link>
-
-            <Link href="/web_basic/rendering">
-              <a>
-                <button className="
-                rounded-lg px-5 py-2 ml-5 mr-5
-                transition ease-in-out duration-500
-                text-gray-200 dark:text-gray-700
-                bg-gray-700 dark:bg-gray-100
-                hover:-translate-y-1 hover:scale-110
-                hover:text-gray-700 dark:hover:text-gray-200
-                hover:bg-gray-200 dark:hover:bg-gray-700 ">
-                  NEXT
-                </button>
-              </a>
-            </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MoveBtn prev={prev} next={next} />
     </Layout>
   );
 }

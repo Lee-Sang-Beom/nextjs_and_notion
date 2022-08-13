@@ -26,12 +26,12 @@ npx create-next-app@latest [프로젝트명]
 npm -v
 ```
 
- - 빌드하기
+ - build
 ```
 npm run build
 ```
 
- - 실행하기
+ - run
 ```
 npm run dev
 ```
