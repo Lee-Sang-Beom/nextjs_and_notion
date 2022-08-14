@@ -14,7 +14,7 @@ export default function Rendering() {
       {/*내용 설명*/}
       <section className="text-gray-600 body-font">
         {/* 내용 1 : 소개 */}
-        <div className="container px-5 mx-auto md:flex-row flex-col items-center">
+        <div className="container px-5 py-24 mx-auto md:flex-row flex-col items-center">
           <div className="flex flex-col">
             {/* bar 길이*/}
             <div className="h-1 bg-gray-200 rounded overflow-hidden">
@@ -45,27 +45,27 @@ export default function Rendering() {
             <h1 className="title-font sm:text-4xl text-3xl mb-6 font-medium text-gray-900">
               렌더링이란?
             </h1>
-            <p className="mb-3 leading-relaxed">
+            <p className="mb-4 leading-relaxed">
               {`웹 브라우저는 HTML문서를 해석하고, 화면을 통해 해석된 결과를 보여줘요.`}
             </p>
-            <p className="mb-3 leading-relaxed">
+            <p className="mb-4 leading-relaxed">
               {`HTML, CSS, JS 등 개발자가 작성한 문서를 브라우저에서 그래픽 형태로 출력해 주는 과정이 `}
               <strong>렌더링</strong>
               {`이에요.`}
             </p>
-            <p className="mb-3 leading-relaxed">
+            <p className="mb-4 leading-relaxed">
               {`웹 브라우저가 원본 HTML문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 View port에 표시하기까지의 과정을 `}
               <strong>{`Critical Rendering Path`}</strong>
               {`라고 불러요.`}
             </p>
-            <p className="leading-relaxed">
+            <p className="mb-2 leading-relaxed">
               {`브라우저마다 렌더링을 수행하는 렌더링 엔진이라는 것을 가지는데, 그 종류는 아래와 같아요.`}
             </p>
-            <div className="leading-relaxed text-base mb-4">
-              <ul className="list-disc ml-10 mt-2 text-sm  text-slate-500 dark:text-slate-300">
-                <li className="mb-2 ">{`크롬 : 블링크(Blink)`}</li>
-                <li className="mb-2">{`사파리 : 웹킷(Webkit)`}</li>
-                <li className="mb-2 ">{`파이어폭스 : 게코(Gecko)`}</li>
+            <div className="leading-relaxed text-base mb-8">
+              <ul className="list-disc ml-10 text-sm text-slate-500 dark:text-slate-300 ">
+                <li className="mb-1 text-left">{`크롬 : 블링크(Blink)`}</li>
+                <li className="mb-1 text-left">{`사파리 : 웹킷(Webkit)`}</li>
+                <li className="mb-1 text-left">{`파이어폭스 : 게코(Gecko)`}</li>
               </ul>
             </div>
           </div>

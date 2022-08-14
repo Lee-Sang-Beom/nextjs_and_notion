@@ -132,15 +132,15 @@ export default function HTML_CSS_JS() {
                   <strong>{`HT(HyperText)`}</strong>
                   {`는 일반적인 텍스트를 비순차적으로 접근할 수 있는 방법을 제공해요! 같은 페이지 내의 다른 데이터로 이동할 수도 있고, 다른 페이지로도 이동할 수도 있죠!`}
                 </p>
-                <p className="leading-relaxed text-base mb-4">
+                <p className="leading-relaxed text-base mb-2">
                   {<strong>{`ML(Markup Lanauage)`}</strong>}
                   {`은 웹 브라우저에게 내 컨텐츠를 어떻게 표현해야 하는지를 명령하는 언어에요. <태그> 등을 이용하여, 문서나 데이터를 구조적으로 표시해요. 마크업 언어를 쓰면 아래와 같은 효과를 얻을 수 있어요!`}
                 </p>
-                <div className="leading-relaxed text-base mb-4">
-                  <ul className="list-disc ml-10 mt-2 text-sm  text-slate-500 dark:text-slate-300">
-                    <li className="mb-1">{`컨텐츠 제작자가 원하는 방법대로 문서를 표현하기 위해 웹 브라우저에게 명령을 내릴 수 있어요!`}</li>
-                    <li className="mb-1">{`구조적인 작성 덕분에, 문서 작성에 대해 협업과 유지보수를 쉽게 할 수 있어요!`}</li>
-                    <li className="mb-1">{`찾기 쉽다는 장점은 검색이 가능하다는 것을 의미하기도 해요. 컴퓨터 또한 마크업 언어의 태그를 통해 정보를 수집할 수 있어요!`}</li>
+                <div className="leading-relaxed text-base mb-8">
+                  <ul className="list-disc ml-10 text-sm  text-slate-500 dark:text-slate-300">
+                    <li className="mb-1 text-left">{`컨텐츠 제작자가 원하는 방법대로 문서를 표현하기 위해 웹 브라우저에게 명령을 내릴 수 있어요!`}</li>
+                    <li className="mb-1 text-left">{`구조적인 작성 덕분에, 문서 작성에 대해 협업과 유지보수를 쉽게 할 수 있어요!`}</li>
+                    <li className="mb-1 text-left">{`찾기 쉽다는 장점은 검색이 가능하다는 것을 의미하기도 해요. 컴퓨터 또한 마크업 언어의 태그를 통해 정보를 수집할 수 있어요!`}</li>
                   </ul>
                 </div>
                 <p className="leading-relaxed text-base mb-4 ">
@@ -204,7 +204,7 @@ export default function HTML_CSS_JS() {
                   {`는`} <strong>{`HTML, XHTML, XML `}</strong>
                   {`같은 문서의 스타일을 꾸밀 때 사용하는 스타일 시트 언어에요!`}
                 </p>
-                <p className="leading-relaxed text-base mb-4">
+                <p className="leading-relaxed text-base mb-2">
                   {
                     <strong>{`1996년 12월, W3C에서 CSS가 도입되기 전까지는`}</strong>
                   }
@@ -212,21 +212,21 @@ export default function HTML_CSS_JS() {
                   {<strong>{`CSS`}</strong>}
                   {`가 도입되면서, 문서의 내용과 표현이 분리될 수 있었어요. 작성 방법은 아래와 같아요.`}
                 </p>
-                <div className="leading-relaxed text-base mb-4">
-                  <ul className="list-disc ml-10 mt-2 text-sm  text-slate-500 dark:text-slate-300">
-                    <li className="mb-1 font-semibold">
+                <div className="leading-relaxed text-base mb-8">
+                  <ul className="list-disc ml-10 text-sm  text-slate-500 dark:text-slate-300">
+                  <li className="mb-1 font-semibold text-left">
                       {`Inline Style Sheet`}
                       <p className="ml-1 mt-1 mb-2 text-xs font-normal">
                         {`- HTML 태그의 style 속성에 css 코드를 넣는 방법`}
                       </p>
                     </li>
-                    <li className="mb-1 font-semibold">
+                    <li className="mb-1 font-semibold text-left">
                       {`Internal Style Sheet`}
                       <p className="mt-1 mb-2 text-xs font-normal">
                         {`- HTML 문서 내의 <style> </style> 안에 css 코드를 넣는 방법`}
                       </p>
                     </li>
-                    <li className="mb-1 font-semibold">
+                    <li className="mb-1 font-semibold text-left">
                       {`Linking Style Sheet ★`}
                       <p className="mt-1 mb-2 text-xs font-normal">
                         {`- 별도 css 파일을 만들고, HTML 문서와 연결하는 방법`}
@@ -309,30 +309,30 @@ export default function HTML_CSS_JS() {
                   {`자바스크립트는 브라우저에서만 쓸 목적으로 고안된 언어이지만, 지금은 다양한 환경에서 쓰이고 있어요. 
                   자바스크립트는 브라우저뿐만 아니라 서버에서도 실행할 수 있어요.`}
                 </p>
-                <p className="leading-relaxed text-base mb-4 ">
+                <p className="leading-relaxed text-base mb-2">
                   {`이외에도 자바스크립트 엔진(JavaScript engine)이라 불리는 특별한 프로그램이 들어 있는 모든 디바이스에서도 동작해요. 브라우저 내에는 '자바스크립트 가상 머신'이라 불리는 엔진이 내장되어 있는데, 종류는 아래처럼 다양해요.`}
                 </p>
-                <div className="leading-relaxed text-base mb-4">
-                  <ul className="list-disc ml-10 mt-2 text-sm  text-slate-500 dark:text-slate-300">
-                    <li className="mb-1 font-semibold">
+                <div className="leading-relaxed text-base mb-8">
+                  <ul className="list-disc ml-10 text-sm  text-slate-500 dark:text-slate-300">
+                    <li className="mb-1 font-semibold text-left">
                       {`V8`}
                       <p className="ml-1 mt-1 mb-2 text-xs font-normal">
                         {`- Chrome과 Opera에서 쓰여요.`}
                       </p>
                     </li>
-                    <li className="mb-1 font-semibold">
+                    <li className="mb-1 font-semibold text-left">
                       {`SpiderMonkey`}
                       <p className="mt-1 mb-2 text-xs font-normal">
                         {`- Firefox에서 쓰여요.`}
                       </p>
                     </li>
-                    <li className="mb-1 font-semibold">
+                    <li className="mb-1 font-semibold text-left">
                       {`Trident / Chakra`}
                       <p className="mt-1 mb-2 text-xs font-normal">
                         {`- IE에서 쓰이며, 버전에 따라 각각을 사용해요.`}
                       </p>
                     </li>
-                    <li className="mb-1 font-semibold">
+                    <li className="mb-1 font-semibold text-left">
                       {`ChakraCore`}
                       <p className="mt-1 mb-2 text-xs font-normal">
                         {`- Microsoft Edge에서 쓰여요.`}
@@ -341,15 +341,15 @@ export default function HTML_CSS_JS() {
                   </ul>
                 </div>
 
-                <p className="leading-relaxed text-base mb-4 ">
+                <p className="leading-relaxed text-base mb-2 ">
                   {`자바스크립트는 다양한 장점을 가지고 있어요.`}
                 </p>
-                <div className="leading-relaxed text-base mb-4">
-                  <ul className="list-disc ml-10 mt-2 text-sm  text-slate-500 dark:text-slate-300">
-                    <li className="mb-1 font-NORMAL">
+                <div className="leading-relaxed text-base mb-8">
+                  <ul className="list-disc ml-10 mt-2 text-sm text-slate-500 dark:text-slate-300">
+                    <li className="mb-1 font-normal text-left">
                       {`HTML/CSS와 완전히 통합할 수 있고, HTML 파일 내에서 작성되므로 개발속도가 빨라요.`}
                     </li>
-                    <li className="mb-1 font-NORMAL">
+                    <li className="mb-1 font-normal text-left">
                       {`운영체제의 영향을 받지 않고, 주요 브라우저에서 대부분 지원되요. 그리고 기본언어로 사용되요!`}
                     </li>
                   </ul>
