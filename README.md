@@ -39,12 +39,10 @@ npm run dev
  ## 2.2. Tailwind
 
 1.  먼저, Tailwind를 설치합니다.
-
 ```
 npm install -D tailwindcss
 npx tailwindcss init
 ```
-
 2. tailwind.config.js의 내용을 변경합니다.
 
 ```
@@ -64,7 +62,6 @@ module.exports = {
 ```
 
 3. globals.css 내용을 변경합니다.
-
 ```
 @tailwind base;
 @tailwind components;
@@ -72,7 +69,6 @@ module.exports = {
 ```
 
 4. postcss.config.js을 root에 생성합니다.
-
 ```
 module.exports = {
     plugins : {
@@ -81,6 +77,27 @@ module.exports = {
 }
 ```
 
+ ## 2.3. styled-reset 
+
+ - 브라우저의 기본값 차이 제거를 위해 npm으로 제공되는 reset css 설치
+```
+npm i styled-reset
+```
+
+ - App.js 파일에 적용
+```
+import * as React from 'react'
+import { Reset } from 'styled-reset'
+
+const App = () => (
+  <React.Fragment>
+    <Reset />
+    <div>Hi, I'm an app!</div>
+  </React.Fragment>
+)
+```
+
+ 
 ****
 
 # 3. Use
