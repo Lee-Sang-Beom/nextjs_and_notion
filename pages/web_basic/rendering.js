@@ -87,11 +87,11 @@ export default function Rendering() {
           </div>
           <div className="flex flex-wrap w-full mt-10">
             <img
-              className="lg:w-3/5 md:w-1/2 h:1/2 object-cover object-center rounded-lg md:mt-0 mb-12"
+              className="lg:w-full object-cover object-center  rounded-lg md:mt-0 mb-12"
               src="/img/rendering_path.png"
               alt="step"
             />
-            <div className="lg:w-2/5 md:w-1/2 md:pl-10 md:py-6">
+            <div className="lg:w-full md:pl-10 md:py-6">
               {/* 과정 1 */}
               <div className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
@@ -226,53 +226,73 @@ export default function Rendering() {
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left">
                         {`서버로부터 응답된 JS코드는 각각의 의미를 갖는 토큰으로 분해되며, 이 토큰이 결합되어 `}
-                        <span className="font-bold">{`AST`}</span>{`를 형성해요.`}</li>
-                      <li className="mb-1 text-left">{`생성된 AST는`} <span className="font-bold">{`인터프리터`}</span>{`가 가상머신이 이해할 수 있는 `}<span className="font-bold">{`바이트코드`}</span>{`로 변환해요.`}</li>
+                        <span className="font-bold">{`AST`}</span>
+                        {`를 형성해요.`}
+                      </li>
+                      <li className="mb-1 text-left">
+                        {`생성된 AST는`}{" "}
+                        <span className="font-bold">{`인터프리터`}</span>
+                        {`가 가상머신이 이해할 수 있는 `}
+                        <span className="font-bold">{`바이트코드`}</span>
+                        {`로 변환해요.`}
+                      </li>
                     </ul>
                   </div>
                   <p className="leading-relaxed mb-4">
                     {`이 때, 자바스크립트는 `}
                     <span className="font-bold">{`DOM API`}</span>
-                    {`를 통해 DOM이나 CSSOM을 변경할 수 있으며, 변경된 DOM과 CSSOM은 다시 `} 
+                    {`를 통해 DOM이나 CSSOM을 변경할 수 있으며, 변경된 DOM과 CSSOM은 다시 `}
                     <span className="font-bold">{`렌더링 트리`}</span>
                     {`로 결합되요.`}
                   </p>
                   <p className="leading-relaxed mb-2">
-                    {`이 부분에서 `}<span className="font-bold">{`<script>`}</span>{`의 위치에 대해 중요한 내용을 아래에 적어봤어요. 꼭 천천히 읽어보고 넘어가도록 해요.`}
+                    {`이 부분에서 `}
+                    <span className="font-bold">{`<script>`}</span>
+                    {`의 위치에 대해 중요한 내용을 아래에 적어봤어요. 꼭 천천히 읽어보고 넘어가도록 해요.`}
                   </p>
                   <div className="leading-relaxed text-base mb-8">
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left list-decimal">
-                      <span className="font-bold">{`HTML파싱`}</span>
+                        <span className="font-bold">{`HTML파싱`}</span>
                         {`은 위에서 아래로 동기적으로 이루어지기 때문에, HTML파싱은 <script>의 위치에 따라 지연될 수 있어요.`}
                       </li>
                       <li className="mb-1 text-left list-decimal">
                         {`JS코드가 DOM, CSSOM을 변경하여 HTML노드를 생성하는 경우, HTML 파싱이 완료되어 있어야 하기 때문에, <script>는 되도록 `}
                         <span className="font-bold">{`<body>`}</span>
-                         {`가 끝나는 부분에 위치하는 편이 좋을 수 있어요.`}
+                        {`가 끝나는 부분에 위치하는 편이 좋을 수 있어요.`}
                       </li>
                       <li className="mb-1 text-left list-decimal">
                         {`하지만, <script>가 <body> 맨 아래에 위치할 때, 사용자가 JS코드 파싱 중에 웹 상호작용을 시도한다면 비정상적으로 작동할 수 있어요.`}
                       </li>
                       <li className="mb-1 text-left list-decimal">
                         {`그렇기 때문에 브라우저는 스크립트 파일을 병렬로 불러오는 방식으로 DOM 렌더 과정을 막지 않게 선언할 수 있어요. 이를 가능하게 하는 키워드는 `}
-                        <span className="font-bold">{`async, defer`}</span> {`가 있어요.`}
+                        <span className="font-bold">{`async, defer`}</span>{" "}
+                        {`가 있어요.`}
                       </li>
                       <li className="ml-8 mb-1 text-left">
-                        <span className="font-bold">{`async`}</span> 
-                        {` 스크립트는 <script>를 만나고, DOM 렌더 과정을 방해하지 않도록 스크립트 파일의 로딩을 `}<span className="font-bold">{`병렬`}</span>{`로 처리해요.
-                         하지만, 파일의 로딩을 마치게 되면 `}<span className="fon-bold">{`그 즉시 DOM 렌더를 멈추고`}</span> {`async방식으로 불러온 스크립트 파일의 해석을 시작하기 때문에,
+                        <span className="font-bold">{`async`}</span>
+                        {` 스크립트는 <script>를 만나고, DOM 렌더 과정을 방해하지 않도록 스크립트 파일의 로딩을 `}
+                        <span className="font-bold">{`병렬`}</span>
+                        {`로 처리해요.
+                         하지만, 파일의 로딩을 마치게 되면 `}
+                        <span className="fon-bold">{`그 즉시 DOM 렌더를 멈추고`}</span>{" "}
+                        {`async방식으로 불러온 스크립트 파일의 해석을 시작하기 때문에,
                          실행 순서가 보장되지 않아요. 불러온 스크립트 파일의 해석이 언제 끝날지 모르니까요!`}
                       </li>
                       <li className="ml-8 mb-1 text-left">
-                        <span className="font-bold">{`defer`}</span> 
-                        {` 스크립트도 <script>를 만나고, DOM 렌더 과정을 방해하지 않도록 스크립트 파일의 로딩을 `}<span className="font-bold">{`병렬`}</span>{`로 처리해요.
-                         하지만, defer 스크립트는 `}<span className="font-bold">{`모든 DOM이 로드된 후에 실행`}</span>{`되요. 
+                        <span className="font-bold">{`defer`}</span>
+                        {` 스크립트도 <script>를 만나고, DOM 렌더 과정을 방해하지 않도록 스크립트 파일의 로딩을 `}
+                        <span className="font-bold">{`병렬`}</span>
+                        {`로 처리해요.
+                         하지만, defer 스크립트는 `}
+                        <span className="font-bold">{`모든 DOM이 로드된 후에 실행`}</span>
+                        {`되요. 
                          또한, defer 스크립트는 선언한대로 실행순서가 보장되기 때문에, 실제도 더 빨리 로드된 스크립트가 있다 하더라도, 실행은 항상 선언한 순서대로 이루어져요.`}
                       </li>
                       <li className="ml-8 mb-1 text-left">
                         {`따라서, 기본적으로 DOM의 모든 엘리먼트에 접근할 수 있고, 실행 순서도 보장하기 때문에 async보다는 `}
-                        <span className="font-bold">{`defer`}</span>{`가 범용적으로 사용할 수 있는 속성으로 정리할 수 있어요.`}
+                        <span className="font-bold">{`defer`}</span>
+                        {`가 범용적으로 사용할 수 있는 속성으로 정리할 수 있어요.`}
                       </li>
                     </ul>
                   </div>
@@ -325,17 +345,6 @@ export default function Rendering() {
                   </p>
                 </div>
               </div>
-              <div className = "w-full text-right pt-4">
-              <a
-              className="text-sm"
-              title="이동하기"
-              href={`https://alledy.netlify.app/posts/critical-rendering-path-1/`}
-            >
-              이미지 출처 : Kang DaYoung님의 포스트
-            </a>
-              </div>
-              
-              
             </div>
           </div>
         </div>
