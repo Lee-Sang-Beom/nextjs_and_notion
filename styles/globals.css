@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* reset */
-* {
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-}
-
 /* tailwind css 적용을 위해서는, @apply 사용 */
 .bg-primary { /* 해당 class명을 layout에서 참조시 자동적용*/
     @apply bg-white dark:bg-slate-900 w-full
