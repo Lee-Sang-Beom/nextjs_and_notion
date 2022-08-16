@@ -36,7 +36,29 @@ npm run build
 npm run dev
 ```
 
- ## 2.2. Tailwind
+ ## 2.2. TypeScript 
+
+ - 타입스크립트를 설치합니다
+```
+npm install [-g(전역설치)] typescript
+```
+
+ - Next.js 프로젝트를 실행해봅니다.
+```
+npm run dev
+```
+
+ - 만약, 터미널에 Typescript 설정 방법이 출력된다면, 안내대로 TypeScript에 필요한 라이브러리를 설치합니다.
+```
+npm install --save-dev @types/react @types/node
+```
+
+ - Next.js 프로젝트를 다시 실행합니다.
+```
+npm run dev
+```
+
+ ## 2.3. Tailwind
 
 1.  먼저, Tailwind를 설치합니다.
 ```
@@ -77,27 +99,6 @@ module.exports = {
 }
 ```
 
- ## 2.3. styled-reset 
-
- - 브라우저의 기본값 차이 제거를 위해 npm으로 제공되는 reset css 설치
-```
-npm i styled-reset
-```
-
- - App.js 파일에 적용
-```
-import * as React from 'react'
-import { Reset } from 'styled-reset'
-
-const App = () => (
-  <React.Fragment>
-    <Reset />
-    <div>Hi, I'm an app!</div>
-  </React.Fragment>
-)
-```
-
- 
 ****
 
 # 3. Use

@@ -1,14 +1,12 @@
-import Link from "next/link";
-
 interface Props {
-  url : string;
-  hover_title : string;
+  url: string;
+  hover_title: string;
 }
 
-export default function Learn_More( props:Props) {
+export default function Learn_More(props: Props) {
   return (
     <>
-      <p className="leading-relaxed text-sm mb-2">
+      <p className="leading-relaxed text-sm">
         <strong className="text-emerald-600 dark:text-yellow-400">
           아래 버튼
         </strong>

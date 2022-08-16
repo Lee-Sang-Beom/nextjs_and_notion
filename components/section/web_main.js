@@ -55,21 +55,23 @@ export default function WebMain() {
                   있나요? 이것과 관련해, 렌더링이라는 용어가 있어요! 렌더링에
                   대해 잘 모르겠다면, 아래 Learn 버튼을 눌러주세요!
                 </p>
-                <a className="text-indigo-500 inline-flex items-center mt-5">
-                  Learn
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <Link href="/web_basic/rendering">
+                  <a className="text-indigo-500 inline-flex items-center mt-5 cursor-pointer">
+                    Learn
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </Link>
               </div>
             </div>
             {/* box 3*/}
