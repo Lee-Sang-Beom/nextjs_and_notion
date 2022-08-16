@@ -22,7 +22,7 @@ export default function Rendering() {
         {/*내용 설명*/}
         <section className="text-gray-600 body-font">
           {/* 내용 1 : 소개 */}
-          <div className="container px-5 py-24 mx-auto md:flex-row flex-col items-center">
+          <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col">
               {/* bar 길이*/}
               <div className="h-1 bg-gray-200 rounded overflow-hidden">
