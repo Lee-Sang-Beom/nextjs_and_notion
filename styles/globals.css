@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/*css 초기화*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 /* tailwind css 적용을 위해서는, @apply 사용 */
 .bg-primary { /* 해당 class명을 layout에서 참조시 자동적용*/
-    @apply bg-white dark:bg-slate-900 w-full
+    @apply bg-white dark:bg-slate-900 w-full 
 }
 
 
@@ -48,7 +56,7 @@ p {
 
 /* table */
 .table_set{
-    @apply table-auto md:table-fixed w-full mt-4 mb-8
+    @apply table-auto md:table-fixed w-full mt-4 mb-8 
 }
 
 .table_set tbody{
@@ -56,8 +64,8 @@ p {
 }
 
 .table_set tbody tr td{
-   @apply p-1.5 text-center text-slate-700 dark:text-slate-200 
-   border border-slate-500 dark:border-slate-400
+   @apply p-1.5 text-center text-slate-700 dark:text-slate-200
+   border border-slate-500 dark:border-slate-400 text-xs overflow-hidden
    
 }
 

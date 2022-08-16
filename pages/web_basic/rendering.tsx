@@ -386,10 +386,10 @@ export default function Rendering() {
                   {`생성된 DOM 요소의 레이아웃 수치(너비, 높이, 위치 등) 변경 시 영향을 받은 모든 노드의 위치를 다시 계산하는 과정을 의미해요. `}
                   <span className="font-bold">{`레이아웃 단계`}</span>{`를 다시 수행하는 것으로 생각할 수 있어요.`}
                 </p>
-                <p className="leading-relaxed mb-2">
+                <p className="leading-relaxed mb-2 hidden md:block">
                   {`리플로우를 발생시키는 일부 속성들은 아래와 같아요.`}
                 </p>
-                <table className="table_set">
+                <table className="table_set hidden md:table">
                   <tbody>
                     <tr>
                       <td>{`width`}</td>
@@ -430,7 +430,7 @@ export default function Rendering() {
 
 
               </div>
-              <div className="p-12 md:w-1/2 flex flex-col items-start">
+              <div className="p-12 md:w-1/2 flex flex-col md:flex-none items-start">
                 <div className="flex flex-wrap flex-row flex-shrink-0">
                   <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경될 때</span>
                   <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경되지 않을 때 </span>
@@ -442,10 +442,10 @@ export default function Rendering() {
                 <p className="leading-relaxed mb-4">
                   {`만약, 노드의 위치를 재계산하는 리플로우가 발생한다면 `}<span className="font-bold">{`필연적으로`}</span> {`리페인트가 실행된다고 볼 수 있어요. `}
                 </p>
-                <p className="leading-relaxed mb-2">
+                <p className="leading-relaxed mb-2 hidden md:block">
                   {`리페인트를 발생시키는 대표 속성은 아래와 같아요.`}
                 </p>
-                <table className="table_set">
+                <table className="table_set hidden md:table">
                   <tbody>
                     <tr>
                       <td>{`background`}</td>
