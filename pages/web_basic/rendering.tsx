@@ -366,9 +366,9 @@ export default function Rendering() {
               </div>
             </div>
           </div>
-
-          {/*3. 리플로우와 리페인트*/}
-          <div className="container px-5 py-24 mx-auto">
+        </section>
+        {/*3. 리플로우와 리페인트*/}
+        <div className="container px-5 py-24 mx-auto">
             <div className="h-1 bg-gray-200 rounded overflow-hidden">
               <div className="w-full h-full bg-indigo-500"></div>
             </div>
@@ -378,7 +378,7 @@ export default function Rendering() {
                   {`리플로우와 리페인트`}
                 </h1>
             </div>
-            <div className="flex flex-wrap -m-12 py-6 ">
+            <div className="flex flex-wrap py-6 ">
               <div className="p-12 md:w-1/2 flex flex-col items-start">
                 <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경될 때</span>
                 <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`리플로우(Reflow)`}</h2>
@@ -480,7 +480,6 @@ export default function Rendering() {
               </div>
             </div>
           </div>
-        </section>
 
          {/*마무리*/}
          <section className="text-gray-600 body-font">
