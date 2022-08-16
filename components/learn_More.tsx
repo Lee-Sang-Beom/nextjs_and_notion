@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-export default function Learn_More({ url, hover_title }) {
+interface Props {
+  url : string;
+  hover_title : string;
+}
+
+export default function Learn_More( props:Props) {
   return (
     <>
       <p className="leading-relaxed text-sm mb-2">
@@ -11,8 +16,8 @@ export default function Learn_More({ url, hover_title }) {
       </p>
       <a
         className="text-indigo-500 inline-flex items-center cursor-pointer mt-2"
-        href={url}
-        title={hover_title}
+        href={props.url}
+        title={props.hover_title}
       >
         Learn More
         <svg

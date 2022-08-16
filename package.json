@@ -20,6 +20,8 @@
     "styled-reset": "^4.4.2"
   },
   "devDependencies": {
+    "@types/node": "^18.7.5",
+    "@types/react": "^18.0.17",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
     "tailwindcss": "^3.1.7"

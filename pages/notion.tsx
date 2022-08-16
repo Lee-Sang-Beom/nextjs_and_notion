@@ -1,8 +1,14 @@
+import { NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/layout";
 import { DATABASE_ID, TOKEN } from "../config";
 
-export default function Notion({ projectData }) {
+
+type Props = {
+  projectData : object[];
+}
+
+const Notion: NextPage<Props> = ({ projectData }) => {
   
   const teamUrl = "https://www.notion.so/Study-FrontEnd-Develop-a4e3dbc37feb4f2093b1211be7cd32a2";
   
@@ -15,7 +21,7 @@ export default function Notion({ projectData }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className="min-h-screen">
-        {projectData.map((data) => (
+        {projectData.map((data:any) => (
             <div className="project-card" key={data.id}>
               <h1 className="font-bold text-2xl ">
                 {data.properties.name.title[0].plain_text}
@@ -42,13 +48,13 @@ export default function Notion({ projectData }) {
                 "
                 >
                   {/* {data.properties.tag.multi_select[0].name} */}
-                  {data.properties.tag.multi_select.map((tagname)=>(
-                    <sapn key={tagname.id} className="
+                  {data.properties.tag.multi_select.map((tagname:{id:string, name:string, color: string})=>(
+                    <span key={tagname.id} className="
                     inline mr-4 px-4 py-2 rounded-md bg-sky-200 
                     dark:bg-sky-500/50  
                     ">
                       {tagname.name}
-                    </sapn>
+                    </span>
                   ))}
                 </p>
               </div>
@@ -61,6 +67,7 @@ export default function Notion({ projectData }) {
   );
 }
 
+export default Notion;
 
 export async function getStaticProps() {
   const options = {
@@ -83,7 +90,7 @@ export async function getStaticProps() {
 
   let projects = await res.json();
   projects = projects.results.slice(2);
-  const projectData = projects.map((aProject) => aProject);
+  const projectData = projects.map((aProject:object) => aProject);
   return {
     props: {
       projectData: projects,

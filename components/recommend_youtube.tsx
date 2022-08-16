@@ -1,6 +1,13 @@
 import Link from "next/link";
 
-export default function Recommend_Youtube({ channel_name, video_title, url }) {
+type Props = {
+  channel_name : string;
+  video_title : string;
+  url:string
+}
+
+
+export default function Recommend_Youtube({ channel_name, video_title, url }:Props) {
   return (
     <div className="p-4 md:w-1/3 flex">
       <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">

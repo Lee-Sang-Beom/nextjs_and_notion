@@ -1,13 +1,18 @@
 import Link from "next/link";
 
-export default function MoveBtn({prev, next}) {
+interface Props {
+  prev : string|undefined;
+  next : string|undefined;
+}
+
+export default function MoveBtn(props : Props) {
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto mt-20 flex px-5 mb-24 items-center justify-center flex-col">
         <div className="text-center lg:w-2/3 w-full">
           <div className="flex justify-center">
-            {prev && 
-                <Link href={prev}>
+            {props.prev && 
+                <Link href={props.prev}>
                 <a>
                 <button
                     className="
@@ -25,8 +30,8 @@ export default function MoveBtn({prev, next}) {
             </Link>
             }
             
-            {next && 
-            <Link href={next}>
+            {props.next && 
+            <Link href={props.next}>
             <a>
               <button
                 className="

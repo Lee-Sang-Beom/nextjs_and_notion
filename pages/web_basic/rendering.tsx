@@ -85,9 +85,9 @@ export default function Rendering() {
           <div className="h-1 bg-gray-200 rounded overflow-hidden">
             <div className="w-1/2 h-full bg-indigo-500"></div>
           </div>
-          <div className="flex flex-wrap w-full mt-10">
+          <div className="w-full mt-10">
             <img
-              className="lg:w-full object-cover object-center  rounded-lg md:mt-0 mb-12"
+              className="lg:w-full rounded-lg md:mt-0 mb-12"
               src="/img/rendering_path.png"
               alt="step"
             />
