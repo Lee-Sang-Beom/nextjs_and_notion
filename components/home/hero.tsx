@@ -22,7 +22,7 @@ export default function Hero() {
         </p>
         <div className="flex justify-center">
           <Link href="/web">
-            <a className="btn-project">
+            <a className="btn-project hover:animate-pulse">
               웹 기초 개념 보러가기
             </a>
           </Link>

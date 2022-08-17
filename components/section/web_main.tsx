@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ChooseTopic from "./component/choose_topic";
 
 export default function WebMain() {
   return (
@@ -8,103 +9,23 @@ export default function WebMain() {
           {/*첫 번째 라인*/}
           <div className="flex flex-wrap -m-4">
             {/* box 1*/}
-            <div className="p-4 lg:w-1/3">
-              <div className="h-full bg-gray-100 bg-opacity-75 dark:bg-gray-800 px-8 pt-14 pb-10 rounded-lg overflow-hidden text-center relative">
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  CATEGORY : WEB BASIC
-                </h2>
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                  HTML, CSS, JS
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  HTML, CSS, JS가 무엇인지 많이 들어보셨나요? 프론트엔드
-                  개발자가 되기 위해서 이것들은 꼭 익혀두셔야 해요! 웹
-                  페이지에서 이것들이 각자 어떠한 역할을 하고 있는지, 궁금하다면
-                  아래 Learn 버튼을 눌러주세요!
-                </p>
-                <Link href="/web_basic/html_css_js">
-                  <a className="text-indigo-500 inline-flex items-center mt-5 cursor-pointer">
-                    Learn
-                    <svg
-                      className="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </Link>
-              </div>
-            </div>
+            <ChooseTopic 
+              category={`CATEGORY : WEB BASIC`} 
+              title={`HTML, CSS, JS`} 
+              url={`/web_basic/html_css_js`}
+              desc = {`HTML, CSS, JS가 무엇인지 많이 들어보셨나요? 프론트엔드 개발자가 되기 위해서 이것들은 꼭 익혀두셔야 해요! 웹 페이지에서 이것들이 각자 어떠한 역할을 하고 있는지, 궁금하다면 아래 Learn 버튼을 눌러주세요!`}/>
             {/* box 2*/}
-            <div className="p-4 lg:w-1/3">
-              <div className="h-full bg-gray-100 bg-opacity-75 dark:bg-gray-800 px-8 pt-14 pb-10 rounded-lg overflow-hidden text-center relative">
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  CATEGORY : WEB BASIC
-                </h2>
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                  렌더링
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  웹 페이지에서 새로고침을 통해 페이지를 다시 불러오신 경험이
-                  있나요? 이것과 관련해, 렌더링이라는 용어가 있어요! 렌더링에
-                  대해 잘 모르겠다면, 아래 Learn 버튼을 눌러주세요!
-                </p>
-                <Link href="/web_basic/rendering">
-                  <a className="text-indigo-500 inline-flex items-center mt-5 cursor-pointer">
-                    Learn
-                    <svg
-                      className="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </Link>
-              </div>
-            </div>
+            <ChooseTopic 
+              category={`CATEGORY : WEB BASIC`}
+              title={`렌더링`}
+              url={`/web_basic/rendering`}
+              desc = {`웹 페이지에서 새로고침을 통해 페이지를 다시 불러오신 경험이 있나요? 이것과 관련해, 렌더링이라는 용어가 있어요! 렌더링에 대해 잘 모르겠다면, 아래 Learn 버튼을 눌러주세요!`}/>
             {/* box 3*/}
-            <div className="p-4 lg:w-1/3">
-              <div className="h-full bg-gray-100 bg-opacity-75 dark:bg-gray-800 px-8 pt-14 pb-10 rounded-lg overflow-hidden text-center relative">
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  CATEGORY - WEB BASIC
-                </h2>
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                  DOM
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  DOM이 무엇인지 들어보셨나요? 웹 페이지에서의 DOM은 사용자와의
-                  상호작용과 깊은 관련이 있어요! 이것이 무엇인지 궁금하다면 아래
-                  Learn 버튼을 눌러주세요!
-                </p>
-                <a className="text-indigo-500 inline-flex items-center mt-5">
-                  Learn
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <ChooseTopic 
+              category={`CATEGORY : WEB BASIC`}
+              title={`DOM`}
+              url={`/web_basic/dom`}
+              desc={`DOM이 무엇인지 들어보셨나요? 웹 페이지에서의 DOM은 사용자와의 상호작용과 깊은 관련이 있어요! 이것이 무엇인지 궁금하다면 아래 Learn 버튼을 눌러주세요!`}/>
           </div>
 
           {/*두 번째 라인*/}
