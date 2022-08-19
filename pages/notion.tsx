@@ -23,10 +23,10 @@ const Notion: NextPage<Props> = ({ projectData }) => {
 
         {/* width : sm(640px) 미만  */}
         <div className="flex flex-col justify-center items-center min-h-screen sm:hidden">
-          <span className="rounded-md border-slate-800 dark:border-white border-y border-dashed p-4" >
+          <span className="m-8 rounded-md border-slate-800 dark:border-white border-y border-dashed p-4" >
           Notion API를 활용한 페이지입니다.
           </span>
-          <span className="mt-8 text-sm" >
+          <span className="m-8 text-sm" >
            화면이 보이지 않으면, 가로모드나 데스크탑에서 내용을 확인해보세요.
           </span>
         </div>
