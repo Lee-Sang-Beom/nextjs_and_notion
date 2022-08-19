@@ -14,8 +14,6 @@ export default function PageNotFound() {
                     <span className="animate-pulse font-semibold border-x-2 w-1/2 h-1/6 flex items-center justify-center text-2xl dark:border-white border-black ">페이지를 찾을 수 없습니다.</span>
                 </div>
             </Layout>
-
-
         </>
     )
 }

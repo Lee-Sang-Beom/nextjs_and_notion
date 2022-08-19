@@ -20,6 +20,7 @@ export default function Dom() {
         </Head>
 
         <section className="text-gray-600 body-font">
+          
           {/* 내용 1 : 소개 */}
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col">
@@ -37,20 +38,33 @@ export default function Dom() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap -mx-4 -mb-10 text-center">
-              <div className="sm:w-1/2 mb-10 px-4">
+            {/* dom, bom 소개시작 */}
+            <div className="flex flex-wrap -mx-4 -mb-10 text-center justify-center">
+              <div className="sm:w-1/2 mb-10 px-4 ">
                 <div className="rounded-lg h-64 overflow-hidden">
-                  {/*1200 500*/}
-                  <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1201x501" />
+                  <img alt="content" className="object-cover object-center h-full w-full" src="/img/bom.jpg" />
                 </div>
+                <a
+                  className="text-sm"
+                  title="이동하기"
+                  href={`https://sharryhong.github.io/2016/12/28/javascript-bom/`}
+                >
+                  {`이미지 출처 : hong's님의 포스트(H-web)`} 
+                </a>
                 <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">{`BOM(Browser Object Model)`}</h2>
-
                 <p className="leading-relaxed text-base">{`브라우저와 관련된 객체들의 집합`}</p>
               </div>
               <div className="sm:w-1/2 mb-10 px-4">
                 <div className="rounded-lg h-64 overflow-hidden">
-                  <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1202x502" />
+                  <img alt="content" className="object-cover object-center h-full w-full" src="/img/dom.png" />
                 </div>
+                <a
+                  className="text-sm"
+                  title="이동하기"
+                  href={`https://sharryhong.github.io/2016/12/28/javascript-dom/`}
+                >
+                  {`이미지 출처 : hong's님의 포스트(H-web)`} 
+                </a>
                 <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">{`DOM(Document Object Model)`}</h2>
                 <p className="leading-relaxed text-base">{`XML/HTML와 같은 문서에 접근하기 위한 인터페이스`}</p>
               </div>
