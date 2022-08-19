@@ -13,7 +13,7 @@ export default function WebMain() {
               category={`CATEGORY : WEB BASIC`} 
               title={`HTML, CSS, JS`} 
               url={`/web_basic/html_css_js`}
-              desc = {`HTML, CSS, JS가 무엇인지 많이 들어보셨나요? 프론트엔드 개발자가 되기 위해서 이것들은 꼭 익혀두셔야 해요! 웹 페이지에서 이것들이 각자 어떠한 역할을 하고 있는지, 궁금하다면 아래 Learn 버튼을 눌러주세요!`}/>
+              desc = {`HTML, CSS, JS가 무엇인지 들어보셨나요? 프론트엔드 개발자가 되기 위해서 이것들은 꼭 익혀두셔야 해요! 웹 페이지에서 이것들이 각자 어떠한 역할을 하고 있는지, 궁금하다면 아래 Learn 버튼을 눌러주세요!`}/>
             {/* box 2*/}
             <ChooseTopic 
               category={`CATEGORY : WEB BASIC`}
@@ -25,7 +25,7 @@ export default function WebMain() {
               category={`CATEGORY : WEB BASIC`}
               title={`DOM`}
               url={`/web_basic/dom`}
-              desc={`DOM이 무엇인지 들어보셨나요? 웹 페이지에서의 DOM은 사용자와의 상호작용과 깊은 관련이 있어요! 이것이 무엇인지 궁금하다면 아래 Learn 버튼을 눌러주세요!`}/>
+              desc={`DOM이라는 용어를 들어보셨나요? 웹 페이지에서의 DOM은 웹 요소의 구성과 사용자와의 상호작용과 깊은 관련이 있어요! 이것이 무엇인지 궁금하다면 아래 Learn 버튼을 눌러주세요!`}/>
           </div>
 
           {/*두 번째 라인 : 여기서부터 컴포넌트 분리해야함*/}
