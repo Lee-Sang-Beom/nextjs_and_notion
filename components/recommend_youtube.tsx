@@ -7,7 +7,7 @@ interface Props {
 }
 
 
-export default function Recommend_Youtube( props : Props) {
+export default function Recommend_Youtube(props : Props) {
   return (
     <div className="p-4 md:w-1/3 flex">
       <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
