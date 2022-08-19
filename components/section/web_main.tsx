@@ -28,7 +28,7 @@ export default function WebMain() {
               desc={`DOM이 무엇인지 들어보셨나요? 웹 페이지에서의 DOM은 사용자와의 상호작용과 깊은 관련이 있어요! 이것이 무엇인지 궁금하다면 아래 Learn 버튼을 눌러주세요!`}/>
           </div>
 
-          {/*두 번째 라인*/}
+          {/*두 번째 라인 : 여기서부터 컴포넌트 분리해야함*/}
           <div className="flex flex-wrap -m-4 mt-4">
             {/* box 4*/}
             <div className="p-4 lg:w-1/3">

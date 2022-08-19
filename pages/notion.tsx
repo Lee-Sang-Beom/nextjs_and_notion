@@ -20,7 +20,20 @@ const Notion: NextPage<Props> = ({ projectData }) => {
           <meta name="description" content="Start Next.js" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="min-h-screen">
+
+        {/* width : sm(640px) 미만  */}
+        <div className="flex flex-col justify-center items-center min-h-screen sm:hidden">
+          <span className="rounded-md border-slate-800 dark:border-white border-y border-dashed p-4" >
+          Notion API를 활용한 페이지입니다.
+          </span>
+          <span className="mt-8 text-sm" >
+           화면이 보이지 않으면, 가로모드나 데스크탑에서 내용을 확인해보세요.
+          </span>
+        </div>
+
+
+        {/* width : sm(640px) 이상  */}
+        <div className="min-h-screen hidden sm:block">
         {projectData.map((data:any) => (
             <div className="project-card" key={data.id}>
               <h1 className="font-bold text-2xl ">
