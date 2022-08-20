@@ -29,12 +29,12 @@ export default function HTML_CSS_JS() {
               {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
               <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                 <h1 className="sm:w-2/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0 ">
-                  HTML, CSS, JS
+                  {`HTML, CSS, JS`}
                 </h1>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  - HTML, CSS, JS는 웹 프로그래밍을 하려면 반드시 알아두어야 하는
+                  {`- HTML, CSS, JS는 웹 프로그래밍을 하려면 반드시 알아두어야 하는
                   상식이에요! 아래 내용을 보면서, 어떤 역할을 하는지에 대해 꼭
-                  알아두도록 해요!
+                  알아두도록 해요!`}
                 </p>
               </div>
             </div>
@@ -124,18 +124,18 @@ export default function HTML_CSS_JS() {
                     </h2>
                     <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                     <p className="text-base">
-                      HTML은 건물을 만들기 위한 뼈대로 이해하자!
+                      {`HTML은 건물을 만들기 위한 뼈대로 이해하자!`}
                     </p>
                   </div>
                 </div>
                 <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                   <p className="leading-relaxed text-base mb-4">
                     {`HTML의 `}
-                    <span className="font-bold">{`HT(HyperText)`}</span>
+                    <strong>{`HT(HyperText)`}</strong>
                     {`는 일반적인 텍스트를 비순차적으로 접근할 수 있는 방법을 제공해요! 같은 페이지 내의 다른 데이터로 이동할 수도 있고, 다른 페이지로도 이동할 수도 있죠!`}
                   </p>
                   <p className="leading-relaxed text-base mb-2">
-                    {<span className="font-bold">{`ML(Markup Lanauage)`}</span>}
+                    {<strong>{`ML(Markup Lanauage)`}</strong>}
                     {`은 웹 브라우저에게 내 컨텐츠를 어떻게 표현해야 하는지를 명령하는 언어에요. <태그> 등을 이용하여, 문서나 데이터를 구조적으로 표시해요. 마크업 언어를 쓰면 아래와 같은 효과를 얻을 수 있어요!`}
                   </p>
                   <div className="leading-relaxed text-base mb-8">
@@ -147,7 +147,7 @@ export default function HTML_CSS_JS() {
                   </div>
                   <p className="leading-relaxed text-base mb-4 ">
                     {`즉, `}
-                    {<span className="font-bold">HTML</span>}
+                    {<strong>HTML</strong>}
                     {`은 하이퍼텍스트를 가장 중요한 특징으로 하는 마크업이라는 형식을 가진 언어라고 정리할 수 있어요. 웹 페이지를 만들기 위해 표준적으로 사용되는 마크업 언어이기 때문에, 웹 페이지를 만들 때 꼭 필요하죠.`}
                   </p>
 
@@ -196,22 +196,22 @@ export default function HTML_CSS_JS() {
                     </h2>
                     <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                     <p className="text-base">
-                      CSS는 건물의 페인트칠 등의 꾸미는 행위로 이해하자!
+                      {`CSS는 건물의 페인트칠 등의 꾸미는 행위로 이해하자!`}
                     </p>
                   </div>
                 </div>
                 <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                   <p className="leading-relaxed text-base mb-4">
-                    <span className="font-bold">{`CSS`}</span>
-                    {`는`} <span className="font-bold">{`HTML, XHTML, XML `}</span>
+                    <strong>{`CSS`}</strong>
+                    {`는`} <strong>{`HTML, XHTML, XML `}</strong>
                     {`같은 문서의 스타일을 꾸밀 때 사용하는 스타일 시트 언어에요!`}
                   </p>
                   <p className="leading-relaxed text-base mb-2">
                     {
-                      <span className="font-bold">{`1996년 12월, W3C에서 CSS가 도입되기 전까지는`}</span>
+                      <strong>{`1996년 12월, W3C에서 CSS가 도입되기 전까지는`}</strong>
                     }
                     {`HTML언어 하나로, 문서의 뼈대와 꾸밈 작업을 함께했어요. 하지만, `}
-                    {<span className="font-bold">{`CSS`}</span>}
+                    {<strong>{`CSS`}</strong>}
                     {`가 도입되면서, 문서의 내용과 표현이 분리될 수 있었어요. 작성 방법은 아래와 같아요.`}
                   </p>
                   <div className="leading-relaxed text-base mb-8">
@@ -239,9 +239,9 @@ export default function HTML_CSS_JS() {
 
                   <p className="leading-relaxed text-base mb-4 ">
                     {`즉, `}
-                    {<span className="font-bold">CSS</span>}
+                    {<strong>CSS</strong>}
                     {`는 구조와 디자인을 분리하기 위해 태어난 언어라고 정리할 수 있어요. `}
-                    {<span className="font-bold">CSS</span>}
+                    {<strong>CSS</strong>}
                     {`는 HTML 요소들의 크기, 디자인, 배치 등을 조절하고 가공해요!`}
                   </p>
                   <Learn_More
@@ -290,14 +290,14 @@ export default function HTML_CSS_JS() {
                     </h2>
                     <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                     <p className="text-base">
-                      JS(JavaScript)는 건물 내 각종 기능을 만들고 수리하는 행위로
-                      이해하자!
+                      {`JS(JavaScript)는 건물 내 각종 기능을 만들고 수리하는 행위로
+                      이해하자!`}
                     </p>
                   </div>
                 </div>
                 <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                   <p className="leading-relaxed text-base mb-4">
-                    <span className="font-bold">{`JS(JavaScript)`}</span>
+                    <strong>{`JS(JavaScript)`}</strong>
                     {`는 웹 페이지에서 복잡한 기능을 구현할 수 있도록 웹 문서에 삽입해서 사용하는 스크립팅 언어 또는 프로그래밍 언어에요! 웹 브라우저에서 웹 문서를 실행할 때 프로그램 코드가 해석되요.`}
                   </p>
                   <p className="leading-relaxed text-base mb-4 ">
