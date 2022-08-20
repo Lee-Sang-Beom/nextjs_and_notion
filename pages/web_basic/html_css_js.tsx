@@ -32,7 +32,7 @@ export default function HTML_CSS_JS() {
                   HTML, CSS, JS
                 </h1>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  - HTML, CSS,JS는 웹 프로그래밍을 하려면 반드시 알아두어야 하는
+                  - HTML, CSS, JS는 웹 프로그래밍을 하려면 반드시 알아두어야 하는
                   상식이에요! 아래 내용을 보면서, 어떤 역할을 하는지에 대해 꼭
                   알아두도록 해요!
                 </p>
@@ -130,7 +130,7 @@ export default function HTML_CSS_JS() {
                 </div>
                 <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                   <p className="leading-relaxed text-base mb-4">
-                    {`HTML의, `}
+                    {`HTML의 `}
                     <span className="font-bold">{`HT(HyperText)`}</span>
                     {`는 일반적인 텍스트를 비순차적으로 접근할 수 있는 방법을 제공해요! 같은 페이지 내의 다른 데이터로 이동할 수도 있고, 다른 페이지로도 이동할 수도 있죠!`}
                   </p>

@@ -10,7 +10,7 @@ export default function Learn_More(props: Props) {
         <strong className="text-emerald-600 dark:text-yellow-400">
           아래 버튼
         </strong>
-        을 누르면, 저희가 추천하는 강의 영상으로 이동할 수 있어요!
+        을 누르면, 저희가 추천하는 자료를 확인하러 갈 수 있어요!
       </p>
       <a
         className="text-indigo-500 inline-flex items-center cursor-pointer mt-2"

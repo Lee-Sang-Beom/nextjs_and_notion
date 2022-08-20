@@ -9,7 +9,7 @@ export default function Hero() {
           프론트엔드 개발에 발을 들이신 여러분, 안녕하세요
         </h1>
         <p className="mb-4 leading-relaxed">
-          프론트엔드 개발자가 되기위해서는 기초적인 HTML, CSS, JS부터 시작하여
+          프론트엔드 개발자가 되기위해, 여러분들은 기초적인 HTML, CSS, JS부터 시작하여
           다양한 라이브러리와 프레임워크들을 만나게 될 거에요.
         </p>
         <p className="mb-4 leading-relaxed">
