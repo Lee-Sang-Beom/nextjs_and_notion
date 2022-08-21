@@ -198,7 +198,7 @@ export default function Rendering() {
                       STEP 4
                     </h2>
                     <p className="leading-relaxed mb-2">
-                      {`DOM트리와 CSSOM을 결합해 `}
+                      {`DOM 트리와 CSSOM 트리를 결합해 `}
                       <strong>{`렌더 트리`}</strong>
                       {`를 형성해요.`}
                     </p>
@@ -226,9 +226,9 @@ export default function Rendering() {
                       STEP 5
                     </h2>
                     <p className="leading-relaxed mb-4">
-                      {`HTML 파싱 중, JS를 의미하는`}
+                      {`HTML 파싱 중, JS를 의미하는 `}
                       <strong>{`<script>`}</strong>
-                      {`태그를 만나게 되면, DOM파싱을 중지하고, `}
+                      {`태그를 만나게 되면, DOM파싱을 중지하고 `}
                       <strong>{`JS엔진`}</strong>
                       {`에게 제어권한을 넘겨요. 그리고 스크립트를 모두 실행하면, 다시 DOM을 그리기 시작해요.`}
                     </p>

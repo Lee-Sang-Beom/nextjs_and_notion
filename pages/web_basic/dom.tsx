@@ -25,7 +25,7 @@ export default function Dom() {
             <div className="flex flex-col">
               {/* bar 길이*/}
               <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                <div className="w-0 h-full bg-indigo-500"></div>
+                <div className="w-1/5 h-full bg-indigo-500"></div>
               </div>
               {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
               <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -70,12 +70,11 @@ export default function Dom() {
             </div>
           </div>
 
-
           {/* 내용 2 : BOM */}
           <div className="container px-5 py-24 mx-auto flex flex-col flex-wrap">
             {/* bar 길이*/}
             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-              <div className="w-1/5 h-full bg-indigo-500"></div>
+              <div className="w-2/5 h-full bg-indigo-500"></div>
             </div>
             <div className="md:flex py-6 md:text-left items-center">
               <h2 className="animate-bounce sm:text-3xl text-2xl text-gray-900 font-bold title-font py-6 mb-2 w-full md:pt-10 md:w-2/5 text-center">
@@ -142,7 +141,7 @@ export default function Dom() {
           <div className="container px-5 py-24 mx-auto flex flex-col flex-wrap">
             {/* bar 길이*/}
             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-              <div className="w-2/5 h-full bg-indigo-500"></div>
+              <div className="w-3/5 h-full bg-indigo-500"></div>
             </div>
             <div className="md:flex py-6 md:text-left items-center">
             <h2 className="animate-bounce sm:text-3xl text-2xl text-gray-900 font-bold title-font py-6 mb-2 w-full md:pt-10 md:w-2/5 text-center">
@@ -184,6 +183,172 @@ export default function Dom() {
                     url={`https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Introduction`}
                     hover_title={`출처 : MDN`}
                   />
+              </div>
+            </div>
+          </div>
+
+          {/* 내용 4 : CRP */}
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-col">
+              {/* bar 길이*/}
+              <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                <div className="w-4/5 h-full bg-indigo-500"></div>
+              </div>
+              {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
+              <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                  {`CRP(Critical Rendering Path)`}
+                </h1>
+                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                  {`- 웹 브라우저가 원본 HTML문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 뷰 포트에 표시하기까지의 과정을 의미해요. 이 과정은 DOM과 밀접한 관련이 있으니, 살펴보고 가도록 해요!`}
+                </p>
+              </div>
+            </div>
+            {/*CRP STEP*/}
+            <div className="flex-col sm:-ml-18 md:-ml-28">
+              {/* step 1 */}
+              <div className="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div className="h-full w-6 mt-10 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                  1
+                </div>
+                <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 22 23" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">파싱</h2>
+                    <p className="leading-relaxed text-sm">{`- 브라우저의 렌더링 엔진은 서버로부터 받은 HTML, CSS파일 등을 해석하는 과정을 거쳐요.`}</p>
+                  </div>
+                </div>
+              </div>
+              {/* step 2 */}
+              <div className="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                  2
+                </div>
+                <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">DOM 트리 구축</h2>
+                    <p className="leading-relaxed text-sm">{`- 렌더링 엔진은 HTML 문서를 파싱하여, DOM 트리를 만들어요.`}</p>
+                  </div>
+                </div>
+              </div>
+              {/* step 3 */}
+              <div className="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                  3
+                </div>
+                <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">CSSOM 트리 구축</h2>
+                    <p className="leading-relaxed text-sm">{`- 렌더링 엔진은 <style> 태그를 만나게 되면, HTML파싱을 멈추고 CSS파싱 작업을 시작하여 CSSOM 트리를 구축해요.`}</p>
+                  </div>
+                </div>
+              </div>
+              {/* step 4 */}
+              <div className="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                  4
+                </div>
+                <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">JS실행</h2>
+                    <p className="leading-relaxed mb-1 text-sm">{`- 이 과정은 DOM 트리를 구성하는 과정 사이에 일어날 수도 있어요.`}</p>
+                    <p className="leading-relaxed mb-1 text-sm">{`- HTML 파싱 중, JS를 의미하는 <script> 태그나 외부 스크립트 참조 구문을 만나게 되면, DOM 파싱을 중지하고 JS엔진에게 제어 권한을 넘겨 스크립트를 실행해요.`}</p>
+                    <p className="leading-relaxed text-sm">{`- 스크립트 실행이 끝나고 나면, 다시 DOM 트리를 그리기 시작해요.`}</p>
+                  </div>
+                </div>
+              </div>
+              {/* step5 */}
+              <div className="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                  5
+                </div>
+                <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">렌더 트리 구축</h2>
+                    <p className="leading-relaxed text-sm">{`- DOM 트리와 CSSOM 트리를 결합해 렌더 트리를 형성해요.`}</p>
+                  </div>
+                </div>
+              </div>
+              {/* step6 */}
+              <div className="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                  6
+                </div>
+                <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">레이아웃 생성</h2>
+                    <p className="leading-relaxed text-sm">{`- 디바이스 viewport 내에서, 노드들의 정확한 위치와 크기를 계산하는 레이아웃 단계를 거쳐요.`}</p>
+                  </div>
+                </div>
+              </div>
+              {/* step7 */}
+              <div className="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+                <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full mb-10 w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                  7
+                </div>
+                <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                  <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 -2 25 26" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+
+                  </div>
+                  <div className="flex-grow sm:pl-6 mt-6 sm:mt-0 ">
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">페인트</h2>
+                    <p className="leading-relaxed mb-1 text-sm">{`- 렌더링 엔진은 Paint Event를 발생시켜요.`}</p>
+                    <p className="leading-relaxed text-sm">{`- 해당 단계에서는, 렌더 트리를 탐색하며 레이아웃 단계를 거쳐 알아낸 구성 노드 정보를 이용해, 노드들을 화면에 표현해요.`}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
