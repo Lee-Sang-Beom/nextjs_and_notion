@@ -8,8 +8,9 @@ import MoveBtn from "../../components/moveBtn";
 
 export default function Dom() {
   // 페이지 넘김 정보
-  // const prev = "/web_basic/html_css_js";
-  // const next = "/web_basic/dom";
+  const prev = "/web_basic/rendering";
+  const next = undefined;
+
   return (
     <>
       <Layout>
@@ -326,7 +327,7 @@ export default function Dom() {
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
                     <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">레이아웃 생성</h2>
-                    <p className="leading-relaxed text-sm">{`- 디바이스 viewport 내에서, 노드들의 정확한 위치와 크기를 계산하는 레이아웃 단계를 거쳐요.`}</p>
+                    <p className="leading-relaxed text-sm">{`- 디바이스 view port 내에서, 노드들의 정확한 위치와 크기를 계산하는 레이아웃 단계를 거쳐요.`}</p>
                   </div>
                 </div>
               </div>
@@ -389,8 +390,96 @@ export default function Dom() {
             </div>
           </div>
 
-          
+          {/* 내용 5 : DOM 목적 */}
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-col">
+              {/* bar 길이*/}
+              <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                <div className="w-full h-full bg-indigo-500"></div>
+              </div>
+              {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
+              <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
+                  {`목적`}
+                </h1>
+                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                  {`그렇다면 DOM은 대체 왜 쓰이는 것일까요? HTML코드는 정적인 텍스트이므로, 웹 화면이 사용자와 동적으로 상호작용을 하기 위해서 DOM이 필요해요. `}
+                </p>
+                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                  {`앞서 JS를 활용해 문서 구조에 접근할 수 있고, 상호작용할 수 있다고 말했죠? 
+                  즉, 문서 내의 각 요소들에 대해 자바스크립트를 활용해 여러 작업을 시도할 수 있는데, DOM이 해당 수정 및 제어 작업을 가능하도록 문서의 구조화된 표현을 제공하고 있는 것이에요. `}
+                </p>
+                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                  {`아래는 DOM이 언제 활용될 수 있는지를 정리한 것이에요. 정리하는 차원에서 읽고 넘어가도록 해요!`}
+                </p>
+              </div>
+            </div>
+
+            {/* {구체적 목적} */}
+            <div className="flex flex-wrap sm:mx-auto sm:mb-2 -mx-2">
+              <div className="p-2 sm:w-1/2 w-full">
+                <div className="bg-gray-200 rounded flex p-4 h-full items-center justify-center">
+                  <span className="title-font font-medium text-sm">{`view port 에 무엇을 렌더링할지 결정할 때`}</span>
+                </div>
+              </div>
+              <div className="p-2 sm:w-1/2 w-full">
+                <div className="bg-gray-200 rounded flex p-4 h-full items-center justify-center">
+                  <span className="title-font font-medium text-sm">{`자바스크립트로 새로운 HTML 요소나 속성을 추가/제거할 때`}</span>
+                </div>
+              </div>
+              <div className="p-2 sm:w-1/2 w-full">
+                <div className="bg-gray-200 rounded flex p-4 h-full items-center justify-center">
+
+                  <span className="title-font font-medium text-sm">{`자바스크립트로 HTML 문서의 HTML 요소/속성을 변경할 때`}</span>
+                </div>
+              </div>
+              <div className="p-2 sm:w-1/2 w-full">
+                <div className="bg-gray-200 rounded flex p-4 h-full items-center justify-center">
+                  <span className="title-font font-medium text-sm">{`자바스크립트로 HTML 문서의 CSS 스타일 요소를 변경할 때`}</span>
+                </div>
+              </div>
+              <div className="p-2 sm:w-1/2 w-full">
+                <div className="bg-gray-200 rounded flex p-4 h-full items-center justify-center">
+                  <span className="title-font font-medium text-sm">{`자바스크립트로 HTML 문서에 새로운 HTML 이벤트를 추가할 때`}</span>
+                </div>
+              </div>
+              <div className="p-2 sm:w-1/2 w-full">
+                <div className="bg-gray-200 rounded flex p-4 h-full items-center justify-center">
+                  <span className="title-font font-medium text-sm ">{`자바스크립트로 HTML 문서에 작성된 HTML 이벤트에 대해 반응할 때`}</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
+
+        {/*마무리*/}
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 mx-auto">
+            <h1 className="sm:text-2xl text-xl font-bold title-font text-center text-gray-900 mb-12">
+              그 외 추천 유튜브 영상
+            </h1>
+            <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+              <Recommend_Youtube
+                channel_name={`얄팍한 코딩사전`}
+                video_title={`웹개발 필수개념! DOM이 뭔가요? (+ Web API)`}
+                url={`https://www.youtube.com/watch?v=mFawNZz_Uu0&t=1s`}
+              />
+              <Recommend_Youtube
+                channel_name={`유노코딩`}
+                video_title={`DOM이란 뭘까요? 초 짧은 설명..!`}
+                url={`https://www.youtube.com/watch?v=zyz1eJJjsNE`}
+              />
+              <Recommend_Youtube
+                channel_name={`유노코딩`}
+                video_title={`입문자를 위한 자바스크립트 기초 #10 DOM (Document Object Model)`}
+                url={`https://www.youtube.com/watch?v=QTWHK9eyuc8`}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/*이동하기*/}
+        <MoveBtn prev={prev} next={next} />
       </Layout>
     </>
   );

@@ -68,7 +68,7 @@ export default function Rendering() {
                 {`이에요.`}
               </p>
               <p className="mb-4 leading-relaxed">
-                {`웹 브라우저가 원본 HTML, CSS, JS문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 View port에 표시하기까지의 과정을 `}
+                {`웹 브라우저가 원본 HTML, CSS, JS문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 view port에 표시하기까지의 과정을 `}
                <strong>{`Critical Rendering Path`}</strong>
                 {`라고 불러요.`}
               </p>
@@ -329,7 +329,7 @@ export default function Rendering() {
                       STEP 6
                     </h2>
                     <p className="leading-relaxed mb-2">
-                      {`디바이스 viewport 내에서, 노드들의 정확한 위치와 크기를 계산해요.`}
+                      {`디바이스 view port 내에서, 노드들의 정확한 위치와 크기를 계산해요.`}
                     </p>
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left">
