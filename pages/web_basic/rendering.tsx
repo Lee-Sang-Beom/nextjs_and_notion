@@ -93,7 +93,7 @@ export default function Rendering() {
             </div>
             {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
             <div className="flex flex-wrap sm:flex-row flex-col py-6">
-                <h1 className="sm:w-2/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
                   {`렌더링 과정`}
                 </h1>
             </div>
@@ -374,7 +374,7 @@ export default function Rendering() {
             </div>
             {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
             <div className="flex flex-wrap sm:flex-row flex-col py-6">
-                <h1 className="sm:w-2/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
                   {`리플로우와 리페인트`}
                 </h1>
             </div>

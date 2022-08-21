@@ -85,54 +85,54 @@ export default function Dom() {
                   {`모든 서비스는 웹 브라우저를 바탕으로 실행되기 때문에, 웹 서비스 개발은 브라우저와 밀접한 관련이 있어요.`}
                 </p>
                 <p className="leading-relaxed text-base mb-4">
-                  {`이 브라우저와 관련된 객체 집합이 `} 
+                  {`이 브라우저와 관련된 객체 집합이 `}
                   <strong>{`BOM(브라우저 객체 모델)`}</strong>
                   {`이에요. 이것을 이용해서, 브라우저와 관련된 기능을 구성할 수 있어요.`}
                 </p>
                 <p className="leading-relaxed text-base mb-2">
                   {`아래에서 다룰 `}
                   <strong>{`DOM은`}</strong>
-                  {` BOM 중 하나이며, 이 BOM의 최상위객체는 `} 
+                  {` BOM 중 하나이며, 이 BOM의 최상위객체는 `}
                   <strong>{`window`}</strong>
                   {`객체에요. window객체는 모든 객체가 소속된 객체이고, 전역 객체이면서 창이나 프레임을 의미해요. 
                   아래와 같은 종류가 존재해요.`}
                 </p>
                 <div className="leading-relaxed text-base mb-8">
-                    <ul className="list-disc ml-7 text-sm  text-slate-500 dark:text-slate-300">
-                      <li className="mb-1 font-semibold text-left">
-                        {`window.screen`}
-                        <p className="mt-1 mb-2 text-xs font-normal">
-                          {`- 사용자 환경의 디스플레이 객체`}
-                        </p>
-                      </li>
-                      <li className="mb-1 font-semibold text-left">
-                        {`window.location`}
-                        <p className="mt-1 mb-2 text-xs font-normal">
-                          {`- 현재 페이지의 url을 다루는 객체`}
-                        </p>
-                      </li>
-                      <li className="mb-1 font-semibold text-left">
-                        {`window.navigator`}
-                        <p className="mt-1 mb-2 text-xs font-normal">
-                          {`- 웹 브라우저 및 브라우저 환경 정보 객체`}
-                        </p>
-                      </li>
-                      <li className="mb-1 font-semibold text-left">
-                        {`window.history`}
-                        <p className="mt-1 mb-2 text-xs font-normal">
-                          {`- 현재 브라우저가 접근해왔던 url history(기록)`}
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                  <p className="leading-relaxed text-base mb-4">
+                  <ul className="list-disc ml-7 text-sm  text-slate-500 dark:text-slate-300">
+                    <li className="mb-1 font-semibold text-left">
+                      {`window.screen`}
+                      <p className="mt-1 mb-2 text-xs font-normal">
+                        {`- 사용자 환경의 디스플레이 객체`}
+                      </p>
+                    </li>
+                    <li className="mb-1 font-semibold text-left">
+                      {`window.location`}
+                      <p className="mt-1 mb-2 text-xs font-normal">
+                        {`- 현재 페이지의 url을 다루는 객체`}
+                      </p>
+                    </li>
+                    <li className="mb-1 font-semibold text-left">
+                      {`window.navigator`}
+                      <p className="mt-1 mb-2 text-xs font-normal">
+                        {`- 웹 브라우저 및 브라우저 환경 정보 객체`}
+                      </p>
+                    </li>
+                    <li className="mb-1 font-semibold text-left">
+                      {`window.history`}
+                      <p className="mt-1 mb-2 text-xs font-normal">
+                        {`- 현재 브라우저가 접근해왔던 url history(기록)`}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <p className="leading-relaxed text-base mb-4">
                   {`참고로, 브라우저에서 제공하는 이 모든 기능을 통틀어 `}<strong>{`Web API`}</strong>{`라고 해요.
                    Web API는 자바스크립트의 기능은 아니지만 자바스크립트 등에 의해 제어될 수 있도록 브라우저에서 제공하고 있어요.`}
-                  </p>
-                  <Learn_More
-                    url={`https://geniee.tistory.com/33`}
-                    hover_title={`출처 : realhee님의 포스트`}
-                  />
+                </p>
+                <Learn_More
+                  url={`https://geniee.tistory.com/33`}
+                  hover_title={`출처 : realhee님의 포스트`}
+                />
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function Dom() {
               <div className="w-3/5 h-full bg-indigo-500"></div>
             </div>
             <div className="md:flex py-6 md:text-left items-center">
-            <h2 className="animate-bounce sm:text-3xl text-2xl text-gray-900 font-bold title-font py-6 mb-2 w-full md:pt-10 md:w-2/5 text-center">
+              <h2 className="animate-bounce sm:text-3xl text-2xl text-gray-900 font-bold title-font py-6 mb-2 w-full md:pt-10 md:w-2/5 text-center">
                 {`DOM`}
               </h2>
               <div className="w-full md:w-3/5 md:pl-6">
@@ -173,16 +173,16 @@ export default function Dom() {
                     <li className="mb-1 text-left">{`DOM은 `}<strong>{`window.document객체`}</strong>{`에요. 즉, DOM은 window객체의 하위 객체에요.`}</li>
                   </ul>
                 </div>
-                  <p className="leading-relaxed text-base mb-4">
+                <p className="leading-relaxed text-base mb-4">
                   {`우리는 JavaScript와 같은 스크립팅 언어를 이용해 DOM을 수정하고 웹 페이지 요소를 제어할 수 있어요. 
                    이렇게 할 수 있는 이유는, 웹 콘텐츠(HTML요소)를 제어/조작할 수 있는 `}
-                   <strong>{`DOM API`}</strong>
-                   {`라는 것이 제공되고 있기 때문이에요.`}
-                  </p>
-                  <Learn_More
-                    url={`https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Introduction`}
-                    hover_title={`출처 : MDN`}
-                  />
+                  <strong>{`DOM API`}</strong>
+                  {`라는 것이 제공되고 있기 때문이에요.`}
+                </p>
+                <Learn_More
+                  url={`https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Introduction`}
+                  hover_title={`출처 : MDN`}
+                />
               </div>
             </div>
           </div>
@@ -196,14 +196,15 @@ export default function Dom() {
               </div>
               {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
               <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
                   {`CRP(Critical Rendering Path)`}
                 </h1>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`- 웹 브라우저가 원본 HTML문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 뷰 포트에 표시하기까지의 과정을 의미해요. 이 과정은 DOM과 밀접한 관련이 있으니, 살펴보고 가도록 해요!`}
+                  {`웹 브라우저가 원본 HTML문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 뷰 포트에 표시하기까지의 과정을 의미해요. 이 과정은 DOM과 밀접한 관련이 있으니, 살펴보고 가도록 해요!`}
                 </p>
               </div>
             </div>
+
             {/*CRP STEP*/}
             <div className="flex-col sm:-ml-18 md:-ml-28">
               {/* step 1 */}
@@ -216,8 +217,9 @@ export default function Dom() {
                 </div>
                 <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                   <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 22 23" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
@@ -256,7 +258,7 @@ export default function Dom() {
                 </div>
                 <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                   <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
@@ -298,12 +300,12 @@ export default function Dom() {
                 </div>
                 <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                   <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">렌더 트리 구축</h2>
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">{`＊렌더 트리 구축`}</h2>
                     <p className="leading-relaxed text-sm">{`- DOM 트리와 CSSOM 트리를 결합해 렌더 트리를 형성해요.`}</p>
                   </div>
                 </div>
@@ -318,7 +320,7 @@ export default function Dom() {
                 </div>
                 <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                   <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
@@ -338,10 +340,9 @@ export default function Dom() {
                 </div>
                 <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                   <div className="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 -2 25 26" stroke="currentColor" strokeWidth="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 -2 25 26" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
-
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0 ">
                     <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">페인트</h2>
@@ -351,7 +352,44 @@ export default function Dom() {
                 </div>
               </div>
             </div>
+
+            {/* 렌더 트리 */}
+            <div className="text-center mt-16 mb-20">
+              <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center mb-4">{`렌더 트리(Render Tree)`}</h1>
+              <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+                {`웹 페이지에 표시될 HTML, 스타일 요소로 구성되는 트리에요. 브라우저는 렌더트리를 생성하기 위해 아래의 두 모델을 필요로 해요.`}
+                </p>
+              <div className="flex mt-6 justify-center">
+                <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              </div>
+            </div>
+            <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6 justify-center">
+              <div className="p-4 md:w-1/2 flex flex-col text-center items-center">
+                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="-1 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="flex-grow">
+                  <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{`DOM(Document Object Model)`}</h2>
+                  <p className="leading-relaxed text-base text-center w-full">{`HTML 요소들의 구조화된 표현`}</p>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/2 flex flex-col text-center items-center">
+                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="-1 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="flex-grow">
+                  <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{`CSSOM(Cascading Style Sheets Object Model)`}</h2>
+                  <p className="leading-relaxed text-base w-full text-center">{`요소들과 연관된 스타일 정보의 구조화된 표현`}</p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          
         </section>
       </Layout>
     </>
