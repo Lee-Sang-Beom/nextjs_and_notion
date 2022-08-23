@@ -225,7 +225,7 @@ export default function Dom() {
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
                     <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">파싱</h2>
-                    <p className="leading-relaxed text-sm">{`- 브라우저의 렌더링 엔진은 서버로부터 받은 HTML, CSS파일 등을 해석하는 과정을 거쳐요.`}</p>
+                    <p className="leading-relaxed text-sm"><strong>{`- 브라우저의 렌더링 엔진`}</strong>{`은 서버로부터 받은 HTML, CSS파일 등을 해석하는 과정을 거쳐요.`}</p>
                   </div>
                 </div>
               </div>
@@ -245,7 +245,7 @@ export default function Dom() {
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
                     <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">DOM 트리 구축</h2>
-                    <p className="leading-relaxed text-sm">{`- 렌더링 엔진은 HTML 문서를 파싱하여, DOM 트리를 만들어요.`}</p>
+                    <p className="leading-relaxed text-sm">{`- 렌더링 엔진은 HTML 문서를 파싱하여, `}<strong>DOM 트리</strong>{`를 만들어요.`}</p>
                   </div>
                 </div>
               </div>
@@ -265,7 +265,7 @@ export default function Dom() {
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
                     <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">CSSOM 트리 구축</h2>
-                    <p className="leading-relaxed text-sm">{`- 렌더링 엔진은 <style> 태그를 만나게 되면, HTML파싱을 멈추고 CSS파싱 작업을 시작하여 CSSOM 트리를 구축해요.`}</p>
+                    <p className="leading-relaxed text-sm">{`- 렌더링 엔진은 <style> 태그를 만나게 되면, HTML파싱을 멈추고 CSS파싱 작업을 시작하여 `}<strong>CSSOM 트리</strong>{`를 구축해요.`}</p>
                   </div>
                 </div>
               </div>
@@ -307,7 +307,7 @@ export default function Dom() {
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
                     <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">{`＊렌더 트리 구축`}</h2>
-                    <p className="leading-relaxed text-sm">{`- DOM 트리와 CSSOM 트리를 결합해 렌더 트리를 형성해요.`}</p>
+                    <p className="leading-relaxed text-sm">{`- DOM 트리와 CSSOM 트리를 결합해 `} <strong>렌더 트리</strong>{`를 형성해요.`}</p>
                   </div>
                 </div>
               </div>
@@ -327,7 +327,7 @@ export default function Dom() {
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
                     <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">레이아웃 생성</h2>
-                    <p className="leading-relaxed text-sm">{`- 디바이스 view port 내에서, 노드들의 정확한 위치와 크기를 계산하는 레이아웃 단계를 거쳐요.`}</p>
+                    <p className="leading-relaxed text-sm">{`- 디바이스 view port 내에서, 노드들의 정확한 위치와 크기를 계산하는 `} <strong>레이아웃</strong>{` 단계를 거쳐요.`}</p>
                   </div>
                 </div>
               </div>
@@ -359,7 +359,7 @@ export default function Dom() {
               <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center mb-4">{`렌더 트리(Render Tree)`}</h1>
               <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
                 {`웹 페이지에 표시될 HTML, 스타일 요소로 구성되는 트리에요. 브라우저는 렌더트리를 생성하기 위해 아래의 두 모델을 필요로 해요.`}
-                </p>
+              </p>
               <div className="flex mt-6 justify-center">
                 <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
               </div>
@@ -378,7 +378,7 @@ export default function Dom() {
               </div>
               <div className="p-4 md:w-1/2 flex flex-col text-center items-center">
                 <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="-1 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="-1 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
@@ -407,7 +407,7 @@ export default function Dom() {
                 </p>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
                   {`앞서 JS를 활용해 문서 구조에 접근할 수 있고, 상호작용할 수 있다고 말했죠? 
-                  즉, 문서 내의 각 요소들에 대해 자바스크립트를 활용해 여러 작업을 시도할 수 있는데, DOM이 해당 수정 및 제어 작업을 가능하도록 문서의 구조화된 표현을 제공하고 있는 것이에요. `}
+                  즉, 문서 내의 각 요소들에 대해 자바스크립트를 활용해 여러 작업을 시도할 수 있는데, `} <strong>{`DOM이 해당 수정 및 제어 작업을 가능하도록 문서의 구조화된 표현을 제공하고 있는 것`}</strong>{`이에요. `}
                 </p>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
                   {`아래는 DOM이 언제 활용될 수 있는지를 정리한 것이에요. 정리하는 차원에서 읽고 넘어가도록 해요!`}
