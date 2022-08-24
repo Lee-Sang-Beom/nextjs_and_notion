@@ -70,3 +70,24 @@ p {
 }
 
 
+/* code highlighting */
+.gataby-highlight{ 
+    @apply flex flex-col justify-center
+    bg-gray-100 dark:bg-gray-800
+    p-1.5 text-slate-700 dark:text-slate-200 w-full lg:w-1/2
+     border-slate-500/40 dark:border-slate-400 text-sm sm:text-lg overflow-hidden
+     border rounded-lg 
+}
+
+.gataby-highlight pre.language-jsx{
+    @apply m-1 sm:m-4
+}
+
+div.language-jsx{
+    @apply w-full
+}
+
+.token_comment{
+    @apply text-xs text-blue-800 dark:text-blue-300
+
+}
