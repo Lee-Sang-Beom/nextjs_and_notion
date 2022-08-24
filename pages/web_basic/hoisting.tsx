@@ -86,7 +86,7 @@ export default function Hoisting() {
                                 <strong>{`선언된 식별자들에 대한 정보`}</strong>
                                 {`를 기억하기 위해, 아래쪽에 존재하는 내용 중 필요한 변수와 함수의 선언을 스코프 범위의 최상단으로 `}
                                 <strong>{`내부적으로 끌어올려 처리`}</strong>
-                                {`하는 것이 바로 `}<strong>{`호이스팅`}</strong> {`이라고 볼 수 있어요.`}
+                                {`하는 것이 바로 `}<strong>{`호이스팅`}</strong>{`이라고 볼 수 있어요.`}
                             </p>
                             <p className="mb-4 leading-relaxed">
                                 {`스코프 상단에 선언부들이 내부적으로 끌어올려지는 것이기 때문에, 자바스크립트의 모든 선언에는 호이스팅이 일어난다고 볼 수 있어요.`}
@@ -108,7 +108,9 @@ export default function Hoisting() {
                                 <div className="w-2/5 h-full bg-indigo-500"></div>
                             </div>
                         </div>
-                        <div className="lg:w-full mx-auto flex flex-wrap py-6 mb-2">
+                        
+                        {/* var 호이스팅 */}
+                        <div className="lg:w-full mx-auto flex flex-wrap py-6 mb-4">
                             {/* flexbox - left 내용 */}
                             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                                 <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`변수 호이스팅 (var)`}</h1>
@@ -214,6 +216,96 @@ export default function Hoisting() {
                                 </pre>
                             </div>
                         </div>
+
+                        {/* let, const 호이스팅 */}
+                        <div className="lg:w-full mx-auto flex flex-wrap py-6 mt-4 mb-2">
+                            {/* flexbox - left 내용 */}
+                            <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+                                <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`변수 호이스팅 (let, const)`}</h1>
+                                <p className="leading-relaxed mb-4">{`let, const 키워드로 선언된 변수들도 var 키워드로 선언된 변수처럼 `} <strong>{`JavaScript Parser(엔진)`}</strong>
+                                {`에 의해, 선언문이 해당 스코프의 최상단으로 끌어올려지기 때문에 호이스팅이 일어난다고 볼 수 있어요. `}
+                                <strong>{`즉, 선언이 코드 실행 이전에, 메모리에 저장되는 과정은 맞다는 의미에요.`}</strong></p>
+                                
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`하지만, var 키워드로 선언된 변수와는 다르게, let, const 키워드로 선언된 변수들은 `}
+                                    <strong>{`호이스팅이 발생하지 않는 것처럼 동작해요.`}</strong>
+                                    {` 왜냐하면 초기화되지 않은 상태로 `}
+                                    <strong>{`선언 자체만 메모리에 저장`}</strong>{`되기 때문이에요.`}
+                                </p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`let, const로 선언된 변수의 경우, var로 선언된 변수와는 다르게 `}
+                                    <strong>{`선언 단계와 초기화 단계가 분리되어 실행되요. `}</strong>
+                                    {`JavaScript Parser(엔진)이 식별자를 기록하긴 하지만 값을 초기화하지 않기 때문에 선언문 이전에 식별자 값을 참조하려 하면 `}
+                                    <strong>{`Reference Error`}</strong>
+                                    {`가 발생하는 것이에요.`}
+                                </p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`이렇게 let, const으로 선언되는 변수의 경우, 스코프의 최상단 지점으로 끌어올려진 선언부 지점이 아니라, `}
+                                    <strong>{`변수를 실질적으로 선언하는 라인을 실행하기 이전에는 `}</strong>
+                                    {`식별자를 참조할 수 없다는 특징이 있어요. 이 참조 불가능한 구역을 `}
+                                    <strong>{`일시적 사각지대(TDZ : Temporal Dead Zone)`}</strong>
+                                    {`라고 해요.`}
+                                </p>
+                            </div>
+                            {/* flexbox - right 내용 */}
+                            <div className="gataby-highlight">
+                                <pre className="language-jsx">
+                                    <code className="language-jsx">
+                                        <div className="language-jsx">
+                                            {`console`}
+                                            <span className="token_punctuation">.</span>
+                                            <span className="token_function">log</span>
+                                            <span className="token_punctuation">{`(`}</span>
+                                            {`name_1`}
+                                            <span className="token_punctuation">{`);`}</span>
+                                            <span className="token_comment">{` // 출력 결과는 무엇일까?`}</span>
+                                        </div>
+                                        <div className="language-jsx">
+                                            <span className="token keyword">let</span>
+                                            {` name_1 `}
+                                            <span className="token operator">=</span>
+                                            {` "Alice";`}
+                                        </div>
+                                    </code>
+                                </pre>
+                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (javascript parser 내부에서 처리되는 결과)`}</div>
+                                <pre className="language-jsx">
+                                    <code className="language-jsx">
+                                        <div className="language-jsx">
+                                            <div className="token_comment">{`// 호이스팅 발생! 하지만 초기화되지 않음.`}</div>
+                                            <span className="token keyword">let</span>
+                                            {` name_1 `}
+                                            <span className="token operator">=</span>
+                                        </div>
+                                        
+                                        <div className="language-jsx">
+                                            {`console`}
+                                            <span className="token_punctuation">.</span>
+                                            <span className="token_function">log</span>
+                                            <span className="token_punctuation">{`(`}</span>
+                                            {`name_1`}
+                                            <span className="token_punctuation">{`);`}</span>
+                                            <span className="token_comment">{` // reference error 발생!`}</span>
+                                        </div>
+
+                                        <div className="language-jsx">
+                                            {`name_1 `}
+                                            <span className="token operator">=</span>
+                                            {` "Alice";`}
+                                            <span className="token_comment">{` // 할당 단계 : 변수에 값 할당`}</span>
+                                        </div>
+                                        
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
             </Layout>
