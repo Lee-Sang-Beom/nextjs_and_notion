@@ -20,7 +20,7 @@ export default function Hoisting() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-1/5 h-full bg-indigo-500"></div>
+                                <div className="w-1/4 h-full bg-indigo-500"></div>
                             </div>
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -75,7 +75,7 @@ export default function Hoisting() {
                                 </ul>
                             </div>
                             <p className="mb-4 leading-relaxed">
-                                <strong>{`JavaScript Parser(엔진)`}</strong>{`는 코드를 실행하기 전에 함수 안을 훑으면서, 실행 가능한 코드를 형상화하고 구분하는 과정을 거쳐요. 이것은 실행 컨텍스트를 위한 과정이에요`}
+                                <strong>{`JavaScript Parser(엔진)`}</strong>{`은 코드를 실행하기 전에 함수 안을 훑으면서, 실행 가능한 코드를 형상화하고 구분하는 과정을 거쳐요. 이것은 실행 컨텍스트를 위한 과정이에요`}
                             </p>
                             <p className="mb-4 leading-relaxed">
                                 {`이 실행 컨텍스트를 위한 과정에서 발생하는 것이 `}
@@ -108,14 +108,14 @@ export default function Hoisting() {
                                 <div className="w-2/5 h-full bg-indigo-500"></div>
                             </div>
                         </div>
-                        
+
                         {/* var 호이스팅 */}
                         <div className="lg:w-full mx-auto flex flex-wrap py-6 mb-4">
                             {/* flexbox - left 내용 */}
                             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                                 <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`변수 호이스팅 (var)`}</h1>
                                 <p className="leading-relaxed mb-4">{`var 키워드로 선언된 변수를 호이스팅하는 경우, `} <strong>{`JavaScript Parser(엔진)`}</strong>
-                                {`은 선언과 함께 `}<strong>{`undefined로 변수를 초기화해`}</strong>{`, 메모리에 저장해요.`}</p>
+                                    {`은 선언과 함께 `}<strong>{`undefined로 변수를 초기화해`}</strong>{`, 메모리에 저장해요.`}</p>
                                 <div className="flex border-t border-gray-200 py-2">
                                 </div>
                                 <p className="leading-relaxed mb-4">
@@ -139,7 +139,7 @@ export default function Hoisting() {
                                         <li className="mb-2 font-semibold text-left list-decimal">
                                             {`선언 단계`}
                                             <p className="ml-1 mt-1 mb-1 text-xs font-normal">
-                                                {`- 변수를 실행 컨텍스트에 등록해, JS엔진에 변수의 존재를 알리는 단계`}
+                                                {`- 변수를 실행 컨텍스트에 등록해, JavaScript Parser(엔진)에 변수의 존재를 알리는 단계`}
                                             </p>
                                             <p className="ml-1 mb-1 text-xs font-normal">
                                                 {`- 이 변수 객체는 스코프가 참조하는 대상이 되요.`}
@@ -194,7 +194,7 @@ export default function Hoisting() {
                                             <span className="token operator">=</span>
                                             {` undefined; `}
                                         </div>
-                                        
+
                                         <div className="language-jsx">
                                             {`console`}
                                             <span className="token_punctuation">.</span>
@@ -211,21 +211,21 @@ export default function Hoisting() {
                                             {` "Alice";`}
                                             <span className="token_comment">{` // 할당 단계 : 변수에 값 할당`}</span>
                                         </div>
-                                        
+
                                     </code>
                                 </pre>
                             </div>
                         </div>
 
                         {/* let, const 호이스팅 */}
-                        <div className="lg:w-full mx-auto flex flex-wrap py-6 mt-4 mb-2">
+                        <div className="lg:w-full mx-auto flex flex-wrap py-6 mt-4">
                             {/* flexbox - left 내용 */}
                             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                                 <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`변수 호이스팅 (let, const)`}</h1>
-                                <p className="leading-relaxed mb-4">{`let, const 키워드로 선언된 변수들도 var 키워드로 선언된 변수처럼 `} <strong>{`JavaScript Parser(엔진)`}</strong>
-                                {`에 의해, 선언문이 해당 스코프의 최상단으로 끌어올려지기 때문에 호이스팅이 일어난다고 볼 수 있어요. `}
-                                <strong>{`즉, 선언이 코드 실행 이전에, 메모리에 저장되는 과정은 맞다는 의미에요.`}</strong></p>
-                                
+                                <p className="leading-relaxed mb-4">{`let, const 키워드로 선언된 변수들도 var 키워드로 선언된 변수처럼 `} <strong>{`JavaScript Parser`}</strong>
+                                    {`에 의해, 선언문이 해당 스코프의 최상단으로 끌어올려지기 때문에 호이스팅이 일어난다고 볼 수 있어요. `}
+                                    <strong>{`즉, 선언이 코드 실행 이전에, 메모리에 저장되는 과정은 맞다는 의미에요.`}</strong></p>
+
                                 <div className="flex border-t border-gray-200 py-2">
                                 </div>
                                 <p className="leading-relaxed mb-4">
@@ -239,7 +239,7 @@ export default function Hoisting() {
                                 <p className="leading-relaxed mb-4">
                                     {`let, const로 선언된 변수의 경우, var로 선언된 변수와는 다르게 `}
                                     <strong>{`선언 단계와 초기화 단계가 분리되어 실행되요. `}</strong>
-                                    {`JavaScript Parser(엔진)이 식별자를 기록하긴 하지만 값을 초기화하지 않기 때문에 선언문 이전에 식별자 값을 참조하려 하면 `}
+                                    {`JavaScript Parser(엔진)가 식별자를 기록하긴 하지만 값을 초기화하지 않기 때문에 선언문 이전에 식별자 값을 참조하려 하면 `}
                                     <strong>{`Reference Error`}</strong>
                                     {`가 발생하는 것이에요.`}
                                 </p>
@@ -283,7 +283,7 @@ export default function Hoisting() {
                                             {` name_1 `}
                                             <span className="token operator">=</span>
                                         </div>
-                                        
+
                                         <div className="language-jsx">
                                             {`console`}
                                             <span className="token_punctuation">.</span>
@@ -300,12 +300,177 @@ export default function Hoisting() {
                                             {` "Alice";`}
                                             <span className="token_comment">{` // 할당 단계 : 변수에 값 할당`}</span>
                                         </div>
-                                        
+
                                     </code>
                                 </pre>
                             </div>
                         </div>
 
+                    </div>
+
+                    {/* 내용 3 : 함수 호이스팅 */}
+                    <div className="container px-5 py-24 mx-auto">
+                        <div className="flex flex-col">
+                            {/* bar 길이*/}
+                            <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                                <div className="w-3/4 h-full bg-indigo-500"></div>
+                            </div>
+                        </div>
+
+                        {/* 함수 표현식*/}
+                        <div className="lg:w-full py-6 mb-4 mx-auto flex flex-wrap">
+                            <div className="gataby-highlight mb-6">
+                                <pre className="language-jsx">
+                                    <code className="language-jsx">
+
+                                        <div className="language-jsx">
+                                            {`study_Javascript`}
+                                            <span className="token_punctuation">{`(`}</span>
+                                            <span className="token_punctuation">{`);`}</span>
+                                            <span className="token_comment">{` // 출력 결과는 무엇일까?`}</span>
+                                        </div>
+                                        <div className="language-jsx mb-4">
+                                            <span className="token keyword">var</span>
+                                            {` study_Javascript `}
+                                            <span className="token operator">=</span>
+                                            {` () => {`}
+                                        </div>
+                                        <div className="language-jsx">
+                                            <span className="token_punctuation">{`};`}</span>
+                                        </div>
+                                    </code>
+                                </pre>
+                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (javascript parser 내부에서 처리되는 결과)`}</div>
+                                <pre className="language-jsx">
+                                    <code className="language-jsx">
+                                        <div className="language-jsx">
+                                            <span className="token keyword">var</span>
+                                            {` study_Javascript `}
+                                            <span className="token operator">=</span>
+                                            {` undefined `}
+                                        </div>
+                                        <div className="language-jsx">
+                                            {`study_Javascript`}
+                                            <span className="token_punctuation">{`(`}</span>
+                                            <span className="token_punctuation">{`);`}</span>
+                                            <span className="token_comment">{` // Type Error : 함수가 undefined로, 아직 함수로 인식되지 않음`}</span>
+                                        </div>
+                                        <div className="language-jsx mb-4">
+                                            <span className="token keyword">var</span>
+                                            {` study_Javascript `}
+                                            <span className="token operator">=</span>
+                                            {` () => {`}
+                                        </div>
+                                        <div className="language-jsx">
+                                            <span className="token_punctuation">{`};`}</span>
+                                        </div>
+                                    </code>
+                                </pre>
+                            </div>
+                            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mb-6 lg:mb-0">
+                                <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`함수 호이스팅 (함수 표현식)`}</h1>
+                                <p className="leading-relaxed mb-4">{`함수를 표현하는 방법 중, 변수에 함수를 담아 함수를 선언하는 방식이 있어요. 이를 `}
+                                    <strong>{`함수 표현식`}</strong>{`이라고 해요.`}</p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`함수를 변수에 담고있기에, 변수 호이스팅과 똑같이 동작해요.`}
+                                </p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`var 키워드로 선언한 경우에 선언문 이전에 함수를 실행하려 하면, undefined가 저장되어 있기 때문에, 이 데이터 타입은 호출될 수 없어요. 따라서 `}
+                                    <strong>{`Type Error`}</strong>{`가 발생해요.`}
+                                </p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`let, const 키워드로 선언한 경우에 선언문 이전에 함수를 실행하려 하면, 초기화 단계를 거치지 않았기 때문에, `} <strong>{`Reference Error`}</strong>{`가 발생해요.`}
+                                </p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`해당 예제를 보면서 이해하고 넘어가도록 해요.`}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* 함수 선언문*/}
+                        <div className="lg:w-full py-6 mt-4 mx-auto flex flex-wrap">
+                            <div className="gataby-highlight mb-6">
+                                <pre className="language-jsx">
+                                    <code className="language-jsx">
+
+                                        <div className="language-jsx">
+                                            {`study_Javascript`}
+                                            <span className="token_punctuation">{`(`}</span>
+                                            <span className="token_punctuation">{`);`}</span>
+                                            <span className="token_comment">{` // 출력 결과는 무엇일까?`}</span>
+                                        </div>
+                                        <div className="language-jsx mb-4">
+                                            <span className="token keyword">function</span>
+                                            {` study_Javascript`}
+                                            <span className="token_punctuation">{`(`}</span>
+                                            <span className="token_punctuation">{`)`}</span>
+                                            <span className="token_punctuation">{`{`}</span>
+                                        </div>
+                                        <div className="language-jsx">
+                                            <span className="token_punctuation">{`};`}</span>
+                                        </div>
+                                    </code>
+                                </pre>
+                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (javascript parser 내부에서 처리되는 결과)`}</div>
+                                <pre className="language-jsx">
+                                    <code className="language-jsx">
+
+                                        <div className="language-jsx mb-4">
+                                            <div className="token_comment">{`// 선언과 동시에 함수가 생성되어 완성된 함수객체로서 호이스팅  `}</div>
+                                            <span className="token keyword">function</span>
+                                            {` study_Javascript`}
+                                            <span className="token_punctuation">{`(`}</span>
+                                            <span className="token_punctuation">{`)`}</span>
+                                            <span className="token_punctuation">{`{`}</span>
+
+                                        </div>
+                                        <div className="language-jsx">
+                                            <span className="token_punctuation">{`};`}</span>
+                                        </div>
+                                        <div className="language-jsx">
+                                            {`study_Javascript`}
+                                            <span className="token_punctuation">{`(`}</span>
+                                            <span className="token_punctuation">{`);`}</span>
+                                            <span className="token_comment">{` // 문제없이 함수 실행`}</span>
+
+                                        </div>
+
+                                    </code>
+                                </pre>
+                            </div>
+                            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mb-6 lg:mb-0">
+                                <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`함수 호이스팅 (함수 선언문)`}</h1>
+                                <p className="leading-relaxed mb-4">{`함수 표현식과 달리, function 키워드로 함수를 선언하는 `}
+                                    <strong>{`함수 선언문`}</strong>{`은 동작방식과 그 결과가 조금 달라요.`}</p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`함수 선언문 방식으로 함수를 선언하는 경우에는, 호이스팅이 JavaScript Parser(엔진)가 
+                                    함수 선언과 동시에, 완성된 함수객체를 생성해 환경 레코드에 기록하는 방식으로 이루어져요.`}
+                                    <div className="text-xs m-1 ml-2 font-bold">{`* 환경 레코드는 실행 컨텍스트에서 자세히 다룰 예정이에요`}</div>
+                                </p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`즉, 함수의 선언 자체가 코드의 최상단으로 끌어올려진다는 뜻이에요. 
+                                    이러한 함수 선언문 방식은 선언과 동시에 함수가 생성된다는 특징을 가지기 때문에 `} 
+                                    <strong>{`에러없이 실행되요.`}</strong>
+                                </p>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                <p className="leading-relaxed mb-4">
+                                    {`마찬가지로 해당 예제를 보면서 이해하고 넘어가도록 해요.`}
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </Layout>
