@@ -1,5 +1,7 @@
 import Layout from "../../components/layout";
 import Head from "next/head";
+import Recommend_Youtube from "../../components/recommend_youtube";
+import MoveBtn from "../../components/moveBtn";
 
 export default function Hoisting() {
     // 페이지 넘김 정보
@@ -20,7 +22,7 @@ export default function Hoisting() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-1/4 h-full bg-indigo-500"></div>
+                                <div className="w-1/3 h-full bg-indigo-500"></div>
                             </div>
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -105,7 +107,7 @@ export default function Hoisting() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-2/5 h-full bg-indigo-500"></div>
+                                <div className="w-2/3 h-full bg-indigo-500"></div>
                             </div>
                         </div>
 
@@ -313,7 +315,7 @@ export default function Hoisting() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-3/4 h-full bg-indigo-500"></div>
+                                <div className="w-full h-full bg-indigo-500"></div>
                             </div>
                         </div>
 
@@ -440,14 +442,12 @@ export default function Hoisting() {
                                             <span className="token_punctuation">{`(`}</span>
                                             <span className="token_punctuation">{`);`}</span>
                                             <span className="token_comment">{` // 문제없이 함수 실행`}</span>
-
                                         </div>
-
                                     </code>
                                 </pre>
                             </div>
                             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mb-6 lg:mb-0">
-                                <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`함수 호이스팅 (함수 선언문)`}</h1>
+                                 <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`함수 호이스팅 (함수 선언문)`}</h1>
                                 <p className="leading-relaxed mb-4">{`함수 표현식과 달리, function 키워드로 함수를 선언하는 `}
                                     <strong>{`함수 선언문`}</strong>{`은 동작방식과 그 결과가 조금 달라요.`}</p>
                                 <div className="flex border-t border-gray-200 py-2">
@@ -455,7 +455,7 @@ export default function Hoisting() {
                                 <p className="leading-relaxed mb-4">
                                     {`함수 선언문 방식으로 함수를 선언하는 경우에는, 호이스팅이 JavaScript Parser(엔진)가 
                                     함수 선언과 동시에, 완성된 함수객체를 생성해 환경 레코드에 기록하는 방식으로 이루어져요.`}
-                                    <div className="text-xs m-1 ml-2 font-bold">{`* 환경 레코드는 실행 컨텍스트에서 자세히 다룰 예정이에요`}</div>
+                                    <span className="text-xs block m-1 ml-2 font-bold">{`* 환경 레코드는 실행 컨텍스트에서 자세히 다룰 예정이에요`}</span>
                                 </p>
                                 <div className="flex border-t border-gray-200 py-2">
                                 </div>
@@ -473,6 +473,35 @@ export default function Hoisting() {
                         </div>
                     </div>
                 </section>
+
+                {/*마무리*/}
+                <section className="text-gray-600 body-font">
+                    <div className="container px-5 mx-auto">
+                        <h1 className="sm:text-2xl text-xl font-bold title-font text-center text-gray-900 mb-12">
+                        그 외 추천 유튜브 영상
+                        </h1>
+                        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                        <Recommend_Youtube
+                            channel_name={`코딩 알려주는 누나`}
+                            video_title={`자바스크립트를 배우는데 아직도 let과 var의 차이를 모른다고? (호이스팅)`}
+                            url={`https://www.youtube.com/watch?v=fETYLCU2YYc`}
+                        />
+                        <Recommend_Youtube
+                            channel_name={`콘돌의터전`}
+                            video_title={`자바스크립트 const와 let의 호이스팅`}
+                            url={`https://www.youtube.com/watch?v=SBTyD_fLZnE`}
+                        />
+                        <Recommend_Youtube
+                            channel_name={`코딩앙마`}
+                            video_title={`자바스크립트 중급 강좌 #1 - 변수, 호이스팅, TDZ(Temporal Dead Zone)`}
+                            url={`https://www.youtube.com/watch?v=ocGc-AmWSnQ`}
+                        />
+                        </div>
+                    </div>
+                </section>
+
+                {/*이동하기*/}
+                <MoveBtn prev={prev} next={next} />
             </Layout>
         </>
     );
