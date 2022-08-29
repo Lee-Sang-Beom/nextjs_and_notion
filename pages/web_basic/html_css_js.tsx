@@ -91,7 +91,6 @@ export default function HTML_CSS_JS() {
             </div>
           </div>
 
-
           {/* 내용 2 : HTML*/}
           <div className="container px-5 py-24 mx-auto">
             {/* bar 길이*/}
