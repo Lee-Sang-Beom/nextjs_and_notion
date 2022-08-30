@@ -701,19 +701,20 @@ export default function Hoisting() {
                         </h1>
                         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
                             <Recommend_Youtube
-                                channel_name={`준비 중`}
-                                video_title={`준비 중`}
-                                url={`준비 중`}
+                                channel_name={`Code ON 코드온`}
+                                video_title={`면접 단골 질문! 브라우저 저장소 (쿠키, 웹스토리지, 로컬스토리지, 세션스토리지)`}
+                                url={`https://www.youtube.com/watch?v=5s--sLWzuZc`}
                             />
                             <Recommend_Youtube
-                                channel_name={`준비 중`}
-                                video_title={`준비 중`}
-                                url={`준비 중`}
+                                channel_name={`
+                                우아한Tech`}
+                                video_title={`[10분 테코톡] 🦄 디토의 웹스토리지 & 쿠키`}
+                                url={`https://www.youtube.com/watch?v=-4ZsGy1LOiE`}
                             />
                             <Recommend_Youtube
-                                channel_name={`준비 중`}
-                                video_title={`준비 중`}
-                                url={`준비 중`}
+                                channel_name={`코드없는 프로그래밍`}
+                                video_title={`세션,쿠키로 로그인을 어떻게 유지시키는가?`}
+                                url={`https://www.youtube.com/watch?v=cWUtMHTKdj0`}
                             />
                         </div>
                     </div>
