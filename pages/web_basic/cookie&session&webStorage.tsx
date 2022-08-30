@@ -517,9 +517,9 @@ export default function Hoisting() {
                                     {`쿠키와 세션 차이점`}
                                 </h1>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`- 데이터 저장위치`}
+                                    <strong>{`- 데이터 저장위치`}</strong>
                                 </p>
-                                <div className="leading-relaxed text-base mb-8">
+                                <div className="leading-relaxed text-base mb-2">
                                     <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
                                         <li className="mb-1 font-semibold text-left">
                                             {`쿠키 : 클라이언트(브라우저)`}
@@ -530,9 +530,9 @@ export default function Hoisting() {
                                     </ul>
                                 </div>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`- 보안`}
+                                    <strong>{`- 보안`}</strong>
                                 </p>
-                                <div className="leading-relaxed text-base mb-8">
+                                <div className="leading-relaxed text-base mb-2">
                                     <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
                                         <li className="mb-1 font-semibold text-left">
                                             {`쿠키 : 저장위치 때문에 request에서 스니핑에 당할 우려가 있어요.`}
@@ -546,9 +546,9 @@ export default function Hoisting() {
                                     </ul>
                                 </div>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`- Life Cycle`}
+                                    <strong>{`- Life Cycle`}</strong>
                                 </p>
-                                <div className="leading-relaxed text-base mb-8">
+                                <div className="leading-relaxed text-base mb-2">
                                     <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
                                         <li className="mb-1 font-semibold text-left">
                                             {`쿠키 : 브라우저를 종료해도 만료기간이 남아있으면 존재`}
@@ -559,9 +559,9 @@ export default function Hoisting() {
                                     </ul>
                                 </div>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`- 속도 `}
+                                    <strong>{`- 속도 `}</strong>
                                 </p>
-                                <div className="leading-relaxed text-base mb-8">
+                                <div className="leading-relaxed text-base mb-2">
                                     <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
                                         <li className="mb-1 font-semibold text-left">
                                             {`쿠키 : 브라우저에 정보가 있어서 빨라요.`}
@@ -571,7 +571,7 @@ export default function Hoisting() {
                                         </li>
                                     </ul>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
