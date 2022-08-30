@@ -26,36 +26,20 @@ export default function Hoisting() {
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="sm:w-2/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
-                                    {`쿠키, 세션, 웹 스토리지`}
+                                {`쿠키, 세션, 웹 스토리지`}
                                 </h1>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`- 기본적으로 HTTP 프로토콜 환경은 "connectionless, stateless"한 특성을 가지기 때문에 이를 보완하기 위해서 쿠키 또는 세션을 사용해요.`}
+                                {`- 기본적으로 HTTP 프로토콜 환경은 "connectionless, stateless"한 특성을 가지기 때문에 이를 보완하기 위해서 쿠키 또는 세션을 사용해요.`}
                                 </p>
+                                
                                 {/* 제목 추가 설명을 위한 p태그의 경우 새로 추가된 태그에서 mt-1로 구분감 부여*/}
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-1">
-                                    <div className="leading-relaxed text-base mb-2">
-                                        <ul className="list-disc ml-7 text-sm  text-slate-500 dark:text-slate-300">
-                                            <li className="mb-1 font-semibold text-left">
-                                                {`connectionless(비연결성)`}
-                                                <p className="mt-1 mb-2 text-xs font-normal">
-                                                    {`- 클라이언트가 요청을 한 후, 응답을 받으면, 그 연결을 끊어버려요.`}
-                                                </p>
-                                            </li>
-                                            <li className="mb-1 font-semibold text-left">
-                                                {`stateless(무상태)`}
-                                                <p className="mt-1 mb-2 text-xs font-normal">
-                                                    {`- 통신이 끝나면 상태를 유지하지 않는 특징이 있어요.`}
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`- 웹 스토리지는 쿠키와 달리 자동 전송의 위험성이 없고 클라이언트에 저장만 할 뿐 서버로 전송되지 않아요.`}
+                                {`- 웹 스토리지는 쿠키와 달리 자동 전송의 위험성이 없고 클라이언트에 저장만 할 뿐 서버로 전송되지 않아요.`}
                                 </p>
                             </div>
                         </div>
                     </div>
+                    
                     {/* 내용 2 : 쿠키 */} 
                     {/* py-24 속성 삭제 [220830_1306]*/}
                     <div className="container px-5 mx-auto">
