@@ -17,7 +17,7 @@ export default function Hoisting() {
                 </Head>
                 <section className="text-gray-600 body-font overflow-hidden">
                     {/* 내용 1 : 소개 */}
-                    <div className="container px-5 py-24 mx-auto">
+                    <div className="container px-5 mx-auto">
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
@@ -50,8 +50,7 @@ export default function Hoisting() {
                     </div>
 
                     {/* 내용 2 : 쿠키 */}
-                    {/* py-24 속성 삭제 [220830_1306]*/}
-                    <div className="container px-5 mx-auto">
+                    <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
@@ -130,6 +129,149 @@ export default function Hoisting() {
                             </ul>
                         </div>
                     </div>
+                    {/* 내용 2-3 : 쿠키 동작 방식 */}
+                    <div className="container px-5 py-24 mx-auto">
+                        {/* bar 길이*/}
+                        <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                            <div className="w-3/4 h-full bg-indigo-500"></div>
+                        </div>
+                        {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
+                        <div className="flex flex-wrap sm:flex-row flex-col py-6">
+                            <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
+                                {`쿠키 동작 방식`}
+                            </h1>
+                            <div className="w-full py-6">
+                                {/* 과정 1 */}
+                                <div className="flex relative pb-12">
+                                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                                        <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font text-sm"
+                                    >
+                                        1
+                                    </div>
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 1
+                                        </h2>
+                                        <p className="leading-relaxed">
+                                            {`클라이언트가 페이지를 요청해요(사용자가 웹 사이트에 접근해요!)`}
+                                        </p>
+                                    </div>
+                                </div>
+                                {/* 과정 2 */}
+                                <div className="flex relative pb-12">
+                                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                                        <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                                    >
+                                        2
+                                    </div>
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 2
+                                        </h2>
+                                        <p className="leading-relaxed">
+                                            {`서버에서 쿠키를 생성해요`}
+                                        </p>
+                                    </div>
+                                </div>
+                                {/* 과정 3 */}
+                                <div className="flex relative pb-12">
+                                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                                        <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                                    >
+                                        3
+                                    </div>
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 3
+                                        </h2>
+                                        <p className="leading-relaxed">
+                                            {`HTTP 헤더에 쿠키를 포함 시켜 응답해요.`}
+                                        </p>
+
+
+                                    </div>
+                                </div>
+                                {/* 과정 4 */}
+                                <div className="flex relative pb-12">
+                                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                                        <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                                    >
+                                        4
+                                    </div>
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 4
+                                        </h2>
+                                        <p className="leading-relaxed mb-2">
+                                            {`넘겨받은 쿠키는 클라이언트가 로컬 pc에서 갖고있다가 다시 서버에 요청할때 요청과 함께 쿠키를 전송해요.`}
+                                        </p>
+                                        <div className="leading-relaxed text-base">
+                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
+                                                <li className="mb-1 text-left">{`브라우저가 종료되어도 쿠키 만료 기간이 있다면 클라이언트에서 보관하고 있어요.`}</li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* 과정 5 */}
+                                <div className="flex relative pb-12">
+                                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                                        <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                                    >
+                                        5
+                                    </div>
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 5
+                                        </h2>
+                                        <p className="leading-relaxed">
+                                            {`동일 사이트 재방문 등 같은 요청을 할 경우, 클라이언트 pc에 해당 쿠키가 있는 경우 요청페이지와 함께 HTTP 헤더에 쿠키를 함께 보내요.`}
+                                        </p>
+
+                                    </div>
+                                </div>
+                                {/* 과정 6 */}
+                                <div className="flex relative pb-12">
+                                    <div
+                                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                                    >
+                                        6
+                                    </div>
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 6
+                                        </h2>
+                                        <p className="leading-relaxed mb-2">
+                                            {`서버에서 쿠키를 읽어 이전 상태 정보를 변경 할 필요가 있을 때 쿠키를 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답해요.`}
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* 내용 3 : 세션*/}
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-col">
@@ -193,9 +335,9 @@ export default function Hoisting() {
                         <p className="leading-relaxed sm:pl-7 mb-4">
                             <strong>{`세션의 사용 예`}</strong>{`에 대해 알아볼까요?`}
                         </p>
-                        <div className="leading-relaxed text-base mb-2 py-2">
-                            <ul className="list-disc ml-14 text-sm  text-slate-500 dark:text-slate-300">
-                                <li className="mb-1 font-semibold text-left py-1">
+                        <div className="leading-relaxed text-base mb-2">
+                            <ul className="list-disc ml-7 text-sm  text-slate-500 dark:text-slate-300">
+                                <li className="mb-1 font-semibold text-left">
                                     {`로그인 같이 보안상 중요한 작업을 수행할 때 사용해요.`}
                                 </li>
                             </ul>
@@ -203,8 +345,7 @@ export default function Hoisting() {
                     </div>
 
                     {/* 내용 3-3 : 세션 동작 방식 */}
-                    {/* py-24 속성 삭제 [220830_1306]*/}
-                    <div className="container px-5 mx-auto">
+                    <div className="container px-5 py-24 mx-auto">
                         {/* bar 길이*/}
                         <div className="h-1 bg-gray-200 rounded overflow-hidden">
                             <div className="w-3/4 h-full bg-indigo-500"></div>
@@ -363,8 +504,78 @@ export default function Hoisting() {
                             </div>
                         </div>
                     </div>
-
-                    {/* 내용 2 : 쿠키 */}
+                    {/* 내용 3 : 세션*/}
+                    <div className="container px-5 mx-auto">
+                        <div className="flex flex-col">
+                            {/* bar 길이*/}
+                            <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                                <div className="w-1/3 h-full bg-indigo-500"></div>
+                            </div>
+                            {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
+                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                                <h1 className="sm:w-2/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                                    {`쿠키와 세션 차이점`}
+                                </h1>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`- 데이터 저장위치`}
+                                </p>
+                                <div className="leading-relaxed text-base mb-8">
+                                    <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`쿠키 : 클라이언트(브라우저)`}
+                                        </li>
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`세션 : 서버`}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`- 보안`}
+                                </p>
+                                <div className="leading-relaxed text-base mb-8">
+                                    <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`쿠키 : 저장위치 때문에 request에서 스니핑에 당할 우려가 있어요.`}
+                                        </li>
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`세션 : 쿠키를 이용해 세션 아이디만 저장하고 그것으로 클라이언트를 구분하여 서버에서 처리 해요.`}
+                                        </li>
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`보안성 측면: 쿠키 < 세션`}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`- Life Cycle`}
+                                </p>
+                                <div className="leading-relaxed text-base mb-8">
+                                    <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`쿠키 : 브라우저를 종료해도 만료기간이 남아있으면 존재`}
+                                        </li>
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`세션 : 브라우저 종료 시 만료기간에 상관없이 종료`}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`- 속도 `}
+                                </p>
+                                <div className="leading-relaxed text-base mb-8">
+                                    <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`쿠키 : 브라우저에 정보가 있어서 빨라요.`}
+                                        </li>
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`세션 : 서버에 정보가 있어서 느려요.`}
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    {/* 내용 4 : 웹 스토리지(WebStorage) */}
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-col">
                             {/* bar 길이*/}
@@ -375,16 +586,15 @@ export default function Hoisting() {
 
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
-                                    {`1. 쿠키(Cookie)`}
+                                    {`3. 웹 스토리지(Web Storage)`}
                                 </h1>
 
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`클라이언트(브라우저)에 저장되는 키와 같이 들어있는 작은 파일을 뜻하고 있어요.`}
+                                    {``}
                                 </p>
                             </div>
                         </div>
                     </div>
-
                 </section>
                 {/*마무리*/}
                 <section className="text-gray-600 body-font">
