@@ -17,7 +17,7 @@ export default function Hoisting() {
                 </Head>
                 <section className="text-gray-600 body-font overflow-hidden">
                     {/* 내용 1 : 소개 */}
-                    <div className="container px-5 mx-auto">
+                    <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
@@ -504,13 +504,112 @@ export default function Hoisting() {
                             </div>
                         </div>
                     </div>
-                    {/* 내용 3 : 세션*/}
-                    <div className="container px-5 mx-auto">
+                    {/* 내용 4 : 웹 스토리지(WebStorage) */}
+                    <div className="container px-5 py-24 mx-auto">
+                        <div className="flex flex-col">
+                            {/* bar 길이*/}
+                            <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                                <div className="w-2/3 h-full bg-indigo-500"></div>
+                            </div>
+                            {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
+
+                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                                <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
+                                    {`3. 웹 스토리지(Web Storage)`}
+                                </h1>
+
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                    {`서버 전송 없이 클라이언트에 데이터를 저장할 수 있도록, HTML5부터 추가된 저장소에요.`}
+                                </p>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                    {`간단한 Key-Value 데이터 저장 형태로 구성되어 있어요.`}
+                                </p>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                    {`쿠키와 같이 해당 도메인에 대한 데이터를 브라우저에 저장해요.`}
+                                </p>
+                                <ul className="list-disc ml-14 text-sm  text-slate-500 dark:text-slate-300">
+                                    <li className="mb-1 font-semibold text-left py-1">
+                                        {`HTML에서는 쿠키의 단점(매번 서버에 전송되고, 저장용량 작고, 보안이 취약)을 보완해 등장한 웹 스토리지를 사용해요.`}
+                                    </li>
+                                </ul>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                    {`서버가 HTTP 헤더를 통해 스토리지 객체를 조작할 수 없어요.`}
+                                </p>
+                                <ul className="list-disc ml-14 text-sm  text-slate-500 dark:text-slate-300">
+                                    <li className="mb-1 font-semibold text-left py-1">
+                                        {`웹 스토리지 객체 조작은 JavaScript 내에서만 수행해요.`}
+                                    </li>
+                                </ul>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                    {`지속성에 따라 로컬 스토리지(Local Storage)와 세션 스토리지(Session Storage)로 분류할 수 있고, 같은 Storage 객체를 상속하기 때문에 메서드가 동일해요.  `}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* 내용 4-1 : 로컬/세션 스토리지*/}
+                    <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
                                 <div className="w-1/3 h-full bg-indigo-500"></div>
                             </div>
+                            {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
+                            {/* 내용 4-1-1 : 로컬 스토리지*/}
+                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                                <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                                    {`로컬 스토리지(Local Storage)`}
+                                </h1>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`사용자가 데이터를 지우지 않는 이상, 브라우저나 OS를 종료해도 계속 브라우저에 남아있어요. (영구성)`}
+                                </p>
+                                <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
+                                    <li className="mb-1 font-semibold text-left py-1">
+                                        {`단, 동일한 브라우저를 사용할 때만 해당해요.`}
+                                    </li>
+                                </ul>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`자동 로그인처럼 지속적으로 필요한 데이터를 저장해요.`}
+                                </p>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`정리하면, 브라우저 자체에 반영구적으로 데이터를 저장하며, 브라우저를 종료해도 데이터가 유지됩니다.`}
+                                </p>
+                                <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
+                                    <li className="mb-1 font-semibold text-left py-1">
+                                        {`다만 도메인(domain)이 다른 경우 로컬 스토리지에 접근할 수 없어요.`}
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* 내용 4-1-2 : 세션 스토리지*/}
+                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                                <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                                    {`세션 스토리지(Session Storage)`}
+                                </h1>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`데이터가 브라우저 탭에도 종속(탭 윈도우 단위로 생성)되기 때문에, 윈도우나 브라우저 탭을 닫을 경우 제거해요.`}
+                                </p>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`일회성 로그인 정보, 입력폼 저장 처럼 일시적으로 필요한 데이터를 저장해요.`}
+                                </p>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    {`정리하면, 각 세션마다 데이터가 개별 저장되며, 브라우저 탭 닫을 시 데이터가 제거되요.`}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* 내용 5 : 내용 요약 */}
+                    <div className="container px-5 py-24 mx-auto">
+                        <div className="flex flex-col">
+                            
+                            {/* bar 길이*/}
+                            <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                                <div className="w-1/3 h-full bg-indigo-500"></div>
+                            </div>
+                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                            <h1 className="w-full sm:text-2xl text-1xl font-bold title-font text-gray-900 text-center">
+                                {`내용 정리`}
+                            </h1>
+                            </div>
+                            {/* 내용 5-1 : 쿠키와 세션 차이점 */}
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="sm:w-2/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
@@ -572,25 +671,23 @@ export default function Hoisting() {
                                     </ul>
                                 </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    {/* 내용 4 : 웹 스토리지(WebStorage) */}
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="flex flex-col">
-                            {/* bar 길이*/}
-                            <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-2/3 h-full bg-indigo-500"></div>
-                            </div>
-                            {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
 
+                            </div>
+                            {/* 내용 5-2 : 데이터 사용에 따른 스토리지와 쿠키 비교*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                                <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
-                                    {`3. 웹 스토리지(Web Storage)`}
+                                <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                                    {`데이터 사용에 따른 쿠키와 스토리지 비교`}
                                 </h1>
 
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {``}
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    <strong>{`- 다시보기 팝업 : 쿠키`}</strong>
+                                </p>
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    <strong>{`- 자동로그인 : 로컬 스토리지`}</strong>
+                                </p>
+
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                    <strong>{`- 입력 폼 정보, 비로그인 장바구니 : 세션 스토리지`}</strong>
                                 </p>
                             </div>
                         </div>
