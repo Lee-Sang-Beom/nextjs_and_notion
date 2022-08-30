@@ -28,10 +28,10 @@ export default function Hoisting() {
                                 <h1 className="sm:w-2/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
                                     {`쿠키, 세션, 웹 스토리지`}
                                 </h1>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4 mb-2">
                                     {`- 기본적으로 HTTP 프로토콜 환경은 "connectionless, stateless"한 특성을 가지기 때문에 이를 보완하기 위해서 쿠키 또는 세션을 사용해요.`}
                                 </p>
-                                <div className="leading-relaxed text-base mb-8">
+                                <div className="leading-relaxed text-base mb-2">
                                     <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
                                         <li className="mb-1 font-semibold text-left">
                                             {`connectionless(비연결성): 클라이언트가 요청을 한 후, 응답을 받으면, 그 연결을 끊어버려요.`}
