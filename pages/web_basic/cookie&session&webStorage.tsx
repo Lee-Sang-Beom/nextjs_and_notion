@@ -56,7 +56,8 @@ export default function Hoisting() {
                             </div>
                         </div>
                     </div>
-                    {/* 내용 2 : 쿠키 */} {/* py-24 속성 삭제 [220830_1306]*/}
+                    {/* 내용 2 : 쿠키 */} 
+                    {/* py-24 속성 삭제 [220830_1306]*/}
                     <div className="container px-5 mx-auto">
                         <div className="flex flex-col">
                             {/* bar 길이*/}
@@ -171,16 +172,25 @@ export default function Hoisting() {
                         <div className="leading-relaxed text-base mb-2 py-2">
                             <ul className="list-disc ml-14 text-sm  text-slate-500 dark:text-slate-300">
                                 <li className="mb-2 font-semibold text-left list-decimal">
-                                    {`이름, 값, 만료일(저장 기간 설정), 경로 정보로 구성되어 있어요.`}
+                                    {`웹 서버에 웹 컨테이너 상태 유지를 위한 정보를 저장해요.`}
                                 </li>
                                 <li className="mb-2 font-semibold text-left list-decimal">
-                                    {`클라이언트에 총 300개의 쿠키를 저장할 수 있어요.`}
+                                    {`각 클라이언트에게 고유 ID를 부여해요.`}
                                 </li>
                                 <li className="mb-2 font-semibold text-left list-decimal">
-                                    {`하나의 도메인 당 20개의 쿠키를 가질 수 있어요.`}
+                                    {`세션 ID로 클라이언트를 구분해서 클라이언트의 요구에 맞는 서비스를 제공해요.`}
                                 </li>
                                 <li className="mb-2 font-semibold text-left list-decimal">
-                                    {`하나의 쿠키는 4KB(=4096byte)까지 저장 가능해요.`}
+                                    {`보안 면에서 쿠키보다 우수해요.`}
+                                </li>
+                                <li className="mb-2 font-semibold text-left list-decimal">
+                                    {`사용자가 많아질수록 서버 메모리를 많이 차지해요.`}
+                                </li>
+                                <li className="ml-8 mb-1 text-left">
+                                    {`즉, 서버의 자원을 사용하기 때문에 무분별하게 만들다보면 서버 메모리가 감당할 수 없고 속도가 느려지게 되는 단점이 있어요.`}
+                                </li>
+                                <li className="mb-2 font-semibold text-left list-decimal">
+                                    {`토큰기반 인증방식인 JWT가 있어요.`}
                                 </li>
                             </ul>
                         </div>
@@ -198,8 +208,9 @@ export default function Hoisting() {
                             </ul>
                         </div>
                     </div>
-                    
-                    {/* 내용 3-3 : 세션 동작 방식 */} {/* py-24 속성 삭제 [220830_1306]*/}
+
+                    {/* 내용 3-3 : 세션 동작 방식 */} 
+                    {/* py-24 속성 삭제 [220830_1306]*/}
                     <div className="container px-5 mx-auto">
                         {/* bar 길이*/}
                         <div className="h-1 bg-gray-200 rounded overflow-hidden">
@@ -210,7 +221,9 @@ export default function Hoisting() {
                             <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
                                 {`세션 동작 방식`}
                             </h1>
-                            <div className="w-full py-6">{/* 동작 방식 그림 들어갈 자리 [220830_1321]*/}</div>
+                            <div className="w-full py-6">
+                                {/* 동작 방식 그림 들어갈 자리 [220830_1321]*/}</div>
+                            {/* 과정 1 */}
                             <div className="flex relative pb-12">
                                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                                     <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
