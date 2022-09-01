@@ -181,9 +181,6 @@ export default function Process_and_Thread() {
                             </div>
                         </div>
                     </div>
-
-                   
-                    
                 </section>
 
             </Layout>
