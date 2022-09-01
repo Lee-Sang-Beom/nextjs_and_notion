@@ -36,13 +36,14 @@ export default function Hoisting() {
                                         <li className="mb-1 font-semibold text-left">
                                             {`connectionless(비연결성)`}
                                             <p className="mt-1 mb-2 text-xs font-normal">
-                                                {`- 클라이언트가 요청을 한 후 응답을 받으면, 그 연결을 끊어버려요. 이는 계속해서 통신연결을 하지 않기 때문에, 서버의 자원을 효율적으로 관리할 수 있도록 하고, 클라이언트 요청에도 대응할 수 있도록 도와줘요.`}
+                                                <strong>{`- 클라이언트가 요청을 한 후 응답을 받으면, 그 연결을 끊어버려요.`}</strong>
+                                                {` 이는 계속해서 통신연결을 하지 않기 때문에, 서버의 자원을 효율적으로 관리할 수 있도록 하고, 클라이언트 요청에도 대응할 수 있도록 도와줘요.`}
                                             </p>
                                         </li>
                                         <li className="mb-1 font-semibold text-left">
                                             {`stateless(무상태)`}
                                             <p className="mt-1 mb-2 text-xs font-normal">
-                                                {`- 통신이 끝나면 서버는 클라이언트의 이전 상태정보를 유지하지 않는 특징이 있어요.`}
+                                                <strong>{`- 통신이 끝나면 서버는 클라이언트의 이전 상태정보를 유지하지 않는 특징이 있어요.`}</strong>
                                             </p>
                                         </li>
                                     </ul>
@@ -61,7 +62,7 @@ export default function Hoisting() {
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
-                                    <strong>{`1. 쿠키(Cookie)`}</strong>
+                                    <strong>{`1. 쿠키 (Cookie)`}</strong>
                                 </h1>
 
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
@@ -283,7 +284,7 @@ export default function Hoisting() {
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
-                                    <strong>{`2. 세션(Session)`}</strong>
+                                    <strong>{`2. 세션 (Session)`}</strong>
                                 </h1>
 
                                 {/* => 220901_1513 (이미 1~7 내용은 내용 3-3 세션 동작 방식에 탑재해두었음.)
@@ -297,16 +298,24 @@ export default function Hoisting() {
                                     7. 클라이언트 정보를 가지고, 서버 요청을 처리하여 클라이언트에게 응답
                                 */}
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`사용자 정보를 브라우저에서 저장하는 쿠키와 달리, 세션은 서버측에서 관리해요.`}
+                                    {`사용자 정보를 브라우저에서 저장하는 `}
+                                    <strong>{`쿠키`}</strong>
+                                    {`와 달리, `} 
+                                    <strong>{`세션`}</strong>
+                                    {`은 서버측에서 관리해요.`}
                                 </p>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`서버에서 클라이언트를 구분하기 위해 세션 ID라는 것을 부여하는데, 이를 통해 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때 까지 인증상태를 유지해요.`}
+                                    {`서버에서 클라이언트를 구분하기 위해`} 
+                                    <strong>{`세션 ID`}</strong>
+                                    {`라는 것을 부여하는데, 이를 통해 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때 까지 인증상태를 유지해요.`}
                                 </p>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
                                     {`접속 시간에 제한을 두어, 일정 시간 응답이 없으면 정보가 유지되지 않게 처리할 수 있어요.`}
                                 </p>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`데이터를 서버에 두기 때문에, 쿠키보다 보안에 좋아요. 하지만 사용자가 많아질수록 서버 메모리를 많이 차지해요.`}
+                                    {`데이터를 서버에 두기 때문에, `}
+                                    <strong>{`쿠키`}</strong>
+                                    {`보다 보안에 좋아요. 하지만 사용자가 많아질수록 서버 메모리를 많이 차지해요.`}
                                 </p>
                             </div>
                         </div>
@@ -381,7 +390,8 @@ export default function Hoisting() {
                                         {` - 세션 : 쿠키를 이용해 세션 아이디만 저장하고 그것으로 클라이언트를 구분하여 서버에서 처리 해요. `}
                                     </p>
                                     <p className="ml-1 mt-1 mb-1 text-xs font-normal">
-                                        {`- 보안성 측면: 쿠키 < 세션`}
+                                        {`- 보안성 측면: `}
+                                        <strong>{`쿠키 < 세션`}</strong>
                                     </p>
                                 </li>
                                 <li className="mb-2 font-semibold text-left">
@@ -577,14 +587,18 @@ export default function Hoisting() {
 
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
-                                    <strong>{`3. 웹 스토리지(Web Storage)`}</strong>
+                                    <strong>{`3. 웹 스토리지 (Web Storage)`}</strong>
                                 </h1>
 
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`서버 전송 없이 클라이언트에 데이터를 저장할 수 있도록, HTML5부터 추가된 저장소에요.`}
+                                    {`서버 전송 없이 `}
+                                    <strong>{`클라이언트에 데이터를 저장할 수 있도록, HTML5`}</strong>
+                                    {`부터 추가된 저장소에요.`}
                                 </p>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`간단한 Key-Value 데이터 저장 형태로 구성되어 있어요.`}
+                                    {`간단한 `}
+                                    <strong>{`Key-Value`}</strong>
+                                    {` 데이터 저장 형태로 구성되어 있어요.`}
                                 </p>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
                                     {`쿠키와 같이 해당 도메인에 대한 데이터를 브라우저에 저장해요.`}
@@ -603,10 +617,14 @@ export default function Hoisting() {
                                     </li>
                                 </ul>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`지속성에 따라 로컬 스토리지(Local Storage)와 세션 스토리지(Session Storage)로 분류할 수 있고, 같은 Storage 객체를 상속하기 때문에 메서드가 동일해요.  `}
+                                    {`지속성에 따라 `}
+                                    <strong>{`로컬 스토리지(Local Storage)`}</strong>
+                                    {`와 `}
+                                    <strong>{`세션 스토리지(Session Storage)로 분류`}</strong>
+                                    {`할 수 있고, 같은 Storage 객체를 상속하기 때문에 메서드가 동일해요.`}
                                 </p>
                             </div>
-                            <div className="flex border-t border-gray-200 py-2">
+                            <div className="flex border-t border-gray-200">
                             </div>
                             {/* 내용 4-1 : 로컬/세션 스토리지 */}
                             <div className="flex flex-col">
@@ -614,10 +632,11 @@ export default function Hoisting() {
                                 {/* 내용 4-1-1 : 로컬 스토리지*/}
                                 <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                     <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
-                                        {`로컬 스토리지(Local Storage)`}
+                                        {`로컬 스토리지 (Local Storage)`}
                                     </h1>
                                     <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                        {`사용자가 데이터를 지우지 않는 이상, 브라우저나 OS를 종료해도 계속 브라우저에 남아있어요. (영구성)`}
+                                        {`사용자가 데이터를 지우지 않는 이상, 브라우저나 OS를 종료해도 계속 브라우저에 남아있어요.`}
+                                        <strong>{`(영구성)`}</strong>
                                     </p>
                                     <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
                                         <li className="mb-1 font-semibold text-left py-1">
@@ -628,21 +647,27 @@ export default function Hoisting() {
                                         {`자동 로그인처럼 지속적으로 필요한 데이터를 저장해요.`}
                                     </p>
                                     <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                        {`정리하면, 브라우저 자체에 반영구적으로 데이터를 저장하며, 브라우저를 종료해도 데이터가 유지됩니다.`}
+                                        {`정리하면, 브라우저 자체에 `}
+                                        <strong>{`반영구적`}</strong>{`으로 데이터를 저장하며, 브라우저를 종료해도 데이터가 유지됩니다.`}
                                     </p>
                                     <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
                                         <li className="mb-1 font-semibold text-left py-1">
-                                            {`다만 도메인(domain)이 다른 경우 로컬 스토리지에 접근할 수 없어요.`}
+                                            <strong>{`다만 도메인(domain)이 다른 경우`}</strong>
+                                            {`로컬 스토리지에 접근할 수 없어요.`}
                                         </li>
                                     </ul>
+                                </div>
+                                <div className="flex border-t border-gray-200">
                                 </div>
                                 {/* 내용 4-1-2 : 세션 스토리지*/}
                                 <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                     <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
-                                        {`세션 스토리지(Session Storage)`}
+                                        {`세션 스토리지 (Session Storage)`}
                                     </h1>
                                     <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                        {`데이터가 브라우저 탭에도 종속(탭 윈도우 단위로 생성)되기 때문에, 윈도우나 브라우저 탭을 닫을 경우 제거해요.`}
+                                        {`데이터가 `}
+                                        <strong>{`브라우저 탭에도 종속(탭 윈도우 단위로 생성)`}</strong>
+                                        {`되기 때문에, 윈도우나 브라우저 탭을 닫을 경우 제거해요.`}
                                     </p>
                                     <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
                                         {`일회성 로그인 정보, 입력폼 저장 처럼 일시적으로 필요한 데이터를 저장해요.`}
@@ -651,7 +676,7 @@ export default function Hoisting() {
                                         {`정리하면, 각 세션마다 데이터가 개별 저장되며, 브라우저 탭 닫을 시 데이터가 제거되요.`}
                                     </p>
                                 </div>
-                                <div className="flex border-t border-gray-200 py-2">
+                                <div className="flex border-t border-gray-200">
                                 </div>
                                 {/* 내용 4-1-3 : 데이터 사용에 따른 스토리지와 쿠키 비교*/}
                                 <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -670,10 +695,34 @@ export default function Hoisting() {
                                         <strong>{`- 입력 폼 정보, 비로그인 장바구니 : 세션 스토리지`}</strong>
                                     </p>
                                 </div>
-                                 {/* 내용 4-1-4 : 캐시 정의, 세션이랑 쿠키에 대해 차이점*/}
+                                <div className="flex border-t border-gray-200">
+                                </div>
+                                {/* 내용 4-1-4 : 캐시 정의, 세션이랑 쿠키에 대해 차이점*/}
+                                <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                                    <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                                        {`캐시 (Cache)`}
+                                    </h1>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`리소스 파일들의 임시 저장소에요.`}
+                                    </p>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`같은 웹 페이지에 접속할 때 사용자의 PC에서 로드하기 때문에 서버를 거치지 않아도 돼요.`}
+                                    </p>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`페이지 속도 개선`}
+                                    </p>
+                                    <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
+                                        <li className="mb-1 font-semibold text-left py-1">
+                                            {`이전에 사용되었던 데이터는 다시 사용될 가능성이 높아요.`}
+                                        </li>
+                                        <li className="mb-1 font-semibold text-left">
+                                            {`다시 사용될 확률이 있는 데이터들을 빠르게 접근 가능한 저장소에 저장해요.`}
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </section>
                 {/*마무리*/}
                 <section className="text-gray-600 body-font">
