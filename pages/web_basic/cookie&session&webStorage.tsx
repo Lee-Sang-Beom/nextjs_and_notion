@@ -21,7 +21,7 @@ export default function Hoisting() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-1/3 h-full bg-indigo-500"></div>
+                                <div className="w-1/7 h-full bg-indigo-500"></div>
                             </div>
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -56,7 +56,7 @@ export default function Hoisting() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-1/3 h-full bg-indigo-500"></div>
+                                <div className="w-2/7 h-full bg-indigo-500"></div>
                             </div>
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -134,7 +134,7 @@ export default function Hoisting() {
                     <div className="container px-5 py-24 mx-auto">
                         {/* bar 길이*/}
                         <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                            <div className="w-3/4 h-full bg-indigo-500"></div>
+                            <div className="w-3/7 h-full bg-indigo-500"></div>
                         </div>
                         {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
                         <div className="flex flex-wrap sm:flex-row flex-col py-6">
@@ -278,7 +278,7 @@ export default function Hoisting() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-2/3 h-full bg-indigo-500"></div>
+                                <div className="w-4/7 h-full bg-indigo-500"></div>
                             </div>
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -333,7 +333,7 @@ export default function Hoisting() {
                                 <li className="mb-2 font-semibold text-left">
                                     {`사용자가 많아질수록 서버 메모리를 많이 차지해요.`}
                                     <p className="ml-1 mt-1 mb-1 text-xs font-normal">
-                                    {`- 즉, 서버의 자원을 사용하기 때문에 무분별하게 만들다보면 서버 메모리가 감당할 수 없고 속도가 느려지게 되는 단점이 있어요.`}
+                                        {`- 즉, 서버의 자원을 사용하기 때문에 무분별하게 만들다보면 서버 메모리가 감당할 수 없고 속도가 느려지게 되는 단점이 있어요.`}
                                     </p>
                                 </li>
                                 {/* jwt를 설명하는 자료 추가 */}
@@ -349,19 +349,68 @@ export default function Hoisting() {
                             <strong>{`세션의 사용 예`}</strong>{`에 대해 알아볼까요?`}
                         </p>
                         <div className="leading-relaxed text-base mb-2">
-                            <ul className="list-disc ml-14 text-sm  text-slate-500 dark:text-slate-300">
-                                <li className="mb-1 font-semibold text-left">
+                            <ul className="list-disc ml-14 text-sm text-slate-500 dark:text-slate-300">
+                                <li className="mb-1 font-semibold text-left py-2">
                                     {`로그인 같이 보안상 중요한 작업을 수행할 때 사용해요.`}
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="flex border-t border-gray-200 py-2">
+                        </div>
+                        {/* 내용 3-3 : 쿠키와 세션의 차이 */}
+                        <p className="leading-relaxed sm:pl-7 mb-4">
+                            <strong>{`쿠키와 세션의 차이점`}</strong>{`은 다음과 같아요.`}
+                        </p>
+                        <div className="leading-relaxed text-base mb-2 py-2">
+                            <ul className="list-disc ml-14 text-sm  text-slate-500 dark:text-slate-300">
+                                <li className="mb-2 font-semibold text-left">
+                                    {`데이터 저장위치`}
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {`- 쿠키 : 클라이언트(브라우저)`}
+                                    </p>
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {`- 세션 : 서버`}
+                                    </p>
+                                </li>
+                                <li className="mb-2 font-semibold text-left">
+                                    {`보안`}
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {` - 쿠키 : 저장위치 때문에 request에서 스니핑에 당할 우려가 있어요.`}
+                                    </p>
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {` - 세션 : 쿠키를 이용해 세션 아이디만 저장하고 그것으로 클라이언트를 구분하여 서버에서 처리 해요. `}
+                                    </p>
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {`- 보안성 측면: 쿠키 < 세션`}
+                                    </p>
+                                </li>
+                                <li className="mb-2 font-semibold text-left">
+                                    {`Life Cycle`}
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {`- 쿠키 : 브라우저를 종료해도 만료기간이 남아있으면 존재`}
+                                    </p>
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {`- 세션 : 브라우저 종료 시 만료기간에 상관없이 종료`}
+                                    </p>
+                                </li>
+                                <li className="mb-2 font-semibold text-left">
+                                    {`속도`}
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {`- 쿠키 : 브라우저에 정보가 있어서 빨라요.`}
+                                    </p>
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                        {`- 세션 : 서버에 정보가 있어서 느려요.`}
+                                    </p>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    {/* 내용 3-3 : 세션 동작 방식 */}
+                    {/* 내용 3-4 : 세션 동작 방식 */}
                     <div className="container px-5 py-24 mx-auto">
                         {/* bar 길이*/}
                         <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                            <div className="w-3/4 h-full bg-indigo-500"></div>
+                            <div className="w-5/7 h-full bg-indigo-500"></div>
                         </div>
                         {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
                         <div className="flex flex-wrap sm:flex-row flex-col py-6">
@@ -522,7 +571,7 @@ export default function Hoisting() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-2/3 h-full bg-indigo-500"></div>
+                                <div className="w-6/7 h-full bg-indigo-500"></div>
                             </div>
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
 
@@ -561,148 +610,70 @@ export default function Hoisting() {
                             </div>
                             {/* 내용 4-1 : 로컬/세션 스토리지 */}
                             <div className="flex flex-col">
-                            {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
-                            {/* 내용 4-1-1 : 로컬 스토리지*/}
-                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                                <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
-                                    {`로컬 스토리지(Local Storage)`}
-                                </h1>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`사용자가 데이터를 지우지 않는 이상, 브라우저나 OS를 종료해도 계속 브라우저에 남아있어요. (영구성)`}
-                                </p>
-                                <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
-                                    <li className="mb-1 font-semibold text-left py-1">
-                                        {`단, 동일한 브라우저를 사용할 때만 해당해요.`}
-                                    </li>
-                                </ul>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`자동 로그인처럼 지속적으로 필요한 데이터를 저장해요.`}
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`정리하면, 브라우저 자체에 반영구적으로 데이터를 저장하며, 브라우저를 종료해도 데이터가 유지됩니다.`}
-                                </p>
-                                <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
-                                    <li className="mb-1 font-semibold text-left py-1">
-                                        {`다만 도메인(domain)이 다른 경우 로컬 스토리지에 접근할 수 없어요.`}
-                                    </li>
-                                </ul>
-                            </div>
-                            {/* 내용 4-1-2 : 세션 스토리지*/}
-                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                                <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
-                                    {`세션 스토리지(Session Storage)`}
-                                </h1>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`데이터가 브라우저 탭에도 종속(탭 윈도우 단위로 생성)되기 때문에, 윈도우나 브라우저 탭을 닫을 경우 제거해요.`}
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`일회성 로그인 정보, 입력폼 저장 처럼 일시적으로 필요한 데이터를 저장해요.`}
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`정리하면, 각 세션마다 데이터가 개별 저장되며, 브라우저 탭 닫을 시 데이터가 제거되요.`}
-                                </p>
+                                {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
+                                {/* 내용 4-1-1 : 로컬 스토리지*/}
+                                <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                                    <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                                        {`로컬 스토리지(Local Storage)`}
+                                    </h1>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`사용자가 데이터를 지우지 않는 이상, 브라우저나 OS를 종료해도 계속 브라우저에 남아있어요. (영구성)`}
+                                    </p>
+                                    <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
+                                        <li className="mb-1 font-semibold text-left py-1">
+                                            {`단, 동일한 브라우저를 사용할 때만 해당해요.`}
+                                        </li>
+                                    </ul>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`자동 로그인처럼 지속적으로 필요한 데이터를 저장해요.`}
+                                    </p>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`정리하면, 브라우저 자체에 반영구적으로 데이터를 저장하며, 브라우저를 종료해도 데이터가 유지됩니다.`}
+                                    </p>
+                                    <ul className="list-disc ml-16 text-sm  text-slate-500 dark:text-slate-300">
+                                        <li className="mb-1 font-semibold text-left py-1">
+                                            {`다만 도메인(domain)이 다른 경우 로컬 스토리지에 접근할 수 없어요.`}
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/* 내용 4-1-2 : 세션 스토리지*/}
+                                <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                                    <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                                        {`세션 스토리지(Session Storage)`}
+                                    </h1>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`데이터가 브라우저 탭에도 종속(탭 윈도우 단위로 생성)되기 때문에, 윈도우나 브라우저 탭을 닫을 경우 제거해요.`}
+                                    </p>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`일회성 로그인 정보, 입력폼 저장 처럼 일시적으로 필요한 데이터를 저장해요.`}
+                                    </p>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        {`정리하면, 각 세션마다 데이터가 개별 저장되며, 브라우저 탭 닫을 시 데이터가 제거되요.`}
+                                    </p>
+                                </div>
+                                <div className="flex border-t border-gray-200 py-2">
+                                </div>
+                                {/* 내용 4-1-3 : 데이터 사용에 따른 스토리지와 쿠키 비교*/}
+                                <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
+                                    <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
+                                        {`데이터 사용에 따른 쿠키와 스토리지 비교`}
+                                    </h1>
+
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        <strong>{`- 다시보기 팝업 : 쿠키`}</strong>
+                                    </p>
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        <strong>{`- 자동로그인 : 로컬 스토리지`}</strong>
+                                    </p>
+
+                                    <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
+                                        <strong>{`- 입력 폼 정보, 비로그인 장바구니 : 세션 스토리지`}</strong>
+                                    </p>
+                                </div>
+                                 {/* 내용 4-1-4 : 캐시 정의, 세션이랑 쿠키에 대해 차이점*/}
                             </div>
                         </div>
-                        </div>
-                    </div>
-                    {/* 내용 5 : 내용 요약 */}
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="flex flex-col">
-
-                            {/* bar 길이*/}
-                            <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-1/3 h-full bg-indigo-500"></div>
-                            </div>
-                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                                <h1 className="w-full sm:text-2xl text-1xl font-bold title-font text-gray-900 text-center">
-                                    {`내용 정리`}
-                                </h1>
-                            </div>
-                            {/* 내용 5-1 : 쿠키와 세션 차이점 */}
-                            {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
-                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                                <h1 className="sm:w-2/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
-                                    {`쿠키와 세션 차이점`}
-                                </h1>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    <strong>{`- 데이터 저장위치`}</strong>
-                                </p>
-                                <div className="leading-relaxed text-base mb-2">
-                                    <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`쿠키 : 클라이언트(브라우저)`}
-                                        </li>
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`세션 : 서버`}
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    <strong>{`- 보안`}</strong>
-                                </p>
-                                <div className="leading-relaxed text-base mb-2">
-                                    <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`쿠키 : 저장위치 때문에 request에서 스니핑에 당할 우려가 있어요.`}
-                                        </li>
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`세션 : 쿠키를 이용해 세션 아이디만 저장하고 그것으로 클라이언트를 구분하여 서버에서 처리 해요.`}
-                                        </li>
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`보안성 측면: 쿠키 < 세션`}
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    <strong>{`- Life Cycle`}</strong>
-                                </p>
-                                <div className="leading-relaxed text-base mb-2">
-                                    <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`쿠키 : 브라우저를 종료해도 만료기간이 남아있으면 존재`}
-                                        </li>
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`세션 : 브라우저 종료 시 만료기간에 상관없이 종료`}
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    <strong>{`- 속도 `}</strong>
-                                </p>
-                                <div className="leading-relaxed text-base mb-2">
-                                    <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`쿠키 : 브라우저에 정보가 있어서 빨라요.`}
-                                        </li>
-                                        <li className="mb-1 font-semibold text-left">
-                                            {`세션 : 서버에 정보가 있어서 느려요.`}
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-                            </div>
-                            {/* 내용 5-2 : 데이터 사용에 따른 스토리지와 쿠키 비교*/}
-                            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                                <h1 className="sm:w-4/5 text-gray-900 font-bold title-font text-2xl mb-2 sm:mb-0">
-                                    {`데이터 사용에 따른 쿠키와 스토리지 비교`}
-                                </h1>
-
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    <strong>{`- 다시보기 팝업 : 쿠키`}</strong>
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    <strong>{`- 자동로그인 : 로컬 스토리지`}</strong>
-                                </p>
-
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    <strong>{`- 입력 폼 정보, 비로그인 장바구니 : 세션 스토리지`}</strong>
-                                </p>
-                            </div>
-
-                            {/* 내용 5-3 : 캐시 정의, 세션이랑 쿠키에 대해 차이점*/}
-                        </div>
-                    </div>
+                    </div> 
                 </section>
                 {/*마무리*/}
                 <section className="text-gray-600 body-font">
