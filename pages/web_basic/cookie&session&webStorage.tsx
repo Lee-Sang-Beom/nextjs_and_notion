@@ -430,7 +430,7 @@ export default function Hoisting() {
                             <div className="w-full py-6">
                                 {/* 동작 방식 그림 들어갈 자리 [220830_1321]*/}</div>
                             {/* 과정 1 */}
-                            <div className="flex relative pb-12">
+                            <div className="flex relative pb-12 w-full">
                                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                                     <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                                 </div>
@@ -470,7 +470,7 @@ export default function Hoisting() {
                                 </div>
                             </div>
                             {/* 과정 3 */}
-                            <div className="flex relative pb-12">
+                            <div className="flex relative pb-12 w-full">
                                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                                     <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                                 </div>
