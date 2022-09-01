@@ -61,7 +61,7 @@ export default function Hoisting() {
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
-                                    {`1. 쿠키(Cookie)`}
+                                    <strong>{`1. 쿠키(Cookie)`}</strong>
                                 </h1>
 
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
@@ -139,7 +139,7 @@ export default function Hoisting() {
                         {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
                         <div className="flex flex-wrap sm:flex-row flex-col py-6">
                             <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
-                                {`쿠키 동작 방식`}
+                                <strong>{`쿠키 동작 방식`}</strong>
                             </h1>
                             <div className="w-full py-6">
                                 {/* 과정 1 */}
@@ -283,10 +283,10 @@ export default function Hoisting() {
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
-                                    {`2. 세션(Session)`}
+                                    <strong>{`2. 세션(Session)`}</strong>
                                 </h1>
 
-                                {/*
+                                {/* => 220901_1513 (이미 1~7 내용은 내용 3-3 세션 동작 방식에 탑재해두었음.)
                                     1. 클라이언트가 페이지를 요청한다 (사용자가 웹 사이트 접근)
                                     2. 서버는 접근한 클라이언트의 request-header필드의 cookie를 확인해, 클라이언트가 해당 세션id를 보냈는지 확인
                                     3. 만약 session-id가 존재하지 않으면, 서버는 session-id를 생성해 클라이언트에 함께 돌려줌
@@ -318,26 +318,26 @@ export default function Hoisting() {
                         </p>
                         <div className="leading-relaxed text-base mb-2 py-2">
                             <ul className="list-disc ml-14 text-sm  text-slate-500 dark:text-slate-300">
-                                <li className="mb-2 font-semibold text-left list-decimal">
+                                <li className="mb-2 font-semibold text-left">
                                     {`웹 서버에 웹 컨테이너 상태 유지를 위한 정보를 저장해요.`}
                                 </li>
-                                <li className="mb-2 font-semibold text-left list-decimal">
+                                <li className="mb-2 font-semibold text-left">
                                     {`각 클라이언트에게 고유 ID를 부여해요.`}
                                 </li>
-                                <li className="mb-2 font-semibold text-left list-decimal">
+                                <li className="mb-2 font-semibold text-left">
                                     {`세션 ID로 클라이언트를 구분해서 클라이언트의 요구에 맞는 서비스를 제공해요.`}
                                 </li>
-                                <li className="mb-2 font-semibold text-left list-decimal">
+                                <li className="mb-2 font-semibold text-left">
                                     {`보안 면에서 쿠키보다 우수해요.`}
                                 </li>
-                                <li className="mb-2 font-semibold text-left list-decimal">
+                                <li className="mb-2 font-semibold text-left">
                                     {`사용자가 많아질수록 서버 메모리를 많이 차지해요.`}
-                                </li>
-                                <li className="ml-8 mb-1 text-left">
-                                    {`즉, 서버의 자원을 사용하기 때문에 무분별하게 만들다보면 서버 메모리가 감당할 수 없고 속도가 느려지게 되는 단점이 있어요.`}
+                                    <p className="ml-1 mt-1 mb-1 text-xs font-normal">
+                                    {`- 즉, 서버의 자원을 사용하기 때문에 무분별하게 만들다보면 서버 메모리가 감당할 수 없고 속도가 느려지게 되는 단점이 있어요.`}
+                                    </p>
                                 </li>
                                 {/* jwt를 설명하는 자료 추가 */}
-                                <li className="mb-2 font-semibold text-left list-decimal">
+                                <li className="mb-2 font-semibold text-left">
                                     {`토큰기반 인증방식인 JWT가 있어요.`}
                                 </li>
                             </ul>
@@ -349,7 +349,7 @@ export default function Hoisting() {
                             <strong>{`세션의 사용 예`}</strong>{`에 대해 알아볼까요?`}
                         </p>
                         <div className="leading-relaxed text-base mb-2">
-                            <ul className="list-disc ml-7 text-sm  text-slate-500 dark:text-slate-300">
+                            <ul className="list-disc ml-14 text-sm  text-slate-500 dark:text-slate-300">
                                 <li className="mb-1 font-semibold text-left">
                                     {`로그인 같이 보안상 중요한 작업을 수행할 때 사용해요.`}
                                 </li>
@@ -528,7 +528,7 @@ export default function Hoisting() {
 
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
-                                    {`3. 웹 스토리지(Web Storage)`}
+                                    <strong>{`3. 웹 스토리지(Web Storage)`}</strong>
                                 </h1>
 
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
@@ -557,15 +557,10 @@ export default function Hoisting() {
                                     {`지속성에 따라 로컬 스토리지(Local Storage)와 세션 스토리지(Session Storage)로 분류할 수 있고, 같은 Storage 객체를 상속하기 때문에 메서드가 동일해요.  `}
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                    {/* 내용 4-1 : 로컬/세션 스토리지*/}
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="flex flex-col">
-                            {/* bar 길이*/}
-                            <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-1/3 h-full bg-indigo-500"></div>
+                            <div className="flex border-t border-gray-200 py-2">
                             </div>
+                            {/* 내용 4-1 : 로컬/세션 스토리지 */}
+                            <div className="flex flex-col">
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             {/* 내용 4-1-1 : 로컬 스토리지*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -607,6 +602,7 @@ export default function Hoisting() {
                                     {`정리하면, 각 세션마다 데이터가 개별 저장되며, 브라우저 탭 닫을 시 데이터가 제거되요.`}
                                 </p>
                             </div>
+                        </div>
                         </div>
                     </div>
                     {/* 내용 5 : 내용 요약 */}
