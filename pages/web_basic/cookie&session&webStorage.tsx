@@ -50,6 +50,37 @@ export default function Hoisting() {
                                     </ul>
                                 </div>
                             </div>
+                            <div className="flex flex-col md:flex-row justify-between items-center">
+                                <div className="w-full md:w-1/2 pr-5 pl-5 mb-10 md:mb-0 md:ml-6 md:mr-6 md:px-6 text-center">
+                                    <img
+                                        className="object-cover object-center rounded mb-1"
+                                        alt="hero"
+                                        src="/img/rendering_main.png"
+                                    />
+                                    <a
+                                        className="text-sm"
+                                        title="이동하기"
+                                        href={`https://ji5485.github.io/post/2020-08-01/what-is-cookie-and-session/`}
+                                    >
+                                        {`이미지 출처 : kangdari님의 포스트`}
+                                    </a>
+                                </div>
+                                <div className="w-full md:w-1/2 pr-5 pl-5 mb-10 md:mb-0 md:ml-6 md:mr-6  md:px-6  text-center">
+                                    <img
+                                        className="object-cover object-center rounded mb-1"
+                                        alt="hero"
+                                        src="/img/rendering_main.png"
+                                    />
+                                    <a
+                                        className="text-sm"
+                                        title="이동하기"
+                                        href={`https://velog.io/@ksh4820/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%9B%90%EB%A6%AC`}
+                                    >
+                                        {`이미지 출처 : kangdari님의 포스트`}
+                                    </a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
@@ -620,7 +651,7 @@ export default function Hoisting() {
                                     </li>
                                 </ul>
                             </div>
-                            
+
                         </div>
                     </div>
                     {/* 내용 5 : 웹 스토리지(WebStorage) */}
