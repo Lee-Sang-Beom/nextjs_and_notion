@@ -93,9 +93,16 @@ export default function Process_and_Thread() {
                                         </svg>
                                         <p className="leading-relaxed mb-3 dark:text-slate-700">
                                             {`실행 파일(프로그램)에게 의미를 부여하기 위해서는 프로그램을 실행해야 해요. 
-                                            프로그램을 실행하는 순간 해당 파일은 컴퓨터 메모리에 올라가게 되는데, `}<strong>{`이 상태의 프로그램을 프로세스라고 말해요.`}</strong></p>
-                                        <p className="leading-relaxed mb-3 dark:text-slate-700">{`"프로그램이 실행되려고 운영체제로부터 시스템 자원을 할당받기 때문에, 운영체제로부터 할당받는 작업의 단위구나" 라고 이해하면 되요.`}</p>
-                                        <p className="leading-relaxed dark:text-slate-700">{`프로그램이 실행되어 파일이 컴퓨터 메모리에 올라간 상태를 동적인 상태라고 말해요. 즉, 프로세스는 실행되고 있는 동적 상태의 프로그램이에요.`}</p>
+                                            프로그램을 실행하는 순간 해당 파일은 컴퓨터 메모리에 올라가게 되는데, `}
+                                            <strong>{`이 상태의 프로그램을 프로세스라고 말해요.`}</strong>
+                                            </p>
+                                        <p className="leading-relaxed mb-3 dark:text-slate-700">{
+                                        `"프로그램을 실행하려고 운영체제로부터 시스템 자원을 할당받기 때문에, 운영체제로부터 할당받는 작업의 단위구나" 라고 이해하면 되요.`}
+                                        </p>
+                                        <p className="leading-relaxed dark:text-slate-700">
+                                            {`프로그램이 실행되어 파일이 컴퓨터 메모리에 올라간 상태를 동적인 상태라고 말해요. 
+                                            즉, 프로세스는 실행되고 있는 동적 상태의 프로그램이에요.`}
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="p-4 md:w-1/3 w-full">
@@ -180,6 +187,54 @@ export default function Process_and_Thread() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* 내용 3 : 프로세스, 스레드 차이*/}
+                    <div className="container px-5 py-12 mx-auto">
+                        {/* bar 길이*/}
+                        <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                            <div className="w-1/3 h-full bg-indigo-500"></div>
+                        </div>
+
+                        {/* 차이점 바로 기술 */}
+                        <div className="mb-12">
+                            <h1 className="text-3xl font-bold title-font text-gray-900 mt-6 mb-2 ">차이</h1>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-1 mb-6">
+                                {`- 위의 설명을 보면서 짐작하실 수 있겠지만, 프로세스와 스레드는 분명한 차이를 가지고 있어요. 그 내용을 좀 더 깊게 파고들어봐요.`}
+                            </p>             
+                        </div>
+
+                        <table className="table_set">
+                            <thead>
+                                <tr>
+                                    <th className="w-1/5">{`구분`}</th>
+                                    <th className="w-2/5">{`Process`}</th>
+                                    <th className="w-2/5">{`Thread`}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="font-semibold tracking-widest">{`영역`}</td>
+                                    <td>{`운영체제에 의해 각각 독립된 메모리 영역 할당`}</td>
+                                    <td>{`프로세스가 할당 받은 메모리 영역에서 Stack영역은 따로 할당받고, `}<strong>{`Code/Data/Heap`}</strong> {`메모리 영역은 공유`}</td>
+                                </tr>
+                                <tr>
+                                    <td className="font-semibold tracking-widest">{`공유`}</td>
+                                    <td>{`각각 독립된 메모리 영역을 할당받으므로 다른 프로세스의 변수나 자료에 접근 불가`}</td>
+                                    <td>{`별도의 Stack영역을 가지고 있지만 Heap 메모리와 같은 영역은 서로 읽고 쓸 수 있음`}</td>
+                                </tr>
+                                <tr>
+                                    <td className="font-semibold tracking-widest">{`오류 전파`}</td>
+                                    <td>{`각 프로세스의 메모리 영역은 서로 독립적이므로, 오류 전파의 걱정이 적음`}</td>
+                                    <td><strong>{`Code/Data/Heap`}</strong>{` 메모리 영역의 내용을 공유하므로 특정 스레드에서 오류 발생 시, 같은 프로세스 내의 다른 스레드에 영향을 미침`}</td>
+                                </tr>
+                                <tr>
+                                    <td className="font-semibold tracking-widest">{`단위`}</td>
+                                    <td title="시스템 자원 : CPU 할당 시간, 운영을 위한 주소 공간, 독립된 메모리 영역">{`운영체제로부터 `}<strong>{`시스템 자원`}</strong>{`을 할당받는 작업 단위 (운영체제 입장에서 최소 작업 단위)`}</td>
+                                    <td>{`프로세스 내에서 실행되는 흐름의 단위 (CPU 입장에서의 최소 작업 단위)`}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
 

@@ -56,17 +56,24 @@ p {
 
 /* table */
 .table_set{
-    @apply table-auto md:table-fixed w-full mt-4 mb-8 
+    @apply table-auto md:table-fixed w-full mt-2 mb-8 
+    hover:scale-105 hover:shadow-lg 
+    hover:shadow-indigo-400/40 
+    dark:hover:shadow-blue-300/40 
+    transition duration-500  
+    
 }
 
-.table_set tbody{
-    @apply border-red-100
-}
-
-.table_set tbody tr td{
-   @apply p-1.5 text-center text-slate-700 dark:text-slate-200
+.table_set tbody tr td {
+   @apply p-2 text-center text-slate-700 dark:text-slate-200
    border border-slate-500 dark:border-slate-400 text-xs overflow-hidden
    
+}
+
+.table_set thead tr th {
+@apply p-2.5 text-center text-slate-700 dark:text-slate-200 
+bg-gray-200 dark:bg-slate-700
+border border-slate-500 dark:border-slate-400 text-base overflow-hidden
 }
 
 
