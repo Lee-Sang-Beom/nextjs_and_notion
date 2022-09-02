@@ -306,7 +306,7 @@ export default function Hoisting() {
                                     {`은 서버측에서 관리해요.`}
                                 </p>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`서버에서 클라이언트를 구분하기 위해`}
+                                    {`서버에서 클라이언트를 구분하기 위해 `}
                                     <strong>{`세션 ID`}</strong>
                                     {`라는 것을 부여하는데, 이를 통해 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때 까지 인증상태를 유지해요.`}
                                 </p>
