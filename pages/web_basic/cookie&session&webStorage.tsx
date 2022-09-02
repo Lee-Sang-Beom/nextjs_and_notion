@@ -29,21 +29,22 @@ export default function Hoisting() {
                                     {`쿠키, 세션, 웹 스토리지`}
                                 </h1>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4 mb-2">
-                                    {`- 기본적으로 HTTP 프로토콜 환경은 "connectionless, stateless"한 특성을 가지기 때문에 이를 보완하기 위해서 쿠키 또는 세션을 사용해요.`}
+                                    {`- 기본적으로 HTTP 프로토콜 환경은 connectionless, stateless한 특성을 가지기 때문에 이를 보완하기 위해서`} <strong>{`쿠키`}</strong> {`또는`} <strong>{`세션`}</strong>{`을 사용해요.`}
                                 </p>
                                 <div className="leading-relaxed text-base mb-2">
                                     <ul className="list-disc ml-20 text-sm  text-slate-500 dark:text-slate-300">
                                         <li className="mb-1 font-semibold text-left">
                                             {`connectionless(비연결성)`}
                                             <p className="mt-1 mb-2 text-xs font-normal">
-                                                <strong>{`- 클라이언트가 요청을 한 후 응답을 받으면, 그 연결을 끊어버려요.`}</strong>
-                                                {` 이는 계속해서 통신연결을 하지 않기 때문에, 서버의 자원을 효율적으로 관리할 수 있도록 하고, 클라이언트 요청에도 대응할 수 있도록 도와줘요.`}
+                                                {`- 클라이언트가 요청을 한 후 응답을 받으면, 그 연결을 끊어버려요.`}
+                                                {` 이는`} <strong>{`계속해서 연결을 유지하지 않음으로써`}</strong>{` 서버의 자원을 효율적으로 관리할 수 있도록 하고, 
+                                                클라이언트 요청에 대응하기 위해서에요.`}
                                             </p>
                                         </li>
                                         <li className="mb-1 font-semibold text-left">
                                             {`stateless(무상태)`}
                                             <p className="mt-1 mb-2 text-xs font-normal">
-                                                <strong>{`- 통신이 끝나면 서버는 클라이언트의 이전 상태정보를 유지하지 않는 특징이 있어요.`}</strong>
+                                                {`- 통신이 끝나면, `}<strong>{`서버는 클라이언트의 이전 상태정보를 유지하지 않는 특징`}</strong>{`이 있어요.`}
                                             </p>
                                         </li>
                                     </ul>
