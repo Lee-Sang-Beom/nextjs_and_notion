@@ -322,10 +322,10 @@ export default function Process_and_Thread() {
                                             {`먼저, 멀티 스레드의 `}<strong>{`장점`}</strong>{`에 대해 언급해볼게요.`}
                                         </p>
                                         <p className="leading-relaxed mb-3 dark:text-slate-700">
-                                            {`프로세스를 생성하여 자원을 할당하는 system call이 줄어들어 자원을 효율적으로 관리할 수 있어요. 즉, 시스템 자원의 소모를 줄임으로써 자원의 효율성을 증대시키고 시스템 처리량이 증가하게 되요. `}
+                                            {`프로세스를 생성해 자원을 할당하는 `}<strong>{`system call`}</strong>{`이 줄어들어 자원을 효율적으로 관리할 수 있어요. 즉, 시스템 자원의 소모를 줄임으로써 자원의 효율성을 증대시키고 시스템 처리량이 증가하게 되요. `}
                                             </p>
                                         <p className="leading-relaxed mb-3 dark:text-slate-700">
-                                            {`또, 프로세스에 비해 스레드 간 데이터를 주고 받는 것이 간단하기 때문에 통신 부담이 적고, 마찬가지로 시스템 자원 소모가 줄어들게 되요. 덕분에 스레드 사이의 작업량이 적어 Context Switching이 빨라요.`}
+                                            {`또, 프로세스에 비해 스레드 간 데이터를 주고 받는 것이 `}<strong>{`간단`}</strong>{`하기 때문에 통신 부담이 적고, 마찬가지로 시스템 자원 소모가 줄어들게 되요. 덕분에 스레드 사이의 작업량이 적어 Context Switching이 빨라요.`}
                                         </p>
                                         <p className="leading-relaxed dark:text-slate-700">
                                             {`프로세스에서의 Context Switching은 서로 공유하는 데이터가 없으므로 캐시가 쌓아놓은 데이터들이 무너지고, 새로 캐시 정보를 쌓아야 해요.
@@ -342,13 +342,16 @@ export default function Process_and_Thread() {
                                             {`다음으로, 멀티 스레드의 `}<strong>{`단점`}</strong>{`에 대해 언급해볼게요.`}
                                         </p>
                                         <p className="leading-relaxed mb-3 dark:text-slate-700">
-                                            {``}
+                                            {`멀티 스레드의 경우 자원을 공유하기 때문에, 각 스레드가 같은 공유 자원의 내용에 접근하고, 수정을 가할 경우 `}<strong>동기화 문제</strong>{`가 발생할 우려가 있어요. `}
                                         </p>
                                         <p className="leading-relaxed mb-3 dark:text-slate-700">
-                                            {``}
+                                            {`그래서, 스레드의 공유 자원 접근에 대해 주의 깊은 설계가 필요하며, 디버깅이 까다로운 점이 있어요.`}
                                         </p>
                                         <p className="leading-relaxed mb-3 dark:text-slate-700">
-                                            {``}
+                                            {`다른 프로세스(프로세스 밖)에서 스레드 각각을 제어할 수 없으며, 하나의 스레드만 오류로 종료되어도 전체 스레드가 종료될 수 있어요.`}
+                                        </p>
+                                        <p className="leading-relaxed dark:text-slate-700">
+                                            {`마지막으로 `}<strong>{`하나의 스레드만 실행중일 때에는 실행시간이 되려 지연`}</strong>{`될 수 있어요. 여러 작업을 할 목적으로 멀티 스레드를 설계했을텐데, 하나의 스레드만 동작한다면 문제가 되겠죠?`}
                                         </p>
                                     </div>
                                 </div>
