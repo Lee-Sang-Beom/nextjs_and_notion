@@ -112,7 +112,7 @@ export default function Hoisting() {
                                 className="object-cover object-center rounded mb-1 ml-1"
                                 alt="hero"
                                 src="/img/cookie_1.png"
-                            /> 
+                            />
                             <a
                                 className="text-sm"
                                 title="이동하기"
@@ -347,39 +347,53 @@ export default function Hoisting() {
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
                                     <strong>{`2. 세션 (Session)`}</strong>
                                 </h1>
-
-                                {/* => 220901_1513 (이미 1~7 내용은 내용 3-3 세션 동작 방식에 탑재해두었음.)
-                                    1. 클라이언트가 페이지를 요청한다 (사용자가 웹 사이트 접근)
-                                    2. 서버는 접근한 클라이언트의 request-header필드의 cookie를 확인해, 클라이언트가 해당 세션id를 보냈는지 확인
-                                    3. 만약 session-id가 존재하지 않으면, 서버는 session-id를 생성해 클라이언트에 함께 돌려줌
-                                        - 서버쪽에서는, 세션저장소에 해당 session-id값을 저장하여 차후 구분할 수 있도록 함
-                                    4. 클라이언트는 세션 ID를 받으면, 이걸 쿠키를 사용해서 저장하고 가지고 있음
-                                    5. 클라이언트는 이제 같은 요청 등의 재접속의 목적으로 서버에 요청할 때, http요청에 이 쿠키의 세션 ID를 같이 서버에 전달해서 요청
-                                    6. 서버는 세션 ID를 전달 받고, 세션저장소에서 해당 session-id 값을 찾아 클라이언트 정보를 가져와서 클라이언트를 구분한다. 그리고 각 클라이언트의 요구에 맞는 서비스를 제공
-                                    7. 클라이언트 정보를 가지고, 서버 요청을 처리하여 클라이언트에게 응답
-                                */}
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`사용자 정보를 브라우저에서 저장하는 `}
-                                    <strong>{`쿠키`}</strong>
-                                    {`와 달리, `}
-                                    <strong>{`세션`}</strong>
-                                    {`은 서버측에서 관리해요.`}
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`서버에서 클라이언트를 구분하기 위해 `}
-                                    <strong>{`세션 ID`}</strong>
-                                    {`라는 것을 부여하는데, 이를 통해 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때 까지 인증상태를 유지해요.`}
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`접속 시간에 제한을 두어, 일정 시간 응답이 없으면 정보가 유지되지 않게 처리할 수 있어요.`}
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`데이터를 서버에 두기 때문에, `}
-                                    <strong>{`쿠키`}</strong>
-                                    {`보다 보안에 좋아요. 하지만 사용자가 많아질수록 서버 메모리를 많이 차지해요.`}
-                                </p>
                             </div>
                         </div>
+                    </div>
+                    <div className="container mx-auto flex px-5 md:flex-row flex-col items-center mb-8">
+                        <div className="lg:max-w-lg lg:w-full pr-6 pl-6 md:w-1/2 w-5/6 mb-10 md:mb-0 ml-3 text-center">
+                            <img
+                                className="object-cover object-center rounded mb-1 ml-1"
+                                alt="hero"
+                                src="/img/session_1.png"
+                            />
+                            <a
+                                className="text-sm"
+                                title="이동하기"
+                                href={`https://ji5485.github.io/post/2020-08-01/what-is-cookie-and-session/`}
+                            >
+                                {`이미지 출처 : Developer Hyun님의 포스트`}
+                            </a>
+                        </div>
+                        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                            <h1 className="title-font sm:text-4xl text-3xl mb-6 font-medium text-gray-900">
+                                {` 세션이란? `}
+                            </h1>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                {`사용자 정보를 브라우저에서 저장하는 `}
+                                <strong>{`쿠키`}</strong>
+                                {`와 달리, `}
+                                <strong>{`세션`}</strong>
+                                {`은 서버측에서 관리해요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                {`서버에서 클라이언트를 구분하기 위해 `}
+                                <strong>{`세션 ID`}</strong>
+                                {`라는 것을 부여하는데, 이를 통해 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때 까지 인증상태를 유지해요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                {`접속 시간에 제한을 두어, 일정 시간 응답이 없으면 정보가 유지되지 않게 처리할 수 있어요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                {`데이터를 서버에 두기 때문에, `}
+                                <strong>{`쿠키`}</strong>
+                                {`보다 보안에 좋아요. 하지만 사용자가 많아질수록 서버 메모리를 많이 차지해요.`}
+                            </p>
+                        </div>
+                    </div>
+                    <div className="container px-5 py-24 mx-auto">
+
+
                         <div className="flex border-t border-gray-200 py-2">
                         </div>
                         {/* 내용 3-1 : 세션의 특징 */}
