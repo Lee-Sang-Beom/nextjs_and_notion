@@ -21,7 +21,7 @@ export default function Prototype() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-1/7 h-full bg-indigo-500"></div>
+                                <div className="w-1/6 h-full bg-indigo-500"></div>
                             </div>
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -35,6 +35,15 @@ export default function Prototype() {
                                     {`- 상속은 불필요한 중복을 제거하고 코드를 재사용하는 부분에서 중요한만큼 `}
                                     <strong>{`프로토타입`}</strong>{`에 대해 더 자세히 알아보아요!`}
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* 내용 2 : 프로토타입 */}
+                    <div className="container px-5 py-24 mx-auto">
+                        <div className="flex flex-col">
+                            {/* bar 길이*/}
+                            <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                                <div className="w-1/6 h-full bg-indigo-500"></div>
                             </div>
                         </div>
                     </div>
