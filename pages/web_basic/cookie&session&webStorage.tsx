@@ -55,28 +55,35 @@ export default function Hoisting() {
                                     <img
                                         className="object-cover object-center rounded mb-1"
                                         alt="hero"
-                                        src="/img/rendering_main.png"
+                                        src="/img/connectionless_1.png"
                                     />
                                     <a
                                         className="text-sm"
                                         title="이동하기"
-                                        href={`https://ji5485.github.io/post/2020-08-01/what-is-cookie-and-session/`}
+                                        href={`https://blog.naver.com/whitesunny65/222786325283`}
                                     >
-                                        {`이미지 출처 : kangdari님의 포스트`}
+                                         <p>
+                                            <strong>{`비연결성`}</strong>
+                                        </p>
+                                        {`이미지 출처 : 이별송이님의 포스트`}
+                                       
                                     </a>
                                 </div>
                                 <div className="w-full md:w-1/2 pr-5 pl-5 mb-10 md:mb-0 md:ml-6 md:mr-6  md:px-6  text-center">
                                     <img
                                         className="object-cover object-center rounded mb-1"
                                         alt="hero"
-                                        src="/img/rendering_main.png"
+                                        src="/img/stateless_1.png"
                                     />
                                     <a
                                         className="text-sm"
                                         title="이동하기"
-                                        href={`https://velog.io/@ksh4820/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%9B%90%EB%A6%AC`}
+                                        href={`https://blog.naver.com/easydiffi/222612903073`}
                                     >
-                                        {`이미지 출처 : kangdari님의 포스트`}
+                                         <p>
+                                            <strong>{`무상태`}</strong>
+                                        </p>
+                                        {`이미지 출처 : ManHoh님의 포스트`}
                                     </a>
                                 </div>
 
