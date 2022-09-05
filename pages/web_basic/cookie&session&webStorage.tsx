@@ -62,11 +62,11 @@ export default function Hoisting() {
                                         title="이동하기"
                                         href={`https://blog.naver.com/whitesunny65/222786325283`}
                                     >
-                                         <p>
+                                        <p>
                                             <strong>{`비연결성`}</strong>
                                         </p>
                                         {`이미지 출처 : 이별송이님의 포스트`}
-                                       
+
                                     </a>
                                 </div>
                                 <div className="w-full md:w-1/2 pr-5 pl-5 mb-10 md:mb-0 md:ml-6 md:mr-6  md:px-6  text-center">
@@ -80,7 +80,7 @@ export default function Hoisting() {
                                         title="이동하기"
                                         href={`https://blog.naver.com/easydiffi/222612903073`}
                                     >
-                                         <p>
+                                        <p>
                                             <strong>{`무상태`}</strong>
                                         </p>
                                         {`이미지 출처 : ManHoh님의 포스트`}
@@ -103,31 +103,53 @@ export default function Hoisting() {
                                 <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-gray-900">
                                     <strong>{`1. 쿠키 (Cookie)`}</strong>
                                 </h1>
-
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`클라이언트(브라우저)에 저장되는 키와 같이 들어있는 작은 파일을 뜻하고 있어요.`}
-                                </p>
-                                <div className="leading-relaxed text-base sm:pl-5 mb-2 py-2 ">
-                                    <ul className="list-disc ml-7 text-sm  text-slate-500 dark:text-slate-300">
-                                        <li className="ml-1 mb-1 font-semibold text-left ">
-                                            {`클라이언트 상태 정보를 로컬에 저장했다가 참조해요!`}
-                                        </li>
-                                        <li className="ml-1 mb-1 font-semibold text-left ">
-                                            {`사용자 인증이 유효한 시간을 명시할 수 있으며, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있어요!`}
-                                        </li>
-                                        <li className="ml-1 mb-1 font-semibold text-left ">
-                                            {`쿠키는 클라이언트의 상태 정보를 로컬에 저장했다가 참조해요!`}
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-2">
-                                    {`Response Header에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있어요!`}
-                                </p>
-                                <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
-                                    {`쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request 할 때 Request Header를 자동으로 넣어 서버에 전송해요!`}
-                                </p>
                             </div>
                         </div>
+                    </div>
+                    <div className="container mx-auto flex px-5 md:flex-row flex-col items-center mb-8">
+                        <div className="lg:max-w-lg lg:w-full pr-6 pl-6 md:w-1/2 w-5/6 mb-10 md:mb-0 ml-3 text-center">
+                            <img
+                                className="object-cover object-center rounded mb-1 ml-1"
+                                alt="hero"
+                                src="/img/cookie_1.png"
+                            /> 
+                            <a
+                                className="text-sm"
+                                title="이동하기"
+                                href={`https://ji5485.github.io/post/2020-08-01/what-is-cookie-and-session/`}
+                            >
+                                {`이미지 출처 : Developer Hyun님의 포스트`}
+                            </a>
+                        </div>
+                        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                            <h1 className="title-font sm:text-4xl text-3xl mb-6 font-medium text-gray-900">
+                                {` 쿠키란? `}
+                            </h1>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                {`클라이언트(브라우저)에 저장되는 키와 같이 들어있는 작은 파일을 뜻하고 있어요.`}
+                            </p>
+                            <div className="leading-relaxed text-base sm:pl-5 mb-2 py-2 ">
+                                <ul className="list-disc ml-7 text-sm  text-slate-500 dark:text-slate-300">
+                                    <li className="ml-1 mb-1 font-semibold text-left ">
+                                        {`클라이언트 상태 정보를 로컬에 저장했다가 참조해요!`}
+                                    </li>
+                                    <li className="ml-1 mb-1 font-semibold text-left ">
+                                        {`사용자 인증이 유효한 시간을 명시할 수 있으며, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있어요!`}
+                                    </li>
+                                    <li className="ml-1 mb-1 font-semibold text-left ">
+                                        {`쿠키는 클라이언트의 상태 정보를 로컬에 저장했다가 참조해요!`}
+                                    </li>
+                                </ul>
+                            </div>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-2">
+                                {`Response Header에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있어요!`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-7 pl-0 mt-4">
+                                {`쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request 할 때 Request Header를 자동으로 넣어 서버에 전송해요!`}
+                            </p>
+                        </div>
+                    </div>
+                    <div className="container px-5 py-24 mx-auto">
                         <div className="flex border-t border-gray-200 py-2">
                         </div>
                         {/* 내용 2-1 : 쿠키의 특징 */}
