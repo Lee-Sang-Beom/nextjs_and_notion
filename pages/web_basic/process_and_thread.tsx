@@ -5,7 +5,7 @@ import MoveBtn from "../../components/moveBtn";
 
 export default function Process_and_Thread() {
     // 페이지 넘김 정보
-    const prev = undefined;
+    const prev = '/web_basic/hoisting';
     const next = undefined;
 
     return (
@@ -22,7 +22,7 @@ export default function Process_and_Thread() {
                         <div className="flex flex-col">
                             {/* bar 길이*/}
                             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                                <div className="w-0 h-full bg-indigo-500"></div>
+                                <div className="w-1/4 h-full bg-indigo-500"></div>
                             </div>
                             {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
                             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
@@ -47,7 +47,7 @@ export default function Process_and_Thread() {
                     <div className="container px-5 py-12 mx-auto">
                         {/* bar 길이*/}
                         <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                            <div className="w-1/6 h-full bg-indigo-500"></div>
+                            <div className="w-1/2 h-full bg-indigo-500"></div>
                         </div>
 
                         {/* 프로그램 */}
@@ -193,7 +193,7 @@ export default function Process_and_Thread() {
                     <div className="container px-5 py-12 mx-auto">
                         {/* bar 길이*/}
                         <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                            <div className="w-1/3 h-full bg-indigo-500"></div>
+                            <div className="w-3/4 h-full bg-indigo-500"></div>
                         </div>
 
                         {/* 차이점 바로 기술 */}
@@ -241,7 +241,7 @@ export default function Process_and_Thread() {
                     <div className="container px-5 py-12 mx-auto">
                         {/* bar 길이*/}
                         <div className="h-1 bg-gray-200 rounded overflow-hidden">
-                            <div className="w-1/2 h-full bg-indigo-500"></div>
+                            <div className="w-full h-full bg-indigo-500"></div>
                         </div>
 
                         {/* 멀티 프로세스 */}
@@ -363,6 +363,35 @@ export default function Process_and_Thread() {
                        
                     </div>
                 </section>
+
+                {/*마무리*/}
+                <section className="text-gray-600 body-font">
+                    <div className="container px-5 mx-auto">
+                        <h1 className="sm:text-2xl text-xl font-bold title-font text-center text-gray-900 mb-12">
+                        그 외 추천 유튜브 영상
+                        </h1>
+                        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                        <Recommend_Youtube
+                            channel_name={`얄팍한 코딩사전`}
+                            video_title={`프로세스는 뭐고 스레드는 뭔가요?`}
+                            url={`https://www.youtube.com/watch?v=iks_Xb9DtTM`}
+                        />
+                        <Recommend_Youtube
+                            channel_name={`우아한Tech`}
+                            video_title={`[10분 테코톡] 🌷 코다의 Process vs Thread`}
+                            url={`https://www.youtube.com/watch?v=1grtWKqTn50`}
+                        />
+                        <Recommend_Youtube
+                            channel_name={`큰돌의터전`}
+                            video_title={`[CS전공지식면접] 프로세스와 스레드의 차이는?`}
+                            url={`https://www.youtube.com/watch?v=sJAcnXquSd4`}
+                        />
+                        </div>
+                    </div>
+                </section>
+
+                {/*이동하기*/}
+                <MoveBtn prev={prev} next={next} />
 
             </Layout>
         </>
