@@ -200,7 +200,9 @@ export default function Rendering() {
                     <p className="leading-relaxed mb-2">
                       {`DOM 트리와 CSSOM 트리를 결합해 `}
                       <strong>{`렌더 트리`}</strong>
-                      {`를 형성해요.`}
+                      {`를 형성해요. 렌더 트리를 생성하는 과정까지를 `}
+                      <strong>{`Construction`}</strong>
+                      {`이라고 해요.`}
                     </p>
                     <div className="leading-relaxed text-base">
                       <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
@@ -245,9 +247,7 @@ export default function Rendering() {
                           {`를 형성해요.`}
                         </li>
                         <li className="mb-1 text-left">
-                          {`생성된 AST는 `}
-                          <strong>{`인터프리터`}</strong>
-                          {`가 가상머신이 이해할 수 있는 `}
+                          {`인터프리터는 생성된 AST를 가상머신이 이해할 수 있는 `}
                           <strong>{`바이트코드`}</strong>
                           {`로 변환해요.`}
                         </li>
@@ -329,7 +329,7 @@ export default function Rendering() {
                       STEP 6
                     </h2>
                     <p className="leading-relaxed mb-2">
-                      {`디바이스 view port 내에서, 노드들의 정확한 위치와 크기를 계산해요.`}
+                      {`렌더링 엔진은 디바이스 view port 내에서, 렌더 트리의 노드들을 화면의 올바른 곳에 표시하기 위해 정확한 위치와 크기를 계산해요.`}
                     </p>
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left">
@@ -356,10 +356,18 @@ export default function Rendering() {
                     <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                       {`FINISH`}
                     </h2>
-                    <p className="leading-relaxed">
-                      {`렌더링 엔진은 `}
+                    <p className="leading-relaxed mb-4">
+                      {`UI BackEnd는 Render Tree의 노드들을 돌며, UI를 그리는 `}
                      <strong>Paint Event</strong>
-                      {`를 발생시켜 렌더 트리(개별 노드)를 화면에 그려요.`}
+                      {`를 발생시켜요.`}
+                    </p>
+                    <p className="leading-relaxed mb-4">
+                      {`그 다음, 노드들의 레이어를 순서대로 구성하는`} <strong>{`Composition`}</strong>{`단계를 거쳐요. 이 과정은 z-index가 낮은 요소를 먼저 놓고, 높은 요소를 놓는 과정으로 생각해주시면 되요.`}
+                    </p>
+                    <p className="leading-relaxd">
+                      {`Layout단계부터 Composition까지의 과정을 `}
+                      <strong>Operation</strong>
+                      {`이라고 해요.`}
                     </p>
                   </div>
                 </div>

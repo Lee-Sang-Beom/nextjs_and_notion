@@ -356,9 +356,9 @@ export default function Dom() {
             </div>
 
             {/* 렌더 트리 */}
-            <div className="text-center mt-16 mb-20">
-              <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center mb-4">{`렌더 트리(Render Tree)`}</h1>
-              <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+            <div className="text-center my-20">
+              <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center mb-4">{`✔ 렌더 트리(Render Tree)`}</h1>
+              <p className="text-base leading-relaxed xl:w-full lg:w-3/4 mx-auto text-gray-500s">
                 {`웹 페이지에 표시될 HTML, 스타일 요소로 구성되는 트리에요. 브라우저는 렌더트리를 생성하기 위해 아래의 두 모델을 필요로 해요.`}
               </p>
               <div className="flex mt-6 justify-center">

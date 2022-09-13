@@ -6,7 +6,7 @@ import MoveBtn from "../../components/moveBtn";
 export default function Process_and_Thread() {
     // 페이지 넘김 정보
     const prev = '/web_basic/hoisting';
-    const next = undefined;
+    const next = '/web_basic/browser_search';
 
     return (
         <>
