@@ -5,6 +5,7 @@ import Learn_More from "../../components/learn_More";
 import React from "react";
 import Recommend_Youtube from "../../components/recommend_youtube";
 import MoveBtn from "../../components/moveBtn";
+import Image from "next/image";
 
 export default function Dom() {
   // 페이지 넘김 정보
