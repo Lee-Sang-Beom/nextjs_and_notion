@@ -197,11 +197,11 @@ export default function Dom() {
               </div>
               {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
               <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
+                <h1 className="w-full title-font text-2xl font-bold text-gray-900">
                   {`CRP(Critical Rendering Path)`}
                 </h1>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`웹 브라우저가 원본 HTML문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 뷰 포트에 표시하기까지의 과정을 의미해요. 이 과정은 DOM과 밀접한 관련이 있으니, 살펴보고 가도록 해요!`}
+                  {`- 웹 브라우저가 원본 HTML문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 View port에 표시하기까지의 과정을 의미해요. 이 과정은 DOM과 밀접한 관련이 있으니, 살펴보고 가도록 해요!`}
                 </p>
               </div>
             </div>
@@ -399,18 +399,18 @@ export default function Dom() {
               </div>
               {/* 제목 : p태그 설명을 포함할 경우, div py-6 mb-2*/}
               <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-2">
-                <h1 className="w-full sm:text-3xl text-2xl font-bold title-font text-gray-900 text-center">
+                <h1 className="w-full title-font text-2xl font-bold text-gray-900">
                   {`목적`}
                 </h1>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`그렇다면 DOM은 대체 왜 쓰이는 것일까요? HTML코드는 정적인 텍스트이므로, 웹 화면이 사용자와 동적으로 상호작용을 하기 위해서 DOM이 필요해요. `}
+                  {`- 그렇다면 DOM은 대체 왜 쓰이는 것일까요? HTML코드는 정적인 텍스트이므로, 웹 화면이 사용자와 동적으로 상호작용을 하기 위해서 DOM이 필요해요. `}
                 </p>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`앞서 JS를 활용해 문서 구조에 접근할 수 있고, 상호작용할 수 있다고 말했죠? 
+                  {`- 앞서 JS를 활용해 문서 구조에 접근할 수 있고, 상호작용할 수 있다고 말했죠? 
                   즉, 문서 내의 각 요소들에 대해 자바스크립트를 활용해 여러 작업을 시도할 수 있는데, `} <strong>{`DOM이 해당 수정 및 제어 작업을 가능하도록 문서의 구조화된 표현을 제공하고 있는 것`}</strong>{`이에요. `}
                 </p>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`아래는 DOM이 언제 활용될 수 있는지를 정리한 것이에요. 정리하는 차원에서 읽고 넘어가도록 해요!`}
+                  {`- 아래는 DOM이 언제 활용될 수 있는지를 정리한 것이에요. 정리하는 차원에서 읽고 넘어가도록 해요!`}
                 </p>
               </div>
             </div>

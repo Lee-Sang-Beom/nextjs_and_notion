@@ -544,36 +544,11 @@ export default function WebMain() {
               desc = {`우리가 사용하는 프로그램은 프로세스, 스레드라는 용어와 깊이 연관되어 있어요. 이것들을 잘못 알고 있으면, 디버깅 및 오류 해결에 어려움을 겪을 수 있어요. 꼭 알고 넘어가도록 해요.`}/>
               
             {/* box 21*/}
-            <div className="p-4 lg:w-1/3">
-              <div className="h-full bg-gray-100 bg-opacity-75 dark:bg-gray-800 px-8 pt-14 pb-10 rounded-lg overflow-hidden text-center relative">
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  CATEGORY - WEB BASIC
-                </h2>
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                  브라우저 주소창에 URL을 입력하면?
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  DOM이 무엇인지 들어보셨나요? 웹 페이지에서의 DOM은 사용자와의
-                  상호작용과 깊은 관련이 있어요! 이것이 무엇인지, 궁금하다면
-                  아래 Learn 버튼을 눌러주세요!
-                </p>
-                <a className="text-indigo-500 inline-flex items-center mt-5">
-                  Learn
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <ChooseTopic 
+              category={`CATEGORY : WEB BASIC`} 
+              title={`브라우저 주소창에 URL을 입력하면?`} 
+              url={`/web_basic/browser_search`}
+              desc = {`이전에 HTML/CSS/JS가 무엇인지, 렌더링이 무엇인지 다루어보았었죠? 이번에는 렌더링을 하기 이전 과정에서, 우리가 검색창에 URL을 입력할 때 어떤 일이 발생하고, 어떻게 리소스 자원들을 받아오는지를 알아볼거에요.`}/>
           </div>
         </div>
       </section>
