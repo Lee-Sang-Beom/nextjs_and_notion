@@ -70,13 +70,18 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 1
+                                            사용자가 주소창에 이동하기를 원하는 도메인을 입력한다.
                                         </h2>
                                         <p className="leading-relaxed mb-4">
-                                            {`text`}
+                                            {`- 특정 웹사이트에 접속하기 위해서 도메인이 아닌 IP 주소가 필요해요. 모든 URL들에는 고유의 IP 주소가 지정되어있는데, 이 IP 주소를 통해서 해당 웹사이트를 호스팅하고 있는 서버 컴퓨터에 접근할 수 있어요. `}
+                                        </p>
+                                        <p className="leading-relaxed mb-4">
+                                            <strong>{`- DNS(Domain Name System)`}</strong>{`은(는) URL의 이름과 IP주소를 저장하고 있는 데이터베이스에요. 도메인의 Hostname을 IP주소로 바꾸거나, 반대의 변환을 수행할 수 있도록 도와줘요.`}
                                         </p>
                                         <p className="leading-relaxed">
-                                            {`text`}
+                                            {`- 내용을 정리해보면, `}
+                                            <strong>{`"사용자가 특정 URL을 입력하면, 그에 매핑되는 DNS에 저장된 IP주소를 얻게 되고, 브라우저는 해당 과정을 통해 해당 IP주소로 접속할 수 있게 되는 것이다."`}</strong>
+                                            {` 정도에요. 일단 해당 단계에서는 사용자가 브라우저 주소창에 URL을 입력한다는 과정이라고 이해하고 넘어가도록 해요.`}
                                         </p>
                                     </div>
                                 </div>
