@@ -129,22 +129,34 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 3
+                                            {`요청한 URL이 캐시에 없으면 ISP의 DNS server가 재귀적으로 도메인 이름을 찾는다.`}
                                         </h2>
-                                        <p className="leading-relaxed mb-4">
-                                            {`text`}
-                                        </p>
-
-                                        <p className="leading-relaxed mb-2">
-                                            {`text`}
-                                        </p>
-                                        <div className="leading-relaxed text-base mb-8">
-                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                                <li className="mb-1 text-left list-decimal">{`text`}</li>
-                                                <li className="mb-1 text-left list-decimal">{`text`}</li>
-                                                <li className="mb-1 text-left list-decimal">{`text`}</li>
-                                            </ul>
+                                        <div className="py-6 w-full">
+                                            <div className="rounded-lg h-full overflow-hidden">
+                                                <img alt="content" className="h-full w-full lg:w-2/3 border-2" src="/img/Recursive_Search.png" />
+                                            </div>
+                                            <a
+                                                className="text-sm mt-1 ml-1"
+                                                title="이동하기"
+                                                href={`https://nesoy.github.io/articles/2018-06/What-happens-search-google`}
+                                            >
+                                                {`이미지 출처 : nesoy 님의 포스트`}
+                                            </a>
                                         </div>
+
+                                        
+                                        <p className="leading-relaxed mb-4">
+                                            {`만약 캐시에 사용자가 입력한 URL과 관련된 DNS기록이 없으면, ISP의 DNS서버는 `}<strong>Root DNS</strong>{`에게 해당 도메인에 해당하는 IP주소를 어디서 찾을 수 있는지 물어보며 조회해요.`}
+                                        </p>
+                                        <p className="leading-relaxed mb-4">
+                                            {`만약에 [.com]으로 끝나는 도메인이면, Root DNS는 [.com]으로 끝나는 도메인들을 담당하는 `}<strong>Top-Level 서버</strong>{`의 IP주소를 반환해요.`}
+                                        </p>
+                                        <p className="leading-relaxed mb-4">
+                                            {`이후, Top-Level서버에게 같은 방법으로 요청하고, google.com으로 끝나는 도메인 정보를 가진 `}<strong>Second-Level 서버</strong>{`의 IP주소를 반환해요. 이렇게 원하는 IP주소를 얻을 때까지 검색을 반복해요.`}
+                                        </p>
+                                        <p className="leading-relaxed">
+                                            {`이렇게 재귀적으로, 여러 다른 DNS 서버들을 검색하며 연결하기를 원하는 사이트의 IP 주소를 찾는 과정을 `}<strong>Recursive Search</strong>{`라고 불러요.`}
+                                        </p>
                                     </div>
                                 </div>
                                 {/* 과정 4 */}
