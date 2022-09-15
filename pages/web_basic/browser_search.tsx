@@ -70,7 +70,7 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            사용자가 주소창에 이동하기를 원하는 도메인을 입력한다.
+                                            {`사용자가 주소창에 이동하기를 원하는 도메인을 입력한다.`}
                                         </h2>
                                         <p className="leading-relaxed mb-4">
                                             {`- 특정 웹사이트에 접속하기 위해서 도메인이 아닌 IP 주소가 필요해요. 모든 URL들에는 고유의 IP 주소가 지정되어있는데, 이 IP 주소를 통해서 해당 웹사이트를 호스팅하고 있는 서버 컴퓨터에 접근할 수 있어요. `}
@@ -98,10 +98,21 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 2
+                                            {`브라우저는 캐싱된 DNS기록이 있는지 체크한다.`}
                                         </h2>
-                                        <p className="leading-relaxed">
-                                            {`text`}
+                                        <p className="leading-relaxed mb-2">
+                                            <strong>{`- DNS`}</strong>{`기록을 찾기 위해서, 브라우저는 네 개의 캐시를 확인해요. 그 순서는 아래와 같아요.`}
+                                        </p>
+                                        <div className="leading-relaxed text-base mb-8">
+                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
+                                                <li className="mb-1 text-left list-decimal">{`우선 `}<strong>브라우저 캐시</strong>{`를 확인해요. 브라우저는 내가 이전에 방문한 웹 사이트의 DNS기록을 일정 기간 저장해요.`}</li>
+                                                <li className="mb-1 text-left list-decimal">{`브라우저 캐시에서 원하는 DNS 기록을 찾지 못하면, 브라우저는 `}<strong>OS 캐시</strong>{`를 확인해요. 이 과정은 브라우저가 OS에 System Call을 통해 DNS기록을 가져와요.`}</li>
+                                                <li className="mb-1 text-left list-decimal">{`OS 캐시에서 원하는 DNS 기록을 찾지 못하면, 브라우저는 `}<strong>라우터 캐시</strong>{`를 확인해요.`}</li>
+                                                <li className="mb-1 text-left list-decimal">{`라우터 캐시에서 원하는 DNS 기록을 찾지 못하면, 마지막으로 `}<strong>ISP 캐시</strong>{`를 확인해요. ISP는 인터넷 서비스 제공자, 즉 인터넷 서비스를 제공하는 주체를 의미해요`}</li>
+                                            </ul>
+                                        </div>
+                                        <p className="leading-relaxed mb-4">
+                                            {`- 여기서 `}<strong>캐시</strong>{`란, 자주 사용하는 데이터나 값을 미리 복사해 놓은 임시 장소로, 네트워크 트래픽을 조절하고 데이터 전송 시간을 줄여줘요.`}
                                         </p>
                                     </div>
                                 </div>
