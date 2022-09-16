@@ -5,6 +5,7 @@ import Learn_More from "../../components/learn_More";
 import React from "react";
 import Recommend_Youtube from "../../components/recommend_youtube";
 import MoveBtn from "../../components/moveBtn";
+import BringImage from "../../components/step_bring_Image";
 
 export default function Browser_search() {
     // 페이지 넘김 정보
@@ -131,19 +132,10 @@ export default function Browser_search() {
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                                             {`요청한 URL이 캐시에 없으면 ISP의 DNS server가 재귀적으로 도메인 이름을 찾는다.`}
                                         </h2>
-                                        <div className="py-6 w-full">
-                                            <div className="rounded-lg h-full overflow-hidden">
-                                                <img alt="content" className="h-full w-full lg:w-2/3 border-2" src="/img/Recursive_Search.png" />
-                                            </div>
-                                            <a
-                                                className="text-sm mt-1 ml-1"
-                                                title="이동하기"
-                                                href={`https://nesoy.github.io/articles/2018-06/What-happens-search-google`}
-                                            >
-                                                {`이미지 출처 : nesoy 님의 포스트`}
-                                            </a>
-                                        </div>
-
+                                        <BringImage
+                                            img_path = {`/img/Recursive_Search.png`}
+                                            from_user = {`nesoy`}
+                                            from_url = {`https://nesoy.github.io/articles/2018-06/What-happens-search-google`} />
                                         
                                         <p className="leading-relaxed mb-4">
                                             {`만약 캐시에 사용자가 입력한 URL과 관련된 DNS기록이 없으면, ISP의 DNS서버는 `}<strong>Root DNS</strong>{`에게 해당 도메인에 해당하는 IP주소를 어디서 찾을 수 있는지 물어보며 조회해요.`}
@@ -172,15 +164,41 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 4
+                                        {`브라우저가 서버와 TCP Connection을 진행한다.`}
                                         </h2>
-                                        <p className="leading-relaxed mb-2">
-                                            {`text`}
+                                        <p className="leading-relaxed mb-4">
+                                            {`브라우저가 원하는 IP주소를 얻게 되면, 해당 IP주소를 가진 서버와 `}<strong>TCP Connection</strong>{`을 시도해요. 이 TCP Connection이 완료되면 `}
+                                            <strong>HTTP 통신을 진행할 수 있어요.</strong>
                                         </p>
-                                        <div className="leading-relaxed text-base">
+                                        <p className="leading-relaxed mb-4">
+                                            {`클라이언트와 서버 간에 데이터가 오가기 위해서는 TCP Connection 상태가 되어야 해요.
+                                              이 상태를 만들기 위해, 클라이언트와 서버는 `}<strong>TCP/IP three-way handshake</strong>{`라는 프로세스를 사용해요.`}
+                                        </p>
+                                        <BringImage
+                                            img_path = {`/img/three_way_handshake.png`}
+                                            from_user = {`초록양파`}
+                                            from_url = {`https://sjlim5092.tistory.com/35`} />
+                                        <p className="leading-relaxed mb-2">
+                                            <strong>TCP</strong>
+                                            {`는 장치들 사이에 논리적인 접속을 성립(establish)하기 위해 사용하는(신뢰성을 중시하는) 프로토콜이에요. 
+                                            위의 사진과 함께, TCP/IP three-way handshake를 이해하기 쉽게 설명해볼게요.`}
+                                        </p>
+                                        <div className="leading-relaxed text-base mb-8">
                                             <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                                <li className="mb-1 text-left">{`text`}</li>
-                                                <li className="mb-1 text-left">{`text`}</li>
+                                                <li className="mb-1 text-left list-decimal">{`클라이언트는 서버에게 접속 요청을 한다는 메시지인 `}
+                                                    <strong> SYN 패킷</strong>
+                                                    {`을 보내요. 이 때, 클라이언트는 서버로부터 SYN/ACK 패킷을 받기를 기다리는 상태가 되는데, 이 상태가 `}
+                                                    <strong>SYN_SENT에요.</strong>
+                                                    </li>
+                                                <li className="mb-1 text-left list-decimal">{`서버는 SYN요청을 받고 클라이언트에게 요청을 수락한다는 `}
+                                                    <strong>ACK와 SYN 패킷</strong>
+                                                    {`을 전송해요. 그리고 다시 클라이언트가 ACK 패킷을 보내주기를 기다리는 상태가 되는데, 이 상태가 `}
+                                                    <strong>SYN_RECEIVED에요</strong>
+                                                    </li>
+                                                <li className="mb-1 text-left list-decimal">
+                                                    {`클라이언트가 서버로부터 SYN/ACK 패킷을 받으면, 다시 서버에게 ACK 패킷을 보내요. `}
+                                                    <strong>{`이 때부터 논리적 연결(establish)이 이루어지고, 데이터가 오갈 수 있는 상태가 되요.`}</strong>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
