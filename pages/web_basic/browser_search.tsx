@@ -216,55 +216,47 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 5
+                                            {`브라우저가 웹 서버에게 HTTP Request를 한다.`}
                                         </h2>
                                         <p className="leading-relaxed mb-4">
-                                            {`text`}
+                                            {`TCP Connection 상태가 되었으니, 이제 클라이언트와 서버는 HTTP 프로토콜을 사용하여 데이터를 전송하고 받을 수 있어요.`}
                                         </p>
-                                        <p className="leading-relaxed mb-2">
-                                            {`text`}
-                                        </p>
-                                        <div className="leading-relaxed text-base mb-8">
-                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                                <li className="mb-1 text-left">
-                                                    {`text`}
-                                                </li>
-                                                <li className="mb-1 text-left">
-                                                    {`text`}
-                                                </li>
-                                            </ul>
-                                        </div>
                                         <p className="leading-relaxed mb-4">
-                                            {`text`}
+                                            {`원래의 사용자 목적인 웹 페이지를 받아와야 하니, 클라이언트의 브라우저는 GET 요청을 통해 서버로부터 `}
+                                            <strong>{`웹 페이지 www.google.com`}</strong>
+                                            {`에 대한 리소스를 달라고 요청해요.`}
+                                        </p>
+                                        <p className="leading-relaxed mb-4">
+                                            {`이 때 생성된 HTTP Request Message는 `} 
+                                            <strong>{`TCP 프로토콜을 사용하여 IP 주소의 컴퓨터로 전송되요.`}</strong>
                                         </p>
                                         <p className="leading-relaxed mb-2">
-                                            {`text`}
+                                            {`Request Message에는 요청을 위한 여러 정보 등이 담겨 있어요. `}
+                                            <strong>HTTP 요청</strong>
+                                            {`에 대해 좀 더 자세히 언급해보면 아래와 같아요.`}
                                         </p>
                                         <div className="leading-relaxed text-base mb-8">
                                             <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                                <li className="mb-1 text-left list-decimal">
-                                                    {`text`}
+                                                <li className="mb-1 text-left">
+                                                    <strong>Request Line</strong>
+                                                    {` : URL정보, 요구 동작(GET), HTTP 버전 정보가 담겨요.`}
                                                 </li>
-                                                <li className="mb-1 text-left list-decimal">
-                                                    {`text`}
+                                                <li className="mb-1 text-left">
+
+                                                    <strong>Request Header</strong>
+                                                    {` : 요청에 대한 추가 정보를 서버에 전달하기 위해 사용되요. `}
+                                                    <strong>{`Host, User-Agent, Accept, Cookie 등 다양한 요소가 있어요.`}</strong>
+                                                    {`궁금하면 `}
+                                                    <a href="https://goddaehee.tistory.com/169">{`"여기"`}</a>
+                                                    {`를 클릭해주세요.`}
                                                 </li>
-                                                <li className="mb-1 text-left list-decimal">
-                                                    {`text`}
-                                                </li>
-                                                <li className="mb-1 text-left list-decimal">
-                                                    {`text`}
-                                                </li>
-                                                <li className="ml-8 mb-1 text-left">
-                                                    {`text`}
-                                                </li>
-                                                <li className="ml-8 mb-1 text-left">
-                                                    {`text`}
-                                                </li>
-                                                <li className="ml-8 mb-1 text-left">
-                                                    {`text`}
+                                                <li className="mb-1 text-left">
+                                                    <strong>Request Body</strong>
+                                                    {` : 추가 컨텐츠를 서버로 보내기 위해 사용되는 부분이에요. JSON이나 XML과 같은 파일 유형이 있어요.`}
                                                 </li>
                                             </ul>
                                         </div>
+                                        
                                     </div>
                                 </div>
                                 {/* 과정 6 */}
