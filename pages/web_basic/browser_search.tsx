@@ -188,12 +188,12 @@ export default function Browser_search() {
                                                 <li className="mb-1 text-left list-decimal">{`클라이언트는 서버에게 접속 요청을 한다는 메시지인 `}
                                                     <strong> SYN 패킷</strong>
                                                     {`을 보내요. 이 때, 클라이언트는 서버로부터 SYN/ACK 패킷을 받기를 기다리는 상태가 되는데, 이 상태가 `}
-                                                    <strong>SYN_SENT에요.</strong>
+                                                    <strong>SYN_SENT 이에요.</strong>
                                                     </li>
                                                 <li className="mb-1 text-left list-decimal">{`서버는 SYN요청을 받고 클라이언트에게 요청을 수락한다는 `}
                                                     <strong>ACK와 SYN 패킷</strong>
                                                     {`을 전송해요. 그리고 다시 클라이언트가 ACK 패킷을 보내주기를 기다리는 상태가 되는데, 이 상태가 `}
-                                                    <strong>SYN_RECEIVED에요</strong>
+                                                    <strong>SYN_RECEIVED 이에요.</strong>
                                                     </li>
                                                 <li className="mb-1 text-left list-decimal">
                                                     {`클라이언트가 서버로부터 SYN/ACK 패킷을 받으면, 다시 서버에게 ACK 패킷을 보내요. `}
@@ -272,17 +272,18 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 6
+                                            {`서버가 요청을 처리하고 Response를 생성한다.`}
                                         </h2>
-                                        <p className="leading-relaxed mb-2">
-                                            {`text`}
+                                        <p className="leading-relaxed mb-4">
+                                            {`서버는 클라이언트 측의 요청을 전달받아 내용을 읽고, `}<strong>Response</strong>{`를 생성해요.`}
                                         </p>
-                                        <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                            <li className="mb-1 text-left">
-                                                {`text`}
-                                            </li>
-                                            <li className="mb-1 text-left">{`text`}</li>
-                                        </ul>
+                                        <p className="leading-relaxed mb-4">
+                                            {`서버는 클라이언트 요청이 무엇인지 파악하고, 그 요청을 실행해요. 
+                                            클라이언트 요청이 무슨 종류인지에 따라 서버 정보를 `}<strong>{`업데이트(POST)`}</strong>{`할 수도 있고, 쿠키와 헤더를 읽을 수도 있어요.`}
+                                        </p>
+                                        <p className="leading-relaxed mb">
+                                            <strong>마지막으로</strong>{`, 서버는 클라이언트에게 응답할 Response를 특정 포맷(JSON, XML, HTML) 형태로 작성해 만들어요. 이제 응답을 보낼 일만 남았어요.`}
+                                        </p>
                                     </div>
                                 </div>
                                 {/* 과정 7 */}
