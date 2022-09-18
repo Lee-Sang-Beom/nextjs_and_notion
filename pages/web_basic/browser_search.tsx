@@ -222,7 +222,7 @@ export default function Browser_search() {
                                             {`TCP Connection 상태가 되었으니, 이제 클라이언트와 서버는 HTTP 프로토콜을 사용하여 데이터를 전송하고 받을 수 있어요.`}
                                         </p>
                                         <p className="leading-relaxed mb-4">
-                                            {`원래의 사용자 목적인 웹 페이지를 받아와야 하니, 클라이언트의 브라우저는 GET 요청을 통해 서버로부터 `}
+                                            {`원래의 사용자 목적인 웹 페이지를 받아와야 하니, 브라우저(클라이언트)는 GET 요청을 통해 서버로부터 `}
                                             <strong>{`웹 페이지 www.google.com`}</strong>
                                             {`에 대한 리소스를 달라고 요청해요.`}
                                         </p>
@@ -246,7 +246,7 @@ export default function Browser_search() {
                                                     <strong>Request Header</strong>
                                                     {` : 요청에 대한 추가 정보를 서버에 전달하기 위해 사용되요. `}
                                                     <strong>{`Host, User-Agent, Accept, Cookie 등 다양한 요소가 있어요.`}</strong>
-                                                    {`궁금하면 `}
+                                                    {` 궁금하면 `}
                                                     <a href="https://goddaehee.tistory.com/169">{`"여기"`}</a>
                                                     {`를 클릭해주세요.`}
                                                 </li>
@@ -275,14 +275,14 @@ export default function Browser_search() {
                                             {`서버가 요청을 처리하고 Response를 생성한다.`}
                                         </h2>
                                         <p className="leading-relaxed mb-4">
-                                            {`서버는 클라이언트 측의 요청을 전달받아 내용을 읽고, `}<strong>Response</strong>{`를 생성해요.`}
+                                            {`서버는 브라우저(클라이언트) 측의 요청을 전달받아 내용을 읽고, `}<strong>Response</strong>{`를 생성해요.`}
                                         </p>
                                         <p className="leading-relaxed mb-4">
-                                            {`서버는 클라이언트 요청이 무엇인지 파악하고, 그 요청을 실행해요. 
+                                            {`서버는 브라우저(클라이언트) 요청이 무엇인지 파악하고, 그 요청을 실행해요. 
                                             클라이언트 요청이 무슨 종류인지에 따라 서버 정보를 `}<strong>{`업데이트(POST)`}</strong>{`할 수도 있고, 쿠키와 헤더를 읽을 수도 있어요.`}
                                         </p>
                                         <p className="leading-relaxed mb">
-                                            <strong>마지막으로</strong>{`, 서버는 클라이언트에게 응답할 Response를 특정 포맷(JSON, XML, HTML) 형태로 작성해 만들어요. 이제 응답을 보낼 일만 남았어요.`}
+                                            <strong>마지막으로</strong>{`, 서버는 브라우저(클라이언트)에게 응답할 Response를 특정 포맷(JSON, XML, HTML) 형태로 작성해 만들어요. 이제 응답을 보낼 일만 남았어요.`}
                                         </p>
                                     </div>
                                 </div>
@@ -299,17 +299,37 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 7
+                                            {`서버가 브라우저(클라이언트)에게 HTTP Response를 한다.`}
                                         </h2>
-                                        <p className="leading-relaxed mb-2">
-                                            {`text`}
+                                        <p className="leading-relaxed mb-4">
+                                            {`서버는 이제 `}<strong>{`브라우저(클라이언트)`}</strong>{`에게 요청에 대한 응답메시지를 전송해요.`}
                                         </p>
-                                        <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                            <li className="mb-1 text-left">
-                                                {`text`}
-                                            </li>
-                                            <li className="mb-1 text-left">{`text`}</li>
-                                        </ul>
+                                        <p className="leading-relaxed mb-2">
+                                            <strong>서버의 response</strong>
+                                            {`에는 요청한 페이지, Status-Code, Content-Type, Cache-Control, 쿠키, 개인정보 등 여러가지가 포함되요. 구조는 아래와 같아요.`}
+                                        </p>
+                                        <div className="leading-relaxed text-base mb-8">
+                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
+                                                <li className="mb-1 text-left">
+                                                    <strong>Status Line</strong>
+                                                    {` : HTTP 버전, 상태 코드, 상태 메시지(상태 코드에 대한 간략한 설명)를 포함해요.`}
+                                                </li>
+                                                <li className="mb-1 text-left">
+                                                    <strong>Response Header</strong>
+                                                    {` : Request처럼 Response에서도 추가적인 정보를 전달하기 위해 Header를 사용해요. `}
+                                                    <strong>{`Content-Type, Server(웹 서버의 종류), Age, Access-Control-Allow-Origin 등 다양한 요소가 있어요. `}</strong>
+                                                    {`궁금하면 `}
+                                                    <a href="https://goddaehee.tistory.com/169">{`"여기"`}</a>
+                                                    {`를 클릭해주세요.`}
+                                                </li>
+                                                <li className="mb-1 text-left">
+                                                    <strong>Response Body</strong>
+                                                    {` : Content-Type Header 정보 형식에 따라 클라이언트가 요청한 리소스 데이터를 서버가 이곳에 담아요. 
+                                                    만약, `}<strong>{`Content-Type: application/json`}</strong>{`이라면, Response Body에는 JSON형식의 데이터가 포함되는 것이죠.`}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 {/* 과정 8 */}
