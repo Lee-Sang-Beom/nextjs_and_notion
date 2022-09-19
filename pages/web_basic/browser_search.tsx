@@ -345,10 +345,17 @@ export default function Browser_search() {
                                     </div>
                                     <div className="flex-grow pl-4">
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            {`FINISH`}
+                                            {`브라우저가 HTML Content를 보여준다.`}
                                         </h2>
+                                        <p className="leading-relaxed mb-4">
+                                            {`브라우저는 서버에게서 받은 `}
+                                            <strong>{`Resource(요청한 웹 페이지)`}</strong>
+                                            {`를 이용하여, HTML Content를 렌더링하고 사용자가 볼 수 있도록 노출시켜요.`}
+                                        </p>
                                         <p className="leading-relaxed">
-                                            {`text`}
+                                            {`이전에 배웠던 렌더링 과정이 기억나시나요? 지금부터 그 과정이 시작되는거에요. 잘 모르겠다면 `}
+                                            <a href="http://localhost:3000/web_basic/rendering">{`"여기"`}</a>
+                                            {`를 클릭해주세요.`}
                                         </p>
                                     </div>
                                 </div>
