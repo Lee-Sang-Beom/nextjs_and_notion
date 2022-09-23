@@ -430,37 +430,12 @@ export default function WebMain() {
           {/*여섯 번째 라인*/}
           <div className="flex flex-wrap -m-4 mt-4">
             {/* box 16*/}
-            <div className="p-4 lg:w-1/3">
-              <div className="h-full bg-gray-100 bg-opacity-75 dark:bg-gray-800 px-8 pt-14 pb-10 rounded-lg overflow-hidden text-center relative">
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  CATEGORY : WEB BASIC
-                </h2>
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                  Webpack, Babel, Polyfill
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  HTML, CSS, JS가 무엇인지 많이 들어보셨나요? 프론트엔드
-                  개발자가 되기 위해서 이것들은 꼭 익혀두셔야 해요! 이것들이
-                  각자 어떠한 역할을 하고 있는지 궁금하다면, 아래 Learn 버튼을
-                  눌러주세요!
-                </p>
-                <a className="text-indigo-500 inline-flex items-center mt-5">
-                  Learn
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <ChooseTopic 
+              category={`CATEGORY : WEB BASIC`}
+              title={`Webpack, Babel, Polyfill`}
+              url={`/web_basic/webpack_babel_polyfill`}
+              desc={`Webpack, Babel, Polyfill에 대해 들어보셨나요? 아마 JavaScript를 문법위주로 공부해오신 분들이라면 생소할 이름일 수 있을 것 같아요.
+               Webpack은 모듈과 관련이 있고, Babel, Polyfill은 크로스 브라우징과 관련이 있어요. 전반적인 개념에 대해 알고싶다면, 아래 Learn 버튼을 눌러주세요!`}/>
 
             {/* box 17*/}
             <div className="p-4 lg:w-1/3">
