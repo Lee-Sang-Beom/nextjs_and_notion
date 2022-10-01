@@ -5,7 +5,6 @@ import Learn_More from "../../components/learn_More";
 import React from "react";
 import Recommend_Youtube from "../../components/recommend_youtube";
 import MoveBtn from "../../components/moveBtn";
-import BringImage from "../../components/step_bring_Image";
 
 export default function Webpack_Babel_Polyfill() {
     // 페이지 넘김 정보
@@ -153,9 +152,38 @@ export default function Webpack_Babel_Polyfill() {
                                 {`Babel`}
                             </h1>
                         </div>
-                        <div className="w-full">
-
+                        <div className="sm:pl-10 pl-0">
+                                {/* module */}
+                                <div className="flex flex-col mb-2 items-start">
+                                    <p className="leading-relaxed text-base">
+                                        {`- Babel이 탄생하게 된 이유는 `}
+                                        <strong>크로스 브라우징</strong>
+                                        {`과 관련이 있어요.`}
+                                    </p>
+                                </div>
+                                <div className="flex flex-col mb-2 items-start">
+                                    <p className="leading-relaxed text-base">
+                                        - <strong> 크로스 브라우징</strong>
+                                        {`은 브라우저 및 플랫폼에 따라 기본적으로 요소들이 보여지는 모습이 다르기 때문에, 이러한 차이를 최소화하기 위한 작업들을 의미해요. 만약 일부 최신 브라우저에만 동작하는 기능을 다른 브라우저에 구현해야 하는 경우가 발생하면, 그 기능을 단순화하거나 생략해야 하는 일이 발생할 수 있어요.`}</p>
+                            </div>
                         </div>
+                        <section className="text-gray-600 body-font">
+                            <div className="container px-5 py-6 mx-auto flex flex-wrap">
+                                <div className="lg:w-1/2 w-full mb-5 lg:mb-0 rounded-lg overflow-hidden">
+                                    <img alt="feature" className="object-cover object-center h-full w-full" src="/img/babel.png" />
+                                </div>
+                                <div className="flex flex-col flex-wrap lg:py-6 -mb-5 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+                                    <div className="flex flex-col mb-5 lg:items-start items-center">
+                                        <div className="flex-grow">
+                                            <h2 className="text-gray-900 text-lg title-font font-bold mb-3">Babel</h2>
+                                            <p className="leading-relaxed mb-2 text-base items-start">- 이 이슈를 해결하기 위해 생겨난 툴이 <strong>{`Babel(바벨)`}</strong>이에요.</p>
+                                            <p className="leading-relaxed mb-2 text-base items-start">{`- 바벨은 ES6+ 버전 코드를 하위버전 코드로 변환해주고, TS, JSX 까지도 다른 브라우저에서 정상 동작할 수 있도록 도와주는`} <strong>JavaScript 컴파일러에요.</strong></p>
+                                            <p className="leading-relaxed mb-2 text-base items-start">{`- 정리하면, 바벨은 ES6+ 버전의 자바스크립트 코드를 하위버전(ES5)으로 변환함으로써 최신버전의 자바스크립트가 지원되지 않는 다른 브라우저에서도 동작할 수 있도록 하는 JS 컴파일러에요.`}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
 
                     {/*4. polyfill */}
