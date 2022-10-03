@@ -127,13 +127,13 @@ export default function Webpack_Babel_Polyfill() {
                                 <div className="flex flex-col lg:items-start items-center">
                                     <p className="leading-relaxed text-base">
                                         <strong>{`즉, Webpack은 여러 파일을 하나의 파일로 묶는 모듈 번들러 중 하나라고 정리할 수 있어요. `}</strong>
-                                    {`모듈 번들러는 프론트엔드 측에서 서버로 HTTP 요청 시, 요청 개수를 줄여줌으로써 `}
-                                    <strong>성능을 향상</strong>
-                                    {`시키고, 공백 등을 없애므로 `}
-                                    <strong>리소스</strong>
-                                    {`를 최적화시켜줘요. 이와 같은 이유로 사용자 경험이 좋아져요. 더 궁금한 내용이 있다면 `}
-                                    <a href="https://joshua1988.github.io/webpack-guide/">{`"여기"`}</a>
-                                    {`를 클릭해주세요. 추천하는 포스트에요!`}
+                                        {`모듈 번들러는 프론트엔드 측에서 서버로 HTTP 요청 시, 요청 개수를 줄여줌으로써 `}
+                                        <strong>성능을 향상</strong>
+                                        {`시키고, 공백 등을 없애므로 `}
+                                        <strong>리소스</strong>
+                                        {`를 최적화시켜줘요. 이와 같은 이유로 사용자 경험이 좋아져요. 더 궁금한 내용이 있다면 `}
+                                        <a href="https://joshua1988.github.io/webpack-guide/" className="text-blue-600">{`여기`}</a>
+                                        {`를 클릭해주세요. 추천하는 포스트에요!`}
                                     </p>
                                 </div>
                             </div>
@@ -153,22 +153,23 @@ export default function Webpack_Babel_Polyfill() {
                             </h1>
                         </div>
                         <div className="sm:pl-10 pl-0">
-                                {/* module */}
-                                <div className="flex flex-col mb-2 items-start">
-                                    <p className="leading-relaxed text-base">
-                                        {`- Babel이 탄생하게 된 이유는 `}
-                                        <strong>크로스 브라우징</strong>
-                                        {`과 관련이 있어요.`}
-                                    </p>
-                                </div>
-                                <div className="flex flex-col mb-2 items-start">
-                                    <p className="leading-relaxed text-base">
-                                        - <strong> 크로스 브라우징</strong>
-                                        {`은 브라우저 및 플랫폼에 따라 기본적으로 요소들이 보여지는 모습이 다르기 때문에, 이러한 차이를 최소화하기 위한 작업들을 의미해요. 만약 일부 최신 브라우저에만 동작하는 기능을 다른 브라우저에 구현해야 하는 경우가 발생하면, 그 기능을 단순화하거나 생략해야 하는 일이 발생할 수 있어요.`}</p>
+                            {/* module */}
+                            <div className="flex flex-col mb-2 items-start">
+                                <p className="leading-relaxed text-base">
+                                    {`- Babel이 탄생하게 된 이유는 `}
+                                    <strong>크로스 브라우징</strong>
+                                    {`과 관련이 있어요.`}
+                                </p>
+                            </div>
+                            <div className="flex flex-col mb-2 items-start">
+                                <p className="leading-relaxed text-base">
+                                    - <strong> 크로스 브라우징</strong>
+                                    {`은 브라우저 및 플랫폼에 따라 기본적으로 요소들이 보여지는 모습이 다르기 때문에, 이러한 차이를 최소화하기 위한 작업들을 의미해요. 만약 일부 최신 브라우저에만 동작하는 기능을 다른 브라우저에 구현해야 하는 경우가 발생하면, 그 기능을 단순화하거나 생략해야 하는 일이 발생할 수 있어요.`}</p>
                             </div>
                         </div>
-                        <section className="text-gray-600 body-font">
+                        <section className="text-gray-600 body-font overflow-hidden">
                             <div className="container px-5 py-6 mx-auto flex flex-wrap">
+                                {/* introduce */}
                                 <div className="lg:w-1/2 w-full mb-5 lg:mb-0 rounded-lg overflow-hidden">
                                     <img alt="feature" className="object-cover object-center h-full w-full" src="/img/babel.png" />
                                 </div>
@@ -182,7 +183,72 @@ export default function Webpack_Babel_Polyfill() {
                                         </div>
                                     </div>
                                 </div>
+
+
                             </div>
+                            <div className="container py-6 mx-auto">
+                                {/* step */}
+                                <div className="sm:ml-10 ml-0 flex flex-col mb-2 items-start">
+                                    <p className="leading-relaxed text-base">
+                                        {`- Babel의 처리단계는 크게 3단계로 나뉘어요. 사용방법에 대해 자세히 알아보고 싶으시다면 `}
+                                        <a href="https://joshua1988.github.io/webpack-guide/" className="text-blue-600">{`여기`}</a>
+                                        {`를 클릭해주세요.`}
+                                    </p>
+                                </div>
+                                <div className="my-2 divide-y-2 divide-gray-100">
+                                    <div className="py-8 flex flex-wrap md:flex-nowrap">
+                                        <div className="ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                                            <span className="font-semibold title-font dark:text-white">STEP 1</span>
+                                            <span className="mt-1 text-gray-500 text-sm dark:text-white">파싱</span>
+                                        </div>
+                                        <div className="md:flex-grow">
+                                            <h2 className="title-font font-medium text-gray-900 text-lg mb-2">코드를 읽고 AST로 변환하는 과정</h2>
+                                            <p className="leading-relaxed text-base mb-2">
+                                                {`- Babel은 자바스크립트 코드를 받아서 AST를 만들고, 
+                                                그걸 활용하여 새로운 자바스크립트 코드를 출력해요.`}
+                                            </p>
+                                            <p className="leading-relaxed text-base">
+                                                {`- AST(추상구문트리)는 프로그래밍 언어 문법에 따라 소스코드의 구조를 나타내는 계층적 프로그램 표현이에요.
+                                             이렇게 만든 AST를 기반으로, 인터프리터는 바이트코드를 생성해요.`}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="py-8 flex flex-wrap md:flex-nowrap">
+                                        <div className="ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                                            <span className="font-semibold title-font dark:text-white">STEP 2</span>
+                                            <span className="mt-1 text-gray-500 text-sm dark:text-white">변환</span>
+                                        </div>
+                                        <div className="md:flex-grow">
+                                            <h2 className="title-font font-medium text-gray-900 mb-2 text-lg">적용된 플러그인을 통해 AST를 탐색하고 변경하는 과정</h2>
+                                            <p className="leading-relaxed text-base mb-2">
+                                                {`- AST를 변환하는 단계는 사실 Babel의 플러그인이 담당해요. 플러그인은 코드를 어떻게 변환할지에 대한 규칙을 정의해요.`}
+                                            </p>
+                                            <p className="leading-relaxed text-base mb-2">
+                                                {`- 여기서, 플러그인의 묶음을 프리셋(preset)이라 해요.
+                                            프리셋을 설정하여 필요한 플러그인들을 목적에 따라 세트로 묶어서 적용하기도 해요.`}
+
+                                            </p>
+                                            <p className="leading-relaxed text-base">
+                                                {`- 현재 바벨은 env 하나로 합쳐서 편리하게 사용할 수 있어요. 대표적인 프리셋은 ES6+로 변환하는 preset-env가 있어요.`}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="py-8 flex flex-wrap md:flex-nowrap">
+                                        <div className="ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                                            <span className="font-semibold title-font dark:text-white">STEP 3</span>
+                                            <span className="text-sm text-gray-500 dark:text-white">출력</span>
+                                        </div>
+                                        <div className="md:flex-grow">
+                                            <h2 className="title-font font-medium text-gray-900 text-lg mb-2">수정된 AST에서 새로운 코드를 생성하고, 변환된 결과물을 출력하는 과정</h2>
+                                            <p className="leading-relaxed text-base">
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </section>
                     </div>
 
