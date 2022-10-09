@@ -177,9 +177,9 @@ export default function Webpack_Babel_Polyfill() {
                                     <div className="flex flex-col mb-5 lg:items-start items-center">
                                         <div className="flex-grow">
                                             <h2 className="text-gray-900 text-lg title-font font-bold mb-3">Babel</h2>
-                                            <p className="leading-relaxed mb-2 text-base items-start">- 이 이슈를 해결하기 위해 생겨난 툴이 <strong>{`Babel(바벨)`}</strong>이에요.</p>
-                                            <p className="leading-relaxed mb-2 text-base items-start">{`- 바벨은 ES6+ 버전 코드를 하위버전 코드로 변환해주고, TS, JSX 까지도 다른 브라우저에서 정상 동작할 수 있도록 도와주는`} <strong>JavaScript 컴파일러에요.</strong></p>
-                                            <p className="leading-relaxed mb-2 text-base items-start">{`- 정리하면, 바벨은 ES6+ 버전의 자바스크립트 코드를 하위버전(ES5)으로 변환함으로써 최신버전의 자바스크립트가 지원되지 않는 다른 브라우저에서도 동작할 수 있도록 하는 JS 컴파일러에요.`}</p>
+                                            <p className="leading-relaxed mb-2 text-base text-start">- 이 이슈를 해결하기 위해 생겨난 툴이 <strong>{`Babel(바벨)`}</strong>이에요.</p>
+                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 바벨은 ES6+ 버전 코드를 하위버전 코드로 변환해주고, TS, JSX 까지도 다른 브라우저에서 정상 동작할 수 있도록 도와주는`} <strong>JavaScript 컴파일러에요.</strong></p>
+                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 정리하면, 바벨은 ES6+ 버전의 자바스크립트 코드를 하위버전(ES5)으로 변환함으로써 최신버전의 자바스크립트가 지원되지 않는 다른 브라우저에서도 동작할 수 있도록 하는 JS 컴파일러에요.`}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -188,7 +188,7 @@ export default function Webpack_Babel_Polyfill() {
                             </div>
                             <div className="container py-6 mx-auto">
                                 {/* step */}
-                                <div className="sm:ml-10 ml-0 flex flex-col mb-2 items-start">
+                                <div className="ml-0 md:ml-10 flex flex-col mb-2 items-start">
                                     <p className="leading-relaxed text-base">
                                         {`- Babel의 처리단계는 크게 3단계로 나뉘어요. 사용방법에 대해 자세히 알아보고 싶으시다면 `}
                                         <a href="https://joshua1988.github.io/webpack-guide/" className="text-blue-600">{`여기`}</a>
@@ -197,7 +197,7 @@ export default function Webpack_Babel_Polyfill() {
                                 </div>
                                 <div className="my-2 divide-y-2 divide-gray-100">
                                     <div className="py-8 flex flex-wrap md:flex-nowrap">
-                                        <div className="ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                                        <div className="ml-0 md:ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                                             <span className="font-semibold title-font dark:text-white">STEP 1</span>
                                             <span className="mt-1 text-gray-500 text-sm dark:text-white">파싱</span>
                                         </div>
@@ -214,7 +214,7 @@ export default function Webpack_Babel_Polyfill() {
                                         </div>
                                     </div>
                                     <div className="py-8 flex flex-wrap md:flex-nowrap">
-                                        <div className="ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                                        <div className="ml-0 md:ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                                             <span className="font-semibold title-font dark:text-white">STEP 2</span>
                                             <span className="mt-1 text-gray-500 text-sm dark:text-white">변환</span>
                                         </div>
@@ -234,21 +234,16 @@ export default function Webpack_Babel_Polyfill() {
                                         </div>
                                     </div>
                                     <div className="py-8 flex flex-wrap md:flex-nowrap">
-                                        <div className="ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                                        <div className="ml-0 md:ml-4 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                                             <span className="font-semibold title-font dark:text-white">STEP 3</span>
                                             <span className="text-sm text-gray-500 dark:text-white">출력</span>
                                         </div>
                                         <div className="md:flex-grow">
                                             <h2 className="title-font font-medium text-gray-900 text-lg mb-2">수정된 AST에서 새로운 코드를 생성하고, 변환된 결과물을 출력하는 과정</h2>
-                                            <p className="leading-relaxed text-base">
-
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
                         </section>
                     </div>
 
@@ -264,8 +259,23 @@ export default function Webpack_Babel_Polyfill() {
                                 {`Polyfill`}
                             </h1>
                         </div>
-                        <div className="w-full">
-
+                        <div className="sm:pl-10 pl-0">
+                            {/* 개념 */}
+                            <div className="flex flex-col mb-2 items-start">
+                                <p className="leading-relaxed text-base">
+                                    {`- 하지만, Babel을 사용한다고 해서 최신함수를 사용할 수 있는 것은 아니에요. Babel은 브라우저가 이해할 수 있는 문법으로 변환만 할 뿐이에요.`}
+                                </p>
+                            </div>
+                            <div className="flex flex-col mb-2 items-start">
+                                <p className="leading-relaxed text-base">
+                                    {`- 개발자는 스크립트가 최신 표준을 준수할 수 있도록 새로운 함수를 추가하거나, 수정하여 작업하는 경우가 있어요. 
+                                    그래서 변경된 최신 표준을 준수하기 위해 기존함수의 동작 방식을 수정하거나 새롭게 구현하게 되는데, 
+                                    이렇게 구현된 함수의 스크립트를 `}<strong>Polyfill</strong>{`이라 불러요.`}</p>
+                            </div>
+                            <div className="flex flex-col mb-2 items-start">
+                                <p className="leading-relaxed text-base">
+                                    {`- 이 부분에서, Babel과 Polyfill의 개념이 헷갈리기 시작할 수 있는데 다시 정리하자면, 아래와 같아요.`}</p>
+                            </div>
                         </div>
                     </div>
 
