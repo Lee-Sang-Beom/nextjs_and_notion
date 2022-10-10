@@ -492,9 +492,9 @@ export default function Hoisting() {
                             url={`https://www.youtube.com/watch?v=SBTyD_fLZnE`}
                         />
                         <Recommend_Youtube
-                            channel_name={`코딩앙마`}
-                            video_title={`자바스크립트 중급 강좌 #1 - 변수, 호이스팅, TDZ(Temporal Dead Zone)`}
-                            url={`https://www.youtube.com/watch?v=ocGc-AmWSnQ`}
+                            channel_name={`얄팍한 코딩사전`}
+                            video_title={`[코딩만화] Scope가 뭔가요? (feat: let, const, var의 차이)`}
+                            url={`https://www.youtube.com/watch?v=HsJ4oy_jBx0&t=386s`}
                         />
                         </div>
                     </div>
