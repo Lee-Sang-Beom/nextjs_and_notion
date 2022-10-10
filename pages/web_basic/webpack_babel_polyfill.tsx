@@ -16,7 +16,7 @@ export default function Webpack_Babel_Polyfill() {
             <Layout>
                 <Head>
                     <title>FrontendWeb</title>
-                    <meta name="description" content="Start Next.js" />
+                    <meta name="description" content="Start Next.Js" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <section className="text-gray-600 body-font">
@@ -73,8 +73,8 @@ export default function Webpack_Babel_Polyfill() {
                                 </div>
                                 <div className="leading-relaxed text-base mb-6">
                                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                        <li className="mb-1 list-decimal">{`웹 애플리케이션 완성 시, 웹 서버에 HTML, CSS, JS 파일을 배포해요`}</li>
-                                        <li className="mb-1 list-decimal">{`사용자가 브라우저를 통해 웹 사이트에 접근하면, 브라우저는 사용자에게 웹 사이트를 보여주기 위해 웹 서버에 HTML, CSS, JS 등의 리소스를 요청해요.`}</li>
+                                        <li className="mb-1 list-decimal">{`웹 애플리케이션 완성 시, 웹 서버에 HTML, CSS, JavaScript 파일을 배포해요`}</li>
+                                        <li className="mb-1 list-decimal">{`사용자가 브라우저를 통해 웹 사이트에 접근하면, 브라우저는 사용자에게 웹 사이트를 보여주기 위해 웹 서버에 HTML, CSS, JavaScript 등의 리소스를 요청해요.`}</li>
                                         <li className="mb-1 list-decimal">{`웹 서버는 리소스를 포함해 응답해요. 이 과정이 끝나면 비로소 사용자는 웹 사이트를 볼 수 있게 되요.`}</li>
                                     </ul>
                                 </div>
@@ -178,8 +178,8 @@ export default function Webpack_Babel_Polyfill() {
                                         <div className="flex-grow">
                                             <h2 className="text-gray-900 text-lg title-font font-bold mb-3">Babel</h2>
                                             <p className="leading-relaxed mb-2 text-base text-start">- 이 이슈를 해결하기 위해 생겨난 툴이 <strong>{`Babel(바벨)`}</strong>이에요.</p>
-                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 바벨은 ES6+ 버전 코드를 하위버전 코드로 변환해주고, TS, JSX 까지도 다른 브라우저에서 정상 동작할 수 있도록 도와주는`} <strong>JavaScript 컴파일러에요.</strong></p>
-                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 정리하면, 바벨은 ES6+ 버전의 자바스크립트 코드를 하위버전(ES5)으로 변환함으로써 최신버전의 자바스크립트가 지원되지 않는 다른 브라우저에서도 동작할 수 있도록 하는 JS 컴파일러에요.`}</p>
+                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 바벨은 ES6+ 버전 코드를 하위버전 코드로 변환해주고, TS, JavaScriptX 까지도 다른 브라우저에서 정상 동작할 수 있도록 도와주는`} <strong>JavaScript 컴파일러에요.</strong></p>
+                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 정리하면, 바벨은 ES6+ 버전의 JavaScript 코드를 하위버전(ES5)으로 변환함으로써 최신버전의 JavaScript가 지원되지 않는 다른 브라우저에서도 동작할 수 있도록 하는 JavaScript 컴파일러에요.`}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -204,8 +204,8 @@ export default function Webpack_Babel_Polyfill() {
                                         <div className="md:flex-grow">
                                             <h2 className="title-font font-medium text-gray-900 text-lg mb-2">코드를 읽고 AST로 변환하는 과정</h2>
                                             <p className="leading-relaxed text-base mb-2">
-                                                {`- Babel은 자바스크립트 코드를 받아서 AST를 만들고, 
-                                                그걸 활용하여 새로운 자바스크립트 코드를 출력해요.`}
+                                                {`- Babel은 JavaScript 코드를 받아서 AST를 만들고, 
+                                                그걸 활용하여 새로운 JavaScript 코드를 출력해요.`}
                                             </p>
                                             <p className="leading-relaxed text-base">
                                                 {`- AST(추상구문트리)는 프로그래밍 언어 문법에 따라 소스코드의 구조를 나타내는 계층적 프로그램 표현이에요.
@@ -256,25 +256,71 @@ export default function Webpack_Babel_Polyfill() {
                         {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
                         <div className="flex flex-wrap sm:flex-row flex-col py-6">
                             <h1 className="w-full title-font text-2xl font-bold text-gray-900">
-                                {`Polyfill`}
+                                {`Babel Polyfill`}
                             </h1>
                         </div>
                         <div className="sm:pl-10 pl-0">
                             {/* 개념 */}
                             <div className="flex flex-col mb-2 items-start">
-                                <p className="leading-relaxed text-base">
-                                    {`- 하지만, Babel을 사용한다고 해서 최신함수를 사용할 수 있는 것은 아니에요. Babel은 브라우저가 이해할 수 있는 문법으로 변환만 할 뿐이에요.`}
+                                <p className="leading-relaxed text-base mb-2 ">
+                                    {`- 하지만, Babel만으로는 모든 ES6+ 코드를 변환할 수 없어요.`}
+                                </p>
+                                <p className="leading-relaxed text-base mb-2 ">
+                                    {`- 어떤 ES6+ 문법은 정상적으로 Babel에 의해 컴파일되지만, 어떤 문법은 컴파일되지 못해요. 이 때 필요한 게 Polyfill이에요.`}
+                                </p>
+                                <p className="leading-relaxed text-base mb-2 ">
+                                    {`- MDN에서는 Polyfill를 `}
+                                    <strong>{`"이전 브라우저에서 기본적으로 지원하지 않는 최신 기능을 제공하는 데 필요한 코드입니다"`}</strong>
+                                    {`라고 정의하고 있어요.`}
+                                </p>
+                                <p className="leading-relaxed text-base mb-2">
+                                    {`- 이 부분에서, Babel과 Polyfill의 개념이 헷갈리기 시작할 수 있어요. 
+                                    아래 내용을 보고 정리하도록 해요.`}
                                 </p>
                             </div>
-                            <div className="flex flex-col mb-2 items-start">
-                                <p className="leading-relaxed text-base">
-                                    {`- 개발자는 스크립트가 최신 표준을 준수할 수 있도록 새로운 함수를 추가하거나, 수정하여 작업하는 경우가 있어요. 
-                                    그래서 변경된 최신 표준을 준수하기 위해 기존함수의 동작 방식을 수정하거나 새롭게 구현하게 되는데, 
-                                    이렇게 구현된 함수의 스크립트를 `}<strong>Polyfill</strong>{`이라 불러요.`}</p>
+
+                        </div>
+
+                        {/* 차이 */}
+                        <div className="flex flex-wrap py-6 ">
+                            <div className="p-12 md:w-1/2 flex flex-col items-start">
+                                <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">구 브라우저에서도 최신 문법을 읽을 수 있게, 문법을 바꿔줘요</span>
+                                <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`Babel(바벨)`}</h2>
+                                <p className="leading-relaxed mb-2">
+                                    {`구 브라우저에서, 최신 JavaScript 코드를 사용할 수 있도록 변환해주는 컴파일러(트랜스파일러)에요.`}
+                                </p>
+                                <p className="leading-relaxed mb-2">
+                                    {`ES5에서 JavaScript 문법이 아니었던 ES6+의 문법들을 구 브라우저에서 사용할 수 있도록 변환해줘요.`}
+                                </p>
+                                <p className="leading-relaxed mb-2">
+                                    {`컴파일 시간(Compile-time)에 코드를 구 브라우저에서 사용가능하게 변환해요.`}
+                                </p>
+                                <Learn_More
+                                    url={`https://medium.com/@larkigdrs/babel-babel-polyfill-%EC%99%9C-%EA%B0%99%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C-b5f806ae64a1`}
+                                    hover_title={`출처 : lark님의 포스트`}
+                                />
                             </div>
-                            <div className="flex flex-col mb-2 items-start">
-                                <p className="leading-relaxed text-base">
-                                    {`- 이 부분에서, Babel과 Polyfill의 개념이 헷갈리기 시작할 수 있는데 다시 정리하자면, 아래와 같아요.`}</p>
+                            <div className="p-12 md:w-1/2 flex flex-col md:flex-none items-start">
+                                <div className="flex flex-wrap flex-row flex-shrink-0">
+                                    <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">Babel이 변환하지 못했던 새 객체/함수/메소드를 구 브라우저에서 사용할 수 있게 변환해줘요</span>
+                                </div>
+                                <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`Polyfill(폴리필)`}</h2>
+                                <p className="leading-relaxed mb-2">
+                                    {`브라우저가 이해할 수 없는 코드에 대하여, 이해할 수 있는 코드 소스를 제공해줘요.`}
+                                </p>
+                                <p className="leading-relaxed mb-2 hidden md:block" title="전역 객체: JavaScript코드가 실행되기 이전에 생성되는 최상위 객체">
+                                    {`ES5의 전역 객체에 포함되지 않은 새로운 객체, 기존 객체의 새 메소드, 새 함수를 변환할 때 필요해요.`}
+                                </p>
+                                <p className="leading-relaxed mb-2">
+                                    {`JavaScript 문법으로 읽히지만, 정의되지 않은 객체/메소드/함수를 정의해줘요.`}
+                                </p>
+                                <p className="leading-relaxed mb-2">
+                                    {`Babel이 컴파일하지 못한 전역 객체/메소드/함수들을 브라우저에서 실행되는 시점인 실행 시간(Run-time)에 변환해줘요.`}
+                                </p>
+                                <Learn_More
+                                    url={`https://happysisyphe.tistory.com/m/49`}
+                                    hover_title={`출처 : 행복한 시지프님의 포스트`}
+                                />
                             </div>
                         </div>
                     </div>

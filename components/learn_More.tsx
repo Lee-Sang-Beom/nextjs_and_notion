@@ -1,3 +1,5 @@
+import React from "react";
+
 interface Props {
   url: string;
   hover_title: string;
@@ -5,8 +7,8 @@ interface Props {
 
 export default function Learn_More(props: Props) {
   return (
-    <>
-      <p className="leading-relaxed text-sm">
+    <React.Fragment >
+      <p className="leading-relaxed text-sm mt-2">
         <strong className="text-emerald-600 dark:text-yellow-400">
           아래 버튼
         </strong>
@@ -30,6 +32,6 @@ export default function Learn_More(props: Props) {
           <path d="M5 12h14M12 5l7 7-7 7"></path>
         </svg>
       </a>
-    </>
+    </React.Fragment>
   );
 }

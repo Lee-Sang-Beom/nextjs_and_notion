@@ -10,7 +10,7 @@ type Props = {
 
 const Notion: NextPage<Props> = ({ projectData }) => {
   
-  const teamUrl = "https://www.notion.so/Study-FrontEnd-Develop-a4e3dbc37feb4f2093b1211be7cd32a2";
+  const teamUrl = "https://humdrum-pyjama-51f.notion.site/Main-Page-b43329e49e8247969e69056688db0b92";
   
   return (
     <>
@@ -51,7 +51,7 @@ const Notion: NextPage<Props> = ({ projectData }) => {
                 <span className="font-semibold">Github</span> : <a href = {data.properties.github.url}> {data.properties.github.url}</a>
               </p>
               <p className="mb-2">
-                <span className="font-semibold">Notion</span> : <a href = {teamUrl}> {teamUrl}</a>
+                <span className="font-semibold">Notion</span> : <a href = {teamUrl}> 클릭하여 작성자 노션으로 이동하기</a>
               </p>
               <div className="mt-3">
                 <p
