@@ -354,7 +354,7 @@ export default function Browser_search() {
                                         </p>
                                         <p className="leading-relaxed">
                                             {`이전에 배웠던 렌더링 과정이 기억나시나요? 지금부터 그 과정이 시작되는거에요. 잘 모르겠다면 `}
-                                            <a href="http://localhost:3000/web_basic/rendering">{`"여기"`}</a>
+                                            <a href="https://nextjs-and-notion-vercel-79a3rrkpg-lee-sang-beom.vercel.app/web_basic/rendering">{`"여기"`}</a>
                                             {`를 클릭해주세요.`}
                                         </p>
                                     </div>
