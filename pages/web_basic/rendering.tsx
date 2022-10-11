@@ -487,7 +487,7 @@ export default function Rendering() {
                 />
               </div>
             </div>
-          </div>
+        </div>
 
          {/*마무리*/}
          <section className="text-gray-600 body-font">

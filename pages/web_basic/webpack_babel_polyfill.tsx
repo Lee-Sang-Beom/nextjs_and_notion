@@ -208,8 +208,7 @@ export default function Webpack_Babel_Polyfill() {
                                                 그걸 활용하여 새로운 JavaScript 코드를 출력해요.`}
                                             </p>
                                             <p className="leading-relaxed text-base">
-                                                {`- AST(추상구문트리)는 프로그래밍 언어 문법에 따라 소스코드의 구조를 나타내는 계층적 프로그램 표현이에요.
-                                             이렇게 만든 AST를 기반으로, 인터프리터는 바이트코드를 생성해요.`}
+                                                {`- AST(추상구문트리)는 프로그래밍 언어 문법에 따라 소스코드의 구조를 나타내는 계층적 프로그램 표현이에요.`}
                                             </p>
                                         </div>
                                     </div>
@@ -256,7 +255,7 @@ export default function Webpack_Babel_Polyfill() {
                         {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
                         <div className="flex flex-wrap sm:flex-row flex-col py-6">
                             <h1 className="w-full title-font text-2xl font-bold text-gray-900">
-                                {`Babel Polyfill`}
+                                {`Polyfill`}
                             </h1>
                         </div>
                         <div className="sm:pl-10 pl-0">
@@ -285,7 +284,12 @@ export default function Webpack_Babel_Polyfill() {
                         <div className="flex flex-wrap py-6 ">
                             <div className="p-12 md:w-1/2 flex flex-col items-start">
                                 <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">구 브라우저에서도 최신 문법을 읽을 수 있게, 문법을 바꿔줘요</span>
-                                <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`Babel(바벨)`}</h2>
+                                <h2 className="text-2xl title-font font-medium text-gray-900 mt-4 mb-4 flex">
+                                    {`Babel(바벨)`}
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7 ml-1">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
+                                    </svg>
+                                </h2>
                                 <p className="leading-relaxed mb-2">
                                     {`구 브라우저에서, 최신 JavaScript 코드를 사용할 수 있도록 변환해주는 컴파일러(트랜스파일러)에요.`}
                                 </p>
@@ -304,7 +308,12 @@ export default function Webpack_Babel_Polyfill() {
                                 <div className="flex flex-wrap flex-row flex-shrink-0">
                                     <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">Babel이 변환하지 못했던 새 객체/함수/메소드를 구 브라우저에서 사용할 수 있게 변환해줘요</span>
                                 </div>
-                                <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`Polyfill(폴리필)`}</h2>
+                                <h2 className="text-2xl title-font font-medium text-gray-900 mt-4 mb-4 flex">
+                                    {`Polyfill(폴리필)`}
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7 ml-1">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
+                                    </svg>
+                                </h2>
                                 <p className="leading-relaxed mb-2">
                                     {`브라우저가 이해할 수 없는 코드에 대하여, 이해할 수 있는 코드 소스를 제공해줘요.`}
                                 </p>
@@ -324,7 +333,32 @@ export default function Webpack_Babel_Polyfill() {
                             </div>
                         </div>
                     </div>
+                </section>
 
+                {/*마무리*/}
+                <section className="text-gray-600 body-font">
+                    <div className="container px-5 mx-auto">
+                        <h1 className="sm:text-2xl text-xl font-bold title-font text-center text-gray-900 mb-12">
+                        그 외 추천 유튜브 영상
+                        </h1>
+                        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                        <Recommend_Youtube
+                            channel_name={`짐코딩의 CODING GYM`}
+                            video_title={`Webpack 기초 강좌 | 웹팩 이란 | 모듈번들러 | 프론트엔드 날개달기`}
+                            url={`https://www.youtube.com/watch?v=NGVc-zw2FG8`}
+                        />
+                        <Recommend_Youtube
+                            channel_name={`생활코딩`}
+                            video_title={`Webpack`}
+                            url={`https://www.youtube.com/watch?v=cp_MeXO2fLg&list=PLuHgQVnccGMChcT9IKopFDoAIoTA-03DA`}
+                        />
+                        <Recommend_Youtube
+                            channel_name={`개발 레시피`}
+                            video_title={`[모던웹 개발 - 자바스크립트편] webpack과 babel 설정하기`}
+                            url={`https://www.youtube.com/watch?v=LKkg0h7f6-U`}
+                        />
+                        </div>
+                    </div>
                 </section>
 
                 {/*이동하기*/}
