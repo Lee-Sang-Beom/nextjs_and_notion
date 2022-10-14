@@ -9,6 +9,7 @@ Project - Frontend Guide
 
 - 프론트엔드 개발자는 꼭 알고 있어야 할 개념 설명
 - React와 Next.js를 사용하는 이유 및 강점에 대한 개념적 설명
+- 공유 Notion : https://www.notion.so/Main-Page-b43329e49e8247969e69056688db0b92
 
 ****
 
