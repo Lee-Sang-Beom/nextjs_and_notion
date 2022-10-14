@@ -438,36 +438,12 @@ export default function WebMain() {
                Webpack은 모듈과 관련이 있고, Babel, Polyfill은 크로스 브라우징과 관련이 있어요. 전반적인 개념에 대해 알고싶다면, 아래 Learn 버튼을 눌러주세요!`}/>
 
             {/* box 17*/}
-            <div className="p-4 lg:w-1/3">
-              <div className="h-full bg-gray-100 bg-opacity-75 dark:bg-gray-800 px-8 pt-14 pb-10 rounded-lg overflow-hidden text-center relative">
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  CATEGORY : WEB BASIC
-                </h2>
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                  웹 사이트 성능 최적화
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  웹 페이지에서 새로고침을 통해 페이지를 다시 불러오신 경험이
-                  있나요? 이것과 관련해, 렌더링이라는 용어가 있어요! 렌더링에
-                  대해 잘 모르겠다면, 아래 Learn 버튼을 눌러주세요!
-                </p>
-                <a className="text-indigo-500 inline-flex items-center mt-5">
-                  Learn
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <ChooseTopic 
+              category={`CATEGORY : WEB BASIC`}
+              title={`Scope(스코프)`}
+              url={`/web_basic/scope`}
+              desc={`스코프는 우리말로, '범위'라는 뜻이에요. JavaScript에서 스코프는 과연 무엇을 의미하는 것인지 알고 계신가요? 
+              바로 다음에 공부할 실행 컨텍스트 개념을 이해하기 위해서는 꼭 알고 넘어가야 하니, 공부하길 원한다면 아래 Learn 버튼을 눌러주세요!`}/>
 
             {/* box 18*/}
             <div className="p-4 lg:w-1/3">
