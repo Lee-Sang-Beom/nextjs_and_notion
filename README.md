@@ -3,7 +3,7 @@ Project - Frontend Guide
 
 ## 1. 프로젝트 계획 이유
 
-[**Next.js**](https://nextjs.org/) : 프론트엔드 개발자를 위한 공부 과정에서, 웹 기초 개념과 현재 프로젝트에서 자주 쓰이는 React, Next.js에 대하여 공부하며, 기초로 한 개념을 정리하기 위해 계획하였습니다. 
+[**Frontend Guide**](https://nextjs-and-notion-vercel.vercel.app/) : 프론트엔드 개발자를 위한 공부 과정에서, 웹 기초 개념과 현재 프로젝트에서 자주 쓰이는 React, Next.js에 대하여 공부하며, 기초로 한 개념을 정리하기 위해 계획하였습니다. 
 
 ### - 제공기능
 
