@@ -1,14 +1,18 @@
-var x = 'global';
+var a = 1;
+let b = 2;
 
 function foo() {
-  var x = 'local';
-  console.log(x);
-
-  function bar() {  // 내부함수
-    console.log(x); // ?
-  }
-
-  bar();
+    var a = 3;
+    let b = 4;
+    if(true) {
+        var a = 5;
+        let b = 6;
+        console.log(a);
+        console.log(b);
+    }
+    console.log(a);
+    console.log(b);
 }
 foo();
-console.log(x); // ?
+console.log(a);
+console.log(b);
