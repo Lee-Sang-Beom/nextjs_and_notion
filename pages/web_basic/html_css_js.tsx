@@ -32,7 +32,7 @@ export default function HTML_CSS_JS() {
                   {`HTML, CSS, JS`}
                 </h1>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`- HTML, CSS, JS는 웹 프로그래밍을 하려면 반드시 알아두어야 하는
+                  {`- HTML, CSS, JS(JavaScript)는 웹 프로그래밍을 하려면 반드시 알아두어야 하는
                   상식이에요! 아래 내용을 보면서, 어떤 역할을 하는지에 대해 꼭
                   알아두도록 해요!`}
                 </p>
@@ -285,7 +285,7 @@ export default function HTML_CSS_JS() {
                   </div>
                   <div className="flex flex-col items-center text-center justify-center">
                     <h2 className="font-bold title-font mt-4 text-gray-900 text-lg">
-                      JS
+                      JavaScript
                     </h2>
                     <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                     <p className="text-base">

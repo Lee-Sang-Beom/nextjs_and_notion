@@ -1,18 +1,9 @@
-var a = 1;
-let b = 2;
+const number = 10;
 
-function foo() {
-    var a = 3;
-    let b = 4;
-    if(true) {
-        var a = 5;
-        let b = 6;
-        console.log(a);
-        console.log(b);
+{
+    const number2 = 30;
+
+    {
+        console.log(number);
     }
-    console.log(a);
-    console.log(b);
 }
-foo();
-console.log(a);
-console.log(b);
