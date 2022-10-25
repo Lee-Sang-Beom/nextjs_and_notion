@@ -5,7 +5,7 @@ import MoveBtn from "../../components/moveBtn";
 
 export default function Scope() {
     // 페이지 넘김 정보
-    const prev = undefined;
+    const prev = "/web_basic/webpack_babel_polyfill";
     const next = undefined;
 
     return (
@@ -193,6 +193,35 @@ export default function Scope() {
                         </div>
                     </div>
                 </section>
+
+                {/*마무리*/}
+                <section className="text-gray-600 body-font">
+                    <div className="container px-5 mx-auto">
+                        <h1 className="sm:text-2xl text-xl font-bold title-font text-center text-gray-900 mb-12">
+                        그 외 추천 유튜브 영상
+                        </h1>
+                        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                        <Recommend_Youtube
+                            channel_name={`얄팍한 코딩사전`}
+                            video_title={`[코딩만화] Scope가 뭔가요? (feat: let, const, var의 차이)`}
+                            url={`https://www.youtube.com/watch?v=HsJ4oy_jBx0&t=429s&ab_channel=%EC%96%84%ED%8C%8D%ED%95%9C%EC%BD%94%EB%94%A9%EC%82%AC%EC%A0%84`}
+                        />
+                        <Recommend_Youtube
+                            channel_name={`코드종`}
+                            video_title={`자바스크립트 클로저? 간단히 핵심만 파악하기`}
+                            url={`https://www.youtube.com/watch?v=MbYShFxp-j0&ab_channel=%EC%BD%94%EB%93%9C%EC%A2%85`}
+                        />
+                        <Recommend_Youtube
+                            channel_name={`노마드코더`}
+                            video_title={`(EP 06.) 자바스크립트 개발자라면 알아야하는 핵심 컨셉 33개 | #6. Scope`}
+                            url={`https://www.youtube.com/watch?v=WrjlQstaCwo&t=4s&ab_channel=%EB%85%B8%EB%A7%88%EB%93%9C%EC%BD%94%EB%8D%94NomadCoders`}
+                        />
+                        </div>
+                    </div>
+                </section>
+
+                {/*이동하기*/}
+                <MoveBtn prev={prev} next={next} />
             </Layout>
         </>
     );
