@@ -10,8 +10,7 @@ type Props = {
 
 const Notion: NextPage<Props> = ({ projectData }) => {
   
-  const teamUrl = "https://humdrum-pyjama-51f.notion.site/Main-Page-b43329e49e8247969e69056688db0b92";
-  
+  console.log(projectData)
   return (
     <>
       <Layout>
@@ -48,10 +47,10 @@ const Notion: NextPage<Props> = ({ projectData }) => {
                 {data.properties.workField.date.end}
               </p>
               <p className="mb-2">
-                <span className="font-semibold">Github</span> : <a href = {data.properties.github.url}> {data.properties.github.url}</a>
+                <span className="font-semibold">Github</span> : <a href = {data.properties.github.url}> 작성자 Github로 이동하기 </a>
               </p>
               <p className="mb-2">
-                <span className="font-semibold">Notion</span> : <a href = {teamUrl}> 클릭하여 작성자 노션으로 이동하기</a>
+                <span className="font-semibold">Notion</span> : <a href = {data.properties.notion.url}> 작성자 Notion으로 이동하기 </a>
               </p>
               <div className="mt-3">
                 <p
@@ -103,7 +102,6 @@ export async function getStaticProps() {
 
   let projects = await res.json();
   projects = projects.results.slice(2);
-  const projectData = projects.map((aProject:object) => aProject);
   return {
     props: {
       projectData: projects,
