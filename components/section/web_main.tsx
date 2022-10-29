@@ -446,36 +446,14 @@ export default function WebMain() {
               바로 다음에 공부할 실행 컨텍스트 개념을 이해하기 위해서는 꼭 알고 넘어가야 하니, 공부하길 원한다면 아래 Learn 버튼을 눌러주세요!`}/>
 
             {/* box 18*/}
-            <div className="p-4 lg:w-1/3">
-              <div className="h-full bg-gray-100 bg-opacity-75 dark:bg-gray-800 px-8 pt-14 pb-10 rounded-lg overflow-hidden text-center relative">
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  CATEGORY - WEB BASIC
-                </h2>
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                  실행 컨텍스트
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  DOM이 무엇인지 들어보셨나요? 웹 페이지에서의 DOM은 사용자와의
-                  상호작용과 깊은 관련이 있어요! 이것이 무엇인지, 궁금하다면
-                  아래 Learn 버튼을 눌러주세요!
-                </p>
-                <a className="text-indigo-500 inline-flex items-center mt-5">
-                  Learn
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <ChooseTopic 
+              category={`CATEGORY : WEB BASIC`}
+              title={`Execution Context(실행 컨텍스트)`}
+              url={`/web_basic/executionContext`}
+              desc={`실행 컨텍스트는 쉽게 말해 자바스크립트의 코드가 동작할 수 있도록 제공하는 총체적 환경을 의미해요.
+               호이스팅, 콜 스택, 스코프 등의 모든 개념을 알아야 이 주제를 이해할 수 있어요. 
+               준비가 되셨다면, 아래 Learn 버튼을 눌러주세요!`}/>
+
           </div>
 
           {/*일곱 번째 라인*/}
