@@ -114,7 +114,7 @@ export default function Rendering() {
               {`렌더링 과정`}
             </h1>
           </div>
-          <div className="w-full py-6">
+          <div className="w-full py-2">
             <img
               className="lg:w-full rounded-lg md:mt-0 mb-12"
               src="/img/rendering_path.png"

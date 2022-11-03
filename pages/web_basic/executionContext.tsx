@@ -114,14 +114,17 @@ export default function Dom() {
                             <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mb-1">
                                 {`- 비동기 처리를 포함한 이벤트 루프와 관련된 사항은 나중에 다뤄보도록 할게요!`}
                             </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mb-1">
+                                {`- 또한, 이제 실행 컨텍스트라는 용어를 사용할텐데, 일단 `}<strong>{`"실행 컨텍스트에는 환경 레코드와 Outer라는 게 들어가는구나"`} </strong>{`라고 이해해주시면 되요!`}
+                            </p>
                         </div>
 
-                        <div className="w-full py-6">
-                            {/* <img
+                        <div className="w-full py-2">
+                            <img
                                 className="lg:w-full rounded-lg md:mt-0 mb-12"
-                                src="/img/rendering_path.png"
+                                src="/img/jsAndCallstack.jpg"
                                 alt="step"
-                            /> */}
+                            />
                             <div className="lg:w-full md:pl-10 md:py-6">
                                 {/* 과정 1 */}
                                 <div className="flex relative pb-12">
