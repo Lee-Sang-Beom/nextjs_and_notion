@@ -2,7 +2,7 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import Head from "next/head";
 import Learn_More from "../../components/learn_More";
-import React from "react";
+import React, { Component } from "react";
 import Recommend_Youtube from "../../components/recommend_youtube";
 import MoveBtn from "../../components/moveBtn";
 import Image from "next/image";
@@ -11,6 +11,22 @@ export default function Dom() {
     // 페이지 넘김 정보
     const prev = undefined;
     const next = undefined;
+
+    const returnStepLogo = (stepNum: number) => {
+        return (
+            <>
+                <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                    <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div
+                    className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                >
+                    {stepNum}
+                </div>
+            </>
+        )
+    }
 
     return (
         <>
@@ -80,8 +96,152 @@ export default function Dom() {
                         </div>
 
                     </div>
-                </section>
 
+                    {/*2. 자바스크립트와 콜 스택*/}
+                    <div className="container px-5 py-24 mx-auto">
+                        {/* bar 길이*/}
+                        <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                            <div className="w-2/5 h-full bg-indigo-500"></div>
+                        </div>
+                        {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
+                        <div className="flex flex-wrap sm:flex-row flex-col py-6">
+                            <h1 className="w-full title-font text-2xl font-bold text-gray-900">
+                                {`자바스크립트와 콜 스택`}
+                            </h1>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4 mb-1">
+                                {`- 해당 Section에서는 자바스크립트 코드의 실행에 따라 `}<strong>콜 스택</strong>{`이 어떻게 동작하는 지에 대한 예시를 들면서 환기할 예정이에요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mb-1">
+                                {`- 비동기 처리를 포함한 이벤트 루프와 관련된 사항은 나중에 다뤄보도록 할게요!`}
+                            </p>
+                        </div>
+
+                        <div className="w-full py-6">
+                            {/* <img
+                                className="lg:w-full rounded-lg md:mt-0 mb-12"
+                                src="/img/rendering_path.png"
+                                alt="step"
+                            /> */}
+                            <div className="lg:w-full md:pl-10 md:py-6">
+                                {/* 과정 1 */}
+                                <div className="flex relative pb-12">
+                                    {returnStepLogo(1)}
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 1
+                                        </h2>
+                                        <p className="leading-relaxed mb-4">
+                                            {`text`}
+                                        </p>
+                                        <p className="leading-relaxed">
+                                            {`text`}
+                                        </p>
+                                    </div>
+                                </div>
+                                {/* 과정 2 */}
+                                <div className="flex relative pb-12">
+                                    {returnStepLogo(2)}
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 2
+                                        </h2>
+                                        <p className="leading-relaxed mb-4">
+                                            {`text`}
+                                        </p>
+                                        <p className="leading-relaxed">
+                                            {`text`}
+                                        </p>
+                                    </div>
+                                </div>
+                                {/* 과정 3 */}
+                                <div className="flex relative pb-12">
+                                    {returnStepLogo(3)}
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 3
+                                        </h2>
+                                        <p className="leading-relaxed mb-4">
+                                            {`text`}
+                                        </p>
+                                        <p className="leading-relaxed mb-2">
+                                            {`이 때, 스타일은 아래에 나열한 순서대로 적용되고, 나중에 처리된 스타일이 우선적으로 적용되요.`}
+                                        </p>
+                                        <div className="leading-relaxed text-base mb-8">
+                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
+                                                <li className="mb-1 text-left list-decimal">{`text1`}</li>
+                                                <li className="mb-1 text-left list-decimal">{`text2`}</li>
+                                                <li className="mb-1 text-left list-decimal">{`text3`}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* 과정 4 */}
+                                <div className="flex relative pb-12">
+                                    {returnStepLogo(4)}
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 4
+                                        </h2>
+                                        <p className="leading-relaxed mb-4">
+                                            {`text`}
+                                        </p>
+                                        <p className="leading-relaxed mb-2">
+                                            {`text`}
+                                        </p>
+                                        <div className="leading-relaxed text-base">
+                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
+                                                <li className="mb-1 text-left">{`text`}</li>
+                                                <li className="mb-1 text-left">{`text`}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* 과정 5 */}
+                                <div className="flex relative pb-12">
+                                    {returnStepLogo(5)}
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            STEP 5
+                                        </h2>
+                                        <p className="leading-relaxed mb-4">
+                                            {`text`}
+                                        </p>
+                                        <p className="leading-relaxed mb-2">
+                                            {`text`}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* 과정 6 */}
+                                <div className="flex relative">
+
+                                    <div
+                                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                                    >
+                                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                            <path d="M22 4L12 14.01l-3-3"></path>
+                                        </svg>
+                                    </div>
+                                    <div className="flex-grow pl-4">
+                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                            {`FINISH`}
+                                        </h2>
+                                        <p className="leading-relaxed mb-4">
+                                            {`text`}
+                                        </p>
+
+                                        <p className="leading-relaxed">
+                                            {`text`}
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </Layout>
         </>
