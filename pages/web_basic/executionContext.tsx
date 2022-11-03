@@ -119,7 +119,6 @@ export default function Dom() {
                                 {`- 또한, 이제 실행 컨텍스트라는 용어를 사용할텐데, 일단 `}<strong>{`"실행 컨텍스트에는 환경 레코드와 Outer라는 게 들어가는구나"`} </strong>{`라고 이해해주시면 되요!`}
                             </p>
                         </div>
-
                         <div className="w-full">
                             <Image src ={jsAndCallstack} alt="Picture of callstack and js" className="lg:w-full rounded-lg"/>
                             <div className="lg:w-full md:pl-10 py-6">
