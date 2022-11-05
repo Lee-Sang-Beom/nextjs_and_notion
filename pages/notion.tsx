@@ -10,7 +10,6 @@ type Props = {
 
 const Notion: NextPage<Props> = ({ projectData }) => {
   
-  console.log(projectData)
   return (
     <>
       <Layout>
@@ -47,10 +46,10 @@ const Notion: NextPage<Props> = ({ projectData }) => {
                 {data.properties.workField.date.end}
               </p>
               <p className="mb-2">
-                <span className="font-semibold">Github</span> : <a href = {data.properties.github.url}> 작성자 Github로 이동하기 </a>
+                <span className="font-semibold">Github</span> {`->`} <a href = {data.properties.github.url}> 이동하기 </a>
               </p>
               <p className="mb-2">
-                <span className="font-semibold">Notion</span> : <a href = {data.properties.notion.url}> 작성자 Notion으로 이동하기 </a>
+                <span className="font-semibold">Notion</span> {`->`} <a href = {data.properties.notion.url}> 이동하기 </a>
               </p>
               <div className="mt-3">
                 <p

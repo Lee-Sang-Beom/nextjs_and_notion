@@ -5,8 +5,11 @@ import Learn_More from "../../components/learn_More";
 import React, { Component } from "react";
 import Recommend_Youtube from "../../components/recommend_youtube";
 import MoveBtn from "../../components/moveBtn";
+
+// img
 import Image from "next/image";
 import jsAndCallstack from "../../public/img/jsAndCallstack.jpg";
+import jsAndCallStackCode from "../../public/img/jsAndCallStackCode.jpg";
 
 export default function Dom() {
     // 페이지 넘김 정보
@@ -120,7 +123,10 @@ export default function Dom() {
                             </p>
                         </div>
                         <div className="w-full">
+                            <div className="w-full px-4 mb-1 flex-col text-center justify-center">
+                            <Image src ={jsAndCallStackCode} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg"/>
                             <Image src ={jsAndCallstack} alt="Picture of callstack and js" className="lg:w-full rounded-lg"/>
+                            </div>
                             <div className="lg:w-full md:pl-10 py-6">
                                 {/* 과정 1 */}
                                 <div className="flex relative pb-12">
