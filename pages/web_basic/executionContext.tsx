@@ -136,7 +136,7 @@ export default function Dom() {
                                             STEP 1
                                         </h2>
                                         <p className="leading-relaxed mb-4">
-                                            {`text`}
+                                            {`자바스크립트 코드를 실행시키면, 자바스크립트 엔진은 콜 스택이라는 통에 전역 실행 컨텍스트를 먼저 담습니다`}
                                         </p>
                                         <p className="leading-relaxed">
                                             {`text`}

@@ -178,8 +178,8 @@ export default function Webpack_Babel_Polyfill() {
                                         <div className="flex-grow">
                                             <h2 className="text-gray-900 text-lg title-font font-bold mb-3">Babel</h2>
                                             <p className="leading-relaxed mb-2 text-base text-start">- 이 이슈를 해결하기 위해 생겨난 툴이 <strong>{`Babel(바벨)`}</strong>이에요.</p>
-                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 바벨은 ES6+ 버전 코드를 하위버전 코드로 변환해주고, TS, JavaScriptX 까지도 다른 브라우저에서 정상 동작할 수 있도록 도와주는`} <strong>JavaScript 컴파일러에요.</strong></p>
-                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 정리하면, 바벨은 ES6+ 버전의 JavaScript 코드를 하위버전(ES5)으로 변환함으로써 최신버전의 JavaScript가 지원되지 않는 다른 브라우저에서도 동작할 수 있도록 하는 JavaScript 컴파일러에요.`}</p>
+                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 바벨은 ES6+ 버전 코드를 하위버전 코드로 변환해주는`} <strong>자바스크립트 컴파일러에요.</strong></p>
+                                            <p className="leading-relaxed mb-2 text-base text-start">{`- 정리하면, 바벨은 ES6+ 버전의 자바스크립트 코드를 하위버전(ES5)으로 변환함으로써 최신버전의 자바스크립트가 지원되지 않는 다른 브라우저에서도 동작할 수 있도록 하는 자바스크립트 컴파일러에요.`}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -204,8 +204,8 @@ export default function Webpack_Babel_Polyfill() {
                                         <div className="md:flex-grow">
                                             <h2 className="title-font font-medium text-gray-900 text-lg mb-2">코드를 읽고 AST로 변환하는 과정</h2>
                                             <p className="leading-relaxed text-base mb-2">
-                                                {`- Babel은 JavaScript 코드를 받아서 AST를 만들고, 
-                                                그걸 활용하여 새로운 JavaScript 코드를 출력해요.`}
+                                                {`- Babel은 자바스크립트 코드를 받아서 AST를 만들고, 
+                                                그걸 활용하여 새로운 자바스크립트 코드를 출력해요.`}
                                             </p>
                                             <p className="leading-relaxed text-base">
                                                 {`- AST(추상구문트리)는 프로그래밍 언어 문법에 따라 소스코드의 구조를 나타내는 계층적 프로그램 표현이에요.`}
@@ -291,10 +291,10 @@ export default function Webpack_Babel_Polyfill() {
                                     </svg>
                                 </h2>
                                 <p className="leading-relaxed mb-2">
-                                    {`구 브라우저에서, 최신 JavaScript 코드를 사용할 수 있도록 변환해주는 컴파일러(트랜스파일러)에요.`}
+                                    {`구 브라우저에서, 최신 자바스크립트 코드를 사용할 수 있도록 변환해주는 컴파일러(트랜스파일러)에요.`}
                                 </p>
                                 <p className="leading-relaxed mb-2">
-                                    {`ES5에서 JavaScript 문법이 아니었던 ES6+의 문법들을 구 브라우저에서 사용할 수 있도록 변환해줘요.`}
+                                    {`ES5에서 자바스크립트 문법이 아니었던 ES6+의 문법들을 구 브라우저에서 사용할 수 있도록 변환해줘요.`}
                                 </p>
                                 <p className="leading-relaxed mb-2">
                                     {`컴파일 시간(Compile-time)에 코드를 구 브라우저에서 사용가능하게 변환해요.`}
@@ -317,11 +317,11 @@ export default function Webpack_Babel_Polyfill() {
                                 <p className="leading-relaxed mb-2">
                                     {`브라우저가 이해할 수 없는 코드에 대하여, 이해할 수 있는 코드 소스를 제공해줘요.`}
                                 </p>
-                                <p className="leading-relaxed mb-2 hidden md:block" title="전역 객체: JavaScript코드가 실행되기 이전에 생성되는 최상위 객체">
+                                <p className="leading-relaxed mb-2 hidden md:block" title="전역 객체: 자바스크립트 실행되기 이전에 생성되는 최상위 객체">
                                     {`ES5의 전역 객체에 포함되지 않은 새로운 객체, 기존 객체의 새 메소드, 새 함수를 변환할 때 필요해요.`}
                                 </p>
                                 <p className="leading-relaxed mb-2">
-                                    {`JavaScript 문법으로 읽히지만, 정의되지 않은 객체/메소드/함수를 정의해줘요.`}
+                                    {`자바스크립트 문법으로 읽히지만, 정의되지 않은 객체/메소드/함수를 정의해줘요.`}
                                 </p>
                                 <p className="leading-relaxed mb-2">
                                     {`Babel이 컴파일하지 못한 전역 객체/메소드/함수들을 브라우저에서 실행되는 시점인 실행 시간(Run-time)에 변환해줘요.`}

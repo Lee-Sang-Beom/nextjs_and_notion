@@ -30,7 +30,7 @@ export default function Scope() {
                                     {`스코프(Scope)`}
                                 </h1>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`- JavaScript뿐 아니라, 많은 프로그래밍 언어들은 스코프의 개념을 아주 많이 활용하고 있어요.`}
+                                    {`- 자바스크립트 뿐 아니라, 많은 프로그래밍 언어들은 스코프의 개념을 아주 많이 활용하고 있어요.`}
                                 </p>
                                 {/* 제목 추가 설명을 위한 p태그의 경우 새로 추가된 태그에서 mt-1로 구분감 부여*/}
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-1">
@@ -60,7 +60,7 @@ export default function Scope() {
                                 {`- 스코프란, 식별자를 찾아내기 위한 규칙으로 사용되며, 변수에 접근할 수 있는 범위를 의미해요.`}
                             </p>
                             <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-1 mb-6">
-                                {`- JavaScript에서의 스코프는 참조 범위에 따라, 아래와 같이 2가지로 분류할 수 있어요.`}
+                                {`- 자바스크립트에서의 스코프는 참조 범위에 따라, 아래와 같이 2가지로 분류할 수 있어요.`}
                             </p>
                             <div className="flex flex-wrap -m-4">
                                 <div className="p-4 lg:w-1/2 w-full">
@@ -176,7 +176,7 @@ export default function Scope() {
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
                                             <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
                                         </svg>
-                                        <p className="leading-relaxed mb-1 dark:text-slate-700"><strong>JavaScript 엔진</strong>{`은 식별자를 찾을 때 우선, 일단 자신이 속한 스코프에서 찾아요.`}</p>  
+                                        <p className="leading-relaxed mb-1 dark:text-slate-700"><strong>자바스크립트 엔진</strong>{`은 식별자를 찾을 때 우선, 일단 자신이 속한 스코프에서 찾아요.`}</p>  
                                         <p className="leading-relaxed mb-1 dark:text-slate-700">{`이 때, 해당 스코프에 식별자가 없으면, 해당 스코프를 포함하는 `}<strong>상위 스코프</strong>{`로 이동해 식별자를 찾아나가요.`}</p>  
                                         <p className="leading-relaxed mb-1 dark:text-slate-700">{`이렇게 연속적으로 연결고리를 타면서 식별자를 찾아나가는 과정을 `}<strong>스코프 체인</strong>{`이라고 해요.`}</p>  
                                         <p className="leading-relaxed dark:text-slate-700">{`다음 이미지 예제의 코드와 주석 부분을 잘 확인해보시면 이해가 쉬울 거에요.`} </p>

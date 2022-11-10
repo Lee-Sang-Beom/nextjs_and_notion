@@ -30,7 +30,7 @@ export default function Hoisting() {
                                     {`호이스팅(Hoisting)`}
                                 </h1>
                                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                                    {`- JavaScript를 공부하면서 var, let, const로 선언된 변수들을 한 번 쯤은 보셨을 거에요!
+                                    {`- 자바스크립트를 공부하면서 var, let, const로 선언된 변수들을 한 번 쯤은 보셨을 거에요!
                                     이것들의 차이를 잘 말할 줄 아는 개발자가 되기 위해서는 `}<strong>{`호이스팅(Hoisting)`}</strong>{`에 대해 꼭 알고 있어야 해요.`}
                                 </p>
                                 {/* 제목 추가 설명을 위한 p태그의 경우 새로 추가된 태그에서 mt-1로 구분감 부여*/}
@@ -77,7 +77,7 @@ export default function Hoisting() {
                                 </ul>
                             </div>
                             <p className="mb-4 leading-relaxed">
-                                <strong>{`JavaScript Parser(엔진)`}</strong>{`은 코드를 실행하기 전에 함수 안을 훑으면서, 실행 가능한 코드를 형상화하고 구분하는 과정을 거쳐요. 이것은 실행 컨텍스트를 위한 과정이에요`}
+                                <strong>{`자바스크립트 엔진`}</strong>{`은 코드를 실행하기 전에 함수 안을 훑으면서, 실행 가능한 코드를 형상화하고 구분하는 과정을 거쳐요. 이것은 실행 컨텍스트를 위한 과정이에요`}
                             </p>
                             <p className="mb-4 leading-relaxed">
                                 {`이 실행 컨텍스트를 위한 과정에서 발생하는 것이 `}
@@ -116,7 +116,7 @@ export default function Hoisting() {
                             {/* flexbox - left 내용 */}
                             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                                 <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`변수 호이스팅 (var)`}</h1>
-                                <p className="leading-relaxed mb-4">{`var 키워드로 선언된 변수를 호이스팅하는 경우, `} <strong>{`JavaScript Parser(엔진)`}</strong>
+                                <p className="leading-relaxed mb-4">{`var 키워드로 선언된 변수를 호이스팅하는 경우, `} <strong>{`자바스크립트 엔진`}</strong>
                                     {`은 선언과 함께 `}<strong>{`undefined로 변수를 초기화해`}</strong>{`, 메모리에 저장해요.`}</p>
                                 <div className="flex border-t border-gray-200 py-2">
                                 </div>
@@ -141,7 +141,7 @@ export default function Hoisting() {
                                         <li className="mb-2 font-semibold text-left list-decimal">
                                             {`선언 단계`}
                                             <p className="ml-1 mt-1 mb-1 text-xs font-normal">
-                                                {`- 변수를 실행 컨텍스트에 등록해, JavaScript Parser(엔진)에 변수의 존재를 알리는 단계`}
+                                                {`- 변수를 실행 컨텍스트에 등록해, 자바스크립트 엔진에 변수의 존재를 알리는 단계`}
                                             </p>
                                             <p className="ml-1 mb-1 text-xs font-normal">
                                                 {`- 이 변수 객체는 스코프가 참조하는 대상이 되요.`}
@@ -186,7 +186,7 @@ export default function Hoisting() {
                                         </div>
                                     </code>
                                 </pre>
-                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (javascript parser 내부에서 처리되는 결과)`}</div>
+                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (자바스크립트 엔진 내부에서 처리되는 결과)`}</div>
                                 <pre className="language-jsx">
                                     <code className="language-jsx">
                                         <div className="language-jsx">
@@ -224,7 +224,7 @@ export default function Hoisting() {
                             {/* flexbox - left 내용 */}
                             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                                 <h1 className="text-gray-900 text-3xl title-font font-bold mb-4">{`변수 호이스팅 (let, const)`}</h1>
-                                <p className="leading-relaxed mb-4">{`let, const 키워드로 선언된 변수들도 var 키워드로 선언된 변수처럼 `} <strong>{`JavaScript Parser`}</strong>
+                                <p className="leading-relaxed mb-4">{`let, const 키워드로 선언된 변수들도 var 키워드로 선언된 변수처럼 `} <strong>{`자바스크립트 엔진`}</strong>
                                     {`에 의해, 선언문이 해당 스코프의 최상단으로 끌어올려지기 때문에 호이스팅이 일어난다고 볼 수 있어요. `}
                                     <strong>{`즉, 선언이 코드 실행 이전에, 메모리에 저장되는 과정은 맞다는 의미에요.`}</strong></p>
 
@@ -241,7 +241,7 @@ export default function Hoisting() {
                                 <p className="leading-relaxed mb-4">
                                     {`let, const로 선언된 변수의 경우, var로 선언된 변수와는 다르게 `}
                                     <strong>{`선언 단계와 초기화 단계가 분리되어 실행되요. `}</strong>
-                                    {`JavaScript Parser(엔진)가 식별자를 기록하긴 하지만 값을 초기화하지 않기 때문에 선언문 이전에 식별자 값을 참조하려 하면 `}
+                                    {`자바스크립트 엔진이 식별자를 기록하긴 하지만 값을 초기화하지 않기 때문에 선언문 이전에 식별자 값을 참조하려 하면 `}
                                     <strong>{`Reference Error`}</strong>
                                     {`가 발생하는 것이에요.`}
                                 </p>
@@ -276,7 +276,7 @@ export default function Hoisting() {
                                         </div>
                                     </code>
                                 </pre>
-                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (javascript parser 내부에서 처리되는 결과)`}</div>
+                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (자바스크립트 엔진 내부에서 처리되는 결과)`}</div>
                                 <pre className="language-jsx">
                                     <code className="language-jsx">
                                         <div className="language-jsx">
@@ -342,7 +342,7 @@ export default function Hoisting() {
                                         </div>
                                     </code>
                                 </pre>
-                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (javascript parser 내부에서 처리되는 결과)`}</div>
+                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (자바스크립트 엔진 내부에서 처리되는 결과)`}</div>
                                 <pre className="language-jsx">
                                     <code className="language-jsx">
                                         <div className="language-jsx">
@@ -421,7 +421,7 @@ export default function Hoisting() {
                                         </div>
                                     </code>
                                 </pre>
-                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (javascript parser 내부에서 처리되는 결과)`}</div>
+                                <div className="text-center py-6 text-sm">{`↓ ↓ ↓ (자바스크립트 엔진 내부에서 처리되는 결과)`}</div>
                                 <pre className="language-jsx">
                                     <code className="language-jsx">
 
@@ -453,7 +453,7 @@ export default function Hoisting() {
                                 <div className="flex border-t border-gray-200 py-2">
                                 </div>
                                 <p className="leading-relaxed mb-4">
-                                    {`함수 선언문 방식으로 함수를 선언하는 경우에는, 호이스팅이 JavaScript Parser(엔진)가 
+                                    {`함수 선언문 방식으로 함수를 선언하는 경우에는, 호이스팅이 자바스크립트 엔진이 
                                     함수 선언과 동시에, 완성된 함수객체를 생성해 환경 레코드에 기록하는 방식으로 이루어져요.`}
                                     <span className="text-xs block m-1 ml-2 font-bold">{`* 환경 레코드는 실행 컨텍스트에서 자세히 다룰 예정이에요`}</span>
                                 </p>

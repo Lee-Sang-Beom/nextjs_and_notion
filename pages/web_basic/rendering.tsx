@@ -85,7 +85,7 @@ export default function Rendering() {
               {`이에요.`}
             </p>
             <p className="mb-4 leading-relaxed">
-              {`웹 브라우저가 원본 HTML, CSS, JavaScript문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 view port에 표시하기까지의 과정을 `}
+              {`웹 브라우저가 원본 HTML, CSS, JavaScript 문서를 읽어들인 후, 스타일을 입히고 대화형 페이지로 만들어 view port에 표시하기까지의 과정을 `}
               <strong>{`Critical Rendering Path`}</strong>
               {`라고 불러요.`}
             </p>
@@ -209,21 +209,21 @@ export default function Rendering() {
                     STEP 5
                   </h2>
                   <p className="leading-relaxed mb-4">
-                    {`HTML 파싱 중, JavaScript를 의미하는 `}
+                    {`HTML 파싱 중, 자바스크립트를 의미하는 `}
                     <strong>{`<script>`}</strong>
                     {`태그를 만나게 되면, DOM파싱을 중지하고 `}
-                    <strong>{`JavaScript 엔진`}</strong>
+                    <strong>{`자바스크립트 엔진`}</strong>
                     {`에게 제어권한을 넘겨요. 그리고 스크립트를 모두 실행하면, 다시 DOM을 그리기 시작해요.`}
                   </p>
                   <p className="leading-relaxed mb-2">
-                    {`브라우저의 JavaScript 엔진은 서버에서 응답한 JavaScript를 파싱하여, `}
+                    {`브라우저의 자바스크립트 엔진은 서버에서 응답한 자바스크립트를 파싱하여, `}
                     <strong>{`AST(추상 구문 트리)`}</strong>
                     {`를 생성하고, 바이트코드로 변환하여 실행해요.`}
                   </p>
                   <div className="leading-relaxed text-base mb-8">
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left">
-                        {`서버로부터 응답된 JavaScript 코드는 각각의 의미를 갖는 토큰으로 분해되며, 이 토큰이 결합되어 `}
+                        {`서버로부터 응답된 자바스크립트 코드는 각각의 의미를 갖는 토큰으로 분해되며, 이 토큰이 결합되어 `}
                         <strong>{`AST`}</strong>
                         {`를 형성해요.`}
                       </li>
@@ -253,12 +253,12 @@ export default function Rendering() {
                         {`은 위에서 아래로 동기적으로 이루어지기 때문에, HTML파싱은 <script>의 위치에 따라 지연될 수 있어요.`}
                       </li>
                       <li className="mb-1 text-left list-decimal">
-                        {`JavaScript 코드가 DOM, CSSOM을 변경하여 HTML노드를 생성하는 경우, HTML 파싱이 완료되어 있어야 하기 때문에, <script>는 되도록 `}
+                        {`자바스크립트 코드가 DOM, CSSOM을 변경하여 HTML노드를 생성하는 경우, HTML 파싱이 완료되어 있어야 하기 때문에, <script>는 되도록 `}
                         <strong>{`<body>`}</strong>
                         {`가 끝나는 부분에 위치하는 편이 좋을 수 있어요.`}
                       </li>
                       <li className="mb-1 text-left list-decimal">
-                        {`하지만, <script>가 <body> 맨 아래에 위치할 때, 사용자가 JavaScript 코드 파싱 중에 웹 상호작용을 시도한다면 비정상적으로 작동할 수 있어요.`}
+                        {`하지만, <script>가 <body> 맨 아래에 위치할 때, 사용자가 자바스크립트 코드 파싱 중에 웹 상호작용을 시도한다면 비정상적으로 작동할 수 있어요.`}
                       </li>
                       <li className="mb-1 text-left list-decimal">
                         {`그렇기 때문에 브라우저는 스크립트 파일을 병렬로 불러오는 방식으로 DOM 렌더 과정을 막지 않게 선언할 수 있어요. 이를 가능하게 하는 키워드는 `}

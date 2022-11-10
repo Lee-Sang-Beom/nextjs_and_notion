@@ -35,7 +35,7 @@ export default function Dom() {
                   {`시작하기 전에..`}
                 </h1>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`- JavaScript는 웹 브라우저 기반의 객체 위에서 동작해요. 그렇기 때문에 여러분이 웹 개발자를 꿈꾼다면, DOM과 BOM에 대해 자세히 알아야 할 필요가 있어요.`}
+                  {`- 자바스크립트는 웹 브라우저 기반의 객체 위에서 동작해요. 그렇기 때문에 여러분이 웹 개발자를 꿈꾼다면, DOM과 BOM에 대해 자세히 알아야 할 필요가 있어요.`}
                 </p>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function Dom() {
                   </ul>
                 </div>
                 <p className="leading-relaxed text-base mb-4">
-                  {`우리는 JavaScript와 같은 스크립팅 언어를 이용해 DOM을 수정하고 웹 페이지 요소를 제어할 수 있어요. 
+                  {`우리는 자바스크립트와 같은 스크립팅 언어를 이용해 DOM을 수정하고 웹 페이지 요소를 제어할 수 있어요. 
                    이렇게 할 수 있는 이유는, 웹 콘텐츠(HTML요소)를 제어/조작할 수 있는 `}
                   <strong>{`DOM API`}</strong>
                   {`라는 것이 제공되고 있기 때문이에요.`}
@@ -285,9 +285,9 @@ export default function Dom() {
                     </svg>
                   </div>
                   <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">JavaScript 실행</h2>
+                    <h2 className="font-medium title-font text-gray-900 mb-2 text-xl">자바스크립트 실행</h2>
                     <p className="leading-relaxed mb-1 text-sm">{`- 이 과정은 DOM 트리를 구성하는 과정 사이에 일어날 수도 있어요.`}</p>
-                    <p className="leading-relaxed mb-1 text-sm">{`- HTML 파싱 중, JavaScript를 의미하는 <script> 태그나 외부 스크립트 참조 구문을 만나게 되면, DOM 파싱을 중지하고 JavaScript 엔진에게 제어 권한을 넘겨 스크립트를 실행해요.`}</p>
+                    <p className="leading-relaxed mb-1 text-sm">{`- HTML 파싱 중, 자바스크립트를 의미하는 <script> 태그나 외부 스크립트 참조 구문을 만나게 되면, DOM 파싱을 중지하고 자바스크립트 엔진에게 제어 권한을 넘겨 스크립트를 실행해요.`}</p>
                     <p className="leading-relaxed text-sm">{`- 스크립트 실행이 끝나고 나면, 다시 DOM 트리를 그리기 시작해요.`}</p>
                   </div>
                 </div>
@@ -407,7 +407,7 @@ export default function Dom() {
                   {`- 그렇다면 DOM은 대체 왜 쓰이는 것일까요? HTML코드는 정적인 텍스트이므로, 웹 화면이 사용자와 동적으로 상호작용을 하기 위해서 DOM이 필요해요. `}
                 </p>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`- 앞서 JavaScript를 활용해 문서 구조에 접근할 수 있고, 상호작용할 수 있다고 말했죠? 
+                  {`- 앞서 자바스크립트를 활용해 문서 구조에 접근할 수 있고, 상호작용할 수 있다고 말했죠? 
                   즉, 문서 내의 각 요소들에 대해 자바스크립트를 활용해 여러 작업을 시도할 수 있는데, `} <strong>{`DOM이 해당 수정 및 제어 작업을 가능하도록 문서의 구조화된 표현을 제공하고 있는 것`}</strong>{`이에요. `}
                 </p>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
