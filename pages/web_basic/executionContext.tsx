@@ -119,7 +119,7 @@ export default function Dom() {
                                 {`- 비동기 처리를 포함한 이벤트 루프와 관련된 사항은 나중에 다뤄보도록 할게요!`}
                             </p>
                             <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0">
-                                {`- 또한, 이제 실행 컨텍스트라는 용어를 사용할텐데, 일단 `}<strong>{`"실행 컨텍스트에는 환경 레코드와 Outer라는 게 들어가는구나"`} </strong>{`라고 이해해주시면 되요!`}
+                                {`- 지금부터는 `}<strong>실행 컨텍스트</strong>{`라는 용어를 사용할텐데, 일단 `}<strong>{`"실행 컨텍스트는 뭔지 잘 모르겠지만, 여기에는 환경 레코드와 Outer라는 게 들어가는구나!"`} </strong>{`라고 이해해주시면 되요!`}
                             </p>
                         </div>
                         <div className="w-full">
@@ -136,10 +136,11 @@ export default function Dom() {
                                             STEP 1
                                         </h2>
                                         <p className="leading-relaxed mb-4">
-                                            {`자바스크립트 코드를 실행시키면, 자바스크립트 엔진은 콜 스택이라는 통에 전역 실행 컨텍스트를 먼저 담습니다`}
+                                            {`자바스크립트 코드를 실행시키면, 자바스크립트 엔진은 `}<strong>{`콜 스택(Call Stack)`}</strong>{`이라는 통에 `}<strong>전역 실행 컨텍스트</strong>{`를 담아요.`}
                                         </p>
                                         <p className="leading-relaxed">
-                                            {`text`}
+                                            <strong>{`여기서 콜 스택이란, `}</strong>
+                                            {`자바스크립트 코드가 실행되며 생성되는 실행 컨텍스트를 저장하는 자료 구조를 의미해요.`}
                                         </p>
                                     </div>
                                 </div>
