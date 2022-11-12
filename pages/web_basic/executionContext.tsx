@@ -16,6 +16,20 @@ export default function Dom() {
     const prev = undefined;
     const next = undefined;
 
+    // 설명순서 (index)
+    const descOrder = (title: string, desc: string) => {
+        return (
+            <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+                <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
+                    {title}
+                </h2>
+                <p className="leading-relaxed text-sm mb-4">
+                    {desc}
+                </p>
+            </div>
+        )
+
+    }
     const returnStepLogo = (stepNum: number) => {
         return (
             <>
@@ -31,6 +45,98 @@ export default function Dom() {
             </>
         )
     }
+
+    // 자바스크립트와 콜 스택 step 내용
+    const jsAndCallstackSection = () => {
+        return (
+            <div className="lg:w-full md:pl-10 py-6">
+                {/* 과정 1 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(1)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 1
+                        </h2>
+                        <p className="leading-relaxed mb-4">
+                            {`자바스크립트 코드를 실행시키면, 자바스크립트 엔진은 `}<strong>{`콜 스택(Call Stack)`}</strong>{`이라는 통에 `}<strong>전역 실행 컨텍스트</strong>{`를 담아요.`}
+                        </p>
+                        <p className="leading-relaxed">
+                            <strong>{`여기서 콜 스택이란, `}</strong>
+                            {`자바스크립트 코드가 실행되며 생성되는 실행 컨텍스트를 저장하는 자료 구조를 의미해요.`}
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 2 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(2)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 2
+                        </h2>
+                        <p className="leading-relaxed mb-4">
+                            {`전역에서 함수 a를 실행시키면, `}<strong>{`함수 a의 실행 컨텍스트를 생성해 콜 스택에 담아요.`}</strong>
+                        </p>
+                        <p className="leading-relaxed">
+                            {`이 때, 콜 스택 안에는 `}<strong>{`가장 최근에 추가된 실행 컨텍스트(함수 a의 컨텍스트)만 활성화`}</strong>{`되게 됩니다.`}
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 3 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(3)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 3
+                        </h2>
+                        <p className="leading-relaxed mb-4">
+                            {`함수 a에서 함수 b가 호출되면, 또 콜 스택에 `}
+                            <strong>함수 b의 실행 컨텍스트</strong>
+                            {`를 생성해 담습니다.`}
+                        </p>
+                        <p className="leading-relaxed">
+                            {`이 때, 함수 b의 실행이 종료되면 콜 스택에서 `}
+                            <strong>함수 b의 실행 컨텍스트</strong>
+                            {`는 사라집니다.`}
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 4 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(4)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 4
+                        </h2>
+                        <p className="leading-relaxed">
+                            {`마찬가지로, 함수 a가 종료되면 콜 스택에서 함수 a의 실행 컨텍스트도 사라집니다.`}
+                        </p>
+                    </div>
+                </div>
+
+                {/* 과정 5 */}
+                <div className="flex relative">
+                    <div
+                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                    >
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            {`FINISH`}
+                        </h2>
+                        <p className="leading-relaxed ">
+                            {`전역 코드가 마지막 라인까지 실행되면, 전역 실행컨텍스트도 콜 스택에서 사라집니다`}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
 
     return (
         <>
@@ -65,38 +171,10 @@ export default function Dom() {
 
                         {/* 소개 순서 환기 */}
                         <div className="flex flex-wrap sm:pl-10 pl-2">
-                            <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                                <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-                                    1. 자바스크립트와 콜 스택
-                                </h2>
-                                <p className="leading-relaxed text-sm mb-4">
-                                    {`> 자바스크립트 코드 수행에 따른 콜 스택 상황 파악하기`}
-                                </p>
-                            </div>
-                            <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                                <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-                                    2. 호이스팅과 환경 레코드
-                                </h2>
-                                <p className="leading-relaxed text-sm mb-4">
-                                    {`> 환경 레코드의 개념과 호이스팅과의 연관성 파악하기`}
-                                </p>
-                            </div>
-                            <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                                <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-                                    3. Outer와 스코프체인
-                                </h2>
-                                <p className="leading-relaxed text-sm mb-4">
-                                    {`> Outer와 스코프체인의 연관성 파악하기`}
-                                </p>
-                            </div>
-                            <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                                <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-                                    4. 실행 컨텍스트란
-                                </h2>
-                                <p className="leading-relaxed text-sm mb-4">
-                                    {`> 이전 과정으로부터 분석한 내용을 토대로 실행 컨텍스트 개념 정리하기`}
-                                </p>
-                            </div>
+                            {descOrder(`1. 자바스크립트와 콜 스택`, `> 자바스크립트 코드 수행에 따른 콜 스택 상황 파악하기`)}
+                            {descOrder(`2. 호이스팅과 환경 레코드`, `> 환경 레코드의 개념과 호이스팅과의 연관성 파악하기`)}
+                            {descOrder(`3. Outer와 스코프체인`, `> Outer와 스코프체인의 연관성 파악하기`)}
+                            {descOrder(`4. 실행 컨텍스트란`, `> 이전 과정으로부터 분석한 내용을 토대로 실행 컨텍스트 개념 정리하기`)}
                         </div>
 
                     </div>
@@ -124,94 +202,10 @@ export default function Dom() {
                         </div>
                         <div className="w-full">
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
-                            <Image src ={jsAndCallStackCode} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg"/>
-                            <Image src ={jsAndCallstack} alt="Picture of callstack and js" className="lg:w-full rounded-lg"/>
+                                <Image src={jsAndCallStackCode} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
+                                <Image src={jsAndCallstack} alt="Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
-                            <div className="lg:w-full md:pl-10 py-6">
-                                {/* 과정 1 */}
-                                <div className="flex relative pb-12">
-                                    {returnStepLogo(1)}
-                                    <div className="flex-grow pl-4">
-                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 1
-                                        </h2>
-                                        <p className="leading-relaxed mb-4">
-                                            {`자바스크립트 코드를 실행시키면, 자바스크립트 엔진은 `}<strong>{`콜 스택(Call Stack)`}</strong>{`이라는 통에 `}<strong>전역 실행 컨텍스트</strong>{`를 담아요.`}
-                                        </p>
-                                        <p className="leading-relaxed">
-                                            <strong>{`여기서 콜 스택이란, `}</strong>
-                                            {`자바스크립트 코드가 실행되며 생성되는 실행 컨텍스트를 저장하는 자료 구조를 의미해요.`}
-                                        </p>
-                                    </div>
-                                </div>
-                                {/* 과정 2 */}
-                                <div className="flex relative pb-12">
-                                    {returnStepLogo(2)}
-                                    <div className="flex-grow pl-4">
-                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 2
-                                        </h2>
-                                        <p className="leading-relaxed mb-4">
-                                            {`전역에서 함수 a를 실행시키면, `}<strong>{`함수 a의 실행 컨텍스트를 생성해 콜 스택에 담아요.`}</strong>
-                                        </p>
-                                        <p className="leading-relaxed">
-                                            {`이 때, 콜 스택 안에는 `}<strong>{`가장 최근에 추가된 실행 컨텍스트(함수 a의 컨텍스트)만 활성화`}</strong>{`되게 됩니다.`}
-                                        </p>
-                                    </div>
-                                </div>
-                                {/* 과정 3 */}
-                                <div className="flex relative pb-12">
-                                    {returnStepLogo(3)}
-                                    <div className="flex-grow pl-4">
-                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 3
-                                        </h2>
-                                        <p className="leading-relaxed mb-4">
-                                            {`함수 a에서 함수 b가 호출되면, 또 콜 스택에 `}
-                                            <strong>함수 b의 실행 컨텍스트</strong>
-                                            {`를 생성해 담습니다.`}
-                                        </p>
-                                        <p className="leading-relaxed">
-                                            {`이 때, 함수 b의 실행이 종료되면 콜 스택에서 `}
-                                            <strong>함수 b의 실행 컨텍스트</strong>
-                                            {`는 사라집니다.`}
-                                        </p>
-                                    </div>
-                                </div>
-                                {/* 과정 4 */}
-                                <div className="flex relative pb-12">
-                                    {returnStepLogo(4)}
-                                    <div className="flex-grow pl-4">
-                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 4
-                                        </h2>
-                                        <p className="leading-relaxed">
-                                            {`마찬가지로, 함수 a가 종료되면 콜 스택에서 함수 a의 실행 컨텍스트도 사라집니다.`}
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                {/* 과정 5 */}
-                                <div className="flex relative">
-                                    <div
-                                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
-                 justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
-                                    >
-                                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                            <path d="M22 4L12 14.01l-3-3"></path>
-                                        </svg>
-                                    </div>
-                                    <div className="flex-grow pl-4">
-                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            {`FINISH`}
-                                        </h2>
-                                        <p className="leading-relaxed ">
-                                            {`전역 코드가 마지막 라인까지 실행되면, 전역 실행컨텍스트도 콜 스택에서 사라집니다`}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            {jsAndCallstackSection()}
                         </div>
                     </div>
                 </section>
