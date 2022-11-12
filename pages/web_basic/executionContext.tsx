@@ -152,10 +152,10 @@ export default function Dom() {
                                             STEP 2
                                         </h2>
                                         <p className="leading-relaxed mb-4">
-                                            {`text`}
+                                            {`전역에서 함수 a를 실행시키면, `}<strong>{`함수 a의 실행 컨텍스트를 생성해 콜 스택에 담아요.`}</strong>
                                         </p>
                                         <p className="leading-relaxed">
-                                            {`text`}
+                                            {`이 때, 콜 스택 안에는 `}<strong>{`가장 최근에 추가된 실행 컨텍스트(함수 a의 컨텍스트)만 활성화`}</strong>{`되게 됩니다.`}
                                         </p>
                                     </div>
                                 </div>
