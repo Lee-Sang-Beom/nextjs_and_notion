@@ -167,18 +167,15 @@ export default function Dom() {
                                             STEP 3
                                         </h2>
                                         <p className="leading-relaxed mb-4">
-                                            {`text`}
+                                            {`함수 a에서 함수 b가 호출되면, 또 콜 스택에 `}
+                                            <strong>함수 b의 실행 컨텍스트</strong>
+                                            {`를 생성해 담습니다.`}
                                         </p>
-                                        <p className="leading-relaxed mb-2">
-                                            {`이 때, 스타일은 아래에 나열한 순서대로 적용되고, 나중에 처리된 스타일이 우선적으로 적용되요.`}
+                                        <p className="leading-relaxed">
+                                            {`이 때, 함수 b의 실행이 종료되면 콜 스택에서 `}
+                                            <strong>함수 b의 실행 컨텍스트</strong>
+                                            {`는 사라집니다.`}
                                         </p>
-                                        <div className="leading-relaxed text-base mb-8">
-                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                                <li className="mb-1 text-left list-decimal">{`text1`}</li>
-                                                <li className="mb-1 text-left list-decimal">{`text2`}</li>
-                                                <li className="mb-1 text-left list-decimal">{`text3`}</li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
                                 {/* 과정 4 */}
@@ -188,39 +185,14 @@ export default function Dom() {
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                                             STEP 4
                                         </h2>
-                                        <p className="leading-relaxed mb-4">
-                                            {`text`}
+                                        <p className="leading-relaxed">
+                                            {`마찬가지로, 함수 a가 종료되면 콜 스택에서 함수 a의 실행 컨텍스트도 사라집니다.`}
                                         </p>
-                                        <p className="leading-relaxed mb-2">
-                                            {`text`}
-                                        </p>
-                                        <div className="leading-relaxed text-base">
-                                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
-                                                <li className="mb-1 text-left">{`text`}</li>
-                                                <li className="mb-1 text-left">{`text`}</li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
+                                
                                 {/* 과정 5 */}
-                                <div className="flex relative pb-12">
-                                    {returnStepLogo(5)}
-                                    <div className="flex-grow pl-4">
-                                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                                            STEP 5
-                                        </h2>
-                                        <p className="leading-relaxed mb-4">
-                                            {`text`}
-                                        </p>
-                                        <p className="leading-relaxed mb-2">
-                                            {`text`}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* 과정 6 */}
                                 <div className="flex relative">
-
                                     <div
                                         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
                  justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
@@ -234,13 +206,8 @@ export default function Dom() {
                                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                                             {`FINISH`}
                                         </h2>
-                                        <p className="leading-relaxed mb-4">
-                                            {`text`}
-                                        </p>
-
-                                        <p className="leading-relaxed">
-                                            {`text`}
-
+                                        <p className="leading-relaxed ">
+                                            {`전역 코드가 마지막 라인까지 실행되면, 전역 실행컨텍스트도 콜 스택에서 사라집니다`}
                                         </p>
                                     </div>
                                 </div>
