@@ -208,6 +208,24 @@ export default function Dom() {
                             {jsAndCallstackSection()}
                         </div>
                     </div>
+
+                    {/*3. 호이스팅 발생과 실행 컨텍스트*/}
+                    <div className="container px-5 py-24 mx-auto">
+                        {/* bar 길이*/}
+                        <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                            <div className="w-3/5 h-full bg-indigo-500"></div>
+                        </div>
+                        {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
+                        <div className="flex flex-wrap sm:flex-row flex-col py-6">
+                            <h1 className="w-full title-font text-2xl font-bold text-gray-900">
+                                {`호이스팅 발생과 실행 컨텍스트`}
+                            </h1>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4 mb-1">
+                                {`- 설명 작성...`}
+                            </p>
+                        </div>
+                        
+                    </div>
                 </section>
 
             </Layout>
