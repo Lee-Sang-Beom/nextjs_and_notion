@@ -221,11 +221,27 @@ export default function Dom() {
                                 {`호이스팅 발생과 실행 컨텍스트`}
                             </h1>
                             <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4 mb-1">
-                                {`- 설명 작성...`}
+                                {`- 호이스팅 현상이 발생하는 이유는 선언문이 있는 코드라인을 물리적으로 최상단으로 끌어올린 게 아니라, `}
+                                <strong>{`자바스크립트 엔진이 먼저 전체 코드를 스캔하면서 변수같은 정보를 실행 컨텍스트 어딘가에 미리 기록해놓기 때문`}</strong>
+                                {`이에요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0">
+                                {`- 이 때 정보를 기록해 놓는곳이 `}
+                                <strong>{`환경 레코드(environment record)이고`}</strong>
+                                {`, 이는 식별자와 식별자에 바인딩된 값을 기록해두는 객체라고 이해하시면 되요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0">
+                                - <strong>{` 호이스팅`}</strong>
+                                {`이 무엇인지 잘 모르겠다면, `}
+                                <Link href="./hoisting">
+                                    {`"여기"`}
+                                </Link>
+                                {`를 클릭해주세요.`}
                             </p>
                         </div>
                         
                     </div>
+                                            
                 </section>
 
             </Layout>
