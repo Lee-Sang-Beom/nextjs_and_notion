@@ -139,7 +139,7 @@ export default function Dom() {
         )
     }
 
-    // 변수 호이스팅과 환경 레코드 step 내용
+    // 변수 호이스팅과 환경 레코드 step 내용 
     const VariableHoisitingAndEnvRecordSection = () => {
         return (
             <div className="lg:w-full md:pl-10 py-6">
@@ -150,13 +150,10 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
                         </h2>
-                        <p className="leading-relaxed mb-4">
-                            {`자바스크립트 코드를 실행시키면, 자바스크립트 엔진은 `}<strong>{`콜 스택(Call Stack)`}</strong>{`이라는 통에 `}<strong>전역 실행 컨텍스트</strong>{`를 담아요.`}
-                        </p>
                         <p className="leading-relaxed">
-                            <strong>{`여기서 콜 스택이란, `}</strong>
-                            {`자바스크립트 코드가 실행되며 생성되는 실행 컨텍스트를 저장하는 자료 구조를 의미해요.`}
+                            자바스크립트 엔진은 코드를 실행하면, 우선 전역 실행 컨텍스트를 생성해 콜 스택에 넣습니다.
                         </p>
+
                     </div>
                 </div>
                 {/* 과정 2 */}
@@ -167,11 +164,9 @@ export default function Dom() {
                             STEP 2
                         </h2>
                         <p className="leading-relaxed mb-4">
-                            {`전역에서 함수 a를 실행시키면, `}<strong>{`함수 a의 실행 컨텍스트를 생성해 콜 스택에 담아요.`}</strong>
+                        그 후 전체 코드를 살펴보며, 선언할 식별자들이 있는지 찾아보고, 있다면 먼저 선언해둡니다.
                         </p>
-                        <p className="leading-relaxed">
-                            {`이 때, 콜 스택 안에는 `}<strong>{`가장 최근에 추가된 실행 컨텍스트(함수 a의 컨텍스트)만 활성화`}</strong>{`되게 됩니다.`}
-                        </p>
+                        
                     </div>
                 </div>
                 {/* 과정 3 */}
@@ -182,14 +177,8 @@ export default function Dom() {
                             STEP 3
                         </h2>
                         <p className="leading-relaxed mb-4">
-                            {`함수 a에서 함수 b가 호출되면, 또 콜 스택에 `}
-                            <strong>함수 b의 실행 컨텍스트</strong>
-                            {`를 생성해 담습니다.`}
                         </p>
                         <p className="leading-relaxed">
-                            {`이 때, 함수 b의 실행이 종료되면 콜 스택에서 `}
-                            <strong>함수 b의 실행 컨텍스트</strong>
-                            {`는 사라집니다.`}
                         </p>
                     </div>
                 </div>
@@ -201,7 +190,6 @@ export default function Dom() {
                             STEP 4
                         </h2>
                         <p className="leading-relaxed">
-                            {`마찬가지로, 함수 a가 종료되면 콜 스택에서 함수 a의 실행 컨텍스트도 사라집니다.`}
                         </p>
                     </div>
                 </div>
@@ -222,7 +210,6 @@ export default function Dom() {
                             {`FINISH`}
                         </h2>
                         <p className="leading-relaxed ">
-                            {`전역 코드가 마지막 라인까지 실행되면, 전역 실행컨텍스트도 콜 스택에서 사라집니다`}
                         </p>
                     </div>
                 </div>
@@ -242,11 +229,8 @@ export default function Dom() {
                             STEP 1
                         </h2>
                         <p className="leading-relaxed mb-4">
-                            {`자바스크립트 코드를 실행시키면, 자바스크립트 엔진은 `}<strong>{`콜 스택(Call Stack)`}</strong>{`이라는 통에 `}<strong>전역 실행 컨텍스트</strong>{`를 담아요.`}
                         </p>
                         <p className="leading-relaxed">
-                            <strong>{`여기서 콜 스택이란, `}</strong>
-                            {`자바스크립트 코드가 실행되며 생성되는 실행 컨텍스트를 저장하는 자료 구조를 의미해요.`}
                         </p>
                     </div>
                 </div>
@@ -258,10 +242,8 @@ export default function Dom() {
                             STEP 2
                         </h2>
                         <p className="leading-relaxed mb-4">
-                            {`전역에서 함수 a를 실행시키면, `}<strong>{`함수 a의 실행 컨텍스트를 생성해 콜 스택에 담아요.`}</strong>
                         </p>
                         <p className="leading-relaxed">
-                            {`이 때, 콜 스택 안에는 `}<strong>{`가장 최근에 추가된 실행 컨텍스트(함수 a의 컨텍스트)만 활성화`}</strong>{`되게 됩니다.`}
                         </p>
                     </div>
                 </div>
@@ -273,14 +255,9 @@ export default function Dom() {
                             STEP 3
                         </h2>
                         <p className="leading-relaxed mb-4">
-                            {`함수 a에서 함수 b가 호출되면, 또 콜 스택에 `}
-                            <strong>함수 b의 실행 컨텍스트</strong>
-                            {`를 생성해 담습니다.`}
+                           
                         </p>
                         <p className="leading-relaxed">
-                            {`이 때, 함수 b의 실행이 종료되면 콜 스택에서 `}
-                            <strong>함수 b의 실행 컨텍스트</strong>
-                            {`는 사라집니다.`}
                         </p>
                     </div>
                 </div>
@@ -292,7 +269,6 @@ export default function Dom() {
                             STEP 4
                         </h2>
                         <p className="leading-relaxed">
-                            {`마찬가지로, 함수 a가 종료되면 콜 스택에서 함수 a의 실행 컨텍스트도 사라집니다.`}
                         </p>
                     </div>
                 </div>
@@ -313,7 +289,6 @@ export default function Dom() {
                             {`FINISH`}
                         </h2>
                         <p className="leading-relaxed ">
-                            {`전역 코드가 마지막 라인까지 실행되면, 전역 실행컨텍스트도 콜 스택에서 사라집니다`}
                         </p>
                     </div>
                 </div>
@@ -390,6 +365,8 @@ export default function Dom() {
                                 <Image src={jsAndCallStackCode} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
                                 <Image src={jsAndCallstack} alt="Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
+
+                            {/* step content */}
                             <JsAndCallstackSection/>
                         </div>
                     </div>
@@ -427,22 +404,26 @@ export default function Dom() {
 
                         {/* 변수 호이스팅과 환경 레코드 예시 설명 */}
                         <div className="w-full">
+
+                            {/* var 키워드 선언 변수 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 mt-6 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingVar} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
+
+                            {/* let, const 키워드 선언 변수 소개 */}
+                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
+                            <div className="w-full px-4 mb-1 flex-col text-center justify-center">
+                                <Image src={jsAndHoistingLetConst} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
+                            </div>
+
+                            {/* step content */}
                             <VariableHoisitingAndEnvRecordSection />
+
                         </div>
 
                         {/* 함수 호이스팅과 환경 레코드 예시 설명 */}
-                        <div className="w-full">
-                            <h1 className="text-lg font-bold title-font text-gray-900 mt-12 pl-0 md:pl-2">💬 함수 호이스팅과 환경 레코드</h1>
-                            <div className="w-full px-4 mb-1 flex-col text-center justify-center">
-                                <Image src={jsAndHoistingLetConst} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
-                    
-                            </div>
-                            <FunctionHoisitingAndEnvRecordSection />
-                        </div>
+                        
 
                     </div>
 
