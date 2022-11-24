@@ -427,7 +427,7 @@ export default function Dom() {
 
                         {/* 변수 호이스팅과 환경 레코드 예시 설명 */}
                         <div className="w-full">
-                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 pl-0 md:pl-2">변수 호이스팅과 환경 레코드</h1>
+                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingVar} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
@@ -436,7 +436,7 @@ export default function Dom() {
 
                         {/* 함수 호이스팅과 환경 레코드 예시 설명 */}
                         <div className="w-full">
-                            <h1 className="text-lg font-bold title-font text-gray-900 mt-12 pl-0 md:pl-2">함수 호이스팅과 환경 레코드</h1>
+                            <h1 className="text-lg font-bold title-font text-gray-900 mt-12 pl-0 md:pl-2">💬 함수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingLetConst} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
                     
