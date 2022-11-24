@@ -163,7 +163,7 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
                         </h2>
-                        <p className="leading-relaxed mb-4">
+                        <p className="leading-relaxed">
                         그 후 전체 코드를 살펴보며, 선언할 식별자들이 있는지 찾아보고, 있다면 먼저 선언해둡니다.
                         </p>
                         
@@ -406,13 +406,13 @@ export default function Dom() {
                         <div className="w-full">
 
                             {/* var 키워드 선언 변수 소개 */}
-                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
+                            <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingVar} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
 
                             {/* let, const 키워드 선언 변수 소개 */}
-                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
+                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 mb-3 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingLetConst} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
