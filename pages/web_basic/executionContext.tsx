@@ -140,7 +140,7 @@ export default function Dom() {
     }
 
     // 변수 호이스팅과 환경 레코드 step 내용 
-    const VariableHoisitingAndEnvRecordSection = () => {
+    const VariableVarHoisitingAndEnvRecordSection = () => {
         return (
             <div className="lg:w-full md:pl-10 py-6">
                 {/* 과정 1 */}
@@ -164,9 +164,98 @@ export default function Dom() {
                             STEP 2
                         </h2>
                         <p className="leading-relaxed">
-                        그 후 전체 코드를 살펴보며, 선언할 식별자들이 있는지 찾아보고, 있다면 먼저 선언해둡니다.
+                            그 후 전체 코드를 살펴보며, 선언할 식별자들이 있는지 찾아보고, 있다면 먼저 선언해둡니다.
                         </p>
-                        
+
+                    </div>
+                </div>
+                {/* 과정 3 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(3)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 3
+                        </h2>
+                        <p className="leading-relaxed mb-4">
+                            선언하는 과정에서 생성해둔 실행 컨텍스트 안에 있는
+                            <strong>환경 레코드에 새로운 식별자를 기록</strong>합니다.
+
+                            그리고, 이 식별자는 <strong>var로 선언한 변수이기 때문에 undefined로 값을 초기화</strong>합니다.
+                        </p>
+                        <p className="leading-relaxed mb-2">
+                            여기까지와 앞으로의 단계를 이 시점에서 한 번 정리해볼게요.
+                        </p>
+                        <div className="leading-relaxed text-base mb-8">
+                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
+                                <li className="mb-1 text-left">{`생성 단계 : 여기까지, 실행 컨텍스트를 생성하고 자바스크립트 엔진이 스캔 과정을 거치면서 환경 레코드에 식별자의 정보를 기록하며 실행 단계를 준비하는 단계.`}</li>
+                                <li className="mb-1 text-left">{`실행 단계 : 생성 단계에 이어, 선언문 외 나머지 코드를 순차적으로 실행하는 단계. 필요한 경우 생성단계에서 환경레코드에 기록해둔 정보를 참고/업데이트할 수 있습니다.`}</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                {/* 과정 4 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(4)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 4
+                        </h2>
+                        <p className="leading-relaxed">
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 5 */}
+                <div className="flex relative">
+                    <div
+                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                     justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                    >
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            {`FINISH`}
+                        </h2>
+                        <p className="leading-relaxed ">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    // 변수 호이스팅과 환경 레코드 step 내용 
+    const VariableLetConstHoisitingAndEnvRecordSection = () => {
+        return (
+            <div className="lg:w-full md:pl-10 py-6">
+                {/* 과정 1 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(1)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 1
+                        </h2>
+                        <p className="leading-relaxed">
+                            자바스크립트 엔진은 코드를 실행하면, 우선 전역 실행 컨텍스트를 생성해 콜 스택에 넣습니다.
+                        </p>
+
+                    </div>
+                </div>
+                {/* 과정 2 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(2)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 2
+                        </h2>
+                        <p className="leading-relaxed">
+                            그 후 전체 코드를 살펴보며, 선언할 식별자들이 있는지 찾아보고, 있다면 먼저 선언해둡니다.
+                        </p>
+
                     </div>
                 </div>
                 {/* 과정 3 */}
@@ -193,7 +282,6 @@ export default function Dom() {
                         </p>
                     </div>
                 </div>
-
                 {/* 과정 5 */}
                 <div className="flex relative">
                     <div
@@ -255,7 +343,7 @@ export default function Dom() {
                             STEP 3
                         </h2>
                         <p className="leading-relaxed mb-4">
-                           
+
                         </p>
                         <p className="leading-relaxed">
                         </p>
@@ -367,7 +455,7 @@ export default function Dom() {
                             </div>
 
                             {/* step content */}
-                            <JsAndCallstackSection/>
+                            <JsAndCallstackSection />
                         </div>
                     </div>
 
@@ -406,27 +494,25 @@ export default function Dom() {
                         <div className="w-full">
 
                             {/* var 키워드 선언 변수 소개 */}
-                            <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
+                            <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 var 키워드로 선언된 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingVar} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
+                            {/* step content */}
+                            <VariableVarHoisitingAndEnvRecordSection />
 
                             {/* let, const 키워드 선언 변수 소개 */}
-                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 mb-3 pl-0 md:pl-2">💬 변수 호이스팅과 환경 레코드</h1>
+                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 mb-3 pl-0 md:pl-2">💬 let, const 키워드로 선언된 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingLetConst} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
-
                             {/* step content */}
-                            <VariableHoisitingAndEnvRecordSection />
-
+                            <VariableLetConstHoisitingAndEnvRecordSection />
                         </div>
 
                         {/* 함수 호이스팅과 환경 레코드 예시 설명 */}
-                        
 
                     </div>
-
                 </section>
 
             </Layout>
