@@ -92,7 +92,7 @@ export default function Rendering() {
             <p className="mb-2 leading-relaxed">
               {`브라우저마다 렌더링을 수행하는 렌더링 엔진이라는 것을 가지는데, 그 종류는 아래와 같아요.`}
             </p>
-            <div className="leading-relaxed text-base mb-8">
+            <div className="leading-relaxed text-base">
               <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                 <li className="mb-1 text-left">{`크롬 : 블링크(Blink)`}</li>
                 <li className="mb-1 text-left">{`사파리 : 웹킷(Webkit)`}</li>
@@ -168,7 +168,7 @@ export default function Rendering() {
                   <p className="leading-relaxed mb-2">
                     {`이 때, 스타일은 아래에 나열한 순서대로 적용되고, 나중에 처리된 스타일이 우선적으로 적용되요.`}
                   </p>
-                  <div className="leading-relaxed text-base mb-8">
+                  <div className="leading-relaxed text-base">
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left list-decimal">{`브라우저의 자체 스타일`}</li>
                       <li className="mb-1 text-left list-decimal">{`사용자 정의 스타일`}</li>
@@ -220,7 +220,7 @@ export default function Rendering() {
                     <strong>{`AST(추상 구문 트리)`}</strong>
                     {`를 생성하고, 바이트코드로 변환하여 실행해요.`}
                   </p>
-                  <div className="leading-relaxed text-base mb-8">
+                  <div className="leading-relaxed text-base">
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left">
                         {`서버로부터 응답된 자바스크립트 코드는 각각의 의미를 갖는 토큰으로 분해되며, 이 토큰이 결합되어 `}
@@ -246,7 +246,7 @@ export default function Rendering() {
                     <strong>{`<script>`}</strong>
                     {`의 위치에 대해 중요한 내용을 아래에 적어봤어요. 꼭 천천히 읽어보고 넘어가도록 해요.`}
                   </p>
-                  <div className="leading-relaxed text-base mb-8">
+                  <div className="leading-relaxed text-base">
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left list-decimal">
                         <strong>{`HTML파싱`}</strong>

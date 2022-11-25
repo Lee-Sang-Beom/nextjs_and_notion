@@ -183,7 +183,7 @@ export default function Browser_search() {
                                             {`는 장치들 사이에 논리적인 접속을 성립(establish)하기 위해 사용하는(신뢰성을 중시하는) 프로토콜이에요. 
                                             위의 사진과 함께, TCP/IP three-way handshake를 이해하기 쉽게 설명해볼게요.`}
                                         </p>
-                                        <div className="leading-relaxed text-base mb-8">
+                                        <div className="leading-relaxed text-base">
                                             <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                                                 <li className="mb-1 text-left list-decimal">{`클라이언트는 서버에게 접속 요청을 한다는 메시지인 `}
                                                     <strong> SYN 패킷</strong>
@@ -235,7 +235,7 @@ export default function Browser_search() {
                                             <strong>HTTP 요청</strong>
                                             {`에 대해 좀 더 자세히 언급해보면 아래와 같아요.`}
                                         </p>
-                                        <div className="leading-relaxed text-base mb-8">
+                                        <div className="leading-relaxed text-base">
                                             <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                                                 <li className="mb-1 text-left">
                                                     <strong>Request Line</strong>
@@ -308,7 +308,7 @@ export default function Browser_search() {
                                             <strong>서버의 response</strong>
                                             {`에는 요청한 페이지, Status-Code, Content-Type, Cache-Control, 쿠키, 개인정보 등 여러가지가 포함되요. 구조는 아래와 같아요.`}
                                         </p>
-                                        <div className="leading-relaxed text-base mb-8">
+                                        <div className="leading-relaxed text-base">
                                             <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                                                 <li className="mb-1 text-left">
                                                     <strong>Status Line</strong>

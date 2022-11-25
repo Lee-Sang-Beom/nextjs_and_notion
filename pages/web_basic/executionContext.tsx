@@ -185,7 +185,7 @@ export default function Dom() {
                         <p className="leading-relaxed mb-2">
                             여기까지와 앞으로의 단계를 이 시점에서 한 번 정리해볼게요.
                         </p>
-                        <div className="leading-relaxed text-base mb-8">
+                        <div className="leading-relaxed text-base">
                             <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                                 <li className="mb-1 text-left">{`생성 단계 : 여기까지, 실행 컨텍스트를 생성하고 자바스크립트 엔진이 스캔 과정을 거치면서 환경 레코드에 식별자의 정보를 기록하며 실행 단계를 준비하는 단계.`}</li>
                                 <li className="mb-1 text-left">{`실행 단계 : 생성 단계에 이어, 선언문 외 나머지 코드를 순차적으로 실행하는 단계. 필요한 경우 생성단계에서 환경레코드에 기록해둔 정보를 참고/업데이트할 수 있습니다.`}</li>
@@ -201,11 +201,31 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 4
                         </h2>
+                        <p className="leading-relaxed mb-4">
+                           {`Line 1에서 console.log() 수행 시, 환경 레코드에 기록해 둔 name 식별자의 값을 출력합니다. `}
+                           <strong>{`이 때, 할당문 var name='Lee' 를 만나기 전이기 때문에 undefined가 출력됩니다.`}</strong>
+                        </p>
                         <p className="leading-relaxed">
+                           {`이 때, console.log()도 함수이기 때문에, 해당하는 실행 컨텍스트가 콜 스택 내부에 추가되었다가 함수 실행 후 사라지게 됩니다.`}
                         </p>
                     </div>
                 </div>
-                {/* 과정 5 */}
+                {/* 과정 5*/}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(5)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 5
+                        </h2>
+                        <p className="leading-relaxed">
+                           {`Line 2에서 식별자 name에 대한 할당문을 만나면, 선언은 아까 생성 단계에서 이미 진행하였으니, 이 라인에서는 식별자 name에 대해 `}
+                           <strong>값의 할당</strong>
+                           {`만 이루어집니다.`}
+                        </p>
+                        
+                    </div>
+                </div>
+                {/* 과정 6 */}
                 <div className="flex relative">
                     <div
                         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
@@ -220,7 +240,12 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             {`FINISH`}
                         </h2>
-                        <p className="leading-relaxed ">
+                        <p className="leading-relaxed mb-4">
+                            {`Line 3에서 console.log() 수행 시, 환경 레코드에 기록해 둔 name 식별자의 값을 출력합니다. `}
+                            <strong>{`이 때, 할당문 var name='Lee' 를 만난 후이기 때문에 'Lee'가 출력됩니다.`}</strong>
+                        </p>
+                        <p className="leading-relaxed">
+                           {`마찬가지로 console.log()도 함수이기 때문에, 해당하는 실행 컨텍스트가 콜 스택 내부에 추가되었다가 함수 실행 후 사라지게 됩니다.`}
                         </p>
                     </div>
                 </div>
