@@ -178,7 +178,7 @@ export default function Dom() {
                             STEP 3
                         </h2>
                         <p className="leading-relaxed mb-4">
-                            선언하는 과정에서 생성해둔 실행 컨텍스트 안에 있는
+                            {`선언하는 과정에서 생성해둔 실행 컨텍스트 안에 있는 `}
                             <strong>환경 레코드에 새로운 식별자를 기록</strong>합니다.
 
                             그리고, 이 식별자는 <strong>var로 선언한 변수이기 때문에 undefined로 값을 초기화</strong>합니다.
@@ -204,7 +204,7 @@ export default function Dom() {
                         </h2>
                         <p className="leading-relaxed mb-4">
                            {`Line 1에서 console.log() 수행 시, 환경 레코드에 기록해 둔 name 식별자의 값을 출력합니다. `}
-                           <strong>{`이 때, 할당문 var name='Lee' 를 만나기 전이기 때문에 undefined가 출력됩니다.`}</strong>
+                           <strong>{`이 때, 할당문을 만나기 전이기 때문에, undefined가 출력됩니다.`}</strong>
                         </p>
                         <p className="leading-relaxed">
                            {`이 때, console.log()도 함수이기 때문에, 해당하는 실행 컨텍스트가 콜 스택 내부에 추가되었다가 함수 실행 후 사라지게 됩니다.`}
@@ -292,23 +292,17 @@ export default function Dom() {
                             STEP 3
                         </h2>
                         <p className="leading-relaxed mb-4">
+                            {`선언하는 과정에서 생성해둔 실행 컨텍스트 안에 있는 `}
+                            <strong>환경 레코드에 새로운 식별자를 기록</strong>합니다.
                         </p>
                         <p className="leading-relaxed">
+                            이 때, 이 식별자는 <strong>const로 선언한 변수</strong>
+                            이기 때문에 값을 초기화하지 않습니다.
                         </p>
+                       
                     </div>
                 </div>
                 {/* 과정 4 */}
-                <div className="flex relative pb-12">
-                    {returnStepLogo(4)}
-                    <div className="flex-grow pl-4">
-                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                            STEP 4
-                        </h2>
-                        <p className="leading-relaxed">
-                        </p>
-                    </div>
-                </div>
-                {/* 과정 5 */}
                 <div className="flex relative">
                     <div
                         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
@@ -323,8 +317,11 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             {`FINISH`}
                         </h2>
-                        <p className="leading-relaxed ">
+                        <p className="leading-relaxed mb-4">
+                            {`Line 1에서 console.log() 수행 시, 환경 레코드에 기록해 둔 name 식별자의 값을 출력합니다. `}
                         </p>
+                        <p className="leading-relaxed">이 때, 식별자는 초기화되지 않았기 때문에 <strong>ReferenceError</strong>가 발생합니다.</p>
+                       
                     </div>
                 </div>
             </div>
