@@ -12,6 +12,7 @@ import jsAndCallstack from "../../public/img/jsAndCallstack.jpg";
 import jsAndCallStackCode from "../../public/img/jsAndCallStackCode.jpg";
 import jsAndHoistingVar from "../../public/img/jsAndHoistingVar.jpg";
 import jsAndHoistingLetConst from "../../public/img/jsAndHoistingLetConst.jpg";
+import variableHoistingAndEnvRecordEx from "../../public/img/variableHoistingAndEnvRecordEx.jpg";
 
 export default function Dom() {
     // 페이지 넘김 정보
@@ -518,18 +519,24 @@ export default function Dom() {
                         {/* 변수 호이스팅과 환경 레코드 예시 설명 */}
                         <div className="w-full">
 
+                            {/* 예제 이미지 */}
+                            <div className="w-full mb-8 flex justify-center">
+                                <Image src={variableHoistingAndEnvRecordEx} alt="Code Picture of hoisting and variable(1)" className="lg:w-full rounded-lg" />
+                            </div>
+
+
                             {/* var 키워드 선언 변수 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 var 키워드로 선언된 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
-                                <Image src={jsAndHoistingVar} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
+                                <Image src={jsAndHoistingVar} alt="step Picture of hoisting and variable(1)" className="lg:w-full rounded-lg" />
                             </div>
                             {/* step content */}
                             <VariableVarHoisitingAndEnvRecordSection />
 
                             {/* let, const 키워드 선언 변수 소개 */}
-                            <h1 className="text-lg font-bold title-font text-gray-900 mt-6 mb-3 pl-0 md:pl-2">💬 let, const 키워드로 선언된 변수 호이스팅과 환경 레코드</h1>
+                            <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 let, const 키워드로 선언된 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
-                                <Image src={jsAndHoistingLetConst} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
+                                <Image src={jsAndHoistingLetConst} alt="step Picture of hoisting and variable(2)" className="lg:w-full rounded-lg" />
                             </div>
                             {/* step content */}
                             <VariableLetConstHoisitingAndEnvRecordSection />
