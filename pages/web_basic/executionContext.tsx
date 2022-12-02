@@ -13,6 +13,7 @@ import jsAndCallStackCode from "../../public/img/jsAndCallStackCode.jpg";
 import jsAndHoistingVar from "../../public/img/jsAndHoistingVar.jpg";
 import jsAndHoistingLetConst from "../../public/img/jsAndHoistingLetConst.jpg";
 import variableHoistingAndEnvRecordEx from "../../public/img/variableHoistingAndEnvRecordEx.jpg";
+import functionExpressionHoisting from "../../public/img/functionExpressionHoisting.jpg";
 
 export default function Dom() {
     // 페이지 넘김 정보
@@ -594,7 +595,6 @@ export default function Dom() {
 
                         {/* 변수 호이스팅과 환경 레코드 예시 설명 */}
                         <div className="w-full">
-
                             {/* 예제 이미지 */}
                             <div className="w-full mb-8 flex justify-center">
                                 <Image src={variableHoistingAndEnvRecordEx} alt="Code Picture of hoisting and variable(1)" className="lg:w-full rounded-lg" />
@@ -619,7 +619,7 @@ export default function Dom() {
                             {/* 함수 표현식에 따른 호이스팅 및 환경레코드 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 함수 표현식에 대한 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
-                                <Image src={jsAndHoistingLetConst} alt="step Picture of hoisting and variable(2)" className="lg:w-full rounded-lg" />
+                                <Image src={functionExpressionHoisting} alt="step Picture of hoisting and functionExpression" className="lg:w-full rounded-lg" />
                             </div>
                             {/* step content */}
                             <FunctionExpressionHoisitingAndEnvRecordSection />
@@ -627,14 +627,11 @@ export default function Dom() {
                             {/* 함수 선언문에 따른 호이스팅 및 환경레코드 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 함수 선언문에 대한 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
-                                <Image src={jsAndHoistingLetConst} alt="step Picture of hoisting and variable(2)" className="lg:w-full rounded-lg" />
+                                <Image src={jsAndHoistingLetConst} alt="step Picture of hoisting and functionDeclaration" className="lg:w-full rounded-lg" />
                             </div>
                             {/* step content */}
                             <FunctionDeclarationHoisitingAndEnvRecordSection />
                         </div>
-
-                       
-
                     </div>
                 </section>
 
