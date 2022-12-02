@@ -340,10 +340,10 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
                         </h2>
-                        <p className="leading-relaxed mb-4">
-                        </p>
                         <p className="leading-relaxed">
+                            자바스크립트 엔진은 코드를 실행하면, 우선 전역 실행 컨텍스트를 생성해 콜 스택에 넣습니다.
                         </p>
+
                     </div>
                 </div>
                 {/* 과정 2 */}
@@ -354,8 +354,10 @@ export default function Dom() {
                             STEP 2
                         </h2>
                         <p className="leading-relaxed mb-4">
+                            그 후 전체 코드를 살펴보며, 선언할 식별자들이 있는지 찾아보고, 있다면 먼저 선언해둡니다.
                         </p>
                         <p className="leading-relaxed">
+                            자바스크립트의 함수는 변수에 담을 수 있습니다. 변수에 담긴 함수는 변수 호이스팅처럼 동작합니다.
                         </p>
                     </div>
                 </div>
@@ -366,22 +368,16 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 3
                         </h2>
-                        <p className="leading-relaxed mb-4">
-
+                        <p className="leading-relaxed mb-2">
+                            {`선언하는 과정에서 생성해둔 실행 컨텍스트 안에 있는 `}
+                            <strong>환경 레코드에 새로운 식별자를 기록</strong>합니다.
                         </p>
-                        <p className="leading-relaxed">
-                        </p>
-                    </div>
-                </div>
-                {/* 과정 4 */}
-                <div className="flex relative pb-12">
-                    {returnStepLogo(4)}
-                    <div className="flex-grow pl-4">
-                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                            STEP 4
-                        </h2>
-                        <p className="leading-relaxed">
-                        </p>
+                        <div className="leading-relaxed text-base">
+                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
+                                <li className="mb-1 text-left">{`var 키워드로 선언된 식별자인 경우에는 값을 undefined로 초기화합니다.`}</li>
+                                <li className="mb-1 text-left">{`let/const 로 선언한 식별자인 경우에는 값을 초기화하지 않습니다.`}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -400,8 +396,15 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             {`FINISH`}
                         </h2>
-                        <p className="leading-relaxed ">
+                        <p className="leading-relaxed mb-2">
+                            함수 실행 시, 이제 아래의 문제가 발생합니다. 
                         </p>
+                        <div className="leading-relaxed text-base">
+                            <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
+                                <li className="mb-1 text-left">{`var 키워드로 선언된 식별자인 경우에는 `}<strong>값이 환경 레코드에 undefined로 초기화되어 저장되었기에,</strong>{` 호출 불가능하므로 TypeError가 발생합니다.`}</li>
+                                <li className="mb-1 text-left">{`let/const 로 선언한 식별자인 경우에는 `}<strong>값이 환경 레코드에 초기화되지 않았기 때문에,</strong>{` ReferenceError가 발생합니다.`}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -595,6 +598,7 @@ export default function Dom() {
 
                         {/* 변수 호이스팅과 환경 레코드 예시 설명 */}
                         <div className="w-full">
+
                             {/* 예제 이미지 */}
                             <div className="w-full mb-8 flex justify-center">
                                 <Image src={variableHoistingAndEnvRecordEx} alt="Code Picture of hoisting and variable(1)" className="lg:w-full rounded-lg" />
