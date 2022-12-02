@@ -143,7 +143,7 @@ export default function Dom() {
     // 변수 호이스팅과 환경 레코드 step 내용 
     const VariableVarHoisitingAndEnvRecordSection = () => {
         return (
-            <div className="lg:w-full md:pl-10 py-6">
+            <div className="lg:w-full md:pl-10 py-6 mb-8">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
                     {returnStepLogo(1)}
@@ -257,7 +257,7 @@ export default function Dom() {
     // 변수 호이스팅과 환경 레코드 step 내용 
     const VariableLetConstHoisitingAndEnvRecordSection = () => {
         return (
-            <div className="lg:w-full md:pl-10 py-6">
+            <div className="lg:w-full md:pl-10 py-6 mb-8">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
                     {returnStepLogo(1)}
@@ -328,10 +328,89 @@ export default function Dom() {
         )
     }
 
-    // 함수 호이스팅과 환경 레코드 step 내용
-    const FunctionHoisitingAndEnvRecordSection = () => {
+    // 함수 표현식 호이스팅과 환경 레코드 step 내용
+    const FunctionExpressionHoisitingAndEnvRecordSection = () => {
         return (
-            <div className="lg:w-full md:pl-10 py-6">
+            <div className="lg:w-full md:pl-10 py-6 mb-8">
+                {/* 과정 1 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(1)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 1
+                        </h2>
+                        <p className="leading-relaxed mb-4">
+                        </p>
+                        <p className="leading-relaxed">
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 2 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(2)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 2
+                        </h2>
+                        <p className="leading-relaxed mb-4">
+                        </p>
+                        <p className="leading-relaxed">
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 3 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(3)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 3
+                        </h2>
+                        <p className="leading-relaxed mb-4">
+
+                        </p>
+                        <p className="leading-relaxed">
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 4 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(4)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 4
+                        </h2>
+                        <p className="leading-relaxed">
+                        </p>
+                    </div>
+                </div>
+
+                {/* 과정 5 */}
+                <div className="flex relative">
+                    <div
+                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                     justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                    >
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            {`FINISH`}
+                        </h2>
+                        <p className="leading-relaxed ">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    // 함수 선언문 호이스팅과 환경 레코드 step 내용
+    const FunctionDeclarationHoisitingAndEnvRecordSection = () => {
+        return (
+            <div className="lg:w-full md:pl-10 py-6 mb-8">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
                     {returnStepLogo(1)}
@@ -521,8 +600,7 @@ export default function Dom() {
                                 <Image src={variableHoistingAndEnvRecordEx} alt="Code Picture of hoisting and variable(1)" className="lg:w-full rounded-lg" />
                             </div>
 
-
-                            {/* var 키워드 선언 변수 소개 */}
+                            {/* var 키워드 선언에 따른 변수 호이스팅 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 var 키워드로 선언된 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingVar} alt="step Picture of hoisting and variable(1)" className="lg:w-full rounded-lg" />
@@ -530,16 +608,32 @@ export default function Dom() {
                             {/* step content */}
                             <VariableVarHoisitingAndEnvRecordSection />
 
-                            {/* let, const 키워드 선언 변수 소개 */}
+                            {/* let, const 키워드 선언에 따른 변수 호이스팅 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 let, const 키워드로 선언된 변수 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
                                 <Image src={jsAndHoistingLetConst} alt="step Picture of hoisting and variable(2)" className="lg:w-full rounded-lg" />
                             </div>
                             {/* step content */}
                             <VariableLetConstHoisitingAndEnvRecordSection />
+
+                            {/* 함수 표현식에 따른 호이스팅 및 환경레코드 소개 */}
+                            <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 함수 표현식에 대한 호이스팅과 환경 레코드</h1>
+                            <div className="w-full px-4 mb-1 flex-col text-center justify-center">
+                                <Image src={jsAndHoistingLetConst} alt="step Picture of hoisting and variable(2)" className="lg:w-full rounded-lg" />
+                            </div>
+                            {/* step content */}
+                            <FunctionExpressionHoisitingAndEnvRecordSection />
+
+                            {/* 함수 선언문에 따른 호이스팅 및 환경레코드 소개 */}
+                            <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 함수 선언문에 대한 호이스팅과 환경 레코드</h1>
+                            <div className="w-full px-4 mb-1 flex-col text-center justify-center">
+                                <Image src={jsAndHoistingLetConst} alt="step Picture of hoisting and variable(2)" className="lg:w-full rounded-lg" />
+                            </div>
+                            {/* step content */}
+                            <FunctionDeclarationHoisitingAndEnvRecordSection />
                         </div>
 
-                        {/* 함수 호이스팅과 환경 레코드 예시 설명 */}
+                       
 
                     </div>
                 </section>
