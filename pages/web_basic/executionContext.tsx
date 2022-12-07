@@ -13,6 +13,7 @@ import jsAndCallStackCode from "../../public/img/jsAndCallStackCode.jpg";
 import jsAndHoistingVar from "../../public/img/jsAndHoistingVar.jpg";
 import jsAndHoistingLetConst from "../../public/img/jsAndHoistingLetConst.jpg";
 import variableHoistingAndEnvRecordEx from "../../public/img/variableHoistingAndEnvRecordEx.jpg";
+import functionExpressionHoistingEx from "../../public/img/functionExpressionHoistingEx.jpg";
 import functionExpressionHoisting from "../../public/img/functionExpressionHoisting.jpg";
 
 export default function Dom() {
@@ -623,6 +624,7 @@ export default function Dom() {
                             {/* 함수 표현식에 따른 호이스팅 및 환경레코드 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 함수 표현식에 대한 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
+                                <Image src={functionExpressionHoistingEx} alt="Code Picture of hoisting functionExpression" className="lg:w-full rounded-lg" />
                                 <Image src={functionExpressionHoisting} alt="step Picture of hoisting and functionExpression" className="lg:w-full rounded-lg" />
                             </div>
                             {/* step content */}
@@ -631,6 +633,7 @@ export default function Dom() {
                             {/* 함수 선언문에 따른 호이스팅 및 환경레코드 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 함수 선언문에 대한 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
+                                
                                 <Image src={jsAndHoistingLetConst} alt="step Picture of hoisting and functionDeclaration" className="lg:w-full rounded-lg" />
                             </div>
                             {/* step content */}
