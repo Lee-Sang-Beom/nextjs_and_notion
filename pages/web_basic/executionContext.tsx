@@ -384,7 +384,7 @@ export default function Dom() {
                     </div>
                 </div>
 
-                {/* 과정 5 */}
+                {/* 과정 4 */}
                 <div className="flex relative">
                     <div
                         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
@@ -425,10 +425,10 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
                         </h2>
-                        <p className="leading-relaxed mb-4">
-                        </p>
                         <p className="leading-relaxed">
+                            자바스크립트 엔진은 코드를 실행하면, 우선 전역 실행 컨텍스트를 생성해 콜 스택에 넣습니다.
                         </p>
+
                     </div>
                 </div>
                 {/* 과정 2 */}
@@ -438,10 +438,10 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
                         </h2>
-                        <p className="leading-relaxed mb-4">
-                        </p>
                         <p className="leading-relaxed">
+                            그 후 전체 코드를 살펴보며, 선언할 식별자들이 있는지 찾아보고, 있다면 먼저 선언해둡니다.
                         </p>
+
                     </div>
                 </div>
                 {/* 과정 3 */}
@@ -452,25 +452,15 @@ export default function Dom() {
                             STEP 3
                         </h2>
                         <p className="leading-relaxed mb-4">
-
+                            자바스크립트 엔진은 함수 선언문을 발견함과 동시에, 완성된 함수 객체를 생성해 환경 레코드에 기록해둡니다.
                         </p>
                         <p className="leading-relaxed">
+                            이렇게, 함수 선언문으로 함수를 선언하는 경우에는, <strong>{`선언과 동시에 함수가 생성되어 선언 전에도 함수를 실행할 수 있다는 특징`}</strong>이 있습니다.
                         </p>
                     </div>
                 </div>
+
                 {/* 과정 4 */}
-                <div className="flex relative pb-12">
-                    {returnStepLogo(4)}
-                    <div className="flex-grow pl-4">
-                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                            STEP 4
-                        </h2>
-                        <p className="leading-relaxed">
-                        </p>
-                    </div>
-                </div>
-
-                {/* 과정 5 */}
                 <div className="flex relative">
                     <div
                         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
@@ -485,7 +475,8 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             {`FINISH`}
                         </h2>
-                        <p className="leading-relaxed ">
+                        <p className="leading-relaxed mb-2">
+                            함수 선언문을 이용한다면, 함수 실행 시 문제가 발생하지 않습니다. 
                         </p>
                     </div>
                 </div>
