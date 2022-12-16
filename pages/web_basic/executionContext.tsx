@@ -647,13 +647,14 @@ export default function Dom() {
                                 {`Outer와 스코프체인`}
                             </h1>
                             <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4 mb-1">
-                                {`- 해당 Section에서는 자바스크립트 코드의 실행에 따라 `}<strong>콜 스택</strong>{`이 어떻게 동작하는 지에 대한 예시를 들면서 환기할 예정이에요.`}
+                                {`- 위에서 배운 환경 레코드가 호이스팅과 관련이 되었다면, 지금부터 배울 `}<strong>{`Outer(Outer environment Reference)`}</strong>{`는 스코프 체인과 관련된 내용이에요.`}
                             </p>
                             <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mb-1">
-                                {`- 비동기 처리를 포함한 이벤트 루프와 관련된 사항은 나중에 다뤄보도록 할게요!`}
+                                {`- Outer는 현재 호출된 함수가 선언될 당시의 외부 Lexical Environment를 참조해요.`}
                             </p>
                             <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0">
-                                {`- 지금부터는 `}<strong>실행 컨텍스트</strong>{`라는 용어를 사용할텐데, 일단 `}<strong>{`"실행 컨텍스트는 뭔지 잘 모르겠지만, 여기에는 환경 레코드와 Outer라는 게 들어가는구나!"`} </strong>{`라고 이해해주시면 되요!`}
+                                - <strong>Lexical Environment </strong>{`는 코드 블록, 함수 등을 실행하기 앞서 생성되는 특별한 객체로, 실행할 스코프 범위 안에 있는 변수와 함수를 프로퍼티로 저장하는 객체에요. 
+                                즉, 소스 코드를 실행하면서 참조가 필요한 변수나 함수가 있다면, 이 객체에서 찾는다고 기억하시면 되요.`}
                             </p>
                         </div>
 
