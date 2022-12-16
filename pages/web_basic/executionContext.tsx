@@ -37,6 +37,7 @@ export default function Dom() {
         )
 
     }
+
     const returnStepLogo = (stepNum: number) => {
         return (
             <>
@@ -631,6 +632,40 @@ export default function Dom() {
                             </div>
                             {/* step content */}
                             <FunctionDeclarationHoisitingAndEnvRecordSection />
+                        </div>
+                    </div>
+
+                    {/*4. Outer와 스코프체인*/}
+                    <div className="container px-5 py-24 mx-auto">
+                        {/* bar 길이*/}
+                        <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                            <div className="w-4/5 h-full bg-indigo-500"></div>
+                        </div>
+                        {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
+                        <div className="flex flex-wrap sm:flex-row flex-col py-6">
+                            <h1 className="w-full title-font text-2xl font-bold text-gray-900">
+                                {`Outer와 스코프체인`}
+                            </h1>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4 mb-1">
+                                {`- 해당 Section에서는 자바스크립트 코드의 실행에 따라 `}<strong>콜 스택</strong>{`이 어떻게 동작하는 지에 대한 예시를 들면서 환기할 예정이에요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mb-1">
+                                {`- 비동기 처리를 포함한 이벤트 루프와 관련된 사항은 나중에 다뤄보도록 할게요!`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0">
+                                {`- 지금부터는 `}<strong>실행 컨텍스트</strong>{`라는 용어를 사용할텐데, 일단 `}<strong>{`"실행 컨텍스트는 뭔지 잘 모르겠지만, 여기에는 환경 레코드와 Outer라는 게 들어가는구나!"`} </strong>{`라고 이해해주시면 되요!`}
+                            </p>
+                        </div>
+
+                        {/* 자바스크립트와 콜 스택 예시 설명 */}
+                        <div className="w-full">
+                            <div className="w-full px-4 mb-1 flex-col text-center justify-center">
+                                <Image src={jsAndCallStackCode} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
+                                <Image src={jsAndCallstack} alt="Picture of callstack and js" className="lg:w-full rounded-lg" />
+                            </div>
+
+                            {/* step content */}
+                            <JsAndCallstackSection />
                         </div>
                     </div>
                 </section>
