@@ -17,6 +17,8 @@ import functionExpressionHoistingEx from "../../public/img/functionExpressionHoi
 import functionExpressionHoisting from "../../public/img/functionExpressionHoisting.jpg";
 import functionDeclarationHoistingEx from "../../public/img/functionDeclarationHoistingEx.jpg";
 import functionDeclarationHoisting from "../../public/img/functionDeclarationHoisting.jpg";
+import outerAndScopeChainEx from "../../public/img/outerAndScopeChain.jpg"
+import outerAndScopeChainCode from "../../public/img/outerAndScopeChainCode.jpg"
 
 export default function Dom() {
     // 페이지 넘김 정보
@@ -485,6 +487,99 @@ export default function Dom() {
         )
     }
 
+    // outer와 scope chain 예제 step 내용 
+    const OuterAndScopeChainSection = () => {
+        return (
+            <div className="lg:w-full md:pl-10 py-6 mb-8">
+                {/* 과정 1 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(1)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 1
+                        </h2>
+                        <p className="leading-relaxed">
+                            text
+                        </p>
+
+                    </div>
+                </div>
+                {/* 과정 2 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(2)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 2
+                        </h2>
+                        <p className="leading-relaxed">
+                        text
+                        </p>
+
+                    </div>
+                </div>
+                {/* 과정 3 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(3)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 3
+                        </h2>
+                        {/* p태그 하나 더 있으면 mb-4, 없이 다음 step 바로가면 mb-4 제거 */}
+                        <p className="leading-relaxed mb-4">
+                        text
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 4 */}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(4)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 4
+                        </h2>
+                        <p className="leading-relaxed">
+                           text
+                        </p>
+                    </div>
+                </div>
+                {/* 과정 5*/}
+                <div className="flex relative pb-12">
+                    {returnStepLogo(5)}
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            STEP 5
+                        </h2>
+                        <p className="leading-relaxed">
+                           text
+                        </p>
+                        
+                    </div>
+                </div>
+                {/* 과정 6 */}
+                <div className="flex relative">
+                    <div
+                        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
+                     justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
+                    >
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                    </div>
+                    <div className="flex-grow pl-4">
+                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            {`FINISH`}
+                        </h2>
+                        <p className="leading-relaxed">
+                           text
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
+    } 
+    
+
     return (
         <>
             <Layout>
@@ -661,12 +756,12 @@ export default function Dom() {
                         {/* 자바스크립트와 콜 스택 예시 설명 */}
                         <div className="w-full">
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
-                                <Image src={jsAndCallStackCode} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
-                                <Image src={jsAndCallstack} alt="Picture of callstack and js" className="lg:w-full rounded-lg" />
+                                <Image src={outerAndScopeChainCode} alt="Code Picture of callstack and js" className="lg:w-full rounded-lg" />
+                                <Image src={outerAndScopeChainEx} alt="Picture of callstack and js" className="lg:w-full rounded-lg" />
                             </div>
 
                             {/* step content */}
-                            <JsAndCallstackSection />
+                            <OuterAndScopeChainSection />
                         </div>
                     </div>
                 </section>
