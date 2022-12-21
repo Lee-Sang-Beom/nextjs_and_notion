@@ -498,10 +498,12 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
                         </h2>
-                        <p className="leading-relaxed">
-                            text
+                        <p className="leading-relaxed mb-4">
+                            자바스크립트 엔진은 코드를 실행하면, 우선 전역 실행 컨텍스트를 생성해 콜 스택에 넣습니다.
                         </p>
-
+                        <p className="leading-relaxed">
+                            이 때, 전역 실행 컨텍스트에 선언된 <strong>{`isPerson=false, goTo2F()`}</strong>의 정보를 전역 실행 컨텍스트의 환경 레코드에 담습니다.
+                        </p>
                     </div>
                 </div>
                 {/* 과정 2 */}
@@ -511,10 +513,15 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
                         </h2>
-                        <p className="leading-relaxed">
-                        text
+                        <p className="leading-relaxed mb-4">
+                           함수 {`goto2F`}실행 시, 새로운 실행 컨텍스트가 생성됩니다.
                         </p>
-
+                        <p className="leading-relaxed mb-4">
+                            이 때, 함수 {`goto2F`} 스코프 내에 선언되어있는 정보를 실행 컨텍스트의 환경 레코드에 기록합니다.
+                        </p>
+                        <p className="leading-relaxed ">
+                            동시에, 자바스크립트 엔진은 새로 생성된 실행 컨텍스트에 바깥 렉시컬 환경으로 돌아갈 수 있는 <strong>outer</strong>를 남겨놓습니다.
+                        </p>
                     </div>
                 </div>
                 {/* 과정 3 */}
@@ -524,9 +531,11 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 3
                         </h2>
-                        {/* p태그 하나 더 있으면 mb-4, 없이 다음 step 바로가면 mb-4 제거 */}
                         <p className="leading-relaxed mb-4">
-                        text
+                           함수 {`goto3F`}실행 시, 새로운 실행 컨텍스트가 생성됩니다.
+                        </p>
+                        <p className="leading-relaxed">
+                            마찬가지로, 함수 {`goto3F`} 스코프 내에 선언되어있는 정보를 실행 컨텍스트의 환경 레코드에 기록하고, outer를 함께 남겨놓습니다.
                         </p>
                     </div>
                 </div>
@@ -537,27 +546,20 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 4
                         </h2>
+                        <p className="leading-relaxed mb-4">
+                            함수 {`goto3F`}의 실행문을 수행합니다.
+                        </p>
+                        <p className="leading-relaxed mb-4">
+                           <strong>{`console.log(pet)`}</strong>을 수행하면 같은 스코프 내에 적합한 pet이라는 식별자가 있기 때문에, pet에 있는 cat이라는 값을 바로 출력합니다.
+                        </p>
                         <p className="leading-relaxed">
-                           text
+                            <strong>{`console.log(isPerson)`}</strong>의 경우, 스코프 내에 적합한 식별자가 없기 때문에 <strong>outer</strong>가 가리키는 <strong>{`바깥 렉시컬 환경(상위 스코프)`}</strong>으로 이동하여, 다시 isPerson이라는 식별자를 탐색합니다. 
                         </p>
                     </div>
                 </div>
                 {/* 과정 5*/}
-                <div className="flex relative pb-12">
-                    {returnStepLogo(5)}
-                    <div className="flex-grow pl-4">
-                        <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
-                            STEP 5
-                        </h2>
-                        <p className="leading-relaxed">
-                           text
-                        </p>
-                        
-                    </div>
-                </div>
-                {/* 과정 6 */}
                 <div className="flex relative">
-                    <div
+                <div
                         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
                      justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
                     >
@@ -570,11 +572,18 @@ export default function Dom() {
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             {`FINISH`}
                         </h2>
+                        <p className="leading-relaxed mb-4">
+                            함수 {`goto2F`}의 환경으로 이동하여, isPerson 식별자를 찾은 후, true를 출력합니다.
+                        </p>
+                        <p className="leading-relaxed mb-4">
+                            이 때, <strong>자바스크립트 엔진</strong>은 전역 실행 컨텍스트의 isPerson 식별자가 저장된 위치까지 이동하여 파악하는 과정을 거치지는 않습니다. 이렇게, 동일한 식별자로 인해 상위스코프에서 선언한 식별자 값이 가려지는 현상을 <strong>변수 섀도잉</strong>이라고 합니다.
+                        </p>
                         <p className="leading-relaxed">
-                           text
+                            그리고, outer가 가리키는 렉시컬 환경으로 이동하면서, 식별자를 결정할 때 활용하는 <strong>스코프의 연결리스트</strong>를 <strong>스코프 체인</strong>이라고 합니다.
                         </p>
                     </div>
                 </div>
+                
             </div>
         )
     } 
