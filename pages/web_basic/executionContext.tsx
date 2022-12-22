@@ -773,6 +773,52 @@ export default function Dom() {
                             <OuterAndScopeChainSection />
                         </div>
                     </div>
+
+                    {/*5. 실행 컨텍스트*/}
+                    <div className="container px-5 py-24 mx-auto">
+                        {/* bar 길이*/}
+                        <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                            <div className="w-full h-full bg-indigo-500"></div>
+                        </div>
+
+                        {/* 제목 : 제목 내, p태그 미포함 시 div : py-6*/}
+                        <div className="flex flex-wrap sm:flex-row flex-col py-6">
+                            <h1 className="w-full title-font text-2xl font-bold text-gray-900">
+                                {`실행 컨텍스트`}
+                            </h1>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4 mb-1">
+                                {`- 지금까지 실행 컨텍스트의 개념을 이해하기 위한 예제들을 살펴보았어요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mb-1">
+                                {`- 지금 이 Section에서는, 지금까지의 예제를 보며 이해한 내용을 토대로, 실행 컨텍스트라는 게 대체 무엇인지를 알아볼 거에요.`}
+                            </p>
+                            <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0">
+                                {`- 마지막이니까 조금만 힘내도록 해요! 😂`}
+                            </p>
+                        </div>
+
+                        {/* 소개: 실행컨텍스트의 정의 */}
+                        <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                            <h2 className="text-2xl my-2">실행 컨텍스트란?</h2>
+                            <p className="leading-relaxed text-base mb-2">
+                                {`실행 컨텍스트는 코드를 실행하는데 필요한 환경 정보들을 제공하는 객체입니다. 여기서 환경이란, 코드 실행에 영향을 주는 조건이나 상태를 의미합니다.`}
+                            </p>
+                            <p className="leading-relaxed text-sm mb-2">
+                                {`실행컨텍스트는 코드 실행 시, 식별자 결정을 더욱 효율적으로 하기위한 수단으로 이용 가능합니다. (위에서 "변수 섀도잉" 기억나시나요?)`}
+                            </p>
+                            <p className="leading-relaxed text-sm mb-2">
+                                {`그리고, 실행 컨텍스트는 자바스크립트 코드가 실행되는 환경이기 때문에, 모든 자바스크립트 코드는 실행 컨텍스트 내부에서 실행된다고 볼 수 있습니다.
+                                예를 들어, 함수가 실행되면 함수 실행에 해당하는 실행 컨텍스트가 생성되고, 생성된 실행 컨텍스트는 자바스크립트 엔진에 있는 콜 스택에 차곡차곡 쌓이게 됩니다.`}
+                            </p>
+                            <p className="leading-relaxed text-sm ">
+                                {`이렇게 실행 컨텍스트는 동일한 환경에 있는 코드들을 실행할 때, 필요한 환경 정보들을 모아 객체를 구성하고 콜 스택에 쌓이게 됩니다. 
+                                그리고 자바스크립트 엔진은 콜 스택의 가장 위에 쌓여있는 실행 컨텍스트에 대한 코드들을 실행함으로써, 전체 코드의 환경과 순서를 보장합니다.`}
+                            </p>
+                        </div>
+
+                        
+                    </div>
+
                 </section>
 
             </Layout>
