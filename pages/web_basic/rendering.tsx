@@ -203,7 +203,6 @@ export default function Rendering() {
               {/* 과정 5 */}
               <div className="flex relative pb-12">
                 {returnStepLogo(5)}
-
                 <div className="flex-grow pl-4">
                   <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                     STEP 5
@@ -220,7 +219,7 @@ export default function Rendering() {
                     <strong>{`AST(추상 구문 트리)`}</strong>
                     {`를 생성하고, 바이트코드로 변환하여 실행해요.`}
                   </p>
-                  <div className="leading-relaxed text-base">
+                  <div className="leading-relaxed text-base mb-4">
                     <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
                       <li className="mb-1 text-left">
                         {`서버로부터 응답된 자바스크립트 코드는 각각의 의미를 갖는 토큰으로 분해되며, 이 토큰이 결합되어 `}
@@ -231,6 +230,9 @@ export default function Rendering() {
                         {`인터프리터는 생성된 AST를 가상머신이 이해할 수 있는 `}
                         <strong>{`바이트코드`}</strong>
                         {`로 변환해요.`}
+                      </li>
+                      <li className="mb-1 text-left">
+                        {`여기서, AST는 프로그램 내에서 발생하는 기능을 나타내기 위해 만들어진 구조화된 트리입니다.`}
                       </li>
                     </ul>
                   </div>
