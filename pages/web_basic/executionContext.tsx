@@ -20,7 +20,7 @@ import functionDeclarationHoisting from "../../public/img/functionDeclarationHoi
 import outerAndScopeChainEx from "../../public/img/outerAndScopeChain.jpg"
 import outerAndScopeChainCode from "../../public/img/outerAndScopeChainCode.jpg"
 
-export default function Dom() {
+export default function ExecutionContext() {
     // 페이지 넘김 정보
     const prev = undefined;
     const next = undefined;
@@ -40,7 +40,7 @@ export default function Dom() {
 
     }
 
-    const returnStepLogo = (stepNum: number) => {
+    const ReturnStepLogo = (stepNum: number) => {
         return (
             <>
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
@@ -62,7 +62,7 @@ export default function Dom() {
             <div className="lg:w-full md:pl-10 py-6">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(1)}
+                    {ReturnStepLogo(1)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
@@ -78,7 +78,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 2 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(2)}
+                    {ReturnStepLogo(2)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
@@ -93,7 +93,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 3 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(3)}
+                    {ReturnStepLogo(3)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 3
@@ -112,7 +112,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 4 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(4)}
+                    {ReturnStepLogo(4)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 4
@@ -153,7 +153,7 @@ export default function Dom() {
             <div className="lg:w-full md:pl-10 py-6 mb-8">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(1)}
+                    {ReturnStepLogo(1)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
@@ -166,7 +166,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 2 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(2)}
+                    {ReturnStepLogo(2)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
@@ -179,7 +179,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 3 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(3)}
+                    {ReturnStepLogo(3)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 3
@@ -204,33 +204,33 @@ export default function Dom() {
                 </div>
                 {/* 과정 4 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(4)}
+                    {ReturnStepLogo(4)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 4
                         </h2>
                         <p className="leading-relaxed mb-4">
-                           {`Line 1에서 console.log() 수행 시, 환경 레코드에 기록해 둔 name 식별자의 값을 출력합니다. `}
-                           <strong>{`이 때, 할당문을 만나기 전이기 때문에, undefined가 출력됩니다.`}</strong>
+                            {`Line 1에서 console.log() 수행 시, 환경 레코드에 기록해 둔 name 식별자의 값을 출력합니다. `}
+                            <strong>{`이 때, 할당문을 만나기 전이기 때문에, undefined가 출력됩니다.`}</strong>
                         </p>
                         <p className="leading-relaxed">
-                           {`이 때, console.log()도 함수이기 때문에, 해당하는 실행 컨텍스트가 콜 스택 내부에 추가되었다가 함수 실행 후 사라지게 됩니다.`}
+                            {`이 때, console.log()도 함수이기 때문에, 해당하는 실행 컨텍스트가 콜 스택 내부에 추가되었다가 함수 실행 후 사라지게 됩니다.`}
                         </p>
                     </div>
                 </div>
                 {/* 과정 5*/}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(5)}
+                    {ReturnStepLogo(5)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 5
                         </h2>
                         <p className="leading-relaxed">
-                           {`Line 2에서 식별자 name에 대한 할당문을 만나면, 선언은 아까 생성 단계에서 이미 진행하였으니, 이 라인에서는 식별자 name에 대해 `}
-                           <strong>값의 할당</strong>
-                           {`만 이루어집니다.`}
+                            {`Line 2에서 식별자 name에 대한 할당문을 만나면, 선언은 아까 생성 단계에서 이미 진행하였으니, 이 라인에서는 식별자 name에 대해 `}
+                            <strong>값의 할당</strong>
+                            {`만 이루어집니다.`}
                         </p>
-                        
+
                     </div>
                 </div>
                 {/* 과정 6 */}
@@ -253,7 +253,7 @@ export default function Dom() {
                             <strong>{`이 때, 할당문 var name='Lee' 를 만난 후이기 때문에 'Lee'가 출력됩니다.`}</strong>
                         </p>
                         <p className="leading-relaxed">
-                           {`마찬가지로 console.log()도 함수이기 때문에, 해당하는 실행 컨텍스트가 콜 스택 내부에 추가되었다가 함수 실행 후 사라지게 됩니다.`}
+                            {`마찬가지로 console.log()도 함수이기 때문에, 해당하는 실행 컨텍스트가 콜 스택 내부에 추가되었다가 함수 실행 후 사라지게 됩니다.`}
                         </p>
                     </div>
                 </div>
@@ -267,7 +267,7 @@ export default function Dom() {
             <div className="lg:w-full md:pl-10 py-6 mb-8">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(1)}
+                    {ReturnStepLogo(1)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
@@ -280,7 +280,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 2 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(2)}
+                    {ReturnStepLogo(2)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
@@ -293,7 +293,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 3 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(3)}
+                    {ReturnStepLogo(3)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 3
@@ -306,7 +306,7 @@ export default function Dom() {
                             이 때, 이 식별자는 <strong>const로 선언한 변수</strong>
                             이기 때문에 값을 초기화하지 않습니다.
                         </p>
-                       
+
                     </div>
                 </div>
                 {/* 과정 4 */}
@@ -328,7 +328,7 @@ export default function Dom() {
                             {`Line 1에서 console.log() 수행 시, 환경 레코드에 기록해 둔 name 식별자의 값을 출력합니다. `}
                         </p>
                         <p className="leading-relaxed">이 때, 식별자는 초기화되지 않았기 때문에 <strong>ReferenceError</strong>가 발생합니다.</p>
-                       
+
                     </div>
                 </div>
             </div>
@@ -341,7 +341,7 @@ export default function Dom() {
             <div className="lg:w-full md:pl-10 py-6 mb-8">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(1)}
+                    {ReturnStepLogo(1)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
@@ -354,7 +354,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 2 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(2)}
+                    {ReturnStepLogo(2)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
@@ -369,7 +369,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 3 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(3)}
+                    {ReturnStepLogo(3)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 3
@@ -403,7 +403,7 @@ export default function Dom() {
                             {`FINISH`}
                         </h2>
                         <p className="leading-relaxed mb-2">
-                            함수 실행 시, 이제 아래의 문제가 발생합니다. 
+                            함수 실행 시, 이제 아래의 문제가 발생합니다.
                         </p>
                         <div className="leading-relaxed text-base">
                             <ul className="list-disc ml-7 text-sm text-slate-500 dark:text-slate-300 ">
@@ -423,7 +423,7 @@ export default function Dom() {
             <div className="lg:w-full md:pl-10 py-6 mb-8">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(1)}
+                    {ReturnStepLogo(1)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
@@ -436,7 +436,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 2 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(2)}
+                    {ReturnStepLogo(2)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
@@ -449,7 +449,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 3 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(3)}
+                    {ReturnStepLogo(3)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 3
@@ -479,7 +479,7 @@ export default function Dom() {
                             {`FINISH`}
                         </h2>
                         <p className="leading-relaxed mb-2">
-                            함수 선언문을 이용한다면, 함수 실행 시 문제가 발생하지 않습니다. 
+                            함수 선언문을 이용한다면, 함수 실행 시 문제가 발생하지 않습니다.
                         </p>
                     </div>
                 </div>
@@ -493,7 +493,7 @@ export default function Dom() {
             <div className="lg:w-full md:pl-10 py-6 mb-8">
                 {/* 과정 1 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(1)}
+                    {ReturnStepLogo(1)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 1
@@ -508,13 +508,13 @@ export default function Dom() {
                 </div>
                 {/* 과정 2 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(2)}
+                    {ReturnStepLogo(2)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 2
                         </h2>
                         <p className="leading-relaxed mb-4">
-                           함수 {`goto2F`}실행 시, 새로운 실행 컨텍스트가 생성됩니다.
+                            함수 {`goto2F`}실행 시, 새로운 실행 컨텍스트가 생성됩니다.
                         </p>
                         <p className="leading-relaxed mb-4">
                             이 때, 함수 {`goto2F`} 스코프 내에 선언되어있는 정보를 실행 컨텍스트의 환경 레코드에 기록합니다.
@@ -526,13 +526,13 @@ export default function Dom() {
                 </div>
                 {/* 과정 3 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(3)}
+                    {ReturnStepLogo(3)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 3
                         </h2>
                         <p className="leading-relaxed mb-4">
-                           함수 {`goto3F`}실행 시, 새로운 실행 컨텍스트가 생성됩니다.
+                            함수 {`goto3F`}실행 시, 새로운 실행 컨텍스트가 생성됩니다.
                         </p>
                         <p className="leading-relaxed">
                             마찬가지로, 함수 {`goto3F`} 스코프 내에 선언되어있는 정보를 실행 컨텍스트의 환경 레코드에 기록하고, outer를 함께 남겨놓습니다.
@@ -541,7 +541,7 @@ export default function Dom() {
                 </div>
                 {/* 과정 4 */}
                 <div className="flex relative pb-12">
-                    {returnStepLogo(4)}
+                    {ReturnStepLogo(4)}
                     <div className="flex-grow pl-4">
                         <h2 className="font-bold title-font text-sm text-gray-900 mb-1 tracking-wider">
                             STEP 4
@@ -550,16 +550,16 @@ export default function Dom() {
                             함수 {`goto3F`}의 실행문을 수행합니다.
                         </p>
                         <p className="leading-relaxed mb-4">
-                           <strong>{`console.log(pet)`}</strong>을 수행하면 같은 스코프 내에 적합한 pet이라는 식별자가 있기 때문에, pet에 있는 cat이라는 값을 바로 출력합니다.
+                            <strong>{`console.log(pet)`}</strong>을 수행하면 같은 스코프 내에 적합한 pet이라는 식별자가 있기 때문에, pet에 있는 cat이라는 값을 바로 출력합니다.
                         </p>
                         <p className="leading-relaxed">
-                            <strong>{`console.log(isPerson)`}</strong>의 경우, 스코프 내에 적합한 식별자가 없기 때문에 <strong>outer</strong>가 가리키는 <strong>{`바깥 렉시컬 환경(상위 스코프)`}</strong>으로 이동하여, 다시 isPerson이라는 식별자를 탐색합니다. 
+                            <strong>{`console.log(isPerson)`}</strong>의 경우, 스코프 내에 적합한 식별자가 없기 때문에 <strong>outer</strong>가 가리키는 <strong>{`바깥 렉시컬 환경(상위 스코프)`}</strong>으로 이동하여, 다시 isPerson이라는 식별자를 탐색합니다.
                         </p>
                     </div>
                 </div>
                 {/* 과정 5*/}
                 <div className="flex relative">
-                <div
+                    <div
                         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center
                      justify-center bg-indigo-500 text-white relative title-font font-medium text-sm"
                     >
@@ -583,11 +583,41 @@ export default function Dom() {
                         </p>
                     </div>
                 </div>
-                
+
             </div>
         )
-    } 
-    
+    }
+
+    const ExecutionContextComponent = () => {
+        return (
+            <div className="my-16">
+                <h1 className="text-lg font-bold title-font text-gray-900 pl-0 md:pl-2">🤔 실행 컨텍스트의 종류</h1>
+                <div className="flex flex-wrap">
+                    <div className="p-12 py-6 md:w-1/2 flex flex-col items-start">
+                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`전역 컨텍스트(Reflow)`}</h2>
+                        <p className="leading-relaxed mb-4">
+                           텍스트
+                        </p>
+                        <p className="leading-relaxed mb-2">
+                            텍스트  
+                        </p>
+                    </div>
+                    <div className="p-12 py-6 md:w-1/2 flex flex-col md:flex-none items-start">
+                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`리페인트(Repaint)`}</h2>
+                        <p className="leading-relaxed mb-4">
+                            텍스트
+                        </p>
+                        <p className="leading-relaxed mb-4">
+                            텍스트
+                        </p>
+                        <p className="leading-relaxed mb-2">
+                            텍스트
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <>
@@ -727,7 +757,7 @@ export default function Dom() {
                             </div>
                             {/* step content */}
                             <FunctionExpressionHoisitingAndEnvRecordSection />
-                            
+
                             {/* 함수 선언문에 따른 호이스팅 및 환경레코드 소개 */}
                             <h1 className="text-lg font-bold title-font text-gray-900 my-3 pl-0 md:pl-2">💬 함수 선언문에 대한 호이스팅과 환경 레코드</h1>
                             <div className="w-full px-4 mb-1 flex-col text-center justify-center">
@@ -798,7 +828,7 @@ export default function Dom() {
                         </div>
 
                         {/* 소개: 실행컨텍스트의 정의 */}
-                        <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                        <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center py-6">
                             <h2 className="text-2xl my-2">실행 컨텍스트란?</h2>
                             <p className="leading-relaxed text-base mb-2">
                                 {`실행 컨텍스트는 코드를 실행하는데 필요한 환경 정보들을 제공하는 객체입니다. 여기서 환경이란, 코드 실행에 영향을 주는 조건이나 상태를 의미합니다.`}
@@ -816,11 +846,10 @@ export default function Dom() {
                             </p>
                         </div>
 
-                        
+                        {/* 실행컨텍스트의 종류 */}
+                        <ExecutionContextComponent />
                     </div>
-
                 </section>
-
             </Layout>
         </>
     );
