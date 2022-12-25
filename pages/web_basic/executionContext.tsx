@@ -588,7 +588,7 @@ export default function ExecutionContext() {
         )
     }
 
-    const ExecutionContextComponent = () => {
+    const ExecutionContextKindsComponent = () => {
         return (
             <div className="my-16">
                 <h1 className="text-lg font-bold title-font text-gray-900 pl-0 md:pl-2">🤔 실행 컨텍스트의 종류</h1>
@@ -613,6 +613,73 @@ export default function ExecutionContext() {
                         <p className="leading-relaxed mb-2">
                             각 함수들은 자신만의 Functional Context를 가지지만, <strong>함수가 호출되고 실행이 되어야만</strong> 콜 스택에 쌓이게됩니다.
                         </p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    const ExecutionContextStructurenComponent = () => {
+        return (
+            <div className="my-16">
+                <h1 className="text-lg font-bold title-font text-gray-900 pl-0 md:pl-2">🤔 실행 컨텍스트의 구조</h1>
+                <div className="flex flex-wrap">
+                    <div className="py-8 px-4 lg:w-1/3">
+                        <div className="h-full flex items-start">
+                            <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+                                <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
+                                <span className="font-medium text-lg text-gray-800 title-font leading-none">18</span>
+                            </div>
+                            <div className="flex-grow pl-6">
+                                <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">1번째</h2>
+                                <h1 className="title-font text-xl font-medium text-gray-900 mb-3">VariableEnvironment</h1>
+                                <p className="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                                <a className="inline-flex items-center">
+                                    <img alt="blog" src="https://dummyimage.com/103x103" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
+                                    <span className="flex-grow flex flex-col pl-3">
+                                        <span className="title-font font-medium text-gray-900">Alper Kamu</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="py-8 px-4 lg:w-1/3">
+                        <div className="h-full flex items-start">
+                            <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+                                <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
+                                <span className="font-medium text-lg text-gray-800 title-font leading-none">18</span>
+                            </div>
+                            <div className="flex-grow pl-6">
+                                <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">2번째</h2>
+                                <h1 className="title-font text-xl font-medium text-gray-900 mb-3">LexicalEnvironment</h1>
+                                <p className="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                                <a className="inline-flex items-center">
+                                    <img alt="blog" src="https://dummyimage.com/102x102" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
+                                    <span className="flex-grow flex flex-col pl-3">
+                                        <span className="title-font font-medium text-gray-900">Holden Caulfield</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="py-8 px-4 lg:w-1/3">
+                        <div className="h-full flex items-start">
+                            <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+                                <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
+                                <span className="font-medium text-lg text-gray-800 title-font leading-none">18</span>
+                            </div>
+                            <div className="flex-grow pl-6">
+                                <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">3번째</h2>
+                                <h1 className="title-font text-xl font-medium text-gray-900 mb-3">ThisBinding</h1>
+                                <p className="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                                <a className="inline-flex items-center">
+                                    <img alt="blog" src="https://dummyimage.com/101x101" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
+                                    <span className="flex-grow flex flex-col pl-3">
+                                        <span className="title-font font-medium text-gray-900">Henry Letham</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -847,7 +914,10 @@ export default function ExecutionContext() {
                         </div>
 
                         {/* 실행컨텍스트의 종류 */}
-                        <ExecutionContextComponent />
+                        <ExecutionContextKindsComponent />
+
+                        {/* 실행컨텍스트의 구성 */}
+                        <ExecutionContextStructurenComponent />
                     </div>
                 </section>
             </Layout>
