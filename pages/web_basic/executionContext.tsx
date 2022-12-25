@@ -594,24 +594,24 @@ export default function ExecutionContext() {
                 <h1 className="text-lg font-bold title-font text-gray-900 pl-0 md:pl-2">🤔 실행 컨텍스트의 종류</h1>
                 <div className="flex flex-wrap">
                     <div className="p-12 py-6 md:w-1/2 flex flex-col items-start">
-                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`전역 컨텍스트(Reflow)`}</h2>
+                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`전역 컨텍스트(Global Context)`}</h2>
                         <p className="leading-relaxed mb-4">
-                           텍스트
+                           전역 영역에 존재하는 코드에 해당하며, 함수 안에서 실행되는 코드가 아니라면 모든 스크립트는 <strong>{`전역 컨텍스트(Global Context)`}</strong>에서 실행됩니다.
+                        </p>
+                        <p className="leading-relaxed mb-4">
+                            스택 구조를 가지는 형태로 실행 컨텍스트가 생성이 된 후, <strong>{`전역 객체(global object)로 window가 this로 할당`}</strong>된 다음, 콜 스택에 쌓이게 됩니다.
                         </p>
                         <p className="leading-relaxed mb-2">
-                            텍스트  
+                            참고로, strict mode가 적용된 this의 default는 <strong>undefined</strong>입니다.
                         </p>
                     </div>
                     <div className="p-12 py-6 md:w-1/2 flex flex-col md:flex-none items-start">
-                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`리페인트(Repaint)`}</h2>
+                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`함수 컨텍스트(Functional Context)`}</h2>
                         <p className="leading-relaxed mb-4">
-                            텍스트
-                        </p>
-                        <p className="leading-relaxed mb-4">
-                            텍스트
+                            <strong>{`함수 컨텍스트(Functional Context)`}</strong>는 선언된 함수가 호출이 될 때를 기점으로 생성이 되고, 함수의 모든 동작이 완료되면 소멸됩니다.
                         </p>
                         <p className="leading-relaxed mb-2">
-                            텍스트
+                            각 함수들은 자신만의 Functional Context를 가지지만, <strong>함수가 호출되고 실행이 되어야만</strong> 콜 스택에 쌓이게됩니다.
                         </p>
                     </div>
                 </div>
