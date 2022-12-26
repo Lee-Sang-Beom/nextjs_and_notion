@@ -622,62 +622,42 @@ export default function ExecutionContext() {
     const ExecutionContextStructurenComponent = () => {
         return (
             <div className="my-16">
-                <h1 className="text-lg font-bold title-font text-gray-900 pl-0 md:pl-2">🤔 실행 컨텍스트의 구조</h1>
+                <h1 className="text-lg font-bold title-font text-gray-900 pl-0 md:pl-2">🤔 실행 컨텍스트 객체가 활성화될 때 수집하는 정보</h1>
                 <div className="flex flex-wrap">
                     <div className="py-8 px-4 lg:w-1/3">
-                        <div className="h-full flex items-start">
-                            <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                                <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
-                                <span className="font-medium text-lg text-gray-800 title-font leading-none">18</span>
-                            </div>
-                            <div className="flex-grow pl-6">
+                        <div className="h-full">
+                            <div className="pl-6">
                                 <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">1번째</h2>
                                 <h1 className="title-font text-xl font-medium text-gray-900 mb-3">VariableEnvironment</h1>
-                                <p className="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                                <a className="inline-flex items-center">
-                                    <img alt="blog" src="https://dummyimage.com/103x103" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
-                                    <span className="flex-grow flex flex-col pl-3">
-                                        <span className="title-font font-medium text-gray-900">Alper Kamu</span>
-                                    </span>
-                                </a>
+                                <p className="leading-relaxed mb-2">
+                                    {`선언 시점에서의 컨텍스트와 관련된 코드의 식별자 정보들을 담는 `}
+                                    <strong>환경 레코드</strong>{`와 현재 호출된 함수가 선언될 당시의 LexicalEnvironment를 참조하는 `}<strong>outer</strong>{`를 담습니다.`}
+                                </p>
+                                <p className="leading-relaxed mb-2 text-sm">{`구성 - EnvironmentRecord, outer-EnvironmentReference`}</p>
                             </div>
                         </div>
                     </div>
                     <div className="py-8 px-4 lg:w-1/3">
-                        <div className="h-full flex items-start">
-                            <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                                <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
-                                <span className="font-medium text-lg text-gray-800 title-font leading-none">18</span>
-                            </div>
-                            <div className="flex-grow pl-6">
+                        <div className="h-full">
+                            <div className="pl-6">
                                 <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">2번째</h2>
                                 <h1 className="title-font text-xl font-medium text-gray-900 mb-3">LexicalEnvironment</h1>
-                                <p className="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                                <a className="inline-flex items-center">
-                                    <img alt="blog" src="https://dummyimage.com/102x102" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
-                                    <span className="flex-grow flex flex-col pl-3">
-                                        <span className="title-font font-medium text-gray-900">Holden Caulfield</span>
-                                    </span>
-                                </a>
+                                <p className="leading-relaxed mb-5">
+                                    {`처음에는 VariableEnvironment와 동일하지만, 변경사항이 실시간으로 반영된다는 차이가 있습니다. (함수 실행 도중에 변경되는 사항이 즉시 반영된다는 의미)`}
+                                </p>
+                                <p className="leading-relaxed mb-2 text-sm">{`구성 - EnvironmentRecord, outer-EnvironmentReference`}</p>
                             </div>
                         </div>
                     </div>
                     <div className="py-8 px-4 lg:w-1/3">
-                        <div className="h-full flex items-start">
-                            <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                                <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
-                                <span className="font-medium text-lg text-gray-800 title-font leading-none">18</span>
-                            </div>
-                            <div className="flex-grow pl-6">
+                        <div className="h-full">
+                            <div className="pl-6">
                                 <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">3번째</h2>
                                 <h1 className="title-font text-xl font-medium text-gray-900 mb-3">ThisBinding</h1>
-                                <p className="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                                <a className="inline-flex items-center">
-                                    <img alt="blog" src="https://dummyimage.com/101x101" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center" />
-                                    <span className="flex-grow flex flex-col pl-3">
-                                        <span className="title-font font-medium text-gray-900">Henry Letham</span>
-                                    </span>
-                                </a>
+                                <p className="leading-relaxed mb-5">
+                                    {`this 식별자가 바라보고 있는 대상 객체를 저장합니다.`}
+                                </p>
+                                <p className="leading-relaxed mb-2 text-sm">{`구성 - EnvironmentRecord, outer-EnvironmentReference`}</p>
                             </div>
                         </div>
                     </div>
