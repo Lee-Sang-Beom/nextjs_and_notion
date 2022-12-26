@@ -909,19 +909,19 @@ export default function ExecutionContext() {
                         </h1>
                         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
                             <Recommend_Youtube
-                                channel_name={`아프리카도서관`}
-                                video_title={`웹 브라우저의 동작 순서 (6분 순삭)`}
-                                url={`https://www.youtube.com/watch?v=FQHNg9gCWpg`}
+                                channel_name={`큰돌의터전`}
+                                video_title={`실행컨텍스트`}
+                                url={`https://youtu.be/RxaiFq2krAA`}
                             />
                             <Recommend_Youtube
-                                channel_name={`널널한 개발자`}
-                                video_title={`웹 브라우저에 URL 입력하면 일어나는 일 - 인프라 위주`}
-                                url={`https://www.youtube.com/watch?v=GAyZ_QgYYYo`}
+                                channel_name={`우아한Tech`}
+                                video_title={`[10분 테코톡] 💙 하루의 실행 컨텍스트`}
+                                url={`https://youtu.be/EWfujNzSUmw`}
                             />
                             <Recommend_Youtube
                                 channel_name={`가장 쉬운 웹개발 with Boaz`}
-                                video_title={`브라우저에 URL 을 입력하면? CS 기본부터 공부하기`}
-                                url={`https://www.youtube.com/watch?v=T2WqQcqssoE`}
+                                video_title={`[JavaScript] Execution Context(실행 컨텍스트) 정의와 종류`}
+                                url={`https://youtu.be/AbNc8_poxu4`}
                             />
                         </div>
                     </div>
