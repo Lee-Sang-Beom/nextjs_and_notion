@@ -21,9 +21,10 @@ import outerAndScopeChainEx from "../../public/img/outerAndScopeChain.jpg"
 import outerAndScopeChainCode from "../../public/img/outerAndScopeChainCode.jpg"
 
 export default function ExecutionContext() {
-    // 페이지 넘김 정보
-    const prev = undefined;
-    const next = undefined;
+
+  // 페이지 넘김 정보
+  const prev = "/web_basic/scope";
+  const next = "/web_basic/hoisting";
 
     // 설명순서 (index)
     const descOrder = (title: string, desc: string) => {
@@ -594,7 +595,7 @@ export default function ExecutionContext() {
                 <h1 className="text-lg font-bold title-font text-gray-900 pl-0 md:pl-2">🤔 실행 컨텍스트의 종류</h1>
                 <div className="flex flex-wrap">
                     <div className="p-12 py-6 md:w-1/2 flex flex-col items-start">
-                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`전역 컨텍스트(Global Context)`}</h2>
+                        <h2 className="text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`전역 컨텍스트(Global Context)`}</h2>
                         <p className="leading-relaxed mb-4">
                            전역 영역에 존재하는 코드에 해당하며, 함수 안에서 실행되는 코드가 아니라면 모든 스크립트는 <strong>{`전역 컨텍스트(Global Context)`}</strong>에서 실행됩니다.
                         </p>
@@ -606,7 +607,7 @@ export default function ExecutionContext() {
                         </p>
                     </div>
                     <div className="p-12 py-6 md:w-1/2 flex flex-col md:flex-none items-start">
-                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`함수 컨텍스트(Functional Context)`}</h2>
+                        <h2 className="text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`함수 컨텍스트(Functional Context)`}</h2>
                         <p className="leading-relaxed mb-4">
                             <strong>{`함수 컨텍스트(Functional Context)`}</strong>는 선언된 함수가 호출이 될 때를 기점으로 생성이 되고, 함수의 모든 동작이 완료되면 소멸됩니다.
                         </p>
@@ -774,7 +775,6 @@ export default function ExecutionContext() {
 
                         {/* 변수 호이스팅과 환경 레코드 예시 설명 */}
                         <div className="w-full">
-
                             {/* 예제 이미지 */}
                             <div className="w-full mb-8 flex justify-center">
                                 <Image src={variableHoistingAndEnvRecordEx} alt="Code Picture of hoisting and variable(1)" className="lg:w-full rounded-lg" />
@@ -900,6 +900,36 @@ export default function ExecutionContext() {
                         <ExecutionContextStructurenComponent />
                     </div>
                 </section>
+
+                {/*마무리*/}
+                <section className="text-gray-600 body-font">
+                    <div className="container px-5 mx-auto">
+                        <h1 className="sm:text-2xl text-xl font-bold title-font text-center text-gray-900 mb-12">
+                            그 외 추천 유튜브 영상
+                        </h1>
+                        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                            <Recommend_Youtube
+                                channel_name={`아프리카도서관`}
+                                video_title={`웹 브라우저의 동작 순서 (6분 순삭)`}
+                                url={`https://www.youtube.com/watch?v=FQHNg9gCWpg`}
+                            />
+                            <Recommend_Youtube
+                                channel_name={`널널한 개발자`}
+                                video_title={`웹 브라우저에 URL 입력하면 일어나는 일 - 인프라 위주`}
+                                url={`https://www.youtube.com/watch?v=GAyZ_QgYYYo`}
+                            />
+                            <Recommend_Youtube
+                                channel_name={`가장 쉬운 웹개발 with Boaz`}
+                                video_title={`브라우저에 URL 을 입력하면? CS 기본부터 공부하기`}
+                                url={`https://www.youtube.com/watch?v=T2WqQcqssoE`}
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                {/*이동하기*/}
+                <MoveBtn prev={prev} next={next} />
+
             </Layout>
         </>
     );

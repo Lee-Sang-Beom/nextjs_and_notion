@@ -6,7 +6,7 @@ import MoveBtn from "../../components/moveBtn";
 export default function Scope() {
     // 페이지 넘김 정보
     const prev = "/web_basic/webpack_babel_polyfill";
-    const next = undefined;
+    const next = "/web_basic/executionContext";
 
     return (
         <>

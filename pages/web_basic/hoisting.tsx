@@ -5,8 +5,8 @@ import MoveBtn from "../../components/moveBtn";
 
 export default function Hoisting() {
     // 페이지 넘김 정보
-    const prev = undefined;
-    const next = '/web_basic/process_and_thread';
+    const prev = "/web_basic/executionContext";
+    const next = "/web_basic/process_and_thread";
 
     return (
         <>

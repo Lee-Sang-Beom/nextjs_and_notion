@@ -29,109 +29,107 @@ export default function Rendering() {
 
   const ReflowAndRepaint = () => {
     return (
-      <>
-        <div className="flex flex-wrap py-6 ">
-          <div className="p-12 md:w-1/2 flex flex-col items-start">
-            <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경될 때</span>
-            <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`리플로우(Reflow)`}</h2>
-            <p className="leading-relaxed mb-4">
-              {`생성된 DOM 요소의 레이아웃 수치(너비, 높이, 위치 등) 변경 시 영향을 받은 모든 노드의 위치를 다시 계산하는 과정을 의미해요. `}
-              <strong>{`레이아웃 단계`}</strong>{`를 다시 수행하는 것으로 생각할 수 있어요.`}
-            </p>
-            <p className="leading-relaxed mb-2 hidden md:block">
-              {`리플로우를 발생시키는 일부 속성들은 아래와 같아요.`}
-            </p>
-            <table className="table_set hidden md:table">
-              <tbody>
-                <tr>
-                  <td>{`width`}</td>
-                  <td>{`height`}</td>
-                  <td>{`margin`}</td>
-                  <td>{`padding`}</td>
-                </tr>
-                <tr>
-                  <td>{`top`}</td>
-                  <td>{`right`}</td>
-                  <td>{`left`}</td>
-                  <td>{`bottom`}</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold">{`border`}</td>
-                  <td>{`border-width`}</td>
-                  <td>{`font-size`}</td>
-                  <td>{`font-weight`}</td>
-                </tr>
-                <tr>
-                  <td>{`text-align`}</td>
-                  <td>{`vertical-align`}</td>
-                  <td>{`line-height`}</td>
-                  <td>{`font-family`}</td>
-                </tr>
-                <tr>
-                  <td>{`overfiow`}</td>
-                  <td>{`white-space`}</td>
-                  <td>{`min-height`}</td>
-                  <td>{`position`}</td>
-                </tr>
-              </tbody>
-            </table>
-            <Learn_More
-              url={`https://www.youtube.com/watch?v=XoyWzOh3Sy4`}
-              hover_title={`출처 : Code States(권오연 교육 엔지니어)`}
-            />
+      <div className="flex flex-wrap py-6 ">
+        <div className="p-12 md:w-1/2 flex flex-col items-start">
+          <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경될 때</span>
+          <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`리플로우(Reflow)`}</h2>
+          <p className="leading-relaxed mb-4">
+            {`생성된 DOM 요소의 레이아웃 수치(너비, 높이, 위치 등) 변경 시 영향을 받은 모든 노드의 위치를 다시 계산하는 과정을 의미해요. `}
+            <strong>{`레이아웃 단계`}</strong>{`를 다시 수행하는 것으로 생각할 수 있어요.`}
+          </p>
+          <p className="leading-relaxed mb-2 hidden md:block">
+            {`리플로우를 발생시키는 일부 속성들은 아래와 같아요.`}
+          </p>
+          <table className="table_set hidden md:table">
+            <tbody>
+              <tr>
+                <td>{`width`}</td>
+                <td>{`height`}</td>
+                <td>{`margin`}</td>
+                <td>{`padding`}</td>
+              </tr>
+              <tr>
+                <td>{`top`}</td>
+                <td>{`right`}</td>
+                <td>{`left`}</td>
+                <td>{`bottom`}</td>
+              </tr>
+              <tr>
+                <td className="font-semibold">{`border`}</td>
+                <td>{`border-width`}</td>
+                <td>{`font-size`}</td>
+                <td>{`font-weight`}</td>
+              </tr>
+              <tr>
+                <td>{`text-align`}</td>
+                <td>{`vertical-align`}</td>
+                <td>{`line-height`}</td>
+                <td>{`font-family`}</td>
+              </tr>
+              <tr>
+                <td>{`overfiow`}</td>
+                <td>{`white-space`}</td>
+                <td>{`min-height`}</td>
+                <td>{`position`}</td>
+              </tr>
+            </tbody>
+          </table>
+          <Learn_More
+            url={`https://www.youtube.com/watch?v=XoyWzOh3Sy4`}
+            hover_title={`출처 : Code States(권오연 교육 엔지니어)`}
+          />
 
 
-          </div>
-          <div className="p-12 md:w-1/2 flex flex-col md:flex-none items-start">
-            <div className="flex flex-wrap flex-row flex-shrink-0">
-              <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경될 때</span>
-              <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경되지 않을 때 </span>
-            </div>
-            <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`리페인트(Repaint)`}</h2>
-            <p className="leading-relaxed mb-4">
-              {`변경된 요소를 실제로 화면에 그려주는 작업을 리페인트라고 해요.`}
-            </p>
-            <p className="leading-relaxed mb-4">
-              {`만약, 노드의 위치를 재계산하는 리플로우가 발생한다면 `}<strong>{`필연적으로`}</strong> {`리페인트가 실행된다고 볼 수 있어요. `}
-            </p>
-            <p className="leading-relaxed mb-2 hidden md:block">
-              {`리페인트를 발생시키는 대표 속성은 아래와 같아요.`}
-            </p>
-            <table className="table_set hidden md:table">
-              <tbody>
-                <tr>
-                  <td>{`background`}</td>
-                  <td>{`background-image`}</td>
-                  <td>{`background-position`}</td>
-                  <td>{`background-repeat`}</td>
-                </tr>
-                <tr>
-                  <td>{`background-size`}</td>
-                  <td>{`visibilty`}</td>
-                  <td className="font-semibold">{`border-radius`}</td>
-                  <td className="font-semibold">{`border-style`}</td>
-                </tr>
-                <tr>
-                  <td>{`box-shadow`}</td>
-                  <td>{`color`}</td>
-                  <td>{`line-style`}</td>
-                  <td className="font-semibold">{`outline`}</td>
-                </tr>
-                <tr>
-                  <td>{`outline-style`}</td>
-                  <td>{`outline-color`}</td>
-                  <td>{`outline-width`}</td>
-                  <td>{`text-decoration`}</td>
-                </tr>
-              </tbody>
-            </table>
-            <Learn_More
-              url={`https://www.youtube.com/watch?v=XoyWzOh3Sy4`}
-              hover_title={`출처 : Code States(권오연 교육 엔지니어)`}
-            />
-          </div>
         </div>
-      </>
+        <div className="p-12 md:w-1/2 flex flex-col md:flex-none items-start">
+          <div className="flex flex-wrap flex-row flex-shrink-0">
+            <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경될 때</span>
+            <span className="block ml-0 m-1 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest text-center dark:bg-slate-600 dark:text-slate-300 hover:font-semibold">레이아웃이 변경되지 않을 때 </span>
+          </div>
+          <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">{`리페인트(Repaint)`}</h2>
+          <p className="leading-relaxed mb-4">
+            {`변경된 요소를 실제로 화면에 그려주는 작업을 리페인트라고 해요.`}
+          </p>
+          <p className="leading-relaxed mb-4">
+            {`만약, 노드의 위치를 재계산하는 리플로우가 발생한다면 `}<strong>{`필연적으로`}</strong> {`리페인트가 실행된다고 볼 수 있어요. `}
+          </p>
+          <p className="leading-relaxed mb-2 hidden md:block">
+            {`리페인트를 발생시키는 대표 속성은 아래와 같아요.`}
+          </p>
+          <table className="table_set hidden md:table">
+            <tbody>
+              <tr>
+                <td>{`background`}</td>
+                <td>{`background-image`}</td>
+                <td>{`background-position`}</td>
+                <td>{`background-repeat`}</td>
+              </tr>
+              <tr>
+                <td>{`background-size`}</td>
+                <td>{`visibilty`}</td>
+                <td className="font-semibold">{`border-radius`}</td>
+                <td className="font-semibold">{`border-style`}</td>
+              </tr>
+              <tr>
+                <td>{`box-shadow`}</td>
+                <td>{`color`}</td>
+                <td>{`line-style`}</td>
+                <td className="font-semibold">{`outline`}</td>
+              </tr>
+              <tr>
+                <td>{`outline-style`}</td>
+                <td>{`outline-color`}</td>
+                <td>{`outline-width`}</td>
+                <td>{`text-decoration`}</td>
+              </tr>
+            </tbody>
+          </table>
+          <Learn_More
+            url={`https://www.youtube.com/watch?v=XoyWzOh3Sy4`}
+            hover_title={`출처 : Code States(권오연 교육 엔지니어)`}
+          />
+        </div>
+      </div>
     )
   }
 
