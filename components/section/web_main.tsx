@@ -31,36 +31,11 @@ export default function WebMain() {
           {/*두 번째 라인 : 여기서부터 컴포넌트 분리해야함*/}
           <div className="flex flex-wrap -m-4 mt-4">
             {/* box 4*/}
-            <div className="p-4 lg:w-1/3">
-              <div className="h-full bg-gray-100 bg-opacity-75 dark:bg-gray-800 px-8 pt-14 pb-10 rounded-lg overflow-hidden text-center relative">
-                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  CATEGORY - WEB BASIC
-                </h2>
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
-                  REST-API
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  REST API라는 용어를 들어보셨나요? 컴퓨터 시스템끼리 정보를
-                  안전하게 교환하기 위한 방법으로 알려져 있는 REST-API에 대해
-                  궁금하다면, 아래 Learn 버튼을 눌러주세요!
-                </p>
-                <a className="text-indigo-500 inline-flex items-center mt-5">
-                  Learn
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <ChooseTopic 
+              category={`CATEGORY : WEB BASIC`}
+              title={`REST API`}
+              url={`/web_basic/rest_api`}
+              desc={`REST API는 말 그대로 REST를 기반으로 API를 구성한 것을 뜻해요. 이는 개발자들 사이에서 데이터를 관리 및 처리함에 있어 굉장히 중요하고, 널리 쓰이는 개념이에요. 이것이 무엇인지 궁금하다면 아래 Learn 버튼을 눌러주세요!`}/>
 
             {/* box 5*/}
             <div className="p-4 lg:w-1/3">
