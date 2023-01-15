@@ -32,79 +32,57 @@ export default function RestApi() {
                   {`REST-API`}
                 </h1>
                 <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-4">
-                  {`- REST API란, ...`}
+                  {`- REST API란, 여러 자원들을 이름으로 표현하여 해당 자원의 상태 및 정보를 주고받는 것을 의미하는 `}<strong>REST</strong>{`를 기반으로 한 API를 의미해요.`}
+                </p>
+                {/* 제목 추가 설명을 위한 p태그의 경우 새로 추가된 태그에서 mt-1로 구분감 부여*/}
+                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-1">
+                  {`- 이는, 개발자들 사이에서 데이터를 명시/접근/수정을 진행하는 데에 널리 알려지는 개발자들 사이의 약속이기도 해요.`}
+                </p>
+                <p className="sm:w-full leading-relaxed text-base sm:pl-10 pl-0 mt-1">
+                  {`- REST API를 알아보기 전에, CRUD와 REST라는 것이 무엇인지부터 알아보도록 해요.`}
                 </p>
               </div>
             </div>
           </div>
 
+          {/* 내용 2 : CRUD */}
           <div className="container px-5 py-24 mx-auto">
-            {/* bar 길이*/}
-            <div className="h-1 bg-gray-200 rounded overflow-hidden">
-              <div className="w-1/2 h-full bg-indigo-500"></div>
-            </div>
-            <div className="lg:w-4/6 mx-auto mt-10">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src="/img/html.jpg"
-                />
-              </div>
-              <div className="flex flex-col sm:flex-row mt-10">
-                <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                  <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-100 dark:bg-slate-700 dark:text-gray-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                    </svg>
-                  </div>
-                  <div className="flex flex-col items-center text-center justify-center">
-                    <h2 className="font-bold title-font mt-4 text-gray-900 text-lg">
-                      HTML
-                    </h2>
-                    <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
-                    <p className="text-base">
-                      {`HTML은 건물을 만들기 위한 뼈대로 이해하자!`}
-                    </p>
-                  </div>
-                </div>
-                <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                  <p className="leading-relaxed text-base mb-4">
-                    {`HTML의 `}
-                    <strong>{`HT(HyperText)`}</strong>
-                    {`는 일반적인 텍스트를 비순차적으로 접근할 수 있는 방법을 제공해요! 같은 페이지 내의 다른 데이터로 이동할 수도 있고, 다른 페이지로도 이동할 수도 있죠!`}
-                  </p>
-                  <p className="leading-relaxed text-base mb-2">
-                    {<strong>{`ML(Markup Lanauage)`}</strong>}
-                    {`은 웹 브라우저에게 내 컨텐츠를 어떻게 표현해야 하는지를 명령하는 언어에요. <태그> 등을 이용하여, 문서나 데이터를 구조적으로 표시해요. 마크업 언어를 쓰면 아래와 같은 효과를 얻을 수 있어요!`}
-                  </p>
-                  <div className="leading-relaxed text-base mb-8">
-                    <ul className="list-disc ml-7 text-sm  text-slate-500 dark:text-slate-300">
-                      <li className="mb-1 text-left">{`컨텐츠 제작자가 원하는 방법대로 문서를 표현하기 위해 웹 브라우저에게 명령을 내릴 수 있어요!`}</li>
-                      <li className="mb-1 text-left">{`구조적인 작성 덕분에, 문서 작성에 대해 협업과 유지보수를 쉽게 할 수 있어요!`}</li>
-                      <li className="mb-1 text-left">{`찾기 쉽다는 장점은 검색이 가능하다는 것을 의미하기도 해요. 컴퓨터 또한 마크업 언어의 태그를 통해 정보를 수집할 수 있어요!`}</li>
-                    </ul>
-                  </div>
-                  <p className="leading-relaxed text-base mb-4 ">
-                    {`즉, `}
-                    {<strong>HTML</strong>}
-                    {`은 하이퍼텍스트를 가장 중요한 특징으로 하는 마크업이라는 형식을 가진 언어라고 정리할 수 있어요. 웹 페이지를 만들기 위해 표준적으로 사용되는 마크업 언어이기 때문에, 웹 페이지를 만들 때 꼭 필요하죠.`}
-                  </p>
-
-                  <Learn_More
-                    url={`https://www.youtube.com/watch?v=8kJwTrs6e-4&list=PLFeNz2ojQZjtQc7mt8E9fNzIh9or34A61`}
-                    hover_title={`출처 : 유노코딩`}
-                  />
-                </div>
+            <div className="flex flex-col">
+              {/* bar 길이*/}
+              <div className="h-1 bg-gray-200 rounded overflow-hidden">
+                <div className="w-1/2 h-full bg-indigo-500"></div>
               </div>
             </div>
           </div>
 
+          <div className="container mx-auto flex px-5 md:flex-row flex-col items-center mb-8">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 ml-3 text-center">
+            <img
+              className="object-cover object-center rounded mb-1"
+              alt="hero"
+              src="/img/crud.jpg"
+            />
+            <a
+              className="text-sm"
+              title="이동하기"
+              href={`https://www.wallarm.com/what/crud-meaning`}
+            >
+              {`이미지 출처 : wallarm`}
+            </a>
+          </div>
+          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 className="title-font sm:text-4xl text-3xl mb-6 font-medium text-gray-900">
+              {`CRUD는 무엇일까?`}
+            </h1>
+            <p className="mb-4 leading-relaxed">
+              {`텍스트`}
+            </p>
+            <p className="mb-2 leading-relaxed">
+              {`마지막 줄 텍스트`}
+            </p>
+            
+          </div>
+        </div>
         </section>
 
         {/*마무리*/}
