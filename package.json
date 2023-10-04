@@ -1,0 +1,30 @@
+{
+  "name": "next-practice03",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "dotenv": "^16.0.1",
+    "next": "^13.5.4",
+    "next-themes": "^0.2.0",
+    "postcss": "^8.4.14",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-lottie-player": "^1.4.3",
+    "styled-reset": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.5",
+    "@types/react": "^18.0.17",
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4",
+    "tailwindcss": "^3.1.7",
+    "typescript": "5.2.2"
+  }
+}
