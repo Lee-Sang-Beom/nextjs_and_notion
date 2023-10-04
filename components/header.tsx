@@ -30,7 +30,6 @@ export default function Header() {
             </svg>
 
             <span className="ml-3 text-xl">
-              {/* 홈페이지 명 */}
               <strong> My FrontendWeb</strong>
             </span>
           </Link>
