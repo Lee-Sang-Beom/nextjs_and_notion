@@ -20,6 +20,7 @@ export default function Hero() {
           만약, 내가 이러한 부분에 자신이 없고, 배워나가고 싶다는 마음가짐이
           있다면, 아래 버튼을 눌러보세요
         </p>
+        <p className="mb-8 leading-relaxed">{`* 2023-10-05 추가 취업 후, 적응기간동안 너무 바빠 그동안 활동이 뜸했습니다. 차후 velog 및 새로운 블로그를 제작하여 최신 버전의 Next.js를 사용하여 다시 찾아뵙게 될 예정입니다. 좀 더 나은 모습으로 돌아올 수 있도록 노력하겠습니다!`}</p>
         <div className="flex justify-center">
           <Link href="/web" className="btn-project hover:animate-pulse">
             웹 기초 개념 보러가기
