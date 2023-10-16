@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <>
       <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-        <h1 className="mb-8 font-sans hover:text-blue-600 title-font sm:text-4xl text-3xl mb-4 font-bold text-gray-900">
+        {/* <h1 className="mb-8 font-sans hover:text-blue-600 title-font sm:text-4xl text-3xl mb-4 font-bold text-gray-900">
           프론트엔드 개발에 발을 들이신 여러분, 안녕하세요
         </h1>
         <p className="mb-4 leading-relaxed">
@@ -19,7 +19,7 @@ export default function Hero() {
         <p className="mb-8 leading-relaxed">
           만약, 내가 이러한 부분에 자신이 없고, 배워나가고 싶다는 마음가짐이
           있다면, 아래 버튼을 눌러보세요
-        </p>
+        </p> */}
         <p className="mb-8 leading-relaxed">{`* 2023-10-05 추가 취업 후, 적응기간동안 너무 바빠 그동안 활동이 뜸했습니다. 차후 velog 및 새로운 블로그를 제작하여 최신 버전의 Next.js를 사용하여 다시 찾아뵙게 될 예정입니다. 좀 더 나은 모습으로 돌아올 수 있도록 노력하겠습니다!`}</p>
 
         <div className="flex justify-center">
